@@ -279,8 +279,8 @@
 			<properties>
 				<url.geoserver>http://sira.csi.geo-solutions.it</url.geoserver>
                 <url.secure.geoserver>https://sira.csi.geo-solutions.it</url.secure.geoserver>
-                <component.name>decsiraweb</component.name>
-				<component.version>2.1.0</component.version>
+                <component.name>bifisic</component.name>
+				<component.version>1.0.0</component.version>
 			</properties>
 		</profile>
 	</profiles>
