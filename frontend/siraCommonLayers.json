@@ -1,0 +1,22 @@
+[{
+      "type": "vector",
+      "position": 1,
+      "queryable": false,
+      "visibility": true,
+      "name": "Selected Feature",
+      "id": "gridItems",
+      "group": "hidden",
+      "style": {
+          "type": "Point",
+          "radius": 10,
+          "stroke": {
+              "width": 3,
+              "color": "blue"
+          },
+          "fill": {
+              "color": "blue"
+          }
+        },
+        "features" : []
+      }
+]

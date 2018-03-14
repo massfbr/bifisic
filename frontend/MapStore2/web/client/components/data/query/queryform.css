@@ -1,0 +1,128 @@
+/**
+ * Copyright 2016, GeoSolutions Sas.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.logicHeader{
+    background-color: #F5F5F5;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.logicHeader .query-remove{
+    float: right;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+#queryFormPanel .panel-title{
+    font-size: 16px;
+}
+
+#queryFormPanel .panel-title a{
+    cursor: text;
+    text-decoration:none;
+}
+
+/*****************************/
+/* DRAWER MENU ***************/
+/*****************************/
+#mapstore-drawermenu #queryFormPanel .queryFormToolbar button:disabled{
+    color: gray;
+}
+#mapstore-drawermenu #queryFormPanel .logicHeader {
+    margin: 0;
+    background-color: #078aa3;
+    color: white;
+}
+#mapstore-drawermenu #queryFormPanel .logicHeader .query-remove {
+    float: right;
+    padding-top: 0px;
+    top: 10px;
+    margin-right: 10px;
+}
+
+#mapstore-drawermenu #queryFormPanel .remove-filter-button {
+    height: 32px;
+    width: 32px;
+    padding: 0;
+}
+#mapstore-drawermenu #queryFormPanel input.form-control {
+    height: 32px;
+}
+
+#mapstore-drawermenu #queryFormPanel .logicHeader .group_label_a,#mapstore-drawermenu #queryFormPanel .logicHeader .group_label_b {
+    margin: auto 5px;
+}
+
+/* nested groups */
+#mapstore-drawermenu #queryFormPanel .panel .panel .panel{
+    margin-left: 10px;
+}
+#mapstore-drawermenu #queryFormPanel .panel .panel .panel > .panel-body{
+    border: thin solid #078aa3;
+    margin-top: 1px;
+}
+#mapstore-drawermenu #queryFormPanel .query-content,
+#mapstore-drawermenu #queryFormPanel .query-buttons
+{
+    margin-left: 3px;
+    margin-bottom: 3px;
+}
+
+/* Spatial Selector */
+#mapstore-drawermenu #queryFormPanel .panel.details-panel {
+    width: auto;
+    height: auto;
+}
+#mapstore-drawermenu #queryFormPanel .details-panel .panel-body {
+    padding: 15px;
+}
+#mapstore-drawermenu #queryFormPanel .details-panel.panel{
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#mapstore-drawermenu #queryFormPanel .details-panel.panel-primary {
+    border-color: #078aa3;
+}
+
+/*****************************/
+/* DRAWER MENU END ***********/
+/*****************************/
+
+.detail_geom_button{
+    text-align: right;
+    margin-top: 3px;
+}
+
+.detail_geom_label{
+    text-align: left;
+}
+
+.details-panel{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.querypanel{
+    height: 660px;
+    max-height: 660px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: none;
+    min-width: 700px;
+}
+
+.queryFormToolbar{
+    float: right;
+    padding-top: 15px;
+}

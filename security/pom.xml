@@ -1,0 +1,22 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>it.geosolutions.csi.sira</groupId>
+    <artifactId>sira-security</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>CSI SIRA - Security submodules</name>
+
+    <!-- sotto moduli del layer di sicurezza -->
+    <modules>
+        <module>iride-commons</module>
+        <module>iride-entities</module>
+        <module>iride-service-client</module>
+        <module>sec-iride</module>
+    </modules>
+
+</project>

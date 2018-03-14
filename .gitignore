@@ -1,0 +1,14 @@
+node_modules/
+node/
+dist/
+target/
+*.sublime-*
+npm-debug.log
+coverage/
+
+# Eclipse configuration
+.classpath
+.project
+.settings
+security/sec-iride/.springBeans
+geoserver/src/accessmanager/.springBeans

@@ -1,0 +1,157 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>it.geosolutions.csi.sira</groupId>
+        <artifactId>sira-root</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>sira-backend</artifactId>
+    <packaging>jar</packaging>
+    <name>CSI SIRA - Backend Services</name>
+    <url>http://www.geo-solutions.it</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<security_data_dir.version>1.1.0</security_data_dir.version>
+		<iride.service.policy-enforcer-base.url>http://tst-applogic-nmsf2e.csi.it/pep_wsfad_nmsf_policy/services/PolicyEnforcerBase</iride.service.policy-enforcer-base.url>
+    </properties>
+
+    <dependencies>
+        <!-- ================================================================ -->
+        <!-- JACKSON                                                          -->
+        <!-- ================================================================ -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.databind-version}</version>
+        </dependency>
+        <!-- ================================================================ -->
+        <!-- SPRING                                                           -->
+        <!-- ================================================================ -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <!-- <dependency> -->
+        <!-- <groupId>org.springframework</groupId> -->
+        <!-- <artifactId>spring-context-support</artifactId> -->
+        <!-- </dependency> -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <!-- =========================================================== -->
+        <!-- LOGGING                                                     -->
+        <!-- =========================================================== -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <!-- <dependency> -->
+        <!-- <groupId>org.slf4j</groupId> -->
+        <!-- <artifactId>jcl-over-slf4j</artifactId> -->
+        <!-- </dependency> -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>Copy GeoServer datadir</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/gs_data_dir</outputDirectory>
+                            <encoding>UTF-8</encoding>
+                            <resources>
+                                <resource>
+                                    <filtering>true</filtering>
+                                    <directory>${basedir}/gs_data_dir</directory>
+                                    <includes>
+                                        <include>**/*.xml</include>
+										<include>**/*.swo</include>
+										<include>**/*.swp</include>
+										<include>**/*.properties</include>
+										<include>**/*.digest</include>
+										<include>**/*.xsd</include>
+										<include>**/passwd*</include>
+                                    </includes>
+                                    <excludes>
+                                      <exclude>workspaces/**</exclude>
+                                    </excludes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                    <id>Zip GeoServer datadir</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>run</goal>
+                    </goals>
+                        <configuration>
+                            <tasks>
+							    <delete file="${basedir}/target/gs_security_data_dir-${security_data_dir.version}.zip" failonerror="false" />
+                                <zip destfile="${basedir}/target/gs_security_data_dir-${security_data_dir.version}.zip">
+                                    <zipfileset dir="${basedir}/target/gs_data_dir" includes="**/**" />
+                                </zip>
+                                <delete dir="${basedir}/target/gs_data_dir" failonerror="false" />
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>produzione</id>
+            <properties>
+                <iride.service.policy-enforcer-base.url>http://applogic-nmsf2e.csi.it/pep_wsfad_nmsf_policy/services/PolicyEnforcerBase</iride.service.policy-enforcer-base.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>demo</id>
+            <properties>
+                <iride.service.policy-enforcer-base.url>http://tst-applogic-nmsf2e.csi.it/pep_wsfad_nmsf_policy/services/PolicyEnforcerBase</iride.service.policy-enforcer-base.url>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>
