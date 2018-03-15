@@ -67,31 +67,31 @@ module.exports = {
             target: "http://mapstore.geo-solutions.it"
         }, {
             path: new RegExp("/proxy(.*)"),
-            rewrite: rewriteUrl("/decsiraweb/proxy$1"),
+            rewrite: rewriteUrl("/bifisic/proxy$1"),
             host: "localhost",
-            target: "http://tst-sipradecweb.territorio.csi.it:8080/"
+            target: "http://192.168.1.226/"
         }, {
             path: new RegExp("/services/metadata/(.*)"),
-            rewrite: rewriteUrl("/decsiraweb/services/metadata/$1"),
+            rewrite: rewriteUrl("/bifisic/services/metadata/$1"),
             host: "localhost",
-            target: "http://tst-sipradecweb.territorio.csi.it:8080/"
+            target: "http://192.168.1.226/"
         }, {
             path: new RegExp("/services/iride/(.*)"),
-            rewrite: rewriteUrl("/decsiraweb/services/iride/$1"),
+            rewrite: rewriteUrl("/bifisic/services/iride/$1"),
             host: "localhost",
-            target: "http://tst-sipradecweb.territorio.csi.it:8080/"
+            target: "http://192.168.1.226/"
         }, {
-            path: new RegExp("/decsiraweb/services/queryformconfig(.*)"),
+            path: new RegExp("/bifisic/services/queryformconfig(.*)"),
             host: "localhost",
-            target: "http://tst-sipradecweb.territorio.csi.it:8080/"
+            target: "http://192.168.1.226/"
         }, {
             path: new RegExp("/geoserver/ows(.*)"),
             host: "localhost",
-            target: "http://tst-sipradecweb.territorio.csi.it:8080/"
+            target: "http://192.168.1.226/"
         }, {
             path: new RegExp("/territoriosliv1sisp/(.*)"),
             host: "localhost",
-            target: "https://tst-conoscenzaambientale.sistemapiemonte.it/"
+            target: "https://TODO/"
         }]
     },
 

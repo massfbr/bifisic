@@ -47,13 +47,15 @@ const Home = React.createClass({
         return (
             <div className="home-page">
             <Header />
+            <h2 className="home-page-title">BIFISIC</h2>
+            <h2 className="home-page-title-bold">Best Information for Industrial Safety in Croatia.</h2>
             <div className="container-fluid">
                 <div className="row-fluid sb-sx">
                     <div className="container search-home">
                         <div className="row">
                             <div className="col-md-7 col-xs-12 testo-home">
                                <div>
-                                 Piattaforma di fruizione delle conoscenze alfanumeriche e geografiche prodotte nel contesto del SIRA Piemonte (Sistema Informativo Ambientale della Regione Piemonte), che si configura come una rete di cooperazione tra soggetti produttori e/o detentori di informazioni di interesse ambientale (Imprese, Regione, Province e ARPA)
+                                 Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones.
                                </div>
                             </div>
                                 <SiraSearchBar
