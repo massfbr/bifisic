@@ -5,7 +5,7 @@
   	"secureDecsirawebUrl": "${url.secure.decsiraweb}",
     "decsirawebUrl": "${url.decsiraweb}",
     "decsiraHelpUrl": "http://www.sistemapiemonte.it/eXoRisorse/dwd/servizi/SistemaConoscenzeAmbientali/SistemaConoscenzeAmbientali_Manuale_utente.pdf",
-    "logOutUrl": "http://www.sistemapiemonte.it/cms/privati/ambiente-e-energia",
+    "logOutUrl": "",
     "logOutService": "${url.secure.VH.decsiraweb}/territoriosliv1sisp/Shibboleth.sso/Logout",
     "useAuthenticationRules": true,
     "authenticationRules": [

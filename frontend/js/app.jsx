@@ -11,9 +11,9 @@ const {connect} = require('react-redux');
 
 const LocaleUtils = require('../MapStore2/web/client/utils/LocaleUtils');
 LocaleUtils.setSupportedLocales({
-        "it": {
-            code: "it-IT",
-            description: "Italiano"}});
+        "en": {
+            code: "en-US",
+            description: "English"}});
 
 require('./utils/ProjUtils')();
 

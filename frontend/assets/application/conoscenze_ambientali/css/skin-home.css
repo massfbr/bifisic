@@ -48,8 +48,8 @@ div.home-page header.navbar h1 a span{
 
 div.home-page .navbar-header{
 	float:none;
-    background:url("images/logo.png") no-repeat scroll center 100px transparent;
-	min-height:200px;
+    /* background:url("images/logo.png") no-repeat scroll center 100px transparent; */
+	/* min-height:200px; */
 	}
 
 div.home-page .navbar-header h2 {
@@ -860,4 +860,17 @@ div.trebox div.tags a.tag_grande{
     border: 1px solid #ddd;
     box-shadow: none!important;
 	border-radius:0;
+}
+.home-page-title{
+    font-family: Arial;
+    color: #0050A4;
+    text-align: center;
+    font-weight: 900;
+}
+.home-page-title-bold{
+    font-family: Arial;
+    color: #0050A4;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
 }
