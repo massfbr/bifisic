@@ -7,6 +7,7 @@
 */
 
 const React = require('react');
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 
 const PlatformNumbers = React.createClass({
 
@@ -31,11 +32,11 @@ render() {
             <div className="row-fluid">
                 <div className="container">
                     <div className="row">
-                        <h3>I numeri della piattaforma</h3>
+                        <h3><I18N.Message msgId={"PlatformNumbers.PlatformNumbers"}/></h3>
                         <ul className="list-group numeri">
-                          <li className="list-group-item col-md-4"><span className="cifra">{this.props.functionObjectMap}</span> <span className="sotto_cifra">Mappe visualizzabili</span></li>
-                          <li className="list-group-item col-md-4"><span className="cifra">{this.props.functionObjectSearch}</span> <span className="sotto_cifra">Ricerche di dettaglio disponibili</span></li>
-                          <li className="list-group-item col-md-4"><span className="cifra">{this.props.functionObjectView}</span> <span className="sotto_cifra">Viste tematiche disponibili</span></li>
+                          <li className="list-group-item col-md-4"><span className="cifra">{this.props.functionObjectMap}</span> <span className="sotto_cifra"><I18N.Message msgId={"PlatformNumbers.view_maps"}/></span></li>
+                          <li className="list-group-item col-md-4"><span className="cifra">{this.props.functionObjectSearch}</span> <span className="sotto_cifra"><I18N.Message msgId={"PlatformNumbers.details_search_available"}/></span></li>
+                          <li className="list-group-item col-md-4"><span className="cifra">{this.props.functionObjectView}</span> <span className="sotto_cifra"><I18N.Message msgId={"PlatformNumbers.tematic_view_available"}/></span></li>
                         </ul>
                 </div>
             </div>

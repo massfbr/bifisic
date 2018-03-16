@@ -11,6 +11,7 @@ const {head} = require('lodash');
 const Footer = require('../components/Footer');
 const Header = require('../components/Header');
 
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 const {getMetadataObjects, selectCategory, resetObjectAndView} = require('../actions/siracatalog');
 const {categorySelector} = require('../selectors/sira');
 const Mosaic = connect(categorySelector)(require('../components/Mosaic'));
@@ -47,16 +48,16 @@ const Home = React.createClass({
         return (
             <div className="home-page">
             <Header />
-            <h2 className="home-page-title">BIFISIC</h2>
-            <h2 className="home-page-title-bold">Best Information for Industrial Safety in Croatia.</h2>
+            <h2 className="home-page-title"><I18N.Message msgId={"site_home.shirt_title"}/></h2>
+            <h2 className="home-page-title-bold"><I18N.Message msgId={"site_home.long_title"}/></h2>
             <div className="container-fluid">
                 <div className="row-fluid sb-sx">
                     <div className="container search-home">
                         <div className="row">
                             <div className="col-md-7 col-xs-12 testo-home">
                                <div>
-                                 Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones.
-                               </div>
+                                   <I18N.Message msgId={"site_home.search"}/>
+                                </div>
                             </div>
                                 <SiraSearchBar
                                     containerClasses="col-md-5 col-xs-12 ricerca-home catalog-search-container"

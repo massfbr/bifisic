@@ -588,12 +588,31 @@
             "panelMsg": "Se sei un utente della Pubblica Amministrazione puoi richiedere che il tuo certificato digitale sia abilitato al Sistema Conoscenze Ambientali"
         },
         "cartpanel": {
+            "list": "Lista",
+            "map": "Mappa",
             "title": "Livelli da caricare in Mappa",
-            "goToMap": "Vai a Mappa"
+            "goToMap": "Vai a Mappa",
+            "tooltip_map": "Vai a Lista",
+            "tooltip_list": "Vai a Mappa"
         },
         "RightMenu": {
             "ConoscenzeAmbTitle": "Sistema Conoscenze Ambientali",
             "CreditsTitle": "Credits e Copyright"
+        },
+        "site_home": {
+            "search": "Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones",
+            "shirt_title": "Bifisic",
+            "long_title": "Best Information for Industrial Safety in Croatia"
+        },
+        "PlatformNumbers": {
+        "PlatformNumbers": "The platform numbers",
+        "view_maps": "Maps displayable",
+        "details_search_available": "Details search available",
+        "tematic_view_available": "Tematic view available"
+        },
+        "dataset_container": {
+            "object": "OGGETTI",
+            "tematic_view": "VISTE TEMATICHE"
         }
     }
 }

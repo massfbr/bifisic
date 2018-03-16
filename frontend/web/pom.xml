@@ -18,8 +18,8 @@
         <url.secure.decsiraweb>https://tst-conoscenzaambientale.sistemapiemonte.it/decsiraweb/map.html</url.secure.decsiraweb>
 		<url.secure.VH.decsiraweb>https://tst-conoscenzaambientale.sistemapiemonte.it/</url.secure.VH.decsiraweb>
         <url.decsiraweb>http://tst-conoscenzaambientale.sistemapiemonte.it/decsiraweb/map.html</url.decsiraweb>
-        <component.name>decsiraweb</component.name>
-		<component.version>2.1.0</component.version>
+        <component.name>bifisic</component.name>
+		<component.version>1.0.0</component.version>
 	</properties>
 
 	<dependencies>
@@ -270,8 +270,8 @@
                 <url.secure.decsiraweb>https://conoscenzaambientale.sistemapiemonte.it/decsiraweb/map.html</url.secure.decsiraweb>
 				<url.secure.VH.decsiraweb>https://conoscenzaambientale.sistemapiemonte.it/</url.secure.VH.decsiraweb>
                 <url.decsiraweb>http://conoscenzaambientale.sistemapiemonte.it/decsiraweb/map.html</url.decsiraweb>
-                <component.name>decsiraweb</component.name>
-				<component.version>2.1.0</component.version>
+                <component.name>bifisic</component.name>
+				<component.version>1.0.0</component.version>
 			</properties>
 		</profile>
 		<profile>
