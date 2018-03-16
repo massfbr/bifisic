@@ -584,12 +584,31 @@
             "panelMsg": "todo"
         },
         "cartpanel": {
+            "list": "List",
+            "map": "Map",
             "title": "Cart Layers",
-            "goToMap": "Map"
+            "goToMap": "Map",
+            "tooltip_map": "Go to Map",
+            "tooltip_list": "Go to List"
         },
         "RightMenu": {
             "ConoscenzeAmbTitle": "Sistema Conoscenze Ambientali",
             "CreditsTitle": "Credits and Copyright"
+        },
+        "site_home": {
+            "search": "Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones",
+            "shirt_title": "Bifisic",
+            "long_title": "Best Information for Industrial Safety in Croatia"
+        },
+        "PlatformNumbers": {
+        "the_numbers": "The platform numbers",
+        "view_maps": "Maps displayable",
+        "details_search_available": "Details search available",
+        "tematic_view_available": "Tematic view available"
+        },
+        "dataset_container": {
+            "object": "OBJECTS",
+            "tematic_view": "TEMATICS VIEWS"
         }
     }
 }

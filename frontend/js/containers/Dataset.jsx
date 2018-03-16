@@ -11,7 +11,7 @@ const {createSelector} = require('reselect');
 const {Tabs, Tab} = require('react-bootstrap');
 const Spinner = require('react-spinkit');
 const {toggleNode, getThematicViewConfig, getMetadataObjects, selectSubCategory, setNodeInUse} = require('../actions/siracatalog');
-
+const LocaleUtils = require('../../MapStore2/web/client/utils/LocaleUtils');
 const {mapSelector} = require('../../MapStore2/web/client/selectors/map');
 const {tocSelector} = require('../selectors/sira');
 const datasetSelector = createSelector([mapSelector, tocSelector], (map, toc) => ({map, ...toc}));
@@ -134,7 +134,8 @@ const Dataset = React.createClass({
         setNodeInUse: React.PropTypes.func
     },
     contextTypes: {
-        router: React.PropTypes.object
+        router: React.PropTypes.object,
+        messages: React.PropTypes.object
     },
     getInitialState() {
             return {
@@ -218,6 +219,8 @@ const Dataset = React.createClass({
             showInfoBox={this.showInfoBox}
             />)) : (<div/>);
         const objEl = [searchSwitch, tocObjects];
+        const labelObj = LocaleUtils.getMessageById(this.context.messages, "dataset_container.object");
+        const labelView = LocaleUtils.getMessageById(this.context.messages, "dataset_container.tematic_view");
         return (
             <Tabs
                 className="dataset-tabs"
@@ -225,11 +228,11 @@ const Dataset = React.createClass({
                 onSelect={this.props.selectSubCategory}>
                 <Tab
                     eventKey={'objects'}
-                    title={`Oggetti (${objects ? objects.length : 0})`}>
+                    title={`${labelObj} (${objects ? objects.length : 0})`}>
                     {loading ? this.renderSpinner() : objEl}
                 </Tab>
                 <Tab eventKey={'views'}
-                    title={`Viste Tematiche (${views ? views.length : 0})`}>
+                    title={`${labelView} (${views ? views.length : 0})`}>
                     {loading ? this.renderSpinner() : (<div id="dataset-results-view"> {viste}</div>)}
                 </Tab>
         </Tabs>);
