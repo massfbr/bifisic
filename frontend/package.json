@@ -153,7 +153,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "compile": "npm run clean && mkdirp ./dist && webpack --config prod-webpack.config.js",
+    "compile": "npm run clean && mkdirp ./dist && webpack --config prod-webpack.config.js --max_old_space_size=8912",
     "start": "webpack-dev-server --progress --colors --port 8082 --hot --inline --content-base .",
     "test": "karma start ./karma.conf.single-run.js",
     "continuoustest": "karma start ./karma.conf.continuous-test.js",
