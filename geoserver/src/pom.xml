@@ -1668,7 +1668,7 @@
  </distributionManagement>
 
  <modules>
-  <module>web/app</module>
+  <module>web</module>
   <module>accessmanager</module>
 </modules>
 
