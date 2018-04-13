@@ -129,12 +129,29 @@
       <artifactId>gs-restconfig</artifactId>
       <version>${gs.version}</version>
     </dependency>
+	<!-- add new version -->
+	<dependency>
+      <groupId>org.geoserver</groupId>
+      <artifactId>gs-restconfig-wcs</artifactId>
+      <version>${gs.version}</version>
+    </dependency>
+	<dependency>
+      <groupId>org.geoserver</groupId>
+      <artifactId>gs-restconfig-wfs</artifactId>
+      <version>${gs.version}</version>
+    </dependency>
+	<dependency>
+      <groupId>org.geoserver</groupId>
+      <artifactId>gs-restconfig-wms</artifactId>
+      <version>${gs.version}</version>
+    </dependency>
+	<!-- add new version end -->
     <dependency>
       <groupId>org.geoserver.security</groupId>
       <artifactId>gs-sec-jdbc</artifactId>
       <version>${gs.version}</version>
     </dependency>
-    <dependency>
+	<dependency>
       <groupId>org.geoserver.security</groupId>
       <artifactId>gs-sec-ldap</artifactId>
       <version>${gs.version}</version>
@@ -163,11 +180,17 @@
       <groupId>org.geotools</groupId>
       <artifactId>gt-image</artifactId>
     </dependency>
-    <dependency>
+	<!-- add new version -->
+	<dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-main</artifactId>
+    </dependency>
+	<!-- add new version END -->
+    <!--<dependency>
       <groupId>org.geotools</groupId>
       <artifactId>gt-main</artifactId>
       <version>14-SIRA-SNAPSHOT</version>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.mortbay.jetty</groupId>
       <artifactId>jetty</artifactId>
@@ -372,7 +395,6 @@
 	</plugin>
 	
 	
-	<!-- configurazione standard CSI per la UI -->
 
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
@@ -601,11 +623,19 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <dependencies>
-        <dependency>
+	   <!--
+	   <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-app-schema</artifactId>
             <version>14-SIRA-SNAPSHOT</version>
+        </dependency> -->
+		<!-- add new version -->
+		<dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-app-schema</artifactId>
+            <version>${gt.version}</version>
         </dependency>
+		<!-- add new version -->
         <dependency>
             <groupId>commons-digester</groupId>
             <artifactId>commons-digester</artifactId>
