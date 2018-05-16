@@ -271,6 +271,7 @@
 				<module>frontend/web</module>
                 <module>backend</module>
                 <module>security</module>
+                <module>frontend/cide-services</module> 
                 <module>frontend/auth-services</module>    
                 <module>frontend/iride-services</module>    
                 <module>frontend/metadata-services</module>     

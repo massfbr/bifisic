@@ -21,6 +21,9 @@
     <bean name="/httpbasicauth/*" class="it.csi.frontend.bifisic.frontend.auth.controller.HttpBasicAuthServiceController" >
       <property name="httpBasicServiceProperties" ref="httpBasicServiceProperties" />
     </bean>
+    
+    <bean name="/cideservices/*" class="it.csi.frontend.bifisic.frontend.cideservices.controller.CideServicesController" >
+    </bean>
 
     <context:component-scan base-package="it.geosolutions.csi.sira" />
 
