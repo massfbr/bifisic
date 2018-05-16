@@ -1,0 +1,24 @@
+<project name="auth-services" default="deploy" basedir=".">
+  <description>
+    auth-services utility file
+  </description>
+  <!-- set global properties for this build -->
+  <property name="webapps" location="/media/fabri/seagate2/apps/csi/apache-tomcat-7.0.86/webapps"/>
+  <property name="build" location="target/classes"/>
+
+  <target name="deploy"
+        description="deploy">
+    <delete file="${webapps}/bifisic/WEB-INF/lib/auth-services-1.0-SNAPSHOT.jar"/>
+  	<unjar src="target/auth-services-1.0-SNAPSHOT.jar" 
+  		dest="${webapps}/bifisic/WEB-INF/lib/auth-services-1.0-SNAPSHOT"/>
+    <delete dir="${webapps}/bifisic/WEB-INF/lib/auth-services-1.0-SNAPSHOT/it"/>
+  	<copy todir="${webapps}/bifisic/WEB-INF/lib/auth-services-1.0-SNAPSHOT" overwrite="true">
+  	  <fileset dir="${build}" includes="it/**" />
+  	</copy>
+  	
+  	<jar basedir="${webapps}/bifisic/WEB-INF/lib/auth-services-1.0-SNAPSHOT" 
+  		destfile="${webapps}/bifisic/WEB-INF/lib/auth-services-1.0-SNAPSHOT.jar"/>
+    <delete dir="${webapps}/bifisic/WEB-INF/lib/auth-services-1.0-SNAPSHOT"/>
+  	<touch file="${webapps}/bifisic/WEB-INF/web.xml" />
+  </target>
+</project>

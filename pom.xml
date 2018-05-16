@@ -168,6 +168,11 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.databind-version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-xml</artifactId>
+                <version>${jackson.databind-version}</version>
+            </dependency>
             <!-- =========================================================== -->
             <!-- TESTING -->
             <!-- =========================================================== -->
@@ -266,6 +271,7 @@
 				<module>frontend/web</module>
                 <module>backend</module>
                 <module>security</module>
+                <module>frontend/auth-services</module>    
                 <module>frontend/iride-services</module>    
                 <module>frontend/metadata-services</module>     
                 <module>frontend/ogc-services</module> 

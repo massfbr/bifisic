@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="serverURL">${auth.service.base.url}</entry>
+  <entry key="rolesURL">http://localhost:8082/geoserver/rest/resource/security/role/default/roles.xml</entry>
+  <entry key="geoserverAdminUser">admin</entry>
+  <entry key="geoserverAdminPassword">gs_cnp1604</entry>
+  <entry key="layerURL">http://localhost:8082/geoserver/tiger/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger:poly_landmarks&amp;styles=&amp;bbox=-74.047185,40.679648,-73.90782,40.882078&amp;width=528&amp;height=768&amp;srs=EPSG:4326&amp;format=image/png</entry>
+  
+</properties>
