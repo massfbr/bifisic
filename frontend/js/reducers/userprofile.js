@@ -10,11 +10,13 @@ const {SHOW_LOGIN_PANEL, HIDE_LOGIN_PANEL, SET_PROFILE, SET_USER_IDENTITY, SET_U
 
 function userprofile(state = {
     profile: null,
-    authParams: {}
+    user: {},
+    authParams: {},
+    error: null
 }, action) {
     switch (action.type) {
         case SHOW_LOGIN_PANEL: {
-            return assign({}, state, {showLoginPanel: action.showLoginPanel});
+            return assign({}, state, {showLoginPanel: action.showLoginPanel, error: null});
         }
         case HIDE_LOGIN_PANEL: {
             return assign({}, state, {showLoginPanel: action.showLoginPanel});
@@ -31,11 +33,11 @@ function userprofile(state = {
                     roles: action.roles,
                     user: action.user,
                     profile: state.profile ? state.profile.concat(action.user.profile) : action.user.profile,
-                    error: ''
+                    error: null
                 });
         }
         case SET_USER_IDENTITY_ERROR: {
-            return assign({}, state, {roles: '', user: '', error: action.error});
+            return assign({}, state, {roles: '', user: {}, error: action.error});
         }
         default:
             return state;

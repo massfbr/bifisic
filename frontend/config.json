@@ -14,25 +14,44 @@
     ],
     "layers":[
       {
+        "type": "ol",
+        "title": "None",
+        "name": "None / Nijedna pozadina",
+        "source": "ol",
+        "group": "background",
+        "visibility": false
+      },
+      {
           "type": "wms",
-          "url": "http://geoportal.dgu.hr/services/hok/ows",
-          "name": "HOK5",
-          "title": "HOK5",
+          "url": "http://geoportal.dgu.hr/wms?",
+          "name": "TK25",
+          "title": "Topografska karta 1:25000 / Topographic map 1: 25000",
+          "group": "background",
+          "visibility": false,
+          "format": "image/png",
+          "tiled": true,
+          "tileSize": 512
+        },
+		    {
+          "type": "wms",
+          "url": "http://geoportal.dgu.hr/wms?",
+          "name": "HOK",
+          "title": "Hrvatska osnovna karta / Croatian base map",
           "group": "background",
           "visibility": false,
           "format": "image/png",
           "tiled": false,
           "tileSize": 512
         },
-      {
+		    {
           "type": "wms",
-          "url": "http://geoportal.dgu.hr/services/hok/ows",
-          "name": "listovi",
-          "title": "listovi",
+          "url": "http://geoportal.dgu.hr/wms?",
+          "name": "DOF",
+          "title": "Digitalni ortofoto / Digital orthophoto",
           "group": "background",
           "visibility": true,
           "format": "image/png",
-          "tiled": true,
+          "tiled": false,
           "tileSize": 512
         }
       ]
