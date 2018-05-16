@@ -7,8 +7,21 @@
  */
 
 const React = require('react');
-const {Modal, Button} = require('react-bootstrap');
-const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
+const {connect} = require('react-redux');
+const {Modal} = require('react-bootstrap');
+const {login, setUser} = require('../actions/userprofile');
+// const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
+// const M2LoginPanel = require('../../MapStore2/web/client/components/security/forms/LoginForm');
+
+const M2LoginPanel = connect((state) => ({
+    showSubmitButton: true,
+    user: state.userprofile.user,
+    loginError: state.userprofile.error
+}), {
+    onSubmit: login,
+    onLoginSuccess: setUser
+})(require('../../MapStore2/web/client/components/security/forms/LoginForm'));
+
 const LoginPanel = React.createClass({
 
     propTypes: {
@@ -25,20 +38,22 @@ const LoginPanel = React.createClass({
         };
     },
 
+    renderLoginForm() {
+        return this.props.showLoginPanel ? (<M2LoginPanel />) : '';
+    },
+
     render() {
         return (
             <div className="infobox-container" style={{display: this.props.showLoginPanel}}>
-                <Modal
+            <Modal
                     show= {this.props.showLoginPanel}>
                     <Modal.Header closeButton onClick={this.props.onClosePanel}>
                         <Modal.Title>Login</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <h4><I18N.Message msgId={"loginpanel.panelMsg"}/></h4>
+                        {this.renderLoginForm()}
                     </Modal.Body>
-                    <Modal.Footer>
-                        <Button onClick={this.props.onConfirm}><I18N.Message msgId={"loginpanel.okButton"}/></Button>
-                    </Modal.Footer>
+                    <Modal.Footer />
                 </Modal>
             </div>
         );

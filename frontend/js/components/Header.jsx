@@ -131,7 +131,6 @@ const LoginPanel = connect((state) => ({
     }
 })(require('./LoginPanel'));
 
-
 const Header = React.createClass({
     propTypes: {
         showCart: React.PropTypes.bool,
