@@ -8,7 +8,7 @@
 const React = require('react');
 const {connect} = require('react-redux');
 const {toggleNode, getThematicViewConfig, selectSubCategory, getMetadataObjects, toggleCategories, setNodeInUse} = require('../actions/siracatalog');
-
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 const assign = require('object-assign');
 const {Tabs, Tab} = require("react-bootstrap");
 const {toggleSiraControl} = require('../actions/controls');
@@ -138,7 +138,7 @@ const LayerTree = React.createClass({
             />
              <div className="catalog-categories-switch-container">
              <div className="catalog-categories-switch" onClick={() => this.props.toggleCategories(!showcategories)}>
-                <span>{showcategories ? 'Nascondi Categorie' : 'Mostra Categorie'} </span>
+                <span>{showcategories ? <I18N.Message msgId={"dataset.hideCategories"}/> : <I18N.Message msgId={"dataset.showCategories"}/>} </span>
               </div>
              </div>
             <Tabs className="catalog-tabs" activeKey={this.props.subcat} onSelect={this.props.selectSubCategory}>
