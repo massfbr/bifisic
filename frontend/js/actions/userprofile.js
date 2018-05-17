@@ -64,16 +64,15 @@ function setUser(user) {
 }
 
 function login(username, password) {
-    let serviceUrl = 'services/httpbasicauth';
+    let serviceUrl = 'services/httpbasicauth/auth';
     serviceUrl += "?" + "user" + "=" + username + "&" + "password" + "=" + password;
     return (dispatch) => {
         return axios.get(serviceUrl).then((response) => {
             // response example
             // response.data = {"roles": [{"code": "PA_GEN_DECSIRA", "domain": "REG_PMN", "mnemonic": "PA_GEN_DECSIRA@REG_PMN"}], "userIdentity": {"codFiscale": "AAAAAA00B77B000F", "nome": "CSI PIEMONTE", "cognome": "DEMO 20", "idProvider": "SISTEMAPIEMONTE"}};
             if (typeof response.data === 'object') {
-                if (response.data.userIdentity && response.data.roles && response.data.roles.length > 0) {
-                    // there is a logged user, geoserverUrl = secureGeoserverUrl
-                    ConfigUtils.setConfigProp('geoserverUrl', ConfigUtils.getConfigProp('secureGeoserverUrl'));
+                if (response.data.name && response.data.roles && response.data.roles.length > 0) {
+                    // there is a logged user
                     response.data.profile = [];
                     Array.from(response.data.roles).forEach(function(val) {
                         if (val && val.mnemonic) {
@@ -82,73 +81,33 @@ function login(username, password) {
                     });
                 }
                 let user = {};
-                if (response.data.userIdentity) {
+                if (response.data.name) {
                     user = {
-                        name: response.data.userIdentity.nome + " " + response.data.userIdentity.cognome,
-                        surname: response.data.userIdentity.cognome,
-                        cf: response.data.userIdentity.nome,
-                        idProvider: response.data.userIdentity.idProvider,
+                        name: response.data.name,
+                        surname: '',
+                        cf: '',
+                        idProvider: 'BIFISIC_AUTH_PROVIDER',
                         profile: response.data.profile
                    };
                     response.data.user = user;
                 }
                 dispatch(userIdentityLoaded(response.data));
+                dispatch(hideLoginPanel());
             } else {
                 try {
                     dispatch(userIdentityLoaded(JSON.parse(response.data)));
                 } catch(e) {
                     let error = {};
-                    error.message = 'Error in getRolesForDigitalIdentity: ' + e.message;
+                    error.message = 'Error in login: ' + e.message;
                     error.status = 401;
                     dispatch(userIdentityError(error));
                 }
             }
         }).catch((e) => {
             let error = {};
-            error.message = 'Error in getRolesForDigitalIdentity: ' + e.message;
+            error.message = 'Error in login: ' + e.message;
             error.status = 401;
             dispatch(userIdentityError(error));
-        });
-    };
-}
-
-function loadUserIdentity(serviceUrl = 'services/iride/getRolesForDigitalIdentity') {
-    return (dispatch) => {
-        return axios.get(serviceUrl).then((response) => {
-            // response example
-            // response.data = {"roles": [{"code": "PA_GEN_DECSIRA", "domain": "REG_PMN", "mnemonic": "PA_GEN_DECSIRA@REG_PMN"}], "userIdentity": {"codFiscale": "AAAAAA00B77B000F", "nome": "CSI PIEMONTE", "cognome": "DEMO 20", "idProvider": "SISTEMAPIEMONTE"}};
-            if (typeof response.data === 'object') {
-                if (response.data.userIdentity && response.data.roles && response.data.roles.length > 0) {
-                    // there is a logged user, geoserverUrl = secureGeoserverUrl
-                    ConfigUtils.setConfigProp('geoserverUrl', ConfigUtils.getConfigProp('secureGeoserverUrl'));
-                    response.data.profile = [];
-                    Array.from(response.data.roles).forEach(function(val) {
-                        if (val && val.mnemonic) {
-                            response.data.profile.push(val.mnemonic);
-                        }
-                    });
-                }
-                let user = {};
-                if (response.data.userIdentity) {
-                    user = {
-                        name: response.data.userIdentity.nome + " " + response.data.userIdentity.cognome,
-                        surname: response.data.userIdentity.cognome,
-                        cf: response.data.userIdentity.nome,
-                        idProvider: response.data.userIdentity.idProvider,
-                        profile: response.data.profile
-                   };
-                    response.data.user = user;
-                }
-                dispatch(userIdentityLoaded(response.data));
-            } else {
-                try {
-                    dispatch(userIdentityLoaded(JSON.parse(response.data)));
-                } catch(e) {
-                    dispatch(userIdentityError('Error in getRolesForDigitalIdentity: ' + e.message));
-                }
-            }
-        }).catch((e) => {
-            dispatch(userIdentityError(e.message));
         });
     };
 }
@@ -162,7 +121,6 @@ module.exports = {
     SET_USER,
     showLoginPanel,
     hideLoginPanel,
-    loadUserIdentity,
     userIdentityLoaded,
     userIdentityError,
     setProfile,
