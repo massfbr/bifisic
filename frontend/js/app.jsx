@@ -58,7 +58,6 @@ const startApp = () => {
     const { configUrl, legacy } = ConfigUtils.getUserConfiguration('config', 'json');
 
     const initialActions = [
-         () => loadUserIdentity(),
          () => loadTiles(),
          () => loadPlatformNumbers(),
          () => loadMapConfig(configUrl, legacy),

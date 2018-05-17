@@ -81,6 +81,11 @@ module.exports = {
             host: "localhost",
             target: "http://192.168.1.226/"
         }, {
+            path: new RegExp("/services/httpbasicauth/(.*)"),
+            rewrite: rewriteUrl("/bifisic/services/httpbasicauth/$1"),
+            host: "localhost",
+            target: "http://192.168.1.226/"
+        }, {
             path: new RegExp("/bifisic/services/queryformconfig(.*)"),
             host: "localhost",
             target: "http://192.168.1.226/"
