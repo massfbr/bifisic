@@ -49,7 +49,7 @@ const RightMenu = connect((state) => ({
           dispatch(showHideRightMenu());
       },
       clickOnHelp: () => {
-          let helpUrl = ConfigUtils.getConfigProp('decsiraHelpUrl');
+          let helpUrl = ConfigUtils.getConfigProp('helpUrl');
           window.open(helpUrl, '_blank');
       },
       clickOnSistemaCA: () => {

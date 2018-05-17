@@ -7,6 +7,7 @@
  */
 
 const React = require('react');
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 
 const Footer = React.createClass({
 
@@ -29,10 +30,10 @@ const Footer = React.createClass({
                                 <a href=""><img alt="conoscenze ambientali" src="assets/application/conoscenze_ambientali/css/images/img_void.png" /></a>
                             </div>
                             <div className="col-md-4 text-center">
-                                <a href="http://www.sistemapiemonte.it/cms/privati/cookies-policy">Cookie policy</a>
+                                <a href="#"><I18N.Message msgId={"footer.cookie_policy"}/></a>
                             </div>
                             <div className="col-md-4 footer-dx">
-                                <a href="http://www.sistemapiemonte.it"><img alt="sistema piemonte" src="assets/application/conoscenze_ambientali/css/images/img_void.png" /></a>
+                                <a href="#"><img alt="HAOP" src="assets/application/conoscenze_ambientali/css/images/img_void.png" /></a>
                             </div>
                         </div>
                     </div>

@@ -597,7 +597,8 @@
         },
         "RightMenu": {
             "ConoscenzeAmbTitle": "Sistema Conoscenze Ambientali",
-            "CreditsTitle": "Credits e Copyright"
+            "CreditsTitle": "Credits e Copyright",
+            "help": "Help"
         },
         "site_home": {
             "search": "Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones",
@@ -613,6 +614,9 @@
         "dataset_container": {
             "object": "OGGETTI",
             "tematic_view": "VISTE TEMATICHE"
+        },
+        "footer": {
+            "cookie_policy": "Cookie policy"
         }
     }
 }

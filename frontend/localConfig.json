@@ -4,7 +4,7 @@
     "secureGeoserverUrl": "${url.secure.geoserver}/geoserver",
   	"secureDecsirawebUrl": "${url.secure.decsiraweb}",
     "decsirawebUrl": "${url.decsiraweb}",
-    "decsiraHelpUrl": "http://www.sistemapiemonte.it/eXoRisorse/dwd/servizi/SistemaConoscenzeAmbientali/SistemaConoscenzeAmbientali_Manuale_utente.pdf",
+    "helpUrl": "assets/application/help.pdf",
     "logOutUrl": "",
     "logOutService": "${url.secure.VH.decsiraweb}/territoriosliv1sisp/Shibboleth.sso/Logout",
     "useAuthenticationRules": true,

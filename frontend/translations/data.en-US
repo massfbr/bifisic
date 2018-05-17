@@ -573,7 +573,7 @@
             "urlWMS": "Services WMS",
             "urlWFS": "Services WFS",
             "urlMetadato": "Metadata",
-            "legendPanelTitle": "Legende",
+            "legendPanelTitle": "Legend",
             "errorLoadMetadata": "There was an error loading records from the metadata service.",
             "panelTitle": "Infobox",
             "link_to_metadata": "Open Metadata",
@@ -592,23 +592,27 @@
             "tooltip_list": "Go to List"
         },
         "RightMenu": {
-            "ConoscenzeAmbTitle": "Sistema Conoscenze Ambientali",
-            "CreditsTitle": "Credits and Copyright"
+            "ConoscenzeAmbTitle": "Environmental Knowledge System",
+            "CreditsTitle": "Credits and Copyright",
+            "help": "Help"
         },
         "site_home": {
             "search": "Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones",
-            "shirt_title": "Bifisic",
-            "long_title": "Best Information for Industrial Safety in Croatia"
+            "shirt_title": "BIFISIC",
+            "long_title": "Better Information for Industrial Safety in Croatia"
         },
         "PlatformNumbers": {
         "the_numbers": "The platform numbers",
         "view_maps": "Maps displayable",
         "details_search_available": "Details search available",
-        "tematic_view_available": "Tematic view available"
+        "tematic_view_available": "Thematic view available"
         },
         "dataset_container": {
             "object": "OBJECTS",
-            "tematic_view": "TEMATICS VIEWS"
+            "tematic_view": "THEMATICS VIEWS"
+        },
+        "footer": {
+            "cookie_policy": "Cookie policy"
         }
     }
 }
