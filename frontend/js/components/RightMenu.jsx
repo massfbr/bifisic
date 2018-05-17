@@ -7,6 +7,7 @@
  */
 
 const React = require('react');
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 
 const RightMenu = React.createClass({
     propTypes: {
@@ -41,9 +42,9 @@ const RightMenu = React.createClass({
         (
             <div className="navbar-on" id="offcanvas-sidebar">
                 <ul id="menu" className="nav navbar-nav navbar-right">
-                    <li data-menuanchor="home" onClick={this.props.clickOnSistemaCA} >Sistema Conoscenze Ambientali</li>
-                    <li data-menuanchor="piemontepay" onClick={this.props.clickOnCredits}>Credits e Copyright</li>
-                    <li data-menuanchor="pagamenti" onClick={this.props.clickOnHelp}>Help</li>
+                    <li data-menuanchor="home" onClick={this.props.clickOnSistemaCA} ><I18N.Message msgId={"RightMenu.ConoscenzeAmbTitle"}/></li>
+                    <li data-menuanchor="piemontepay" onClick={this.props.clickOnCredits}><I18N.Message msgId={"RightMenu.CreditsTitle"}/></li>
+                    <li data-menuanchor="pagamenti" onClick={this.props.clickOnHelp}><I18N.Message msgId={"RightMenu.help"}/></li>
                 </ul>
             </div>
         ) : '';
