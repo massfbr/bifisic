@@ -20,6 +20,16 @@
         "backgroundSwither": {
             "tooltip": "Select Background"
         },
+        "toc": {
+            "toggleLayerVisibility": "Activate or deactivate the visibility of the level",
+            "displayLegendAndTools": "View legend and additional tools",
+            "zoomToLayerExtent": "Zoom to the extension of the level",
+            "editLayerProperties": "Edit properties from the level",
+            "searchFeatures": "Do a search on this level ...",
+            "removeLayer": "Remove level",
+            "loadingerror": "The level has not been loaded correctly",
+            "tooltip": "Map Contents"
+        },
         "bandselector": {
             "algorithm": {
                 "ClipToMinimumMaximum": "Clip",
@@ -189,6 +199,9 @@
             "text": "An error has occurred during this <b>GetFeatureInfo</b> request",
             "title": "Ooops! Something's wrong"
         },
+        "siraSearchBar": {
+            "placeholder": "Search objects"
+        },
         "getFeatureInfoTitle": "Feature Info",
         "gohome": "Go home",
         "help": "Help",
@@ -220,6 +233,10 @@
             "barLabel": "Map history",
             "redoBtnTooltip": "Go  forward",
             "undoBtnTooltip": "Go back"
+        },
+        "dataset": {
+            "showCategories": "Show Categories",
+            "hideCategories": "Hide Categories"
         },
         "home": {
             "Applications": "Applications",

@@ -15,7 +15,7 @@ const LocaleUtils = require('../../MapStore2/web/client/utils/LocaleUtils');
 const {mapSelector} = require('../../MapStore2/web/client/selectors/map');
 const {tocSelector} = require('../selectors/sira');
 const datasetSelector = createSelector([mapSelector, tocSelector], (map, toc) => ({map, ...toc}));
-
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 const {setProfile} = require('../actions/userprofile');
 const {toggleSiraControl} = require('../actions/controls');
 const {
@@ -189,7 +189,7 @@ const Dataset = React.createClass({
         const searchSwitch = this.props.nodes.length > 0 ? (
             <div key="categoriesSearch" className="ricerca-home dataset-categories-switch-container">
                 <div className="dataset-categories-switch" onClick={() => this.setState({showCategories: !showCategories})}>
-                    <span>{showCategories ? 'Nascondi Categorie' : 'Mostra Categorie'} </span>
+                    <span>{showCategories ? <I18N.Message msgId={"dataset.hideCategories"}/> : <I18N.Message msgId={"dataset.showCategories"}/>} </span>
                 </div>
             </div>) : (<noscript key="categoriesSearch"/>);
         const tocObjects = (

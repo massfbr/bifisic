@@ -193,6 +193,9 @@
             "text": "Si è verificato un errore nel fare questa richiesta <b>GetFeatureInfo</b>",
             "title": "Ooops! Qualcosa non va"
         },
+        "siraSearchBar": {
+            "placeholder": "Cerca oggetti"
+        },
         "getFeatureInfoTitle": "Informazioni Sulle Feature",
         "gohome": "Torna alla home",
         "help": "Aiuto",
@@ -224,6 +227,10 @@
             "barLabel": "Storia Mappa",
             "redoBtnTooltip": "Vai avanti",
             "undoBtnTooltip": "Torna indietro"
+        },
+        "dataset": {
+            "showCategories": "Mostra Categorie",
+            "hideCategories": "Nascondi Categorie"
         },
         "home": {
             "Applications": "Applicazioni",
