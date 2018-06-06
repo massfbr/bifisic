@@ -11,7 +11,7 @@
     "authenticationRules": [
         {
             "urlPattern": ".*geoserver.*",
-            "method": "authkey"
+            "method": "basic"
         }
     ],
     "plugins": {
