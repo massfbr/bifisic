@@ -6,8 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 const assign = require("object-assign");
-const {SET_PROFILE} = require('../actions/userprofile');
-
+const {SET_PROFILE, SET_HEADER} = require('../actions/userprofile');
+// e' qui forse si usa questo al posto di security
+// di Ms2....
 function security(state = {user: null, errorCause: null}, action) {
     switch (action.type) {
         case SET_PROFILE: {
@@ -17,6 +18,14 @@ function security(state = {user: null, errorCause: null}, action) {
                     // token: action.authParams && action.authParams.authkey ? action.authParams.authkey : ''
                     user: action.authParams ? action.authParams.userName : '',
                     token: action.authParams ? action.authParams.authkey : ''
+                });
+        }
+        case SET_HEADER: {
+            return assign({}, state,
+                {
+                token: '',
+                authHeader: action.authHeader,
+                loginError: null
                 });
         }
         default:

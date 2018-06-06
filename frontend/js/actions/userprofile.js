@@ -7,19 +7,26 @@
  */
 
 const axios = require('../../MapStore2/web/client/libs/ajax');
-const ConfigUtils = require('../../MapStore2/web/client/utils/ConfigUtils');
-
+// const ConfigUtils = require('../../MapStore2/web/client/utils/ConfigUtils');
 const SET_PROFILE = 'SET_PROFILE';
 const SET_USER_IDENTITY_ERROR = 'SET_USER_IDENTITY_ERROR';
 const SET_USER_IDENTITY = 'LOADED_USER_IDENTITY';
 const SHOW_LOGIN_PANEL = 'SHOW_LOGIN_PANEL';
 const HIDE_LOGIN_PANEL = 'HIDE_LOGIN_PANEL';
 const SET_USER = 'SET_USER';
+const SET_HEADER = 'SET_HEADER';
 
 function showLoginPanel() {
     return {
         type: SHOW_LOGIN_PANEL,
         showLoginPanel: true
+    };
+}
+
+function setHeader(username, password) {
+    return {
+        type: SET_HEADER,
+        authHeader: 'Basic ' + btoa(username + ':' + password)
     };
 }
 
@@ -86,13 +93,14 @@ function login(username, password) {
                         name: response.data.name,
                         surname: '',
                         cf: '',
-                        idProvider: 'BIFISIC_AUTH_PROVIDER',
+                        authProvider: 'BIFISIC_AUTH_PROVIDER',
                         profile: response.data.profile
                    };
                     response.data.user = user;
                 }
                 dispatch(userIdentityLoaded(response.data));
                 dispatch(hideLoginPanel());
+                dispatch(setHeader(username, password));
             } else {
                 try {
                     dispatch(userIdentityLoaded(JSON.parse(response.data)));
@@ -119,11 +127,13 @@ module.exports = {
     SHOW_LOGIN_PANEL,
     HIDE_LOGIN_PANEL,
     SET_USER,
+    SET_HEADER,
     showLoginPanel,
     hideLoginPanel,
     userIdentityLoaded,
     userIdentityError,
     setProfile,
     login,
-    setUser
+    setUser,
+    setHeader
 };

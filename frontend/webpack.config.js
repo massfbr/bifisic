@@ -32,6 +32,7 @@ module.exports = {
         new NormalModuleReplacementPlugin(/openlayers$/, path.join(__dirname, "MapStore2", "web", "client", "libs", "openlayers")),
         new NormalModuleReplacementPlugin(/proj4$/, path.join(__dirname, "MapStore2", "web", "client", "libs", "proj4")),
         new NormalModuleReplacementPlugin(/ConfigUtils/, path.join(__dirname, "js", "utils", "ConfigUtils.js")),
+        new NormalModuleReplacementPlugin(/WMSLayer/, path.join(__dirname, "js", "Ms2Override", "WMSLayer.js")),
         new NormalModuleReplacementPlugin(/map\/openlayers\/Feature/, path.join(__dirname, "js", "Ms2Override", "Feature.jsx")),
         new NormalModuleReplacementPlugin(/VectorLayer/, path.join(__dirname, "js", "Ms2Override", "VectorLayer.jsx")),
         new NoErrorsPlugin()
@@ -69,12 +70,12 @@ module.exports = {
             path: new RegExp("/proxy(.*)"),
             rewrite: rewriteUrl("/bifisic/proxy$1"),
             host: "localhost",
-            target: "http://192.168.1.226/"
+            target: "http://pproo.azo.hr/"
         }, {
             path: new RegExp("/services/metadata/(.*)"),
             rewrite: rewriteUrl("/bifisic/services/metadata/$1"),
             host: "localhost",
-            target: "http://192.168.1.226/"
+            target: "http://pproo.azo.hr/"
         }, {
             path: new RegExp("/services/iride/(.*)"),
             rewrite: rewriteUrl("/bifisic/services/iride/$1"),
@@ -84,15 +85,15 @@ module.exports = {
             path: new RegExp("/services/httpbasicauth/(.*)"),
             rewrite: rewriteUrl("/bifisic/services/httpbasicauth/$1"),
             host: "localhost",
-            target: "http://192.168.1.226/"
+            target: "http://pproo.azo.hr/"
         }, {
             path: new RegExp("/bifisic/services/queryformconfig(.*)"),
             host: "localhost",
-            target: "http://192.168.1.226/"
+            target: "http://pproo.azo.hr/"
         }, {
             path: new RegExp("/geoserver/ows(.*)"),
             host: "localhost",
-            target: "http://192.168.1.226/"
+            target: "http://pproo.azo.hr/"
         }, {
             path: new RegExp("/territoriosliv1sisp/(.*)"),
             host: "localhost",
