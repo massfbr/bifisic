@@ -15,6 +15,7 @@ const ConfigUtils = require('../../MapStore2/web/client/utils/ConfigUtils');
 const {isArray} = require('lodash');
 const SecurityUtils = require('../../MapStore2/web/client/utils/SecurityUtils');
 const mapUtils = require('../../MapStore2/web/client/utils/MapUtils');
+const securityUtils = require('../../MapStore2/web/client/utils/SecurityUtils');
 
 function wmsToOpenlayersOptions(options) {
     // NOTE: can we use opacity to manage visibility?
@@ -54,8 +55,12 @@ function customTileLoader(imageTile, src) {
         let xmlhttp = new XMLHttpRequest();
         xmlhttp.open('GET', newSrc);
         // TODO to take Authorization dinamically from state
-        xmlhttp.setRequestHeader('Authorization', 'Basic YmlmaXNpY3VzZXI6Y25wMTYwNF9ncw==');
-        xmlhttp.onload = function() {
+	var requestHeader = securityUtils.getBasicAuthHeader();
+        xmlhttp.setRequestHeader('Authorization', requestHeader);
+	//xmlhttp.setRequestHeader('Authorization', 'Basic YmlmaXNpY3VzZXI6Y25wMTYwNF9ncw==');
+	/* FM 12/06/2018         
+	https://github.com/openlayers/openlayers/issues/5401
+	xmlhttp.onload = function() {
             // const urlCreator = window.URL || window.webkitURL;
             let data = this.responseText;
             data = btoa(encodeURIComponent(data));
@@ -65,6 +70,17 @@ function customTileLoader(imageTile, src) {
             imageTile.getImage().src = data;
             // imageTile.getImage().src = urlCreator.createObjectURL(data);
         };
+	*/
+	xmlhttp.responseType = "arraybuffer";
+
+	xmlhttp.onload = function () {
+	    var arrayBufferView = new Uint8Array(this.response);
+	    var blob = new Blob([arrayBufferView], { type: 'image/png' });
+	    var urlCreator = window.URL || window.webkitURL;
+	    var imageUrl = urlCreator.createObjectURL(blob);
+	    imageTile.getImage().src = imageUrl;
+	};
+
         xmlhttp.send();
     }else {
         imageTile.getImage().src = src;

@@ -6,7 +6,7 @@
 		<artifactId>sira-root</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>sira-web</artifactId>
+	<artifactId>bifisic</artifactId>
 	<packaging>war</packaging>
 	<name>CSI SIRA - WAR</name>
 	<url>http://www.geo-solutions.it</url>
@@ -20,6 +20,7 @@
         <url.decsiraweb>http://tst-conoscenzaambientale.sistemapiemonte.it/decsiraweb/map.html</url.decsiraweb>
         <component.name>bifisic</component.name>
 		<component.version>1.0.0</component.version>
+		<tomcat.version>7.0.47</tomcat.version>
 	</properties>
 
 	<dependencies>
@@ -31,11 +32,13 @@
 			<artifactId>sira-backend</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<!-- 
 		<dependency>
 		    <groupId>it.geosolutions.csi.sira</groupId>
             <artifactId>cide-services</artifactId>
             <version>${project.version}</version>
         </dependency>
+         -->
 		<dependency>
 			<groupId>it.geosolutions.csi.sira</groupId>
 			<artifactId>metadata-services</artifactId>
@@ -118,7 +121,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>decsiraweb</finalName>
+		<finalName>bifisic</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -130,7 +133,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/decsiraweb</outputDirectory>
+							<outputDirectory>${basedir}/target/bifisic</outputDirectory>
 							<encoding>UTF-8</encoding>
 							<resources>
 								<resource>
@@ -156,7 +159,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/decsiraweb/dist</outputDirectory>
+							<outputDirectory>${basedir}/target/bifisic/dist</outputDirectory>
 							<encoding>UTF-8</encoding>
 							<resources>
 								<resource>
@@ -172,7 +175,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/decsiraweb/assets</outputDirectory>
+							<outputDirectory>${basedir}/target/bifisic/assets</outputDirectory>
 							<encoding>UTF-8</encoding>
 							<resources>
 								<resource>
@@ -188,7 +191,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/decsiraweb</outputDirectory>
+							<outputDirectory>${basedir}/target/bifisic</outputDirectory>
 							<encoding>UTF-8</encoding>
 							<resources>
 								<resource>
@@ -265,13 +268,13 @@
 				<version>9.3.14.v20161028</version>
 				<configuration>
 					<webApp>
-						<contextPath>/decsiraweb</contextPath>
+						<contextPath>/bifisic</contextPath>
 					</webApp>
 					<httpConnector>
 						<port>9191</port>
 						<idleTimeout>60000</idleTimeout>
 					</httpConnector>
-					<war>${project.basedir}/target/decsiraweb.war</war>
+					<war>${project.basedir}/target/bifisic.war</war>
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -286,6 +289,32 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+			
+			<!-- Maven Tomcat7 plugin start -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<path>/${project.build.finalName}</path>
+					<port>8080</port>
+					<contextReloadable>true</contextReloadable>
+					<contextFile>${project.basedir}/src/test/resources/context.xml</contextFile>  
+					<systemProperties>
+						<JAVA_OPTS>-Xms256m -Xmx1024m -XX:+DisableExplicitGC -Dcom.sun.management.jmxremote -XX:PermSize=256m -XX:MaxPermSize=512m</JAVA_OPTS>
+						<MAVEN_OPTS>-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000</MAVEN_OPTS>
+					</systemProperties>
+				</configuration>
+			    <dependencies>
+					<dependency>
+	       				<groupId>postgresql</groupId>
+	       				<artifactId>postgresql</artifactId>
+	       				<version>8.4-701.jdbc4</version>
+      				</dependency>
+    			</dependencies>
+			 </plugin>
+			<!-- Maven Tomcat7 plugin end -->
+
 		</plugins>
 	</build>
 
