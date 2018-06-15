@@ -34,9 +34,9 @@ var DefaultNode = React.createClass({
         };
     },
     renderTools() {
-        let tooltipSira = <Tooltip id="tpm-search-details">Ricerca di dettaglio</Tooltip>;
-        let tooltipMap = <Tooltip id="tpm-add-map">Carica in Mappa</Tooltip>;
-        let tooltipList = <Tooltip id="tpm-list-obj">Elenco di Oggetti</Tooltip>;
+        let tooltipSira = <Tooltip id="tpm-search-details"><I18N.Message msgId={"DefaultNode.tooltipSira"}/></Tooltip>;
+        let tooltipMap = <Tooltip id="tpm-add-map"><I18N.Message msgId={"DefaultNode.tooltipMap"}/></Tooltip>;
+        let tooltipList = <Tooltip id="tpm-list-obj"><I18N.Message msgId={"DefaultNode.tooltipList"}/></Tooltip>;
         const tools = [
         (<OverlayTrigger key={"map-tp"} rootClose placement="left" overlay={tooltipMap}>
             <Glyphicon

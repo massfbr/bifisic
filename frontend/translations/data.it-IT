@@ -625,5 +625,22 @@
         "footer": {
             "cookie_policy": "Cookie policy"
         }
+        },
+        "MosaicTile": {
+            "objects": "OGGETTI",
+            "thematicViews": "VISTE TEMATICHE"
+        },
+        "SiraLayer": {
+            "removelayerConfirmingText": "Sei sicuro",
+            "thematicViews": "THEMATIC VIEWS"
+        },
+        "DefaultNode": {
+            "tooltipSira": "Ricerca di dettaglio",
+            "tooltipMap": "Carica in Mappa",
+            "tooltipList": "Elenco di Oggetti"
+        },
+        "SideQueryPanel": {
+            "tooltipCloseSearch": "Chiudi Ricerca di dettaglio"
+        }
     }
 }

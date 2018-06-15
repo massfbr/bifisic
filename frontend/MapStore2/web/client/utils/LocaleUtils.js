@@ -23,17 +23,22 @@ let supportedLocales = {
      "de": {
        code: "de-DE",
        description: "Deutsch"
+     },
+     "hr": {
+       code: "hr-HR",
+       description: "Hrvatski"
      }
 };
 
 var LocaleUtils = {
     ensureIntl(callback) {
-        require.ensure(['intl', 'intl/locale-data/jsonp/en.js', 'intl/locale-data/jsonp/it.js', 'intl/locale-data/jsonp/fr.js', 'intl/locale-data/jsonp/de.js'], (require) => {
+        require.ensure(['intl', 'intl/locale-data/jsonp/en.js', 'intl/locale-data/jsonp/it.js', 'intl/locale-data/jsonp/fr.js', 'intl/locale-data/jsonp/de.js', 'intl/locale-data/jsonp/hr.js'], (require) => {
             global.Intl = require('intl');
             require('intl/locale-data/jsonp/en.js');
             require('intl/locale-data/jsonp/it.js');
             require('intl/locale-data/jsonp/fr.js');
             require('intl/locale-data/jsonp/de.js');
+            require('intl/locale-data/jsonp/hr.js');
             if (callback) {
                 callback();
             }
@@ -62,9 +67,9 @@ var LocaleUtils = {
     },
     getLocale: function(query) {
         let locale = supportedLocales[
-            LocaleUtils.normalizeLocaleCode(query.locale || (navigator ? navigator.language || navigator.browserLanguage : "en"))
+            LocaleUtils.normalizeLocaleCode(query.locale || (navigator ? navigator.language || navigator.browserLanguage : "hr"))
         ];
-        return locale ? locale.code : "en-US";
+        return locale ? locale.code : "hr-HR";
     },
     getSupportedLocales: function() {
         return supportedLocales;

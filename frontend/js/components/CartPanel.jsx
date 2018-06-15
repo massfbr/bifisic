@@ -48,7 +48,7 @@ const CartPanel = React.createClass({
                  <ConfirmButton key="removelayer"
                     text={(<Glyphicon glyph="1-close"/>)}
                     style={{"float": "right", "cursor": "pointer", "marginTop": -45}}
-                    confirming={{text: "Sei sicuro",
+                    confirming={{text: <I18N.Message msgId={"CartPanel.removelayerConfirmingText"}/>,
                         style: {"float": "right", cursor: "pointer", marginTop: -35}}}
                          onConfirm={() => {
                              this.props.removeService(service.id);

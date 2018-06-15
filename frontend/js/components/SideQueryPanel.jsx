@@ -175,7 +175,7 @@ const SideQueryPanel = React.createClass({
     },
     renderHeader() {
         const header = LocaleUtils.getMessageById(this.context.messages, this.props.header);
-        let tooltip = <Tooltip id="header_tp">Chiudi Ricerca di dettaglio</Tooltip>;
+        let tooltip = <Tooltip id="header_tp"><I18N.Message msgId={"SideQueryPanel.tooltipCloseSearch"}/></Tooltip>;
         let heading;
         if (this.props.collapsible) {
             heading = this.props.filterPanelExpanded ? (

@@ -21,7 +21,7 @@ const LabeledField = React.createClass({
         return {
             label: '',
             value: null,
-            locale: 'it-IT'
+            locale: 'hr-HR'
         };
     },
     renderDate(value, dateFormat) {

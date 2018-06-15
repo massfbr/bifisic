@@ -17,7 +17,8 @@ const RightMenu = React.createClass({
         clickOnIconButton: React.PropTypes.func,
         clickOnHelp: React.PropTypes.func,
         clickOnCredits: React.PropTypes.func,
-        clickOnSistemaCA: React.PropTypes.func
+        clickOnSistemaCA: React.PropTypes.func,
+        clickOnToggleLanguage: React.PropTypes.func
     },
 
     getDefaultProps() {
@@ -28,8 +29,9 @@ const RightMenu = React.createClass({
             clickOnIconButton: () => {},
             clickOnHelp: () => {},
             clickOnCredits: () => {},
-            clickOnSistemaCA: () => {}
-       };
+            clickOnSistemaCA: () => {},
+            clickOnToggleLanguage: () => {}
+      };
     },
 
     renderIconStyle() {
@@ -43,6 +45,7 @@ const RightMenu = React.createClass({
             <div className="navbar-on" id="offcanvas-sidebar">
                 <ul id="menu" className="nav navbar-nav navbar-right">
                     <li data-menuanchor="home" onClick={this.props.clickOnSistemaCA} ><I18N.Message msgId={"RightMenu.ConoscenzeAmbTitle"}/></li>
+                    <li data-menuanchor="language" onClick={this.props.clickOnToggleLanguage}><I18N.Message msgId={"RightMenu.ToggleLanguageTitle"}/></li>
                     <li data-menuanchor="piemontepay" onClick={this.props.clickOnCredits}><I18N.Message msgId={"RightMenu.CreditsTitle"}/></li>
                     <li data-menuanchor="pagamenti" onClick={this.props.clickOnHelp}><I18N.Message msgId={"RightMenu.help"}/></li>
                 </ul>

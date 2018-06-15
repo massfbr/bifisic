@@ -24,7 +24,7 @@ var LangBar = React.createClass({
     getDefaultProps() {
         return {
             locales: LocaleUtils.getSupportedLocales(),
-            code: 'en-US',
+            code: 'hr-HR',
             onLanguageChange: function() {}
         };
     },

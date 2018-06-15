@@ -10,6 +10,8 @@ const React = require('react');
 const {connect} = require('react-redux');
 const {Glyphicon} = require('react-bootstrap');
 
+const {toggleControl} = require('../../MapStore2/web/client/actions/controls');
+
 const {
     showLoginPanel,
     hideLoginPanel
@@ -57,6 +59,10 @@ const RightMenu = connect((state) => ({
       },
       clickOnCredits: () => {
           dispatch(showHideCreditsBox());
+      },
+      clickOnToggleLanguage: () => {
+          // dispatch(showHideCreditsBox());
+          dispatch(toggleControl("settings", null));
       }
   };
 })(require('./RightMenu'));

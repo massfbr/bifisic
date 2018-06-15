@@ -7,6 +7,7 @@
  */
 
 const React = require('react');
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 
 const {Link} = require('react-router');
 
@@ -35,12 +36,12 @@ const MosaicTile = React.createClass({
             <div className="ogg_appl">
                 <span>
                     <Link to={'/dataset/' + this.props.objectNumber + '/0'} className="list-group-item">
-                        Oggetti <span className="items-badge" > {this.props.objectNumber} </span>
+                        <I18N.Message msgId={"MosaicTile.objects"}/> <span className="items-badge" > {this.props.objectNumber} </span>
                     </Link>
                 </span>
                 <span>
                     <Link to={'/dataset/0/' + this.props.tematicViewNumber} className="list-group-item" >
-                        Viste tematiche <span className="items-badge" > {this.props.tematicViewNumber} </span>
+                        <I18N.Message msgId={"MosaicTile.thematicViews"}/> <span className="items-badge" > {this.props.tematicViewNumber} </span>
                     </Link>
                 </span>
             </div>
@@ -48,12 +49,12 @@ const MosaicTile = React.createClass({
             <div className="ogg_appl">
                 <span >
                     <a className="list-group-item" onClick={() => this.props.onClick('objects')}>
-                        Oggetti <span className="items-badge" > {this.props.objectNumber} </span>
+                        <I18N.Message msgId={"MosaicTile.objects"}/> <span className="items-badge" > {this.props.objectNumber} </span>
                     </a>
                 </span>
                 <span >
                     <a className="list-group-item" onClick={() => this.props.onClick('views')}>
-                        Viste tematiche <span className="items-badge" > {this.props.tematicViewNumber} </span>
+                        <I18N.Message msgId={"MosaicTile.thematicViews"}/> <span className="items-badge" > {this.props.tematicViewNumber} </span>
                     </a>
                 </span>
             </div>

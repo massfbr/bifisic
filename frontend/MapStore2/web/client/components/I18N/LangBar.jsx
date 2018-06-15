@@ -22,7 +22,7 @@ var LangBar = React.createClass({
         return {
             id: "mapstore-langselector",
             locales: LocaleUtils.getSupportedLocales(),
-            currentLocale: 'en-US',
+            currentLocale: 'hr-HR',
             onLanguageChange: function() {}
         };
     },
