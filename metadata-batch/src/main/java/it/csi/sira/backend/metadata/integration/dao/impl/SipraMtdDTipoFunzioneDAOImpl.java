@@ -28,19 +28,19 @@ public class SipraMtdDTipoFunzioneDAOImpl extends GenericDAO<SipraMtdDTipoFunzio
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_d_tipo_funzione where id_tipo_funzione = :id_tipo_funzione";
+		"select * from bifisic_mtd_d_function_type where id_tipo_funzione = :id_tipo_funzione";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_d_tipo_funzione(id_tipo_funzione,des_tipo_funzione,protocollo) values(:id_tipo_funzione,:des_tipo_funzione,:protocollo)";
+		"insert into bifisic_mtd_d_function_type(id_tipo_funzione,des_tipo_funzione,protocollo,campo) values(:id_tipo_funzione,:des_tipo_funzione,:protocollo,:campo)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_d_tipo_funzione set des_tipo_funzione = :des_tipo_funzione, protocollo = :protocollo  where id_tipo_funzione = :id_tipo_funzione";
+		"update bifisic_mtd_d_function_type set des_tipo_funzione = :des_tipo_funzione, protocollo = :protocollo, campo = :campo  where id_tipo_funzione = :id_tipo_funzione";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_d_tipo_funzione where  id_tipo_funzione = :id_tipo_funzione";
+		"delete from bifisic_mtd_d_function_type where  id_tipo_funzione = :id_tipo_funzione";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_d_tipo_funzione";
+		"select count(*) from bifisic_mtd_d_function_type";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdDTipoFunzioneDAOImpl extends GenericDAO<SipraMtdDTipoFunzio
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_d_tipo_funzione";
+		return "bifisic_mtd_d_function_type";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_d_tipo_funzione";
+		return "select * from bifisic_mtd_d_function_type";
 	}
 
 	@Override
@@ -95,6 +95,7 @@ public class SipraMtdDTipoFunzioneDAOImpl extends GenericDAO<SipraMtdDTipoFunzio
 		map.put("id_tipo_funzione", sipraMtdDTipoFunzione.getIdTipoFunzione());
 		map.put("des_tipo_funzione", sipraMtdDTipoFunzione.getDesTipoFunzione());
 		map.put("protocollo", sipraMtdDTipoFunzione.getProtocollo());
+		map.put("campo", sipraMtdDTipoFunzione.getCampo());
 		return map;
 	}
 
@@ -104,6 +105,7 @@ public class SipraMtdDTipoFunzioneDAOImpl extends GenericDAO<SipraMtdDTipoFunzio
 		map.put("des_tipo_funzione", sipraMtdDTipoFunzione.getDesTipoFunzione());
 		map.put("protocollo", sipraMtdDTipoFunzione.getProtocollo());
 		map.put("id_tipo_funzione", sipraMtdDTipoFunzione.getIdTipoFunzione());
+		map.put("campo", sipraMtdDTipoFunzione.getCampo());
 		return map;
 	}
 
@@ -142,6 +144,7 @@ public class SipraMtdDTipoFunzioneDAOImpl extends GenericDAO<SipraMtdDTipoFunzio
 		if ( rs.wasNull() ) { sipraMtdDTipoFunzione.setIdTipoFunzione(null); }; // not primitive number => keep null value if any
 		sipraMtdDTipoFunzione.setDesTipoFunzione(rs.getString("des_tipo_funzione")); // java.lang.String
 		sipraMtdDTipoFunzione.setProtocollo(rs.getString("protocollo")); // java.lang.String
+		sipraMtdDTipoFunzione.setCampo(rs.getString("campo"));
 	}
 
 

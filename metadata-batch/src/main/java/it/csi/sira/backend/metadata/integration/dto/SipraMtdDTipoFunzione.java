@@ -32,6 +32,8 @@ public class SipraMtdDTipoFunzione implements Serializable {
     // DB : protocollo varchar 
     private String protocollo;
 
+    // DB : protocollo varchar 
+    private String campo;
 
 
     //----------------------------------------------------------------------
@@ -64,7 +66,15 @@ public class SipraMtdDTipoFunzione implements Serializable {
     }
 
 
-    //----------------------------------------------------------------------
+    public String getCampo() {
+		return campo;
+	}
+
+	public void setCampo(String campo) {
+		this.campo = campo;
+	}
+
+	//----------------------------------------------------------------------
     // toString METHOD
     //----------------------------------------------------------------------
     public String toString() { 
@@ -74,6 +84,8 @@ public class SipraMtdDTipoFunzione implements Serializable {
         sb.append(desTipoFunzione);
         sb.append("|");
         sb.append(protocollo);
+        sb.append("|");
+        sb.append(campo);
         return sb.toString(); 
     } 
 

@@ -20,7 +20,7 @@ public class SipraMtdTStoricoMtdCsw implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_storico_metadato int4 
+    // DB : id_metadata_history int4 
     private Integer idStoricoMetadato;
 
     //----------------------------------------------------------------------
@@ -29,16 +29,16 @@ public class SipraMtdTStoricoMtdCsw implements Serializable {
     // DB : dc_identifier varchar 
     private String dcIdentifier;
 
-    // DB : titolo varchar 
-    private String titolo;
+    // DB : title varchar 
+    private String title;
 
-    // DB : testo_abstract varchar 
+    // DB : text_abstract varchar 
     private String testoAbstract;
 
-    // DB : tipo_metadato varchar 
+    // DB : metadata_type varchar 
     private String tipoMetadato;
 
-    // DB : url_metadato_calc varchar 
+    // DB : url_metadata_calc varchar 
     private String urlMetadatoCalc;
 
     // DB : bound_box_crs varchar 
@@ -74,11 +74,11 @@ public class SipraMtdTStoricoMtdCsw implements Serializable {
         return this.dcIdentifier;
     }
 
-    public void setTitolo( String titolo ) {
-        this.titolo = titolo;
+    public void settitle( String title ) {
+        this.title = title;
     }
-    public String getTitolo() {
-        return this.titolo;
+    public String gettitle() {
+        return this.title;
     }
 
     public void setTestoAbstract( String testoAbstract ) {
@@ -133,7 +133,7 @@ public class SipraMtdTStoricoMtdCsw implements Serializable {
         sb.append("|");
         sb.append(dcIdentifier);
         sb.append("|");
-        sb.append(titolo);
+        sb.append(title);
         sb.append("|");
         sb.append(testoAbstract);
         sb.append("|");

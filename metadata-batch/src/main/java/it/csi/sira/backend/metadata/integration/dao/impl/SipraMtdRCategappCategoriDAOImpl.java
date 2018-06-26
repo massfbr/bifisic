@@ -28,16 +28,16 @@ public class SipraMtdRCategappCategoriDAOImpl extends GenericDAO<SipraMtdRCatega
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_r_categapp_categori where id_categoria_appl = :id_categoria_appl and id_categoria = :id_categoria";
+		"select * from sipra_mtd_r_categapp_categori where id_category_appl = :id_category_appl and id_category = :id_category";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_r_categapp_categori(id_categoria_appl,id_categoria) values(:id_categoria_appl,:id_categoria)";
+		"insert into sipra_mtd_r_categapp_categori(id_category_appl,id_category) values(:id_category_appl,:id_category)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_r_categapp_categori set   where id_categoria_appl = :id_categoria_appl and id_categoria = :id_categoria";
+		"update sipra_mtd_r_categapp_categori set   where id_category_appl = :id_category_appl and id_category = :id_category";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_r_categapp_categori where  id_categoria_appl = :id_categoria_appl and id_categoria = :id_categoria";
+		"delete from sipra_mtd_r_categapp_categori where  id_category_appl = :id_category_appl and id_category = :id_category";
 
 	private final static String SQL_COUNT_ALL = 
 		"select count(*) from sipra_mtd_r_categapp_categori";
@@ -79,46 +79,46 @@ public class SipraMtdRCategappCategoriDAOImpl extends GenericDAO<SipraMtdRCatega
 
 	public SipraMtdRCategappCategori findByPK(Integer idCategoriaAppl, Integer idCategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", idCategoriaAppl);
-		map.put("id_categoria", idCategoria);
+		map.put("id_category_appl", idCategoriaAppl);
+		map.put("id_category", idCategoria);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idCategoriaAppl, Integer idCategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", idCategoriaAppl);
-		map.put("id_categoria", idCategoria);
+		map.put("id_category_appl", idCategoriaAppl);
+		map.put("id_category", idCategoria);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdRCategappCategori sipraMtdRCategappCategori) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", sipraMtdRCategappCategori.getIdCategoriaAppl());
-		map.put("id_categoria", sipraMtdRCategappCategori.getIdCategoria());
+		map.put("id_category_appl", sipraMtdRCategappCategori.getIdCategoriaAppl());
+		map.put("id_category", sipraMtdRCategappCategori.getIdCategoria());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdRCategappCategori sipraMtdRCategappCategori) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", sipraMtdRCategappCategori.getIdCategoriaAppl());
-		map.put("id_categoria", sipraMtdRCategappCategori.getIdCategoria());
+		map.put("id_category_appl", sipraMtdRCategappCategori.getIdCategoriaAppl());
+		map.put("id_category", sipraMtdRCategappCategori.getIdCategoria());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdRCategappCategori sipraMtdRCategappCategori) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", sipraMtdRCategappCategori.getIdCategoriaAppl());
-		map.put("id_categoria", sipraMtdRCategappCategori.getIdCategoria());
+		map.put("id_category_appl", sipraMtdRCategappCategori.getIdCategoriaAppl());
+		map.put("id_category", sipraMtdRCategappCategori.getIdCategoria());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdRCategappCategori sipraMtdRCategappCategori) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", sipraMtdRCategappCategori.getIdCategoriaAppl());
-		map.put("id_categoria", sipraMtdRCategappCategori.getIdCategoria());
+		map.put("id_category_appl", sipraMtdRCategappCategori.getIdCategoriaAppl());
+		map.put("id_category", sipraMtdRCategappCategori.getIdCategoria());
 		return map;
 	}
 
@@ -140,9 +140,9 @@ public class SipraMtdRCategappCategoriDAOImpl extends GenericDAO<SipraMtdRCatega
 	private static void populateBean(ResultSet rs, SipraMtdRCategappCategori sipraMtdRCategappCategori) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdRCategappCategori.setIdCategoriaAppl(rs.getInt("id_categoria_appl")); // java.lang.Integer
+		sipraMtdRCategappCategori.setIdCategoriaAppl(rs.getInt("id_category_appl")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdRCategappCategori.setIdCategoriaAppl(null); }; // not primitive number => keep null value if any
-		sipraMtdRCategappCategori.setIdCategoria(rs.getInt("id_categoria")); // java.lang.Integer
+		sipraMtdRCategappCategori.setIdCategoria(rs.getInt("id_category")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdRCategappCategori.setIdCategoria(null); }; // not primitive number => keep null value if any
 	}
 

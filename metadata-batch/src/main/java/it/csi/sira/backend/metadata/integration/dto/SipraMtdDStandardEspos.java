@@ -26,7 +26,7 @@ public class SipraMtdDStandardEspos implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : des_standard_espos varchar 
+    // DB : des_standard_expos varchar 
     private String desStandardEspos;
 
 

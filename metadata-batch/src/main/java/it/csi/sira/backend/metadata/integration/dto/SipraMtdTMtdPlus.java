@@ -20,16 +20,16 @@ public class SipraMtdTMtdPlus implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_metadato int4 
+    // DB : id_metadata int4 
     private Integer idMetadato;
 
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : nr_oggetti_dataset_calc int4 
+    // DB : object_num_dataset_calc int4 
     private Integer nrOggettiDatasetCalc;
 
-    // DB : fk_tipo_oggetto int4 
+    // DB : fk_object_type int4 
     private Integer fkTipoOggetto;
 
 

@@ -20,28 +20,28 @@ public class SipraMtdDFontedati implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_fontedati int4 
+    // DB : id_datasource int4 
     private Integer idFontedati;
 
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : fk_standard_espos int4 
+    // DB : fk_standard_expos int4 
     private Integer fkStandardEspos;
 
-    // DB : des_fontedati varchar 
+    // DB : des_datasource varchar 
     private String desFontedati;
 
-    // DB : url_prefisso_metadato varchar 
+    // DB : url_prefix_metadata varchar 
     private String urlPrefissoMetadato;
 
-    // DB : url_servizio varchar 
+    // DB : url_service varchar 
     private String urlServizio;
 
     // DB : fl_attiva varchar 
     private String flAttiva;
 
-    // DB : prefisso_fontedati varchar 
+    // DB : prefix_datasource varchar 
     private String prefissoFontedati;
 
 

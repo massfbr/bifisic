@@ -20,7 +20,7 @@ public class SipraMtdTCategoriaAppl implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_categoria_appl int4 
+    // DB : id_category_appl int4 
     private Integer idCategoriaAppl;
 
     //----------------------------------------------------------------------
@@ -29,13 +29,13 @@ public class SipraMtdTCategoriaAppl implements Serializable {
     // DB : fk_padre int4 
     private Integer fkPadre;
 
-    // DB : livello int4 
-    private Integer livello;
+    // DB : level int4 
+    private Integer level;
 
-    // DB : des_categoria varchar 
+    // DB : des_category varchar 
     private String desCategoria;
 
-    // DB : url_icona varchar 
+    // DB : url_icon varchar 
     private String urlIcona;
 
     // DB : object_number int4 
@@ -68,11 +68,11 @@ public class SipraMtdTCategoriaAppl implements Serializable {
         return this.fkPadre;
     }
 
-    public void setLivello( Integer livello ) {
-        this.livello = livello;
+    public void setlevel( Integer level ) {
+        this.level = level;
     }
-    public Integer getLivello() {
-        return this.livello;
+    public Integer getlevel() {
+        return this.level;
     }
 
     public void setDesCategoria( String desCategoria ) {
@@ -113,7 +113,7 @@ public class SipraMtdTCategoriaAppl implements Serializable {
         sb.append("|");
         sb.append(fkPadre);
         sb.append("|");
-        sb.append(livello);
+        sb.append(level);
         sb.append("|");
         sb.append(desCategoria);
         sb.append("|");

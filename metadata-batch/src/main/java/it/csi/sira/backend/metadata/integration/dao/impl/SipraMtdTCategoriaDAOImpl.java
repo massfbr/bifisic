@@ -28,19 +28,19 @@ public class SipraMtdTCategoriaDAOImpl extends GenericDAO<SipraMtdTCategoria> im
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_t_categoria where id_categoria = :id_categoria";
+		"select * from bifisic_mtd_t_category where id_category = :id_category";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_categoria(id_categoria,fk_tipo_categoria) values(:id_categoria,:fk_tipo_categoria)";
+		"insert into bifisic_mtd_t_category(id_category,fk_category_type) values(:id_category,:fk_category_type)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_categoria set fk_tipo_categoria = :fk_tipo_categoria  where id_categoria = :id_categoria";
+		"update bifisic_mtd_t_category set fk_category_type = :fk_category_type  where id_category = :id_category";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_t_categoria where  id_categoria = :id_categoria";
+		"delete from bifisic_mtd_t_category where  id_category = :id_category";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_t_categoria";
+		"select count(*) from bifisic_mtd_t_category";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdTCategoriaDAOImpl extends GenericDAO<SipraMtdTCategoria> im
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_categoria";
+		return "bifisic_mtd_t_category";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_categoria";
+		return "select * from bifisic_mtd_t_category";
 	}
 
 	@Override
@@ -79,42 +79,42 @@ public class SipraMtdTCategoriaDAOImpl extends GenericDAO<SipraMtdTCategoria> im
 
 	public SipraMtdTCategoria findByPK(Integer idCategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", idCategoria);
+		map.put("id_category", idCategoria);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idCategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", idCategoria);
+		map.put("id_category", idCategoria);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTCategoria sipraMtdTCategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdTCategoria.getIdCategoria());
-		map.put("fk_tipo_categoria", sipraMtdTCategoria.getFkTipoCategoria());
+		map.put("id_category", sipraMtdTCategoria.getIdCategoria());
+		map.put("fk_category_type", sipraMtdTCategoria.getFkTipoCategoria());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTCategoria sipraMtdTCategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("fk_tipo_categoria", sipraMtdTCategoria.getFkTipoCategoria());
-		map.put("id_categoria", sipraMtdTCategoria.getIdCategoria());
+		map.put("fk_category_type", sipraMtdTCategoria.getFkTipoCategoria());
+		map.put("id_category", sipraMtdTCategoria.getIdCategoria());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdTCategoria sipraMtdTCategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdTCategoria.getIdCategoria());
+		map.put("id_category", sipraMtdTCategoria.getIdCategoria());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdTCategoria sipraMtdTCategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdTCategoria.getIdCategoria());
+		map.put("id_category", sipraMtdTCategoria.getIdCategoria());
 		return map;
 	}
 
@@ -136,9 +136,9 @@ public class SipraMtdTCategoriaDAOImpl extends GenericDAO<SipraMtdTCategoria> im
 	private static void populateBean(ResultSet rs, SipraMtdTCategoria sipraMtdTCategoria) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdTCategoria.setIdCategoria(rs.getInt("id_categoria")); // java.lang.Integer
+		sipraMtdTCategoria.setIdCategoria(rs.getInt("id_category")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTCategoria.setIdCategoria(null); }; // not primitive number => keep null value if any
-		sipraMtdTCategoria.setFkTipoCategoria(rs.getInt("fk_tipo_categoria")); // java.lang.Integer
+		sipraMtdTCategoria.setFkTipoCategoria(rs.getInt("fk_category_type")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTCategoria.setFkTipoCategoria(null); }; // not primitive number => keep null value if any
 	}
 

@@ -28,19 +28,19 @@ public class SipraMtdDLinguaDAOImpl extends GenericDAO<SipraMtdDLingua> implemen
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_d_lingua where id_lingua = :id_lingua";
+		"select * from bifisic_mtd_d_language where bifisic_mtd_d_language = :bifisic_mtd_d_language";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_d_lingua(id_lingua,des_lingua) values(:id_lingua,:des_lingua)";
+		"insert into bifisic_mtd_d_language(bifisic_mtd_d_language,des_language) values(:bifisic_mtd_d_language,:des_language)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_d_lingua set des_lingua = :des_lingua  where id_lingua = :id_lingua";
+		"update bifisic_mtd_d_language set des_language = :des_language  where bifisic_mtd_d_language = :bifisic_mtd_d_language";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_d_lingua where  id_lingua = :id_lingua";
+		"delete from bifisic_mtd_d_language where  bifisic_mtd_d_language = :bifisic_mtd_d_language";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_d_lingua";
+		"select count(*) from bifisic_mtd_d_language";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdDLinguaDAOImpl extends GenericDAO<SipraMtdDLingua> implemen
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_d_lingua";
+		return "bifisic_mtd_d_language";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_d_lingua";
+		return "select * from bifisic_mtd_d_language";
 	}
 
 	@Override
@@ -79,42 +79,42 @@ public class SipraMtdDLinguaDAOImpl extends GenericDAO<SipraMtdDLingua> implemen
 
 	public SipraMtdDLingua findByPK(Integer idLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_lingua", idLingua);
+		map.put("bifisic_mtd_d_language", idLingua);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_lingua", idLingua);
+		map.put("bifisic_mtd_d_language", idLingua);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdDLingua sipraMtdDLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_lingua", sipraMtdDLingua.getIdLingua());
-		map.put("des_lingua", sipraMtdDLingua.getDesLingua());
+		map.put("bifisic_mtd_d_language", sipraMtdDLingua.getIdLingua());
+		map.put("des_language", sipraMtdDLingua.getDesLingua());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdDLingua sipraMtdDLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("des_lingua", sipraMtdDLingua.getDesLingua());
-		map.put("id_lingua", sipraMtdDLingua.getIdLingua());
+		map.put("des_language", sipraMtdDLingua.getDesLingua());
+		map.put("bifisic_mtd_d_language", sipraMtdDLingua.getIdLingua());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdDLingua sipraMtdDLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_lingua", sipraMtdDLingua.getIdLingua());
+		map.put("bifisic_mtd_d_language", sipraMtdDLingua.getIdLingua());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdDLingua sipraMtdDLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_lingua", sipraMtdDLingua.getIdLingua());
+		map.put("bifisic_mtd_d_language", sipraMtdDLingua.getIdLingua());
 		return map;
 	}
 
@@ -136,9 +136,9 @@ public class SipraMtdDLinguaDAOImpl extends GenericDAO<SipraMtdDLingua> implemen
 	private static void populateBean(ResultSet rs, SipraMtdDLingua sipraMtdDLingua) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdDLingua.setIdLingua(rs.getInt("id_lingua")); // java.lang.Integer
+		sipraMtdDLingua.setIdLingua(rs.getInt("bifisic_mtd_d_language")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdDLingua.setIdLingua(null); }; // not primitive number => keep null value if any
-		sipraMtdDLingua.setDesLingua(rs.getString("des_lingua")); // java.lang.String
+		sipraMtdDLingua.setDesLingua(rs.getString("des_language")); // java.lang.String
 	}
 
 

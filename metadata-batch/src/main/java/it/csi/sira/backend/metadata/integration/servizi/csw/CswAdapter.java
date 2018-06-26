@@ -184,6 +184,7 @@ public class CswAdapter {
 		  recordCSW.setTextAbstract(child.getFirstChild().getNodeValue());
 		} else if (child.getNodeName().equals("dc:URI") && child.getFirstChild() != null) {
 
+		  boolean found = false;
 		  if (child.getAttributes() != null) {
 
 			Node protocol = child.getAttributes().getNamedItem("protocol");
@@ -198,11 +199,28 @@ public class CswAdapter {
 					cswURI.setProtocol(elencoTipoFunzioni.get(f).getProtocollo());
 					cswURI.setUrl(child.getFirstChild().getNodeValue());
 					uri.add(cswURI);
+					found = true;
 				  }
 				}
 			  }
 			}
 		  }
+		  
+		  if (!found) {
+			  for (int f = 0; f < elencoTipoFunzioni.size(); f++) {
+				if (elencoTipoFunzioni.get(f).getCampo() != null && !elencoTipoFunzioni.get(f).getCampo().equals("")) {
+					String url = child.getFirstChild().getNodeValue();
+					if (url!=null && !url.trim().equals("") && url.toLowerCase().contains(elencoTipoFunzioni.get(f).getCampo().trim().toLowerCase())) {
+						CswURI cswURI = new CswURI();
+						cswURI.setTipo(elencoTipoFunzioni.get(f).getIdTipoFunzione());
+						cswURI.setProtocol(elencoTipoFunzioni.get(f).getProtocollo());
+						cswURI.setUrl(url);
+						uri.add(cswURI);
+					}
+				}
+			 }
+		  }
+
 		} else if (child.getNodeName().equals("dct:references") && child.getFirstChild() != null) {
 
 		  if (child.getAttributes() != null) {

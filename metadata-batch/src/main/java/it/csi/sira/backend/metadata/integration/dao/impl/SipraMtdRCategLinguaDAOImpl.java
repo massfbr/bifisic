@@ -28,16 +28,16 @@ public class SipraMtdRCategLinguaDAOImpl extends GenericDAO<SipraMtdRCategLingua
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_r_categ_lingua where id_categoria = :id_categoria and id_lingua = :id_lingua";
+		"select * from sipra_mtd_r_categ_lingua where id_category = :id_category and id_lingua = :id_lingua";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_r_categ_lingua(id_categoria,id_lingua,des_categoria,des_alias,fl_alias) values(:id_categoria,:id_lingua,:des_categoria,:des_alias,:fl_alias)";
+		"insert into sipra_mtd_r_categ_lingua(id_category,id_lingua,des_category,des_alias,fl_alias) values(:id_category,:id_lingua,:des_category,:des_alias,:fl_alias)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_r_categ_lingua set des_categoria = :des_categoria, des_alias = :des_alias, fl_alias = :fl_alias  where id_categoria = :id_categoria and id_lingua = :id_lingua";
+		"update sipra_mtd_r_categ_lingua set des_category = :des_category, des_alias = :des_alias, fl_alias = :fl_alias  where id_category = :id_category and id_lingua = :id_lingua";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_r_categ_lingua where  id_categoria = :id_categoria and id_lingua = :id_lingua";
+		"delete from sipra_mtd_r_categ_lingua where  id_category = :id_category and id_lingua = :id_lingua";
 
 	private final static String SQL_COUNT_ALL = 
 		"select count(*) from sipra_mtd_r_categ_lingua";
@@ -79,14 +79,14 @@ public class SipraMtdRCategLinguaDAOImpl extends GenericDAO<SipraMtdRCategLingua
 
 	public SipraMtdRCategLingua findByPK(Integer idCategoria, Integer idLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", idCategoria);
+		map.put("id_category", idCategoria);
 		map.put("id_lingua", idLingua);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idCategoria, Integer idLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", idCategoria);
+		map.put("id_category", idCategoria);
 		map.put("id_lingua", idLingua);
 		return super.delete(getSqlDelete(), map);		
 	}
@@ -94,9 +94,9 @@ public class SipraMtdRCategLinguaDAOImpl extends GenericDAO<SipraMtdRCategLingua
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdRCategLingua sipraMtdRCategLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdRCategLingua.getIdCategoria());
+		map.put("id_category", sipraMtdRCategLingua.getIdCategoria());
 		map.put("id_lingua", sipraMtdRCategLingua.getIdLingua());
-		map.put("des_categoria", sipraMtdRCategLingua.getDesCategoria());
+		map.put("des_category", sipraMtdRCategLingua.getDesCategoria());
 		map.put("des_alias", sipraMtdRCategLingua.getDesAlias());
 		map.put("fl_alias", sipraMtdRCategLingua.getFlAlias());
 		return map;
@@ -105,17 +105,17 @@ public class SipraMtdRCategLinguaDAOImpl extends GenericDAO<SipraMtdRCategLingua
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdRCategLingua sipraMtdRCategLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("des_categoria", sipraMtdRCategLingua.getDesCategoria());
+		map.put("des_category", sipraMtdRCategLingua.getDesCategoria());
 		map.put("des_alias", sipraMtdRCategLingua.getDesAlias());
 		map.put("fl_alias", sipraMtdRCategLingua.getFlAlias());
-		map.put("id_categoria", sipraMtdRCategLingua.getIdCategoria());
+		map.put("id_category", sipraMtdRCategLingua.getIdCategoria());
 		map.put("id_lingua", sipraMtdRCategLingua.getIdLingua());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdRCategLingua sipraMtdRCategLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdRCategLingua.getIdCategoria());
+		map.put("id_category", sipraMtdRCategLingua.getIdCategoria());
 		map.put("id_lingua", sipraMtdRCategLingua.getIdLingua());
 		return map;
 	}
@@ -123,7 +123,7 @@ public class SipraMtdRCategLinguaDAOImpl extends GenericDAO<SipraMtdRCategLingua
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdRCategLingua sipraMtdRCategLingua) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdRCategLingua.getIdCategoria());
+		map.put("id_category", sipraMtdRCategLingua.getIdCategoria());
 		map.put("id_lingua", sipraMtdRCategLingua.getIdLingua());
 		return map;
 	}
@@ -146,11 +146,11 @@ public class SipraMtdRCategLinguaDAOImpl extends GenericDAO<SipraMtdRCategLingua
 	private static void populateBean(ResultSet rs, SipraMtdRCategLingua sipraMtdRCategLingua) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdRCategLingua.setIdCategoria(rs.getInt("id_categoria")); // java.lang.Integer
+		sipraMtdRCategLingua.setIdCategoria(rs.getInt("id_category")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdRCategLingua.setIdCategoria(null); }; // not primitive number => keep null value if any
 		sipraMtdRCategLingua.setIdLingua(rs.getInt("id_lingua")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdRCategLingua.setIdLingua(null); }; // not primitive number => keep null value if any
-		sipraMtdRCategLingua.setDesCategoria(rs.getString("des_categoria")); // java.lang.String
+		sipraMtdRCategLingua.setDesCategoria(rs.getString("des_category")); // java.lang.String
 		sipraMtdRCategLingua.setDesAlias(rs.getString("des_alias")); // java.lang.String
 		sipraMtdRCategLingua.setFlAlias(rs.getString("fl_alias")); // java.lang.String
 	}

@@ -29,19 +29,19 @@ public class SipraMtdTMetadatoDAOImpl extends GenericDAO<SipraMtdTMetadato> impl
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_t_metadato where id_metadato = :id_metadato";
+		"select * from bifisic_mtd_t_metadata where id_metadata = :id_metadata";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_metadato(id_metadato,fk_fontedati,des_metadato,data_ult_agg) values(:id_metadato,:fk_fontedati,:des_metadato,:data_ult_agg)";
+		"insert into bifisic_mtd_t_metadata(id_metadata,fk_datasource,des_metadata,last_upd_date) values(:id_metadata,:fk_datasource,:des_metadata,:last_upd_date)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_metadato set fk_fontedati = :fk_fontedati, des_metadato = :des_metadato, data_ult_agg = :data_ult_agg  where id_metadato = :id_metadato";
+		"update bifisic_mtd_t_metadata set fk_datasource = :fk_datasource, des_metadata = :des_metadata, last_upd_date = :last_upd_date  where id_metadata = :id_metadata";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_t_metadato where  id_metadato = :id_metadato";
+		"delete from bifisic_mtd_t_metadata where  id_metadata = :id_metadata";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_t_metadato";
+		"select count(*) from bifisic_mtd_t_metadata";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -50,12 +50,12 @@ public class SipraMtdTMetadatoDAOImpl extends GenericDAO<SipraMtdTMetadato> impl
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_metadato";
+		return "bifisic_mtd_t_metadata";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_metadato";
+		return "select * from bifisic_mtd_t_metadata";
 	}
 
 	@Override
@@ -80,46 +80,46 @@ public class SipraMtdTMetadatoDAOImpl extends GenericDAO<SipraMtdTMetadato> impl
 
 	public SipraMtdTMetadato findByPK(Integer idMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", idMetadato);
+		map.put("id_metadata", idMetadato);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", idMetadato);
+		map.put("id_metadata", idMetadato);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTMetadato sipraMtdTMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", sipraMtdTMetadato.getIdMetadato());
-		map.put("fk_fontedati", sipraMtdTMetadato.getFkFontedati());
-		map.put("des_metadato", sipraMtdTMetadato.getDesMetadato());
-		map.put("data_ult_agg", sipraMtdTMetadato.getDataUltAgg());
+		map.put("id_metadata", sipraMtdTMetadato.getIdMetadato());
+		map.put("fk_datasource", sipraMtdTMetadato.getFkFontedati());
+		map.put("des_metadata", sipraMtdTMetadato.getDesMetadato());
+		map.put("last_upd_date", sipraMtdTMetadato.getDataUltAgg());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTMetadato sipraMtdTMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("fk_fontedati", sipraMtdTMetadato.getFkFontedati());
-		map.put("des_metadato", sipraMtdTMetadato.getDesMetadato());
-		map.put("data_ult_agg", sipraMtdTMetadato.getDataUltAgg());
-		map.put("id_metadato", sipraMtdTMetadato.getIdMetadato());
+		map.put("fk_datasource", sipraMtdTMetadato.getFkFontedati());
+		map.put("des_metadata", sipraMtdTMetadato.getDesMetadato());
+		map.put("last_upd_date", sipraMtdTMetadato.getDataUltAgg());
+		map.put("id_metadata", sipraMtdTMetadato.getIdMetadato());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdTMetadato sipraMtdTMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", sipraMtdTMetadato.getIdMetadato());
+		map.put("id_metadata", sipraMtdTMetadato.getIdMetadato());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdTMetadato sipraMtdTMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", sipraMtdTMetadato.getIdMetadato());
+		map.put("id_metadata", sipraMtdTMetadato.getIdMetadato());
 		return map;
 	}
 
@@ -141,12 +141,12 @@ public class SipraMtdTMetadatoDAOImpl extends GenericDAO<SipraMtdTMetadato> impl
 	private static void populateBean(ResultSet rs, SipraMtdTMetadato sipraMtdTMetadato) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdTMetadato.setIdMetadato(rs.getInt("id_metadato")); // java.lang.Integer
+		sipraMtdTMetadato.setIdMetadato(rs.getInt("id_metadata")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTMetadato.setIdMetadato(null); }; // not primitive number => keep null value if any
-		sipraMtdTMetadato.setFkFontedati(rs.getInt("fk_fontedati")); // java.lang.Integer
+		sipraMtdTMetadato.setFkFontedati(rs.getInt("fk_datasource")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTMetadato.setFkFontedati(null); }; // not primitive number => keep null value if any
-		sipraMtdTMetadato.setDesMetadato(rs.getString("des_metadato")); // java.lang.String
-		sipraMtdTMetadato.setDataUltAgg(rs.getDate("data_ult_agg")); // java.util.Date
+		sipraMtdTMetadato.setDesMetadato(rs.getString("des_metadata")); // java.lang.String
+		sipraMtdTMetadato.setDataUltAgg(rs.getDate("last_upd_date")); // java.util.Date
 	}
 
 

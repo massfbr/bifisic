@@ -28,16 +28,16 @@ public class SipraMtdRCategoriaMtdDAOImpl extends GenericDAO<SipraMtdRCategoriaM
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_r_categoria_mtd where id_categoria = :id_categoria and id_metadato = :id_metadato";
+		"select * from sipra_mtd_r_categoria_mtd where id_category = :id_category and id_metadata = :id_metadata";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_r_categoria_mtd(id_categoria,id_metadato) values(:id_categoria,:id_metadato)";
+		"insert into sipra_mtd_r_categoria_mtd(id_category,id_metadata) values(:id_category,:id_metadata)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_r_categoria_mtd set   where id_categoria = :id_categoria and id_metadato = :id_metadato";
+		"update sipra_mtd_r_categoria_mtd set   where id_category = :id_category and id_metadata = :id_metadata";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_r_categoria_mtd where  id_categoria = :id_categoria and id_metadato = :id_metadato";
+		"delete from sipra_mtd_r_categoria_mtd where  id_category = :id_category and id_metadata = :id_metadata";
 
 	private final static String SQL_COUNT_ALL = 
 		"select count(*) from sipra_mtd_r_categoria_mtd";
@@ -79,46 +79,46 @@ public class SipraMtdRCategoriaMtdDAOImpl extends GenericDAO<SipraMtdRCategoriaM
 
 	public SipraMtdRCategoriaMtd findByPK(Integer idCategoria, Integer idMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", idCategoria);
-		map.put("id_metadato", idMetadato);
+		map.put("id_category", idCategoria);
+		map.put("id_metadata", idMetadato);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idCategoria, Integer idMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", idCategoria);
-		map.put("id_metadato", idMetadato);
+		map.put("id_category", idCategoria);
+		map.put("id_metadata", idMetadato);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdRCategoriaMtd sipraMtdRCategoriaMtd) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdRCategoriaMtd.getIdCategoria());
-		map.put("id_metadato", sipraMtdRCategoriaMtd.getIdMetadato());
+		map.put("id_category", sipraMtdRCategoriaMtd.getIdCategoria());
+		map.put("id_metadata", sipraMtdRCategoriaMtd.getIdMetadato());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdRCategoriaMtd sipraMtdRCategoriaMtd) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdRCategoriaMtd.getIdCategoria());
-		map.put("id_metadato", sipraMtdRCategoriaMtd.getIdMetadato());
+		map.put("id_category", sipraMtdRCategoriaMtd.getIdCategoria());
+		map.put("id_metadata", sipraMtdRCategoriaMtd.getIdMetadato());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdRCategoriaMtd sipraMtdRCategoriaMtd) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdRCategoriaMtd.getIdCategoria());
-		map.put("id_metadato", sipraMtdRCategoriaMtd.getIdMetadato());
+		map.put("id_category", sipraMtdRCategoriaMtd.getIdCategoria());
+		map.put("id_metadata", sipraMtdRCategoriaMtd.getIdMetadato());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdRCategoriaMtd sipraMtdRCategoriaMtd) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria", sipraMtdRCategoriaMtd.getIdCategoria());
-		map.put("id_metadato", sipraMtdRCategoriaMtd.getIdMetadato());
+		map.put("id_category", sipraMtdRCategoriaMtd.getIdCategoria());
+		map.put("id_metadata", sipraMtdRCategoriaMtd.getIdMetadato());
 		return map;
 	}
 
@@ -140,9 +140,9 @@ public class SipraMtdRCategoriaMtdDAOImpl extends GenericDAO<SipraMtdRCategoriaM
 	private static void populateBean(ResultSet rs, SipraMtdRCategoriaMtd sipraMtdRCategoriaMtd) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdRCategoriaMtd.setIdCategoria(rs.getInt("id_categoria")); // java.lang.Integer
+		sipraMtdRCategoriaMtd.setIdCategoria(rs.getInt("id_category")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdRCategoriaMtd.setIdCategoria(null); }; // not primitive number => keep null value if any
-		sipraMtdRCategoriaMtd.setIdMetadato(rs.getInt("id_metadato")); // java.lang.Integer
+		sipraMtdRCategoriaMtd.setIdMetadato(rs.getInt("id_metadata")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdRCategoriaMtd.setIdMetadato(null); }; // not primitive number => keep null value if any
 	}
 

@@ -20,9 +20,9 @@ public class SipraMtdRParolachiaveMtd implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_metadato int4 
+    // DB : id_metadata int4 
     private Integer idMetadato;
-    // DB : id_parola_chiave int4 
+    // DB : id_keyword int4 
     private Integer idParolaChiave;
 
     //----------------------------------------------------------------------

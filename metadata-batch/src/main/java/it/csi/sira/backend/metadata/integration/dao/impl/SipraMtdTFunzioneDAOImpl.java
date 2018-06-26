@@ -31,10 +31,10 @@ public class SipraMtdTFunzioneDAOImpl extends GenericDAO<SipraMtdTFunzione> impl
 		"select * from sipra_mtd_t_funzione where id_funzione = :id_funzione";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_funzione(id_funzione,fk_tipo_funzione,fk_metadato,request_url) values(:id_funzione,:fk_tipo_funzione,:fk_metadato,:request_url)";
+		"insert into sipra_mtd_t_funzione(id_funzione,fk_function_type,fk_metadata,request_url) values(:id_funzione,:fk_function_type,:fk_metadata,:request_url)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_funzione set fk_tipo_funzione = :fk_tipo_funzione, fk_metadato = :fk_metadato, request_url = :request_url  where id_funzione = :id_funzione";
+		"update sipra_mtd_t_funzione set fk_function_type = :fk_function_type, fk_metadata = :fk_metadata, request_url = :request_url  where id_funzione = :id_funzione";
 
 	private final static String QUERY_DELETE = 
 		"delete from sipra_mtd_t_funzione where  id_funzione = :id_funzione";
@@ -93,8 +93,8 @@ public class SipraMtdTFunzioneDAOImpl extends GenericDAO<SipraMtdTFunzione> impl
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTFunzione sipraMtdTFunzione) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
 		map.put("id_funzione", sipraMtdTFunzione.getIdFunzione());
-		map.put("fk_tipo_funzione", sipraMtdTFunzione.getFkTipoFunzione());
-		map.put("fk_metadato", sipraMtdTFunzione.getFkMetadato());
+		map.put("fk_function_type", sipraMtdTFunzione.getFkTipoFunzione());
+		map.put("fk_metadata", sipraMtdTFunzione.getFkMetadato());
 		map.put("request_url", sipraMtdTFunzione.getRequestUrl());
 		return map;
 	}
@@ -102,8 +102,8 @@ public class SipraMtdTFunzioneDAOImpl extends GenericDAO<SipraMtdTFunzione> impl
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTFunzione sipraMtdTFunzione) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("fk_tipo_funzione", sipraMtdTFunzione.getFkTipoFunzione());
-		map.put("fk_metadato", sipraMtdTFunzione.getFkMetadato());
+		map.put("fk_function_type", sipraMtdTFunzione.getFkTipoFunzione());
+		map.put("fk_metadata", sipraMtdTFunzione.getFkMetadato());
 		map.put("request_url", sipraMtdTFunzione.getRequestUrl());
 		map.put("id_funzione", sipraMtdTFunzione.getIdFunzione());
 		return map;
@@ -142,9 +142,9 @@ public class SipraMtdTFunzioneDAOImpl extends GenericDAO<SipraMtdTFunzione> impl
 		//--- Set data from ResultSet to Bean attributes
 		sipraMtdTFunzione.setIdFunzione(rs.getInt("id_funzione")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTFunzione.setIdFunzione(null); }; // not primitive number => keep null value if any
-		sipraMtdTFunzione.setFkTipoFunzione(rs.getInt("fk_tipo_funzione")); // java.lang.Integer
+		sipraMtdTFunzione.setFkTipoFunzione(rs.getInt("fk_function_type")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTFunzione.setFkTipoFunzione(null); }; // not primitive number => keep null value if any
-		sipraMtdTFunzione.setFkMetadato(rs.getInt("fk_metadato")); // java.lang.Integer
+		sipraMtdTFunzione.setFkMetadato(rs.getInt("fk_metadata")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTFunzione.setFkMetadato(null); }; // not primitive number => keep null value if any
 		sipraMtdTFunzione.setRequestUrl(rs.getString("request_url")); // java.lang.String
 	}

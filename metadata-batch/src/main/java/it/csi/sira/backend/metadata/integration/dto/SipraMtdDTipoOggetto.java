@@ -20,13 +20,13 @@ public class SipraMtdDTipoOggetto implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_tipo_oggetto int4 
+    // DB : id_object_type int4 
     private Integer idTipoOggetto;
 
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : des_tipo_oggetto varchar 
+    // DB : des_object_type varchar 
     private String desTipoOggetto;
 
 

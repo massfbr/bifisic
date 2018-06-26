@@ -20,13 +20,13 @@ public class SipraMtdTParolaChiave implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_parola_chiave int4 
+    // DB : id_keyword int4 
     private Integer idParolaChiave;
 
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : des_parola_chiave varchar 
+    // DB : des_keyword varchar 
     private String desParolaChiave;
 
 

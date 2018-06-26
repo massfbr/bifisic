@@ -12,7 +12,7 @@
 
 	<bean id="seqSipraMtdTMetadato" class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
 		<constructor-arg ref="dataSource" />
-		<constructor-arg value="seq_sipra_mtd_t_metadato" />
+		<constructor-arg value="seq_bifisic_mtd_t_metadata" />
 	</bean>
 
 	<bean id="seqSipraMtdTFunzione" class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
@@ -23,7 +23,7 @@
 	<bean id="seqSipraMtdTParolaChiave"
 		class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
 		<constructor-arg ref="dataSource" />
-		<constructor-arg value="seq_sipra_mtd_t_parola_chiave" />
+		<constructor-arg value="seq_bifisic_mtd_t_keyword" />
 	</bean>
 
 

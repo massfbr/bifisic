@@ -21,19 +21,19 @@ public class SipraMtdTMetadato implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_metadato int4 
+    // DB : id_metadata int4 
     private Integer idMetadato;
 
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : fk_fontedati int4 
+    // DB : fk_datasource int4 
     private Integer fkFontedati;
 
-    // DB : des_metadato varchar 
+    // DB : des_metadata varchar 
     private String desMetadato;
 
-    // DB : data_ult_agg date 
+    // DB : last_upd_date date 
     private Date dataUltAgg;
 
 

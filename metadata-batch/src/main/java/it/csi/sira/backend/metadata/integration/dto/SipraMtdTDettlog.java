@@ -20,7 +20,7 @@ public class SipraMtdTDettlog implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_dett_log int4 
+    // DB : id_det_log int4 
     private Integer idDettLog;
 
     //----------------------------------------------------------------------
@@ -29,7 +29,7 @@ public class SipraMtdTDettlog implements Serializable {
     // DB : fk_log int4 
     private Integer fkLog;
 
-    // DB : cod_errore varchar 
+    // DB : cod_error varchar 
     private String codErrore;
 
 

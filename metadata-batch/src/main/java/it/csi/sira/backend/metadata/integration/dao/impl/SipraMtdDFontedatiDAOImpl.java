@@ -28,19 +28,19 @@ public class SipraMtdDFontedatiDAOImpl extends GenericDAO<SipraMtdDFontedati> im
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_d_fontedati where id_fontedati = :id_fontedati";
+		"select * from bifisic_mtd_d_datasource where id_datasource = :id_datasource";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_d_fontedati(id_fontedati,fk_standard_espos,des_fontedati,url_prefisso_metadato,url_servizio,fl_attiva,prefisso_fontedati) values(:id_fontedati,:fk_standard_espos,:des_fontedati,:url_prefisso_metadato,:url_servizio,:fl_attiva,:prefisso_fontedati)";
+		"insert into bifisic_mtd_d_datasource(id_datasource,fk_standard_expos,des_datasource,url_prefix_metadata,url_service,fl_attiva,prefix_datasource) values(:id_datasource,:fk_standard_expos,:des_datasource,:url_prefix_metadata,:url_service,:fl_attiva,:prefix_datasource)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_d_fontedati set fk_standard_espos = :fk_standard_espos, des_fontedati = :des_fontedati, url_prefisso_metadato = :url_prefisso_metadato, url_servizio = :url_servizio, fl_attiva = :fl_attiva, prefisso_fontedati = :prefisso_fontedati  where id_fontedati = :id_fontedati";
+		"update bifisic_mtd_d_datasource set fk_standard_expos = :fk_standard_expos, des_datasource = :des_datasource, url_prefix_metadata = :url_prefix_metadata, url_service = :url_service, fl_attiva = :fl_attiva, prefix_datasource = :prefix_datasource  where id_datasource = :id_datasource";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_d_fontedati where  id_fontedati = :id_fontedati";
+		"delete from bifisic_mtd_d_datasource where  id_datasource = :id_datasource";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_d_fontedati";
+		"select count(*) from bifisic_mtd_d_datasource";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdDFontedatiDAOImpl extends GenericDAO<SipraMtdDFontedati> im
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_d_fontedati";
+		return "bifisic_mtd_d_datasource";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_d_fontedati";
+		return "select * from bifisic_mtd_d_datasource";
 	}
 
 	@Override
@@ -79,52 +79,52 @@ public class SipraMtdDFontedatiDAOImpl extends GenericDAO<SipraMtdDFontedati> im
 
 	public SipraMtdDFontedati findByPK(Integer idFontedati) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_fontedati", idFontedati);
+		map.put("id_datasource", idFontedati);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idFontedati) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_fontedati", idFontedati);
+		map.put("id_datasource", idFontedati);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdDFontedati sipraMtdDFontedati) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_fontedati", sipraMtdDFontedati.getIdFontedati());
-		map.put("fk_standard_espos", sipraMtdDFontedati.getFkStandardEspos());
-		map.put("des_fontedati", sipraMtdDFontedati.getDesFontedati());
-		map.put("url_prefisso_metadato", sipraMtdDFontedati.getUrlPrefissoMetadato());
-		map.put("url_servizio", sipraMtdDFontedati.getUrlServizio());
+		map.put("id_datasource", sipraMtdDFontedati.getIdFontedati());
+		map.put("fk_standard_expos", sipraMtdDFontedati.getFkStandardEspos());
+		map.put("des_datasource", sipraMtdDFontedati.getDesFontedati());
+		map.put("url_prefix_metadata", sipraMtdDFontedati.getUrlPrefissoMetadato());
+		map.put("url_service", sipraMtdDFontedati.getUrlServizio());
 		map.put("fl_attiva", sipraMtdDFontedati.getFlAttiva());
-		map.put("prefisso_fontedati", sipraMtdDFontedati.getPrefissoFontedati());
+		map.put("prefix_datasource", sipraMtdDFontedati.getPrefissoFontedati());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdDFontedati sipraMtdDFontedati) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("fk_standard_espos", sipraMtdDFontedati.getFkStandardEspos());
-		map.put("des_fontedati", sipraMtdDFontedati.getDesFontedati());
-		map.put("url_prefisso_metadato", sipraMtdDFontedati.getUrlPrefissoMetadato());
-		map.put("url_servizio", sipraMtdDFontedati.getUrlServizio());
+		map.put("fk_standard_expos", sipraMtdDFontedati.getFkStandardEspos());
+		map.put("des_datasource", sipraMtdDFontedati.getDesFontedati());
+		map.put("url_prefix_metadata", sipraMtdDFontedati.getUrlPrefissoMetadato());
+		map.put("url_service", sipraMtdDFontedati.getUrlServizio());
 		map.put("fl_attiva", sipraMtdDFontedati.getFlAttiva());
-		map.put("prefisso_fontedati", sipraMtdDFontedati.getPrefissoFontedati());
-		map.put("id_fontedati", sipraMtdDFontedati.getIdFontedati());
+		map.put("prefix_datasource", sipraMtdDFontedati.getPrefissoFontedati());
+		map.put("id_datasource", sipraMtdDFontedati.getIdFontedati());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdDFontedati sipraMtdDFontedati) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_fontedati", sipraMtdDFontedati.getIdFontedati());
+		map.put("id_datasource", sipraMtdDFontedati.getIdFontedati());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdDFontedati sipraMtdDFontedati) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_fontedati", sipraMtdDFontedati.getIdFontedati());
+		map.put("id_datasource", sipraMtdDFontedati.getIdFontedati());
 		return map;
 	}
 
@@ -146,15 +146,15 @@ public class SipraMtdDFontedatiDAOImpl extends GenericDAO<SipraMtdDFontedati> im
 	private static void populateBean(ResultSet rs, SipraMtdDFontedati sipraMtdDFontedati) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdDFontedati.setIdFontedati(rs.getInt("id_fontedati")); // java.lang.Integer
+		sipraMtdDFontedati.setIdFontedati(rs.getInt("id_datasource")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdDFontedati.setIdFontedati(null); }; // not primitive number => keep null value if any
-		sipraMtdDFontedati.setFkStandardEspos(rs.getInt("fk_standard_espos")); // java.lang.Integer
+		sipraMtdDFontedati.setFkStandardEspos(rs.getInt("fk_standard_expos")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdDFontedati.setFkStandardEspos(null); }; // not primitive number => keep null value if any
-		sipraMtdDFontedati.setDesFontedati(rs.getString("des_fontedati")); // java.lang.String
-		sipraMtdDFontedati.setUrlPrefissoMetadato(rs.getString("url_prefisso_metadato")); // java.lang.String
-		sipraMtdDFontedati.setUrlServizio(rs.getString("url_servizio")); // java.lang.String
+		sipraMtdDFontedati.setDesFontedati(rs.getString("des_datasource")); // java.lang.String
+		sipraMtdDFontedati.setUrlPrefissoMetadato(rs.getString("url_prefix_metadata")); // java.lang.String
+		sipraMtdDFontedati.setUrlServizio(rs.getString("url_service")); // java.lang.String
 		sipraMtdDFontedati.setFlAttiva(rs.getString("fl_attiva")); // java.lang.String
-		sipraMtdDFontedati.setPrefissoFontedati(rs.getString("prefisso_fontedati")); // java.lang.String
+		sipraMtdDFontedati.setPrefissoFontedati(rs.getString("prefix_datasource")); // java.lang.String
 	}
 
 

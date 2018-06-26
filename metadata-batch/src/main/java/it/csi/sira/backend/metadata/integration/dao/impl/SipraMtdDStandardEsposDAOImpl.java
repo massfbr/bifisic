@@ -28,19 +28,19 @@ public class SipraMtdDStandardEsposDAOImpl extends GenericDAO<SipraMtdDStandardE
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_d_standard_espos where id_standard_espos = :id_standard_espos";
+		"select * from bifisic_mtd_d_standard_expos where id_standard_expos = :id_standard_expos";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_d_standard_espos(id_standard_espos,des_standard_espos) values(:id_standard_espos,:des_standard_espos)";
+		"insert into bifisic_mtd_d_standard_expos(id_standard_expos,des_standard_expos) values(:id_standard_expos,:des_standard_expos)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_d_standard_espos set des_standard_espos = :des_standard_espos  where id_standard_espos = :id_standard_espos";
+		"update bifisic_mtd_d_standard_expos set des_standard_expos = :des_standard_expos  where id_standard_expos = :id_standard_expos";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_d_standard_espos where  id_standard_espos = :id_standard_espos";
+		"delete from bifisic_mtd_d_standard_expos where  id_standard_expos = :id_standard_expos";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_d_standard_espos";
+		"select count(*) from bifisic_mtd_d_standard_expos";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdDStandardEsposDAOImpl extends GenericDAO<SipraMtdDStandardE
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_d_standard_espos";
+		return "bifisic_mtd_d_standard_expos";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_d_standard_espos";
+		return "select * from bifisic_mtd_d_standard_expos";
 	}
 
 	@Override
@@ -79,42 +79,42 @@ public class SipraMtdDStandardEsposDAOImpl extends GenericDAO<SipraMtdDStandardE
 
 	public SipraMtdDStandardEspos findByPK(Integer idStandardEspos) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_standard_espos", idStandardEspos);
+		map.put("id_standard_expos", idStandardEspos);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idStandardEspos) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_standard_espos", idStandardEspos);
+		map.put("id_standard_expos", idStandardEspos);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdDStandardEspos sipraMtdDStandardEspos) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_standard_espos", sipraMtdDStandardEspos.getIdStandardEspos());
-		map.put("des_standard_espos", sipraMtdDStandardEspos.getDesStandardEspos());
+		map.put("id_standard_expos", sipraMtdDStandardEspos.getIdStandardEspos());
+		map.put("des_standard_expos", sipraMtdDStandardEspos.getDesStandardEspos());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdDStandardEspos sipraMtdDStandardEspos) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("des_standard_espos", sipraMtdDStandardEspos.getDesStandardEspos());
-		map.put("id_standard_espos", sipraMtdDStandardEspos.getIdStandardEspos());
+		map.put("des_standard_expos", sipraMtdDStandardEspos.getDesStandardEspos());
+		map.put("id_standard_expos", sipraMtdDStandardEspos.getIdStandardEspos());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdDStandardEspos sipraMtdDStandardEspos) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_standard_espos", sipraMtdDStandardEspos.getIdStandardEspos());
+		map.put("id_standard_expos", sipraMtdDStandardEspos.getIdStandardEspos());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdDStandardEspos sipraMtdDStandardEspos) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_standard_espos", sipraMtdDStandardEspos.getIdStandardEspos());
+		map.put("id_standard_expos", sipraMtdDStandardEspos.getIdStandardEspos());
 		return map;
 	}
 
@@ -136,9 +136,9 @@ public class SipraMtdDStandardEsposDAOImpl extends GenericDAO<SipraMtdDStandardE
 	private static void populateBean(ResultSet rs, SipraMtdDStandardEspos sipraMtdDStandardEspos) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdDStandardEspos.setIdStandardEspos(rs.getInt("id_standard_espos")); // java.lang.Integer
+		sipraMtdDStandardEspos.setIdStandardEspos(rs.getInt("id_standard_expos")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdDStandardEspos.setIdStandardEspos(null); }; // not primitive number => keep null value if any
-		sipraMtdDStandardEspos.setDesStandardEspos(rs.getString("des_standard_espos")); // java.lang.String
+		sipraMtdDStandardEspos.setDesStandardEspos(rs.getString("des_standard_expos")); // java.lang.String
 	}
 
 
