@@ -4,32 +4,32 @@ import org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIn
 
 public class SequenceManager {
 
-  private PostgreSQLSequenceMaxValueIncrementer seqSipraMtdTMetadato;   
-  private PostgreSQLSequenceMaxValueIncrementer seqSipraMtdTFunzione;
-  private PostgreSQLSequenceMaxValueIncrementer seqSipraMtdTParolaChiave;  
+  private PostgreSQLSequenceMaxValueIncrementer seqMtdTMetadato;   
+  private PostgreSQLSequenceMaxValueIncrementer seqMtdTFunzione;
+  private PostgreSQLSequenceMaxValueIncrementer seqMtdTParolaChiave;  
 
-  public PostgreSQLSequenceMaxValueIncrementer getSeqSipraMtdTMetadato() {
-	return seqSipraMtdTMetadato;
+  public PostgreSQLSequenceMaxValueIncrementer getSeqMtdTMetadato() {
+	return seqMtdTMetadato;
   }
 
-  public void setSeqSipraMtdTMetadato(PostgreSQLSequenceMaxValueIncrementer seqSipraMtdTMetadato) {
-	this.seqSipraMtdTMetadato = seqSipraMtdTMetadato;
+  public void setSeqMtdTMetadato(PostgreSQLSequenceMaxValueIncrementer seqMtdTMetadato) {
+	this.seqMtdTMetadato = seqMtdTMetadato;
   }
 
-  public PostgreSQLSequenceMaxValueIncrementer getSeqSipraMtdTFunzione() {
-    return seqSipraMtdTFunzione;
+  public PostgreSQLSequenceMaxValueIncrementer getSeqMtdTFunzione() {
+    return seqMtdTFunzione;
   }
 
-  public void setSeqSipraMtdTFunzione(PostgreSQLSequenceMaxValueIncrementer seqSipraMtdTFunzione) {
-    this.seqSipraMtdTFunzione = seqSipraMtdTFunzione;
+  public void setSeqMtdTFunzione(PostgreSQLSequenceMaxValueIncrementer seqMtdTFunzione) {
+    this.seqMtdTFunzione = seqMtdTFunzione;
   }
 
-  public PostgreSQLSequenceMaxValueIncrementer getSeqSipraMtdTParolaChiave() {
-    return seqSipraMtdTParolaChiave;
+  public PostgreSQLSequenceMaxValueIncrementer getSeqMtdTParolaChiave() {
+    return seqMtdTParolaChiave;
   }
 
-  public void setSeqSipraMtdTParolaChiave(PostgreSQLSequenceMaxValueIncrementer seqSipraMtdTParolaChiave) {
-    this.seqSipraMtdTParolaChiave = seqSipraMtdTParolaChiave;
+  public void setSeqMtdTParolaChiave(PostgreSQLSequenceMaxValueIncrementer seqMtdTParolaChiave) {
+    this.seqMtdTParolaChiave = seqMtdTParolaChiave;
   }
 
 }

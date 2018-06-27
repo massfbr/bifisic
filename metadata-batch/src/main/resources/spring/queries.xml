@@ -4,7 +4,7 @@
 	<entry key="GET_METADATA_OBJECTS_BY_id_category">
 	    <![CDATA[
 		select distinct(c.*) 
-	    from sipra_mtd_r_categoria_mtd a, bifisic_mtd_t_metadata b, bifisic_mtd_t_mtd_csw c, sipra_mtd_t_funzione d 
+	    from bifisic_mtd_r_category_mtd a, bifisic_mtd_t_metadata b, bifisic_mtd_t_mtd_csw c, bifisic_mtd_t_function d 
 		where id_category = :id_category and 
 		      b.id_metadata = a.id_metadata and 
 		      c.id_metadata = b.id_metadata and
@@ -16,7 +16,7 @@
 	<entry key="GET_METADATA_VIEWS_BY_id_category">
 	    <![CDATA[
 		select distinct(c.*)  
-	    from sipra_mtd_r_categoria_mtd a, bifisic_mtd_t_metadata b, bifisic_mtd_t_mtd_csw c, sipra_mtd_t_funzione d 
+	    from bifisic_mtd_r_category_mtd a, bifisic_mtd_t_metadata b, bifisic_mtd_t_mtd_csw c, bifisic_mtd_t_function d 
 		where id_category = :id_category and 
 		      b.id_metadata = a.id_metadata and 
 		      c.id_metadata = b.id_metadata and

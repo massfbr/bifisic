@@ -1,8 +1,8 @@
 package it.csi.sira.backend.metadata.integration.servizi.csw;
 
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdDFontedati;
+import it.csi.sira.backend.metadata.integration.dto.MtdDFontedati;
 
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdDTipoFunzione;
+import it.csi.sira.backend.metadata.integration.dto.MtdDTipoFunzione;
 import it.csi.sira.backend.metadata.integration.servizi.csw.dto.CswBoundingBox;
 import it.csi.sira.backend.metadata.integration.servizi.csw.dto.CswRecord;
 import it.csi.sira.backend.metadata.integration.servizi.csw.dto.CswSubject;
@@ -99,13 +99,13 @@ public class CswAdapter {
 	return id;
   }
 
-  public List<CswRecord> getCswRecords(String xml, SipraMtdDFontedati fonteDati) throws CswAdapterException {
+  public List<CswRecord> getCswRecords(String xml, MtdDFontedati fonteDati) throws CswAdapterException {
 	final String methodName = new Object() {
 	}.getClass().getEnclosingMethod().getName();
 
 	logger.debug(LogFormatter.format(className, methodName, "BEGIN"));
 
-	List<SipraMtdDTipoFunzione> elencoTipoFunzioni = integratioManager.getDaoManager().getSipraMtdDTipoFunzioneDAO().findAll();
+	List<MtdDTipoFunzione> elencoTipoFunzioni = integratioManager.getDaoManager().getMtdDTipoFunzioneDAO().findAll();
 
 	InputStream xmlStream = new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8));
 
