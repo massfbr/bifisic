@@ -4,261 +4,261 @@
  */
 package it.csi.sira.backend.metadata.utils;
 
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdDFontedatiDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdDLinguaDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdDStandardEsposDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdDTipoCategoriaDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdDTipoFunzioneDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdDTipoOggettoDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdRCategLinguaDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdRCategappCategoriDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdRCategoriaMtdDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdRParolachiaveMtdDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTCategoriaDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTCategoriaApplDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTDettlogDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTFunzioneDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTLogDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTMetadatoDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTMtdCswDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTMtdPlusDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTParolaChiaveDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTStoricoFunzioneDAO;
-import it.csi.sira.backend.metadata.integration.dao.SipraMtdTStoricoMtdCswDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdDFontedatiDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdDLinguaDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdDStandardEsposDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdDTipoCategoriaDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdDTipoFunzioneDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdDTipoOggettoDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdRCategLinguaDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdRCategappCategoriDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdRCategoriaMtdDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdRParolachiaveMtdDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTCategoriaDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTCategoriaApplDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTDettlogDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTFunzioneDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTLogDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTMetadatoDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTMtdCswDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTMtdPlusDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTParolaChiaveDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTStoricoFunzioneDAO;
+import it.csi.sira.backend.metadata.integration.dao.MtdTStoricoMtdCswDAO;
 
 public class DAOManager 
 {
 
- private SipraMtdDFontedatiDAO sipraMtdDFontedatiDAO;
- private SipraMtdDLinguaDAO sipraMtdDLinguaDAO;
- private SipraMtdDStandardEsposDAO sipraMtdDStandardEsposDAO;
- private SipraMtdDTipoCategoriaDAO sipraMtdDTipoCategoriaDAO;
- private SipraMtdDTipoFunzioneDAO sipraMtdDTipoFunzioneDAO;
- private SipraMtdDTipoOggettoDAO sipraMtdDTipoOggettoDAO;
- private SipraMtdRCategLinguaDAO sipraMtdRCategLinguaDAO;
- private SipraMtdRCategappCategoriDAO sipraMtdRCategappCategoriDAO;
- private SipraMtdRCategoriaMtdDAO sipraMtdRCategoriaMtdDAO;
- private SipraMtdRParolachiaveMtdDAO sipraMtdRParolachiaveMtdDAO;
- private SipraMtdTCategoriaDAO sipraMtdTCategoriaDAO;
- private SipraMtdTCategoriaApplDAO sipraMtdTCategoriaApplDAO;
- private SipraMtdTDettlogDAO sipraMtdTDettlogDAO;
- private SipraMtdTFunzioneDAO sipraMtdTFunzioneDAO;
- private SipraMtdTLogDAO sipraMtdTLogDAO;
- private SipraMtdTMetadatoDAO sipraMtdTMetadatoDAO;
- private SipraMtdTMtdCswDAO sipraMtdTMtdCswDAO;
- private SipraMtdTMtdPlusDAO sipraMtdTMtdPlusDAO;
- private SipraMtdTParolaChiaveDAO sipraMtdTParolaChiaveDAO;
- private SipraMtdTStoricoFunzioneDAO sipraMtdTStoricoFunzioneDAO;
- private SipraMtdTStoricoMtdCswDAO sipraMtdTStoricoMtdCswDAO;
+ private MtdDFontedatiDAO mtdDFontedatiDAO;
+ private MtdDLinguaDAO mtdDLinguaDAO;
+ private MtdDStandardEsposDAO mtdDStandardEsposDAO;
+ private MtdDTipoCategoriaDAO mtdDTipoCategoriaDAO;
+ private MtdDTipoFunzioneDAO mtdDTipoFunzioneDAO;
+ private MtdDTipoOggettoDAO mtdDTipoOggettoDAO;
+ private MtdRCategLinguaDAO mtdRCategLinguaDAO;
+ private MtdRCategappCategoriDAO mtdRCategappCategoriDAO;
+ private MtdRCategoriaMtdDAO mtdRCategoriaMtdDAO;
+ private MtdRParolachiaveMtdDAO mtdRParolachiaveMtdDAO;
+ private MtdTCategoriaDAO mtdTCategoriaDAO;
+ private MtdTCategoriaApplDAO mtdTCategoriaApplDAO;
+ private MtdTDettlogDAO mtdTDettlogDAO;
+ private MtdTFunzioneDAO mtdTFunzioneDAO;
+ private MtdTLogDAO mtdTLogDAO;
+ private MtdTMetadatoDAO mtdTMetadatoDAO;
+ private MtdTMtdCswDAO mtdTMtdCswDAO;
+ private MtdTMtdPlusDAO mtdTMtdPlusDAO;
+ private MtdTParolaChiaveDAO mtdTParolaChiaveDAO;
+ private MtdTStoricoFunzioneDAO mtdTStoricoFunzioneDAO;
+ private MtdTStoricoMtdCswDAO mtdTStoricoMtdCswDAO;
 
- public void setSipraMtdDFontedatiDAO(SipraMtdDFontedatiDAO sipraMtdDFontedatiDAO)
+ public void setMtdDFontedatiDAO(MtdDFontedatiDAO mtdDFontedatiDAO)
  {
-  this.sipraMtdDFontedatiDAO = sipraMtdDFontedatiDAO;
+  this.mtdDFontedatiDAO = mtdDFontedatiDAO;
  }
 
- public SipraMtdDFontedatiDAO getSipraMtdDFontedatiDAO()
+ public MtdDFontedatiDAO getMtdDFontedatiDAO()
  {
-  return this.sipraMtdDFontedatiDAO;
+  return this.mtdDFontedatiDAO;
  }
 
- public void setSipraMtdDLinguaDAO(SipraMtdDLinguaDAO sipraMtdDLinguaDAO)
+ public void setMtdDLinguaDAO(MtdDLinguaDAO mtdDLinguaDAO)
  {
-  this.sipraMtdDLinguaDAO = sipraMtdDLinguaDAO;
+  this.mtdDLinguaDAO = mtdDLinguaDAO;
  }
 
- public SipraMtdDLinguaDAO getSipraMtdDLinguaDAO()
+ public MtdDLinguaDAO getMtdDLinguaDAO()
  {
-  return this.sipraMtdDLinguaDAO;
+  return this.mtdDLinguaDAO;
  }
 
- public void setSipraMtdDStandardEsposDAO(SipraMtdDStandardEsposDAO sipraMtdDStandardEsposDAO)
+ public void setMtdDStandardEsposDAO(MtdDStandardEsposDAO mtdDStandardEsposDAO)
  {
-  this.sipraMtdDStandardEsposDAO = sipraMtdDStandardEsposDAO;
+  this.mtdDStandardEsposDAO = mtdDStandardEsposDAO;
  }
 
- public SipraMtdDStandardEsposDAO getSipraMtdDStandardEsposDAO()
+ public MtdDStandardEsposDAO getMtdDStandardEsposDAO()
  {
-  return this.sipraMtdDStandardEsposDAO;
+  return this.mtdDStandardEsposDAO;
  }
 
- public void setSipraMtdDTipoCategoriaDAO(SipraMtdDTipoCategoriaDAO sipraMtdDTipoCategoriaDAO)
+ public void setMtdDTipoCategoriaDAO(MtdDTipoCategoriaDAO mtdDTipoCategoriaDAO)
  {
-  this.sipraMtdDTipoCategoriaDAO = sipraMtdDTipoCategoriaDAO;
+  this.mtdDTipoCategoriaDAO = mtdDTipoCategoriaDAO;
  }
 
- public SipraMtdDTipoCategoriaDAO getSipraMtdDTipoCategoriaDAO()
+ public MtdDTipoCategoriaDAO getMtdDTipoCategoriaDAO()
  {
-  return this.sipraMtdDTipoCategoriaDAO;
+  return this.mtdDTipoCategoriaDAO;
  }
 
- public void setSipraMtdDTipoFunzioneDAO(SipraMtdDTipoFunzioneDAO sipraMtdDTipoFunzioneDAO)
+ public void setMtdDTipoFunzioneDAO(MtdDTipoFunzioneDAO mtdDTipoFunzioneDAO)
  {
-  this.sipraMtdDTipoFunzioneDAO = sipraMtdDTipoFunzioneDAO;
+  this.mtdDTipoFunzioneDAO = mtdDTipoFunzioneDAO;
  }
 
- public SipraMtdDTipoFunzioneDAO getSipraMtdDTipoFunzioneDAO()
+ public MtdDTipoFunzioneDAO getMtdDTipoFunzioneDAO()
  {
-  return this.sipraMtdDTipoFunzioneDAO;
+  return this.mtdDTipoFunzioneDAO;
  }
 
- public void setSipraMtdDTipoOggettoDAO(SipraMtdDTipoOggettoDAO sipraMtdDTipoOggettoDAO)
+ public void setMtdDTipoOggettoDAO(MtdDTipoOggettoDAO mtdDTipoOggettoDAO)
  {
-  this.sipraMtdDTipoOggettoDAO = sipraMtdDTipoOggettoDAO;
+  this.mtdDTipoOggettoDAO = mtdDTipoOggettoDAO;
  }
 
- public SipraMtdDTipoOggettoDAO getSipraMtdDTipoOggettoDAO()
+ public MtdDTipoOggettoDAO getMtdDTipoOggettoDAO()
  {
-  return this.sipraMtdDTipoOggettoDAO;
+  return this.mtdDTipoOggettoDAO;
  }
 
- public void setSipraMtdRCategLinguaDAO(SipraMtdRCategLinguaDAO sipraMtdRCategLinguaDAO)
+ public void setMtdRCategLinguaDAO(MtdRCategLinguaDAO mtdRCategLinguaDAO)
  {
-  this.sipraMtdRCategLinguaDAO = sipraMtdRCategLinguaDAO;
+  this.mtdRCategLinguaDAO = mtdRCategLinguaDAO;
  }
 
- public SipraMtdRCategLinguaDAO getSipraMtdRCategLinguaDAO()
+ public MtdRCategLinguaDAO getMtdRCategLinguaDAO()
  {
-  return this.sipraMtdRCategLinguaDAO;
+  return this.mtdRCategLinguaDAO;
  }
 
- public void setSipraMtdRCategappCategoriDAO(SipraMtdRCategappCategoriDAO sipraMtdRCategappCategoriDAO)
+ public void setMtdRCategappCategoriDAO(MtdRCategappCategoriDAO mtdRCategappCategoriDAO)
  {
-  this.sipraMtdRCategappCategoriDAO = sipraMtdRCategappCategoriDAO;
+  this.mtdRCategappCategoriDAO = mtdRCategappCategoriDAO;
  }
 
- public SipraMtdRCategappCategoriDAO getSipraMtdRCategappCategoriDAO()
+ public MtdRCategappCategoriDAO getMtdRCategappCategoriDAO()
  {
-  return this.sipraMtdRCategappCategoriDAO;
+  return this.mtdRCategappCategoriDAO;
  }
 
- public void setSipraMtdRCategoriaMtdDAO(SipraMtdRCategoriaMtdDAO sipraMtdRCategoriaMtdDAO)
+ public void setMtdRCategoriaMtdDAO(MtdRCategoriaMtdDAO mtdRCategoriaMtdDAO)
  {
-  this.sipraMtdRCategoriaMtdDAO = sipraMtdRCategoriaMtdDAO;
+  this.mtdRCategoriaMtdDAO = mtdRCategoriaMtdDAO;
  }
 
- public SipraMtdRCategoriaMtdDAO getSipraMtdRCategoriaMtdDAO()
+ public MtdRCategoriaMtdDAO getMtdRCategoriaMtdDAO()
  {
-  return this.sipraMtdRCategoriaMtdDAO;
+  return this.mtdRCategoriaMtdDAO;
  }
 
- public void setSipraMtdRParolachiaveMtdDAO(SipraMtdRParolachiaveMtdDAO sipraMtdRParolachiaveMtdDAO)
+ public void setMtdRParolachiaveMtdDAO(MtdRParolachiaveMtdDAO mtdRParolachiaveMtdDAO)
  {
-  this.sipraMtdRParolachiaveMtdDAO = sipraMtdRParolachiaveMtdDAO;
+  this.mtdRParolachiaveMtdDAO = mtdRParolachiaveMtdDAO;
  }
 
- public SipraMtdRParolachiaveMtdDAO getSipraMtdRParolachiaveMtdDAO()
+ public MtdRParolachiaveMtdDAO getMtdRParolachiaveMtdDAO()
  {
-  return this.sipraMtdRParolachiaveMtdDAO;
+  return this.mtdRParolachiaveMtdDAO;
  }
 
- public void setSipraMtdTCategoriaDAO(SipraMtdTCategoriaDAO sipraMtdTCategoriaDAO)
+ public void setMtdTCategoriaDAO(MtdTCategoriaDAO mtdTCategoriaDAO)
  {
-  this.sipraMtdTCategoriaDAO = sipraMtdTCategoriaDAO;
+  this.mtdTCategoriaDAO = mtdTCategoriaDAO;
  }
 
- public SipraMtdTCategoriaDAO getSipraMtdTCategoriaDAO()
+ public MtdTCategoriaDAO getMtdTCategoriaDAO()
  {
-  return this.sipraMtdTCategoriaDAO;
+  return this.mtdTCategoriaDAO;
  }
 
- public void setSipraMtdTCategoriaApplDAO(SipraMtdTCategoriaApplDAO sipraMtdTCategoriaApplDAO)
+ public void setMtdTCategoriaApplDAO(MtdTCategoriaApplDAO mtdTCategoriaApplDAO)
  {
-  this.sipraMtdTCategoriaApplDAO = sipraMtdTCategoriaApplDAO;
+  this.mtdTCategoriaApplDAO = mtdTCategoriaApplDAO;
  }
 
- public SipraMtdTCategoriaApplDAO getSipraMtdTCategoriaApplDAO()
+ public MtdTCategoriaApplDAO getMtdTCategoriaApplDAO()
  {
-  return this.sipraMtdTCategoriaApplDAO;
+  return this.mtdTCategoriaApplDAO;
  }
 
- public void setSipraMtdTDettlogDAO(SipraMtdTDettlogDAO sipraMtdTDettlogDAO)
+ public void setMtdTDettlogDAO(MtdTDettlogDAO mtdTDettlogDAO)
  {
-  this.sipraMtdTDettlogDAO = sipraMtdTDettlogDAO;
+  this.mtdTDettlogDAO = mtdTDettlogDAO;
  }
 
- public SipraMtdTDettlogDAO getSipraMtdTDettlogDAO()
+ public MtdTDettlogDAO getMtdTDettlogDAO()
  {
-  return this.sipraMtdTDettlogDAO;
+  return this.mtdTDettlogDAO;
  }
 
- public void setSipraMtdTFunzioneDAO(SipraMtdTFunzioneDAO sipraMtdTFunzioneDAO)
+ public void setMtdTFunzioneDAO(MtdTFunzioneDAO mtdTFunzioneDAO)
  {
-  this.sipraMtdTFunzioneDAO = sipraMtdTFunzioneDAO;
+  this.mtdTFunzioneDAO = mtdTFunzioneDAO;
  }
 
- public SipraMtdTFunzioneDAO getSipraMtdTFunzioneDAO()
+ public MtdTFunzioneDAO getMtdTFunzioneDAO()
  {
-  return this.sipraMtdTFunzioneDAO;
+  return this.mtdTFunzioneDAO;
  }
 
- public void setSipraMtdTLogDAO(SipraMtdTLogDAO sipraMtdTLogDAO)
+ public void setMtdTLogDAO(MtdTLogDAO mtdTLogDAO)
  {
-  this.sipraMtdTLogDAO = sipraMtdTLogDAO;
+  this.mtdTLogDAO = mtdTLogDAO;
  }
 
- public SipraMtdTLogDAO getSipraMtdTLogDAO()
+ public MtdTLogDAO getMtdTLogDAO()
  {
-  return this.sipraMtdTLogDAO;
+  return this.mtdTLogDAO;
  }
 
- public void setSipraMtdTMetadatoDAO(SipraMtdTMetadatoDAO sipraMtdTMetadatoDAO)
+ public void setMtdTMetadatoDAO(MtdTMetadatoDAO mtdTMetadatoDAO)
  {
-  this.sipraMtdTMetadatoDAO = sipraMtdTMetadatoDAO;
+  this.mtdTMetadatoDAO = mtdTMetadatoDAO;
  }
 
- public SipraMtdTMetadatoDAO getSipraMtdTMetadatoDAO()
+ public MtdTMetadatoDAO getMtdTMetadatoDAO()
  {
-  return this.sipraMtdTMetadatoDAO;
+  return this.mtdTMetadatoDAO;
  }
 
- public void setSipraMtdTMtdCswDAO(SipraMtdTMtdCswDAO sipraMtdTMtdCswDAO)
+ public void setMtdTMtdCswDAO(MtdTMtdCswDAO mtdTMtdCswDAO)
  {
-  this.sipraMtdTMtdCswDAO = sipraMtdTMtdCswDAO;
+  this.mtdTMtdCswDAO = mtdTMtdCswDAO;
  }
 
- public SipraMtdTMtdCswDAO getSipraMtdTMtdCswDAO()
+ public MtdTMtdCswDAO getMtdTMtdCswDAO()
  {
-  return this.sipraMtdTMtdCswDAO;
+  return this.mtdTMtdCswDAO;
  }
 
- public void setSipraMtdTMtdPlusDAO(SipraMtdTMtdPlusDAO sipraMtdTMtdPlusDAO)
+ public void setMtdTMtdPlusDAO(MtdTMtdPlusDAO mtdTMtdPlusDAO)
  {
-  this.sipraMtdTMtdPlusDAO = sipraMtdTMtdPlusDAO;
+  this.mtdTMtdPlusDAO = mtdTMtdPlusDAO;
  }
 
- public SipraMtdTMtdPlusDAO getSipraMtdTMtdPlusDAO()
+ public MtdTMtdPlusDAO getMtdTMtdPlusDAO()
  {
-  return this.sipraMtdTMtdPlusDAO;
+  return this.mtdTMtdPlusDAO;
  }
 
- public void setSipraMtdTParolaChiaveDAO(SipraMtdTParolaChiaveDAO sipraMtdTParolaChiaveDAO)
+ public void setMtdTParolaChiaveDAO(MtdTParolaChiaveDAO mtdTParolaChiaveDAO)
  {
-  this.sipraMtdTParolaChiaveDAO = sipraMtdTParolaChiaveDAO;
+  this.mtdTParolaChiaveDAO = mtdTParolaChiaveDAO;
  }
 
- public SipraMtdTParolaChiaveDAO getSipraMtdTParolaChiaveDAO()
+ public MtdTParolaChiaveDAO getMtdTParolaChiaveDAO()
  {
-  return this.sipraMtdTParolaChiaveDAO;
+  return this.mtdTParolaChiaveDAO;
  }
 
- public void setSipraMtdTStoricoFunzioneDAO(SipraMtdTStoricoFunzioneDAO sipraMtdTStoricoFunzioneDAO)
+ public void setMtdTStoricoFunzioneDAO(MtdTStoricoFunzioneDAO mtdTStoricoFunzioneDAO)
  {
-  this.sipraMtdTStoricoFunzioneDAO = sipraMtdTStoricoFunzioneDAO;
+  this.mtdTStoricoFunzioneDAO = mtdTStoricoFunzioneDAO;
  }
 
- public SipraMtdTStoricoFunzioneDAO getSipraMtdTStoricoFunzioneDAO()
+ public MtdTStoricoFunzioneDAO getMtdTStoricoFunzioneDAO()
  {
-  return this.sipraMtdTStoricoFunzioneDAO;
+  return this.mtdTStoricoFunzioneDAO;
  }
 
- public void setSipraMtdTStoricoMtdCswDAO(SipraMtdTStoricoMtdCswDAO sipraMtdTStoricoMtdCswDAO)
+ public void setMtdTStoricoMtdCswDAO(MtdTStoricoMtdCswDAO mtdTStoricoMtdCswDAO)
  {
-  this.sipraMtdTStoricoMtdCswDAO = sipraMtdTStoricoMtdCswDAO;
+  this.mtdTStoricoMtdCswDAO = mtdTStoricoMtdCswDAO;
  }
 
- public SipraMtdTStoricoMtdCswDAO getSipraMtdTStoricoMtdCswDAO()
+ public MtdTStoricoMtdCswDAO getMtdTStoricoMtdCswDAO()
  {
-  return this.sipraMtdTStoricoMtdCswDAO;
+  return this.mtdTStoricoMtdCswDAO;
  }
 
 }

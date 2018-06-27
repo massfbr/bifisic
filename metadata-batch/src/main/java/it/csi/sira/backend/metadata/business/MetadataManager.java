@@ -1,18 +1,18 @@
 package it.csi.sira.backend.metadata.business;
 
 import it.csi.sira.backend.metadata.dto.MetaObject;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdDFontedati;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdRCategLingua;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdRCategappCategori;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdRCategoriaMtd;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdRParolachiaveMtd;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdTCategoriaAppl;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdTFunzione;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdTMetadato;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdTMtdCsw;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdTParolaChiave;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdTStoricoFunzione;
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdTStoricoMtdCsw;
+import it.csi.sira.backend.metadata.integration.dto.MtdDFontedati;
+import it.csi.sira.backend.metadata.integration.dto.MtdRCategLingua;
+import it.csi.sira.backend.metadata.integration.dto.MtdRCategappCategori;
+import it.csi.sira.backend.metadata.integration.dto.MtdRCategoriaMtd;
+import it.csi.sira.backend.metadata.integration.dto.MtdRParolachiaveMtd;
+import it.csi.sira.backend.metadata.integration.dto.MtdTCategoriaAppl;
+import it.csi.sira.backend.metadata.integration.dto.MtdTFunzione;
+import it.csi.sira.backend.metadata.integration.dto.MtdTMetadato;
+import it.csi.sira.backend.metadata.integration.dto.MtdTMtdCsw;
+import it.csi.sira.backend.metadata.integration.dto.MtdTParolaChiave;
+import it.csi.sira.backend.metadata.integration.dto.MtdTStoricoFunzione;
+import it.csi.sira.backend.metadata.integration.dto.MtdTStoricoMtdCsw;
 import it.csi.sira.backend.metadata.integration.servizi.csw.CswAdapter;
 import it.csi.sira.backend.metadata.integration.servizi.csw.CswService;
 import it.csi.sira.backend.metadata.integration.servizi.csw.dto.CswRecord;
@@ -57,15 +57,15 @@ public class MetadataManager {
 	String query = null;
 	MetaObject[] children = null;
 	Map<String, Object> params = new HashMap<String, Object>();
-	List<SipraMtdTMtdCsw> metadata = null;
+	List<MtdTMtdCsw> metadata = null;
 
 	try {
-	  RowMapper<SipraMtdTMtdCsw> rowMapper = integratioManager.getDaoManager().getSipraMtdTMtdCswDAO().getRowMapper();
+	  RowMapper<MtdTMtdCsw> rowMapper = integratioManager.getDaoManager().getMtdTMtdCswDAO().getRowMapper();
 
-	  params.put("id_categoria", idCategory);
-	  query = integratioManager.getQueries().getProperty("GET_METADATA_VIEWS_BY_ID_CATEGORIA");
+	  params.put("id_category", idCategory);
+	  query = integratioManager.getQueries().getProperty("GET_METADATA_VIEWS_BY_id_category");
 
-	  metadata = integratioManager.getDaoManager().getSipraMtdTMtdCswDAO().findByGenericCriteria(query, rowMapper, params);
+	  metadata = integratioManager.getDaoManager().getMtdTMtdCswDAO().findByGenericCriteria(query, rowMapper, params);
 
 	  if (metadata != null && metadata.size() > 0) {
 		children = new MetaObject[metadata.size()];
@@ -107,15 +107,15 @@ public class MetadataManager {
 	MetaObject[] children = null;
 	Map<String, Object> params = null;
 	params = new HashMap<String, Object>();
-	List<SipraMtdTMtdCsw> metadata = null;
+	List<MtdTMtdCsw> metadata = null;
 
 	try {
-	  RowMapper<SipraMtdTMtdCsw> rowMapper = integratioManager.getDaoManager().getSipraMtdTMtdCswDAO().getRowMapper();
+	  RowMapper<MtdTMtdCsw> rowMapper = integratioManager.getDaoManager().getMtdTMtdCswDAO().getRowMapper();
 
-	  params.put("id_categoria", idCategory);
+	  params.put("id_category", idCategory);
 
-	  query = integratioManager.getQueries().getProperty("GET_METADATA_OBJECTS_BY_ID_CATEGORIA");
-	  metadata = integratioManager.getDaoManager().getSipraMtdTMtdCswDAO().findByGenericCriteria(query, rowMapper, params);
+	  query = integratioManager.getQueries().getProperty("GET_METADATA_OBJECTS_BY_id_category");
+	  metadata = integratioManager.getDaoManager().getMtdTMtdCswDAO().findByGenericCriteria(query, rowMapper, params);
 
 	  if (metadata != null && metadata.size() > 0) {
 		children = new MetaObject[metadata.size()];
@@ -157,8 +157,8 @@ public class MetadataManager {
 	try {
 
 	  params = new HashMap<String, Object>();
-	  params.put("id_categoria_appl", idCategoria);
-	  List<SipraMtdRCategappCategori> metaCategories = integratioManager.getDaoManager().getSipraMtdRCategappCategoriDAO().findByCriteria(params);
+	  params.put("id_category_appl", idCategoria);
+	  List<MtdRCategappCategori> metaCategories = integratioManager.getDaoManager().getMtdRCategappCategoriDAO().findByCriteria(params);
 
 	  if (metaCategories != null && metaCategories.size() > 0) {
 
@@ -166,9 +166,9 @@ public class MetadataManager {
 
 		for (int i = 0; i < metaCategories.size(); i++) {
 
-		  SipraMtdRCategappCategori sipraMtdRCategappCategori = metaCategories.get(i);
+		  MtdRCategappCategori sipraMtdRCategappCategori = metaCategories.get(i);
 
-		  SipraMtdRCategLingua sipraMtdRCategLingua = integratioManager.getDaoManager().getSipraMtdRCategLinguaDAO()
+		  MtdRCategLingua sipraMtdRCategLingua = integratioManager.getDaoManager().getMtdRCategLinguaDAO()
 			  .findByPK(sipraMtdRCategappCategori.getIdCategoria(), 1);
 
 		  MetaObject metaCategory = new MetaObject();
@@ -242,18 +242,18 @@ public class MetadataManager {
 	MetaObject metaObject = null;
 
 	try {
-	  SipraMtdTCategoriaAppl appCat = integratioManager.getDaoManager().getSipraMtdTCategoriaApplDAO().findByPK(idAppCategory);
+	  MtdTCategoriaAppl appCat = integratioManager.getDaoManager().getMtdTCategoriaApplDAO().findByPK(idAppCategory);
 
 	  if (appCat != null) {
 		metaObject = new MetaObject();
 		metaObject.setTitle(appCat.getDesCategoria());
 	  } else {
-		throw new Exception("Category not found in sipra_mtd_t_categoria_appl!!");
+		throw new Exception("Category not found in bifisic_mtd_t_category_appl!!");
 	  }
 
 	  params = new HashMap<String, Object>();
-	  params.put("fk_padre", appCat.getIdCategoriaAppl());
-	  List<SipraMtdTCategoriaAppl> appChildrenCategories = integratioManager.getDaoManager().getSipraMtdTCategoriaApplDAO().findByCriteria(params);
+	  params.put("fk_parent", appCat.getIdCategoriaAppl());
+	  List<MtdTCategoriaAppl> appChildrenCategories = integratioManager.getDaoManager().getMtdTCategoriaApplDAO().findByCriteria(params);
 
 	  if (appChildrenCategories != null && appChildrenCategories.size() > 0) {
 
@@ -305,21 +305,21 @@ public class MetadataManager {
 
 	try {
 	  params = new HashMap<String, Object>();
-	  params.put("livello", 1);
-	  List<SipraMtdTCategoriaAppl> allFirstCategories = integratioManager.getDaoManager().getSipraMtdTCategoriaApplDAO().findByCriteria(params);
+	  params.put("level", 1);
+	  List<MtdTCategoriaAppl> allFirstCategories = integratioManager.getDaoManager().getMtdTCategoriaApplDAO().findByCriteria(params);
 
 	  if (allFirstCategories != null && allFirstCategories.size() > 0) {
 
 		for (int i = 0; i < allFirstCategories.size(); i++) {
 
-		  SipraMtdTCategoriaAppl cat = allFirstCategories.get(i);
+		  MtdTCategoriaAppl cat = allFirstCategories.get(i);
 
 		  MetaObject rootCategory = this.getAppCategories(allFirstCategories.get(i).getIdCategoriaAppl());
 
 		  cat.setObjectNumber(rootCategory.getObjectCounter());
 		  cat.setViewNumber(rootCategory.getTematicViewCounter());
 
-		  integratioManager.getDaoManager().getSipraMtdTCategoriaApplDAO().update(cat);
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().update(cat);
 		}
 	  }
 	} catch (Exception e) {
@@ -339,7 +339,7 @@ public class MetadataManager {
 	logger.debug(LogFormatter.format(className, methodName, "BEGIN"));
 
 	Map<String, Object> params = null;
-	List<SipraMtdTMtdCsw> cswTable = integratioManager.getDaoManager().getSipraMtdTMtdCswDAO().findAll();
+	List<MtdTMtdCsw> cswTable = integratioManager.getDaoManager().getMtdTMtdCswDAO().findAll();
 
 	PlatformTransactionManager transactionManager = transactionTemplate.getTransactionManager();
 	TransactionStatus transactionStatus = transactionManager.getTransaction(new DefaultTransactionDefinition());
@@ -347,15 +347,15 @@ public class MetadataManager {
 	try {
 
 	  params = new HashMap<String, Object>();
-	  params.put("fl_attiva", "S");
-	  List<SipraMtdDFontedati> elencoFontiDati = integratioManager.getDaoManager().getSipraMtdDFontedatiDAO().findByCriteria(params);
+	  params.put("fl_active", "S");
+	  List<MtdDFontedati> elencoFontiDati = integratioManager.getDaoManager().getMtdDFontedatiDAO().findByCriteria(params);
 
 	  for (int fonte = 0; fonte < elencoFontiDati.size(); fonte++) {
 
-		SipraMtdDFontedati fonteDati = elencoFontiDati.get(fonte);
+		MtdDFontedati fonteDati = elencoFontiDati.get(fonte);
 		cswService.setUrlService(fonteDati.getUrlServizio());
 
-		for (SipraMtdTMtdCsw csw : cswTable) {
+		for (MtdTMtdCsw csw : cswTable) {
 		  
 		  Thread.sleep(100);
 		  
@@ -366,11 +366,11 @@ public class MetadataManager {
 
 			logger.info(LogFormatter.format(className, methodName, "RECORD ID: " + csw.getDcIdentifier() + "(" + csw.getIdMetadato() + ") NON TROVATO SU FONTE " + fonteDati.getDesFontedati()));
 
-			SipraMtdTStoricoMtdCsw cswStorico = integratioManager.getDaoManager().getSipraMtdTStoricoMtdCswDAO().findByPK(csw.getIdMetadato());
+			MtdTStoricoMtdCsw cswStorico = integratioManager.getDaoManager().getMtdTStoricoMtdCswDAO().findByPK(csw.getIdMetadato());
 
 			if (cswStorico == null) {
 
-			  cswStorico = new SipraMtdTStoricoMtdCsw();
+			  cswStorico = new MtdTStoricoMtdCsw();
 
 			  cswStorico.setIdStoricoMetadato(csw.getIdMetadato());
 			  cswStorico.setUrlMetadatoCalc(csw.getUrlMetadatoCalc());
@@ -382,28 +382,28 @@ public class MetadataManager {
 			  cswStorico.setBoundBoxLowerCorner(csw.getBoundBoxLowerCorner());
 			  cswStorico.setBoundBoxCrs(csw.getBoundBoxCrs());
 
-			  integratioManager.getDaoManager().getSipraMtdTStoricoMtdCswDAO().insert(cswStorico);
-			  integratioManager.getDaoManager().getSipraMtdTMtdCswDAO().deleteByPK(csw.getIdMetadato());
+			  integratioManager.getDaoManager().getMtdTStoricoMtdCswDAO().insert(cswStorico);
+			  integratioManager.getDaoManager().getMtdTMtdCswDAO().deleteByPK(csw.getIdMetadato());
 
 			  params = new HashMap<String, Object>();
-			  params.put("fk_metadato", csw.getIdMetadato());
-			  List<SipraMtdTFunzione> funzioni = integratioManager.getDaoManager().getSipraMtdTFunzioneDAO().findByCriteria(params);
+			  params.put("fk_metadata", csw.getIdMetadato());
+			  List<MtdTFunzione> funzioni = integratioManager.getDaoManager().getMtdTFunzioneDAO().findByCriteria(params);
 
 			  if (funzioni != null) {
-				for (SipraMtdTFunzione f : funzioni) {
+				for (MtdTFunzione f : funzioni) {
 
-				  SipraMtdTStoricoFunzione fun = integratioManager.getDaoManager().getSipraMtdTStoricoFunzioneDAO().findByPK(f.getIdFunzione());
+				  MtdTStoricoFunzione fun = integratioManager.getDaoManager().getMtdTStoricoFunzioneDAO().findByPK(f.getIdFunzione());
 
 				  if (fun == null) {
-					fun = new SipraMtdTStoricoFunzione();
+					fun = new MtdTStoricoFunzione();
 
 					fun.setIdStoricoFunzione(f.getIdFunzione());
 					fun.setFkTipoFunzione(f.getFkTipoFunzione());
 					fun.setFkMetadato(f.getFkMetadato());
 					fun.setRequestUrl(f.getRequestUrl());
 
-					integratioManager.getDaoManager().getSipraMtdTStoricoFunzioneDAO().insert(fun);
-					integratioManager.getDaoManager().getSipraMtdTFunzioneDAO().deleteByPK(f.getIdFunzione());
+					integratioManager.getDaoManager().getMtdTStoricoFunzioneDAO().insert(fun);
+					integratioManager.getDaoManager().getMtdTFunzioneDAO().deleteByPK(f.getIdFunzione());
 				  }
 				}
 			  }
@@ -433,8 +433,8 @@ public class MetadataManager {
 
 	Map<String, Object> params = new HashMap<String, Object>();
 
-	integratioManager.getDaoManager().getSipraMtdRParolachiaveMtdDAO().delete("delete from sipra_mtd_r_parolachiave_mtd", params);
-	integratioManager.getDaoManager().getSipraMtdTParolaChiaveDAO().delete("delete from sipra_mtd_t_parola_chiave", params);
+	integratioManager.getDaoManager().getMtdRParolachiaveMtdDAO().delete("delete from bifisic_mtd_r_keyword_mtd", params);
+	integratioManager.getDaoManager().getMtdTParolaChiaveDAO().delete("delete from bifisic_mtd_t_keyword", params);
 
 	logger.debug(LogFormatter.format(className, methodName, "END"));
   }
@@ -454,13 +454,13 @@ public class MetadataManager {
 
 	logger.debug(LogFormatter.format(className, methodName, "BEGIN"));
 
-	List<SipraMtdRCategLingua> categorie = integratioManager.getDaoManager().getSipraMtdRCategLinguaDAO().findAll();
+	List<MtdRCategLingua> categorie = integratioManager.getDaoManager().getMtdRCategLinguaDAO().findAll();
 
 	for (int i = 0; i < categorie.size(); i++) {
 
-	  SipraMtdRCategLingua category = categorie.get(i);
+	  MtdRCategLingua category = categorie.get(i);
 
-	  SipraMtdRCategLingua updatedCategory = new SipraMtdRCategLingua();
+	  MtdRCategLingua updatedCategory = new MtdRCategLingua();
 
 	  updatedCategory.setIdCategoria(category.getIdCategoria());
 	  updatedCategory.setIdLingua(category.getIdLingua());
@@ -468,7 +468,7 @@ public class MetadataManager {
 	  updatedCategory.setDesAlias(category.getDesAlias());
 	  updatedCategory.setFlAlias(category.getFlAlias());
 
-	  integratioManager.getDaoManager().getSipraMtdRCategLinguaDAO().update(updatedCategory);
+	  integratioManager.getDaoManager().getMtdRCategLinguaDAO().update(updatedCategory);
 	}
 
 	logger.debug(LogFormatter.format(className, methodName, "END"));
@@ -497,26 +497,26 @@ public class MetadataManager {
 	cleanKeyWords();
 
 	// *** IL BATCH LAVORA SOLO SULLE CATEGORIE INSPIRE E PSR IMPORTATE DAL CSW
-	String query = "select a.* from sipra_mtd_r_categ_lingua a, sipra_mtd_t_categoria b where b.id_categoria = a.id_categoria and b.fk_tipo_categoria in (1, 2)";
+	String query = "select a.* from bifisic_mtd_r_categ_language a, bifisic_mtd_t_category b where b.id_category = a.id_category and b.fk_category_type in (1, 2)";
 
 	params = new HashMap<String, Object>();
-	List<SipraMtdRCategLingua> filterAategories = integratioManager.getDaoManager().getSipraMtdRCategLinguaDAO()
-		.findByGenericCriteria(query, integratioManager.getDaoManager().getSipraMtdRCategLinguaDAO().getRowMapper(), params);
+	List<MtdRCategLingua> filterAategories = integratioManager.getDaoManager().getMtdRCategLinguaDAO()
+		.findByGenericCriteria(query, integratioManager.getDaoManager().getMtdRCategLinguaDAO().getRowMapper(), params);
 
 	Map<String, Integer> filterAategoriesMap = new HashMap<String, Integer>();
 
-	for (SipraMtdRCategLingua categoria : filterAategories) {
+	for (MtdRCategLingua categoria : filterAategories) {
 	  filterAategoriesMap.put((String) categoria.getDesCategoria(), (Integer) categoria.getIdCategoria());
 	}
 	// ***
 
 	params = new HashMap<String, Object>();
-	params.put("fl_attiva", "S");
-	List<SipraMtdDFontedati> elencoFontiDati = integratioManager.getDaoManager().getSipraMtdDFontedatiDAO().findByCriteria(params);
+	params.put("fl_active", "S");
+	List<MtdDFontedati> elencoFontiDati = integratioManager.getDaoManager().getMtdDFontedatiDAO().findByCriteria(params);
 
 	for (int f = 0; f < elencoFontiDati.size(); f++) {
 
-	  SipraMtdDFontedati fonteDati = elencoFontiDati.get(f);
+	  MtdDFontedati fonteDati = elencoFontiDati.get(f);
 
 	  logger.info(LogFormatter.format(className, methodName, "----------"));
 	  logger.info(LogFormatter.format(className, methodName, "URL SERVIZIO: " + fonteDati.getUrlServizio()));
@@ -529,7 +529,7 @@ public class MetadataManager {
 
 	  for (int i = 0; i < filterAategories.size(); i++) {
 
-		SipraMtdRCategLingua categoria = filterAategories.get(i);
+		MtdRCategLingua categoria = filterAategories.get(i);
 
 		logger.info(LogFormatter.format(className, methodName, "---------: "));
 		logger.info(LogFormatter.format(className, methodName, "CATEGORIA: " + categoria.getDesCategoria()));
@@ -595,6 +595,12 @@ public class MetadataManager {
 
 	  if (isValid) {
 		cswRecordsValid.add(recordCSW);
+	  } else {
+		  for (int s = 0; s < recordCSW.getSubjects().length; s++) {
+			  Integer idCategoria = categorieMap.get("Others");
+			  recordCSW.getSubjects()[s].setIdCategoria(idCategoria);
+		  }
+		  cswRecordsValid.add(recordCSW);
 	  }
 	}
 
@@ -621,9 +627,9 @@ public class MetadataManager {
 	Map<String, Object> params = null;
 	Map<String, Integer> categorieMap = new HashMap<String, Integer>();
 
-	List<SipraMtdRCategLingua> categorie = integratioManager.getDaoManager().getSipraMtdRCategLinguaDAO().findAll();
+	List<MtdRCategLingua> categorie = integratioManager.getDaoManager().getMtdRCategLinguaDAO().findAll();
 
-	for (SipraMtdRCategLingua categoria : categorie) {
+	for (MtdRCategLingua categoria : categorie) {
 	  categorieMap.put((String) categoria.getDesCategoria(), (Integer) categoria.getIdCategoria());
 	}
 
@@ -638,37 +644,37 @@ public class MetadataManager {
 
 		params = new HashMap<String, Object>();
 		params.put("dc_identifier", cswRecord.getIdentifier());
-		List<SipraMtdTMtdCsw> listaMetadatoCSW = integratioManager.getDaoManager().getSipraMtdTMtdCswDAO().findByCriteria(params);
+		List<MtdTMtdCsw> listaMetadatoCSW = integratioManager.getDaoManager().getMtdTMtdCswDAO().findByCriteria(params);
 
 		if (listaMetadatoCSW != null && listaMetadatoCSW.size() > 1) {
 		  throw new Exception("ERRORE: non possono esistere due record con lo stesso c_identifier");
 		}
 
-		SipraMtdTMtdCsw metadatoCSW = new SipraMtdTMtdCsw();
+		MtdTMtdCsw metadatoCSW = new MtdTMtdCsw();
 
 		if (listaMetadatoCSW != null && listaMetadatoCSW.size() == 1) {
 
 		  mapping(metadatoCSW, cswRecord, listaMetadatoCSW.get(0).getIdMetadato());
-		  integratioManager.getDaoManager().getSipraMtdTMtdCswDAO().update(metadatoCSW);
+		  integratioManager.getDaoManager().getMtdTMtdCswDAO().update(metadatoCSW);
 
 		} else {
 
-		  SipraMtdTMetadato metadato = new SipraMtdTMetadato();
-		  metadato.setIdMetadato(integratioManager.getSequenceManager().getSeqSipraMtdTMetadato().nextIntValue());
+		  MtdTMetadato metadato = new MtdTMetadato();
+		  metadato.setIdMetadato(integratioManager.getSequenceManager().getSeqMtdTMetadato().nextIntValue());
 		  metadato.setFkFontedati(idFonteDati);
 
-		  integratioManager.getDaoManager().getSipraMtdTMetadatoDAO().insert(metadato);
+		  integratioManager.getDaoManager().getMtdTMetadatoDAO().insert(metadato);
 
 		  mapping(metadatoCSW, cswRecord, metadato.getIdMetadato());
-		  integratioManager.getDaoManager().getSipraMtdTMtdCswDAO().insert(metadatoCSW);
+		  integratioManager.getDaoManager().getMtdTMtdCswDAO().insert(metadatoCSW);
 		}
 
 		cswRecord.setIdMetadato(metadatoCSW.getIdMetadato());
 
 		params = new HashMap<String, Object>();
-		params.put("id_metadato", cswRecord.getIdMetadato());
-		integratioManager.getDaoManager().getSipraMtdRCategoriaMtdDAO()
-			.delete("delete from sipra_mtd_r_categoria_mtd where id_metadato = :id_metadato", params);
+		params.put("id_metadata", cswRecord.getIdMetadato());
+		integratioManager.getDaoManager().getMtdRCategoriaMtdDAO()
+			.delete("delete from bifisic_mtd_r_category_mtd where id_metadata = :id_metadata", params);
 
 		if (cswRecord.getSubjects() != null) {
 		  for (int s = 0; s < cswRecord.getSubjects().length; s++) {
@@ -679,7 +685,7 @@ public class MetadataManager {
 			// corrispondono alle categorie configurate!!
 			if (subject.getIdCategoria() != null) {
 
-			  SipraMtdRCategoriaMtd categoria = new SipraMtdRCategoriaMtd();
+			  MtdRCategoriaMtd categoria = new MtdRCategoriaMtd();
 
 			  categoria.setIdCategoria(subject.getIdCategoria());
 			  categoria.setIdMetadato(cswRecord.getIdMetadato());
@@ -687,7 +693,7 @@ public class MetadataManager {
 			  // verifico la presenza di una cetegoria gia' inserita ma
 			  // relativa ad
 			  // una lingua diversa nell'ambito delle stesso metadato
-			  SipraMtdRCategoriaMtd cat = integratioManager.getDaoManager().getSipraMtdRCategoriaMtdDAO()
+			  MtdRCategoriaMtd cat = integratioManager.getDaoManager().getMtdRCategoriaMtdDAO()
 				  .findByPK(categoria.getIdCategoria(), categoria.getIdMetadato());
 
 			  if (categoria.getIdCategoria() == 55) {
@@ -695,7 +701,7 @@ public class MetadataManager {
 			  }
 
 			  if (cat == null) {
-				integratioManager.getDaoManager().getSipraMtdRCategoriaMtdDAO().insert(categoria);
+				integratioManager.getDaoManager().getMtdRCategoriaMtdDAO().insert(categoria);
 			  }
 			} else {
 			  // se un subject non ha id categoria vuol dire che non corrisponde
@@ -705,33 +711,33 @@ public class MetadataManager {
 			  String txtSubject = cswRecord.getSubjects()[s].getTesto();
 
 			  params = new HashMap<String, Object>();
-			  params.put("des_parola_chiave", txtSubject);
-			  List<SipraMtdTParolaChiave> subjectNotFound = integratioManager.getDaoManager().getSipraMtdTParolaChiaveDAO().findByCriteria(params);
+			  params.put("des_keyword", txtSubject);
+			  List<MtdTParolaChiave> subjectNotFound = integratioManager.getDaoManager().getMtdTParolaChiaveDAO().findByCriteria(params);
 
 			  if (subjectNotFound == null || (subjectNotFound != null && subjectNotFound.size() == 0)) {
 
-				SipraMtdTParolaChiave beanT = new SipraMtdTParolaChiave();
-				beanT.setIdParolaChiave(integratioManager.getSequenceManager().getSeqSipraMtdTParolaChiave().nextIntValue());
+				MtdTParolaChiave beanT = new MtdTParolaChiave();
+				beanT.setIdParolaChiave(integratioManager.getSequenceManager().getSeqMtdTParolaChiave().nextIntValue());
 				beanT.setDesParolaChiave(txtSubject);
 
-				integratioManager.getDaoManager().getSipraMtdTParolaChiaveDAO().insert(beanT);
+				integratioManager.getDaoManager().getMtdTParolaChiaveDAO().insert(beanT);
 
-				SipraMtdRParolachiaveMtd beanR = new SipraMtdRParolachiaveMtd();
+				MtdRParolachiaveMtd beanR = new MtdRParolachiaveMtd();
 				beanR.setIdMetadato(cswRecord.getIdMetadato());
 				beanR.setIdParolaChiave(beanT.getIdParolaChiave());
 
-				integratioManager.getDaoManager().getSipraMtdRParolachiaveMtdDAO().insert(beanR);
+				integratioManager.getDaoManager().getMtdRParolachiaveMtdDAO().insert(beanR);
 			  } else {
 
-				SipraMtdRParolachiaveMtd rParolaChiave = integratioManager.getDaoManager().getSipraMtdRParolachiaveMtdDAO()
+				MtdRParolachiaveMtd rParolaChiave = integratioManager.getDaoManager().getMtdRParolachiaveMtdDAO()
 					.findByPK(cswRecord.getIdMetadato(), subjectNotFound.get(0).getIdParolaChiave());
 
 				if (rParolaChiave == null) {
-				  SipraMtdRParolachiaveMtd beanR = new SipraMtdRParolachiaveMtd();
+				  MtdRParolachiaveMtd beanR = new MtdRParolachiaveMtd();
 				  beanR.setIdMetadato(cswRecord.getIdMetadato());
 				  beanR.setIdParolaChiave(subjectNotFound.get(0).getIdParolaChiave());
 
-				  integratioManager.getDaoManager().getSipraMtdRParolachiaveMtdDAO().insert(beanR);
+				  integratioManager.getDaoManager().getMtdRParolachiaveMtdDAO().insert(beanR);
 				}
 			  }
 			}
@@ -739,12 +745,12 @@ public class MetadataManager {
 		}
 
 		params = new HashMap<String, Object>();
-		params.put("id_metadato", cswRecord.getIdMetadato());
+		params.put("id_metadata", cswRecord.getIdMetadato());
 		integratioManager
 			.getDaoManager()
-			.getSipraMtdRCategoriaMtdDAO()
+			.getMtdRCategoriaMtdDAO()
 			.delete(
-				"delete from sipra_mtd_t_funzione where fk_metadato = :id_metadato and fk_tipo_funzione in (select id_tipo_funzione from sipra_mtd_d_tipo_funzione where protocollo is not null)",
+				"delete from bifisic_mtd_t_function where fk_metadata = :id_metadata and fk_function_type in (select id_function_type from bifisic_mtd_d_function_type where protocol is not null)",
 				params);
 
 		if (cswRecord.getUri() != null) {
@@ -752,14 +758,14 @@ public class MetadataManager {
 
 			CswURI uri = cswRecord.getUri()[f];
 
-			SipraMtdTFunzione funzione = new SipraMtdTFunzione();
+			MtdTFunzione funzione = new MtdTFunzione();
 
-			funzione.setIdFunzione(integratioManager.getSequenceManager().getSeqSipraMtdTFunzione().nextIntValue());
+			funzione.setIdFunzione(integratioManager.getSequenceManager().getSeqMtdTFunzione().nextIntValue());
 			funzione.setFkTipoFunzione(uri.getTipo());
 			funzione.setFkMetadato(cswRecord.getIdMetadato());
 			funzione.setRequestUrl(uri.getUrl());
 
-			integratioManager.getDaoManager().getSipraMtdTFunzioneDAO().insert(funzione);
+			integratioManager.getDaoManager().getMtdTFunzioneDAO().insert(funzione);
 		  }
 		}
 	  }
@@ -775,7 +781,7 @@ public class MetadataManager {
 	logger.debug(LogFormatter.format(className, methodName, "END"));
   }
 
-  private void mapping(SipraMtdTMtdCsw metadatoCSW, CswRecord cswRecord, int idMetadato) {
+  private void mapping(MtdTMtdCsw metadatoCSW, CswRecord cswRecord, int idMetadato) {
 	metadatoCSW.setIdMetadato(idMetadato);
 	metadatoCSW.setDcIdentifier(cswRecord.getIdentifier());
 	metadatoCSW.setTitolo(cswRecord.getTitle());

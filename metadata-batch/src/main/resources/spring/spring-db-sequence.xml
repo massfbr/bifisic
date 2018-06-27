@@ -4,26 +4,26 @@
 
 	<bean id="sequenceManager" class="it.csi.sira.backend.metadata.utils.SequenceManager">
 
-		<property name="seqSipraMtdTMetadato" ref="seqSipraMtdTMetadato" />
-		<property name="seqSipraMtdTFunzione" ref="seqSipraMtdTFunzione" />
-		<property name="seqSipraMtdTParolaChiave" ref="seqSipraMtdTParolaChiave" />
+		<property name="seqMtdTMetadato" ref="seqMtdTMetadata" />
+		<property name="seqMtdTFunzione" ref="seqMtdTFunction" />
+		<property name="seqMtdTParolaChiave" ref="seqMtdTKeyword" />
 
 	</bean>
 
-	<bean id="seqSipraMtdTMetadato" class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
+	<bean id="seqMtdTMetadata" class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
 		<constructor-arg ref="dataSource" />
-		<constructor-arg value="seq_sipra_mtd_t_metadato" />
+		<constructor-arg value="seq_bifisic_mtd_t_metadata" />
 	</bean>
 
-	<bean id="seqSipraMtdTFunzione" class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
+	<bean id="seqMtdTFunction" class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
 		<constructor-arg ref="dataSource" />
-		<constructor-arg value="seq_sipra_mtd_t_funzione" />
+		<constructor-arg value="seq_bifisic_mtd_t_function" />
 	</bean>
 
-	<bean id="seqSipraMtdTParolaChiave"
+	<bean id="seqMtdTKeyword"
 		class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
 		<constructor-arg ref="dataSource" />
-		<constructor-arg value="seq_sipra_mtd_t_parola_chiave" />
+		<constructor-arg value="seq_bifisic_mtd_t_keyword" />
 	</bean>
 
 

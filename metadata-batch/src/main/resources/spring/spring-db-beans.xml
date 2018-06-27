@@ -3,67 +3,67 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="sipraMtdDFontedatiDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdDFontedatiDAOImpl">
+	<bean id="mtdDFontedatiDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdDFontedatiDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdDLinguaDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdDLinguaDAOImpl">
+	<bean id="mtdDLinguaDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdDLinguaDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdDStandardEsposDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdDStandardEsposDAOImpl">
+	<bean id="mtdDStandardEsposDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdDStandardEsposDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdDTipoCategoriaDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdDTipoCategoriaDAOImpl">
+	<bean id="mtdDTipoCategoriaDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdDTipoCategoriaDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdDTipoFunzioneDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdDTipoFunzioneDAOImpl">
+	<bean id="mtdDTipoFunzioneDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdDTipoFunzioneDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdDTipoOggettoDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdDTipoOggettoDAOImpl">
+	<bean id="mtdDTipoOggettoDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdDTipoOggettoDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdRCategLinguaDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdRCategLinguaDAOImpl">
+	<bean id="mtdRCategLinguaDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdRCategLinguaDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdRCategappCategoriDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdRCategappCategoriDAOImpl">
+	<bean id="mtdRCategappCategoriDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdRCategappCategoriDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdRCategoriaMtdDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdRCategoriaMtdDAOImpl">
+	<bean id="mtdRCategoriaMtdDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdRCategoriaMtdDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdRParolachiaveMtdDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdRParolachiaveMtdDAOImpl">
+	<bean id="mtdRParolachiaveMtdDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdRParolachiaveMtdDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTCategoriaDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTCategoriaDAOImpl">
+	<bean id="mtdTCategoriaDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTCategoriaDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTCategoriaApplDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTCategoriaApplDAOImpl">
+	<bean id="mtdTCategoriaApplDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTCategoriaApplDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTDettlogDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTDettlogDAOImpl">
+	<bean id="mtdTDettlogDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTDettlogDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTFunzioneDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTFunzioneDAOImpl">
+	<bean id="mtdTFunzioneDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTFunzioneDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTLogDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTLogDAOImpl">
+	<bean id="mtdTLogDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTLogDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTMetadatoDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTMetadatoDAOImpl">
+	<bean id="mtdTMetadatoDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTMetadatoDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTMtdCswDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTMtdCswDAOImpl">
+	<bean id="mtdTMtdCswDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTMtdCswDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTMtdPlusDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTMtdPlusDAOImpl">
+	<bean id="mtdTMtdPlusDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTMtdPlusDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTParolaChiaveDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTParolaChiaveDAOImpl">
+	<bean id="mtdTParolaChiaveDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTParolaChiaveDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTStoricoFunzioneDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTStoricoFunzioneDAOImpl">
+	<bean id="mtdTStoricoFunzioneDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTStoricoFunzioneDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
-	<bean id="sipraMtdTStoricoMtdCswDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.SipraMtdTStoricoMtdCswDAOImpl">
+	<bean id="mtdTStoricoMtdCswDAO" class="it.csi.sira.backend.metadata.integration.dao.impl.MtdTStoricoMtdCswDAOImpl">
 		<property name="template" ref="template" />
 	</bean>
 
@@ -71,27 +71,27 @@
 
 	<bean id="daoManager" class="it.csi.sira.backend.metadata.utils.DAOManager">
 
-					<property name="sipraMtdDFontedatiDAO" ref="sipraMtdDFontedatiDAO" />
-					<property name="sipraMtdDLinguaDAO" ref="sipraMtdDLinguaDAO" />
-					<property name="sipraMtdDStandardEsposDAO" ref="sipraMtdDStandardEsposDAO" />
-					<property name="sipraMtdDTipoCategoriaDAO" ref="sipraMtdDTipoCategoriaDAO" />
-					<property name="sipraMtdDTipoFunzioneDAO" ref="sipraMtdDTipoFunzioneDAO" />
-					<property name="sipraMtdDTipoOggettoDAO" ref="sipraMtdDTipoOggettoDAO" />
-					<property name="sipraMtdRCategLinguaDAO" ref="sipraMtdRCategLinguaDAO" />
-					<property name="sipraMtdRCategappCategoriDAO" ref="sipraMtdRCategappCategoriDAO" />
-					<property name="sipraMtdRCategoriaMtdDAO" ref="sipraMtdRCategoriaMtdDAO" />
-					<property name="sipraMtdRParolachiaveMtdDAO" ref="sipraMtdRParolachiaveMtdDAO" />
-					<property name="sipraMtdTCategoriaDAO" ref="sipraMtdTCategoriaDAO" />
-					<property name="sipraMtdTCategoriaApplDAO" ref="sipraMtdTCategoriaApplDAO" />
-					<property name="sipraMtdTDettlogDAO" ref="sipraMtdTDettlogDAO" />
-					<property name="sipraMtdTFunzioneDAO" ref="sipraMtdTFunzioneDAO" />
-					<property name="sipraMtdTLogDAO" ref="sipraMtdTLogDAO" />
-					<property name="sipraMtdTMetadatoDAO" ref="sipraMtdTMetadatoDAO" />
-					<property name="sipraMtdTMtdCswDAO" ref="sipraMtdTMtdCswDAO" />
-					<property name="sipraMtdTMtdPlusDAO" ref="sipraMtdTMtdPlusDAO" />
-					<property name="sipraMtdTParolaChiaveDAO" ref="sipraMtdTParolaChiaveDAO" />
-					<property name="sipraMtdTStoricoFunzioneDAO" ref="sipraMtdTStoricoFunzioneDAO" />
-					<property name="sipraMtdTStoricoMtdCswDAO" ref="sipraMtdTStoricoMtdCswDAO" />
+					<property name="mtdDFontedatiDAO" ref="mtdDFontedatiDAO" />
+					<property name="mtdDLinguaDAO" ref="mtdDLinguaDAO" />
+					<property name="mtdDStandardEsposDAO" ref="mtdDStandardEsposDAO" />
+					<property name="mtdDTipoCategoriaDAO" ref="mtdDTipoCategoriaDAO" />
+					<property name="mtdDTipoFunzioneDAO" ref="mtdDTipoFunzioneDAO" />
+					<property name="mtdDTipoOggettoDAO" ref="mtdDTipoOggettoDAO" />
+					<property name="mtdRCategLinguaDAO" ref="mtdRCategLinguaDAO" />
+					<property name="mtdRCategappCategoriDAO" ref="mtdRCategappCategoriDAO" />
+					<property name="mtdRCategoriaMtdDAO" ref="mtdRCategoriaMtdDAO" />
+					<property name="mtdRParolachiaveMtdDAO" ref="mtdRParolachiaveMtdDAO" />
+					<property name="mtdTCategoriaDAO" ref="mtdTCategoriaDAO" />
+					<property name="mtdTCategoriaApplDAO" ref="mtdTCategoriaApplDAO" />
+					<property name="mtdTDettlogDAO" ref="mtdTDettlogDAO" />
+					<property name="mtdTFunzioneDAO" ref="mtdTFunzioneDAO" />
+					<property name="mtdTLogDAO" ref="mtdTLogDAO" />
+					<property name="mtdTMetadatoDAO" ref="mtdTMetadatoDAO" />
+					<property name="mtdTMtdCswDAO" ref="mtdTMtdCswDAO" />
+					<property name="mtdTMtdPlusDAO" ref="mtdTMtdPlusDAO" />
+					<property name="mtdTParolaChiaveDAO" ref="mtdTParolaChiaveDAO" />
+					<property name="mtdTStoricoFunzioneDAO" ref="mtdTStoricoFunzioneDAO" />
+					<property name="mtdTStoricoMtdCswDAO" ref="mtdTStoricoMtdCswDAO" />
 				
 	</bean>
 

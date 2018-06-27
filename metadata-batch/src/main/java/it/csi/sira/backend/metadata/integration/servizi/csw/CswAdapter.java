@@ -1,8 +1,8 @@
 package it.csi.sira.backend.metadata.integration.servizi.csw;
 
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdDFontedati;
+import it.csi.sira.backend.metadata.integration.dto.MtdDFontedati;
 
-import it.csi.sira.backend.metadata.integration.dto.SipraMtdDTipoFunzione;
+import it.csi.sira.backend.metadata.integration.dto.MtdDTipoFunzione;
 import it.csi.sira.backend.metadata.integration.servizi.csw.dto.CswBoundingBox;
 import it.csi.sira.backend.metadata.integration.servizi.csw.dto.CswRecord;
 import it.csi.sira.backend.metadata.integration.servizi.csw.dto.CswSubject;
@@ -99,13 +99,13 @@ public class CswAdapter {
 	return id;
   }
 
-  public List<CswRecord> getCswRecords(String xml, SipraMtdDFontedati fonteDati) throws CswAdapterException {
+  public List<CswRecord> getCswRecords(String xml, MtdDFontedati fonteDati) throws CswAdapterException {
 	final String methodName = new Object() {
 	}.getClass().getEnclosingMethod().getName();
 
 	logger.debug(LogFormatter.format(className, methodName, "BEGIN"));
 
-	List<SipraMtdDTipoFunzione> elencoTipoFunzioni = integratioManager.getDaoManager().getSipraMtdDTipoFunzioneDAO().findAll();
+	List<MtdDTipoFunzione> elencoTipoFunzioni = integratioManager.getDaoManager().getMtdDTipoFunzioneDAO().findAll();
 
 	InputStream xmlStream = new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8));
 
@@ -184,6 +184,7 @@ public class CswAdapter {
 		  recordCSW.setTextAbstract(child.getFirstChild().getNodeValue());
 		} else if (child.getNodeName().equals("dc:URI") && child.getFirstChild() != null) {
 
+		  boolean found = false;
 		  if (child.getAttributes() != null) {
 
 			Node protocol = child.getAttributes().getNamedItem("protocol");
@@ -198,11 +199,28 @@ public class CswAdapter {
 					cswURI.setProtocol(elencoTipoFunzioni.get(f).getProtocollo());
 					cswURI.setUrl(child.getFirstChild().getNodeValue());
 					uri.add(cswURI);
+					found = true;
 				  }
 				}
 			  }
 			}
 		  }
+		  
+		  if (!found) {
+			  for (int f = 0; f < elencoTipoFunzioni.size(); f++) {
+				if (elencoTipoFunzioni.get(f).getCampo() != null && !elencoTipoFunzioni.get(f).getCampo().equals("")) {
+					String url = child.getFirstChild().getNodeValue();
+					if (url!=null && !url.trim().equals("") && url.toLowerCase().contains(elencoTipoFunzioni.get(f).getCampo().trim().toLowerCase())) {
+						CswURI cswURI = new CswURI();
+						cswURI.setTipo(elencoTipoFunzioni.get(f).getIdTipoFunzione());
+						cswURI.setProtocol(elencoTipoFunzioni.get(f).getProtocollo());
+						cswURI.setUrl(url);
+						uri.add(cswURI);
+					}
+				}
+			 }
+		  }
+
 		} else if (child.getNodeName().equals("dct:references") && child.getFirstChild() != null) {
 
 		  if (child.getAttributes() != null) {

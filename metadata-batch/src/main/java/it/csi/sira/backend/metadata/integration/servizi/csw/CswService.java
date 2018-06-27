@@ -7,6 +7,9 @@ import it.csi.sira.backend.metadata.utils.LogFormatter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpException;
@@ -111,6 +114,12 @@ public class CswService {
 	sb.append("</csw:Query>");
 	sb.append("</csw:GetRecords>");
 
+	try{
+	    //Files.write(Paths.get("/tmp/debug.txt"), ("request:\n"+sb.toString()).getBytes(), StandardOpenOption.APPEND);
+	} catch(Exception e) {
+		logger.error(e);
+	}
+	
 	try {
 	  method.setRequestEntity(new StringRequestEntity(sb.toString(), "text/xml", "UTF-8"));
 	} catch (UnsupportedEncodingException e) {
@@ -129,6 +138,11 @@ public class CswService {
 	  InputStream is = method.getResponseBodyAsStream();
 	  byte[] bytes = IOUtils.toByteArray(is);
 	  xml = new String(bytes, "UTF-8");
+		try{
+		    //Files.write(Paths.get("/tmp/debug.txt"), ("reponse:\n"+xml).getBytes(), StandardOpenOption.APPEND);
+		} catch(Exception e) {
+			logger.error(e);
+		}
 
 	} catch (HttpException e) {
 	  e.printStackTrace();
