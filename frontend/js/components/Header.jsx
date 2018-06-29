@@ -9,6 +9,7 @@
 const React = require('react');
 const {connect} = require('react-redux');
 const {Glyphicon} = require('react-bootstrap');
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 
 const {
     showLoginPanel,
@@ -165,8 +166,8 @@ const Header = React.createClass({
                     <div className="row-fluid">
 
                         <div className="col-lg-9 col-md-9 col-sm-8 col-xs-8 testalino-sx">
-                            <h1><a href="http://192.168.1.226/bifisic/map.html" title="Best Information for Industrial Safety in Croatia."><span>SP</span></a></h1>
-                            <h2><a onClick={this.props.goToHome} href="#" title="Best Information for Industrial Safety in Croatia."><span>Bifisic</span> Best Information for Industrial Safety in Croatia.</a></h2>
+                            <h1><a href="http://www.haop.hr/"><img alt="HAOP" src="assets/img/HAOP_logo_sm.png" /></a></h1>
+                            <h2><a onClick={this.props.goToHome} href="#" title="<I18N.Message msgId={'header.bifisic_name'}/>"><span><I18N.Message msgId={"header.bifisic_acronym"}/></span> <I18N.Message msgId={"header.bifisic_name"}/></a></h2>
                         </div>
 
                         <div className="col-lg-3 col-md-3 col-sm-4 col-xs-4 testalino-dx">

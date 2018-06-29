@@ -7,6 +7,7 @@
  */
 
 var React = require('react');
+
 var Node = require('../../../MapStore2/web/client/components/TOC/Node');
 var VisibilityCheck = require('../../../MapStore2/web/client/components/TOC/fragments/VisibilityCheck');
 var Title = require('../../../MapStore2/web/client/components/TOC/fragments/Title');
@@ -16,6 +17,7 @@ const LayersTool = require('../../../MapStore2/web/client/components/TOC/fragmen
 const SiraSettings = require('./fragments/SiraSettings');
 const ConfirmButton = require('../../../MapStore2/web/client/components/buttons/ConfirmButton');
 const {Glyphicon} = require('react-bootstrap');
+const I18N = require('../../../MapStore2/web/client/components/I18N/I18N');
 
 var DefaultLayer = React.createClass({
     propTypes: {
@@ -80,7 +82,7 @@ var DefaultLayer = React.createClass({
             <ConfirmButton key="removelayer"
                 text={(<Glyphicon glyph="1-close"/>)}
                 style={{"float": "right", cursor: "pointer", backgroundColor: "transparent", marginRight: 3, padding: 0, outline: "none"}}
-                confirming={{text: "Sei sicuro",
+                confirming={{text: <I18N.Message msgId={"SiraLayer.removelayerConfirmingText"}/>,
                     style: {"float": "right", cursor: "pointer", marginTop: -5}}}
                     onConfirm={() => {
                         this.props.removeNode(this.props.node.id, "layers");

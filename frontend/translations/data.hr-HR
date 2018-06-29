@@ -1,5 +1,5 @@
-﻿{
-    "locale": "en-US",
+{
+    "locale": "hr-HR",
     "messages": {
         "Language": "Language",
         "aboutLbl": "About",
@@ -615,9 +615,9 @@
             "help": "Help"
         },
         "site_home": {
-            "search": "Alat za prikaz alfanumeričkih i zemljopisnih podataka iz baze podataka HAOP-a i vanjskih baza podataka",
+            "search": "Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones",
             "shirt_title": "BIFISIC",
-            "long_title": "Objedinjene informacije za industrijsku sigurnost u Republici Hrvatskoj"
+            "long_title": "Better Information for Industrial Safety in Croatia"
         },
         "PlatformNumbers": {
         "the_numbers": "The platform numbers",
@@ -626,16 +626,16 @@
         "tematic_view_available": "Thematic view available"
         },
         "dataset_container": {
-            "object": "INFORMACIJE",
-            "tematic_view": "TEME"
+            "object": "OBJECTS",
+            "tematic_view": "THEMATICS VIEWS"
         },
         "footer": {
-            "cookie_policy": "Politika korištenja kolačića"
+            "cookie_policy": "Cookie policy"
         },
 	"header": {
             "bifisic_acronym": "BIFISIC",
-            "bifisic_name": "Objedinjene informacije za industrijsku sigurnost u Republici Hrvatskoj."
-	},
+            "bifisic_name": "Better Information for Industrial Safety in Croatia"
+        },
         "MosaicTile": {
             "objects": "OBJECTS",
             "thematicViews": "THEMATIC VIEWS",
@@ -654,6 +654,6 @@
         },
         "SideQueryPanel": {
             "tooltipCloseSearch": "Close Detailed Search"
-	}
+        }
     }
 }

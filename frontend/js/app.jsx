@@ -11,9 +11,15 @@ const {connect} = require('react-redux');
 
 const LocaleUtils = require('../MapStore2/web/client/utils/LocaleUtils');
 LocaleUtils.setSupportedLocales({
+        "hr": {
+            code: "hr-HR",
+            description: "Hrvatska"
+        },
         "en": {
             code: "en-US",
-            description: "English"}});
+            description: "English"
+        }
+});
 
 require('./utils/ProjUtils')();
 
