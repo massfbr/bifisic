@@ -7,6 +7,7 @@
     "helpUrl": "assets/application/help.pdf",
     "logOutUrl": "",
     "logOutService": "${url.secure.VH.decsiraweb}/territoriosliv1sisp/Shibboleth.sso/Logout",
+    "bingApiKey": "At7ANe-DQcOfNFmnPivEhXVWn7NJ-jkkEzlPPaamJOPAXvZnZVJPg8-NtgBQ9gB3",
     "useAuthenticationRules": true,
     "authenticationRules": [
         {

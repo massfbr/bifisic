@@ -1,6 +1,7 @@
 const {createSelector} = require('reselect');
 const assign = require('object-assign');
 const {head} = require('lodash');
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 
 const grid = (state) => state && state.grid;
 const featureGrid = (state) => state && state.siradec && state.siradec.configOggetti[state.siradec.activeFeatureType].featuregrid || {};
@@ -19,7 +20,7 @@ const categorySelector = createSelector([
             return v;
         }, {objectNumber: 0, tematicViewNumber: 0});
         return {
-        tiles: [...servertiles, {id: 999, name: "Tutte le Categorie", icon: "all", objectNumber, tematicViewNumber}]
+        tiles: [...servertiles, {id: 999, name: "All Categories", icon: "all", objectNumber, tematicViewNumber}]
         };
     }
 );
