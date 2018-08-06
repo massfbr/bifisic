@@ -28,7 +28,6 @@ const {configureQueryForm} = require('./actions/siradec');
 const {loadTiles} = require('./actions/mosaictile');
 const {loadPlatformNumbers} = require('./actions/platformnumbers');
 const {configureExporter} = require('./actions/siraexporter');
-const {loadUserIdentity} = require('./actions/userprofile');
 
 const appReducers = {
      userprofile: require('./reducers/userprofile'),
@@ -46,7 +45,8 @@ const appReducers = {
      siraexporter: require('./reducers/siraexporter'),
      addmap: require('./reducers/addmap'),
      cart: require('./reducers/cart'),
-     header: require('./reducers/header')
+     header: require('./reducers/header'),
+     changelanguage: require('./reducers/changelanguage')
  };
 
 const startApp = () => {

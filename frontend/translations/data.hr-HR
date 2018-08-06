@@ -612,7 +612,8 @@
             "ConoscenzeAmbTitle": "About BIFISIC",
             "ToggleLanguageTitle": "Toggle Language",
             "CreditsTitle": "Credits and Copyright",
-            "help": "Help"
+            "help": "Help",
+            "language": "Language"
         },
         "site_home": {
             "search": "Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones",
@@ -632,10 +633,10 @@
         "footer": {
             "cookie_policy": "Cookie policy"
         },
-	"header": {
-            "bifisic_acronym": "BIFISIC",
-            "bifisic_name": "Better Information for Industrial Safety in Croatia"
-        },
+    	"header": {
+                "bifisic_acronym": "BIFISIC",
+                "bifisic_name": "Better Information for Industrial Safety in Croatia"
+            },
         "MosaicTile": {
             "objects": "OBJECTS",
             "thematicViews": "THEMATIC VIEWS",
@@ -654,6 +655,9 @@
         },
         "SideQueryPanel": {
             "tooltipCloseSearch": "Close Detailed Search"
+        },
+        "ChangeLanguage": {
+            "language": "Odaberite jezik"
         }
     }
 }

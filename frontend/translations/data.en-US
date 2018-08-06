@@ -612,7 +612,8 @@
             "ConoscenzeAmbTitle": "About BIFISIC",
             "ToggleLanguageTitle": "Toggle Language",
             "CreditsTitle": "Credits and Copyright",
-            "help": "Help"
+            "help": "Help",
+            "language": "Language"
         },
         "site_home": {
             "search": "Alat za prikaz alfanumeričkih i zemljopisnih podataka iz baze podataka HAOP-a i vanjskih baza podataka",
@@ -654,6 +655,9 @@
         },
         "SideQueryPanel": {
             "tooltipCloseSearch": "Close Detailed Search"
-	}
+	     },
+         "ChangeLanguage": {
+             "language": "Choose the language"
+         }
     }
 }
