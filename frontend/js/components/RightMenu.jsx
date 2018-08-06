@@ -17,7 +17,8 @@ const RightMenu = React.createClass({
         clickOnIconButton: React.PropTypes.func,
         clickOnHelp: React.PropTypes.func,
         clickOnCredits: React.PropTypes.func,
-        clickOnSistemaCA: React.PropTypes.func
+        clickOnSistemaCA: React.PropTypes.func,
+        clickOnShowLanguagePanel: React.PropTypes.func
     },
 
     getDefaultProps() {
@@ -28,7 +29,8 @@ const RightMenu = React.createClass({
             clickOnIconButton: () => {},
             clickOnHelp: () => {},
             clickOnCredits: () => {},
-            clickOnSistemaCA: () => {}
+            clickOnSistemaCA: () => {},
+            clickOnShowLanguagePanel: () => {}
        };
     },
 
@@ -45,6 +47,7 @@ const RightMenu = React.createClass({
                     <li data-menuanchor="home" onClick={this.props.clickOnSistemaCA} ><I18N.Message msgId={"RightMenu.ConoscenzeAmbTitle"}/></li>
                     <li data-menuanchor="piemontepay" onClick={this.props.clickOnCredits}><I18N.Message msgId={"RightMenu.CreditsTitle"}/></li>
                     <li data-menuanchor="pagamenti" onClick={this.props.clickOnHelp}><I18N.Message msgId={"RightMenu.help"}/></li>
+                    <li data-menuanchor="language" onClick={this.props.clickOnShowLanguagePanel}><I18N.Message msgId={"RightMenu.language"}/></li>
                 </ul>
             </div>
         ) : '';

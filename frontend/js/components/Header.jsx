@@ -21,6 +21,7 @@ const ConfigUtils = require('../../MapStore2/web/client/utils/ConfigUtils');
 const {showPanel, hidePanel, removeServiceFromCart, removeLayersFromCart, prepareDataToMap} = require('../actions/cart');
 const {toggleAddMap, addLayersInCart} = require('../actions/addmap');
 const {showHideRightMenu, showHideRightConoscenzaAmbBox, showHideCreditsBox} = require('../actions/header');
+const {showLanguagePanel, hideLanguagePanel} = require('../actions/changelanguage');
 
 const SistemaConoscenzeAmbientaliBox = connect((state) => ({
     show: state.header.showSistemaConoscenzeAmbientaliBox
@@ -58,9 +59,21 @@ const RightMenu = connect((state) => ({
       },
       clickOnCredits: () => {
           dispatch(showHideCreditsBox());
+      },
+      clickOnShowLanguagePanel: () => {
+          dispatch(showLanguagePanel());
       }
   };
 })(require('./RightMenu'));
+
+const LanguagePanel = connect((state) => ({
+        showPanel: state.changelanguage.showLanguagePanel
+    }), (dispatch) => {
+        return {
+        onClosePanel: () => {
+            dispatch(hideLanguagePanel());
+        }
+    }; })(require('./ChangeLanguage'));
 
 const LoginNav = connect((state) => ({
     user: state.userprofile.user,
@@ -176,6 +189,7 @@ const Header = React.createClass({
                                 <LoginNav />
                             </div>
                             <RightMenu />
+                            <LanguagePanel />
                         </div>
 
                     </div>
