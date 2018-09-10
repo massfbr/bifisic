@@ -7,7 +7,7 @@ const React = require('react');
 const {connect} = require('react-redux');
 const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 const Dialog = require('../../MapStore2/web/client/components/misc/Dialog');
-const {Button} = require('react-bootstrap');
+// const {Button} = require('react-bootstrap');
 const {loadLocale} = require('../../MapStore2/web/client/actions/locale');
 
 const LangBar = connect((state) => ({
