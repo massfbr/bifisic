@@ -1,7 +1,7 @@
 const {createSelector} = require('reselect');
 const assign = require('object-assign');
 const {head} = require('lodash');
-const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
+// const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 
 const grid = (state) => state && state.grid;
 const featureGrid = (state) => state && state.siradec && state.siradec.configOggetti[state.siradec.activeFeatureType].featuregrid || {};
