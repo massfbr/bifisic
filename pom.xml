@@ -86,7 +86,7 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>${servlet-api.version}</version>
-                <scope>provided</scope>
+                <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>jstl</groupId>
@@ -258,7 +258,7 @@
         <profile>
             <id>geoserver</id>
             <modules>
-				<module>security</module>
+		<module>security</module>
                 <module>geoserver/src</module>
             </modules>
         </profile>
@@ -268,16 +268,14 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
-				<module>frontend/web</module>
+		<module>frontend/web</module>
                 <module>backend</module>
                 <module>security</module>
-                <module>frontend/cide-services</module> 
                 <module>frontend/auth-services</module>    
-                <module>frontend/iride-services</module>    
                 <module>frontend/metadata-services</module>     
                 <module>frontend/ogc-services</module> 
-				<module>metadata-batch</module>
-				<module>security/app-schema</module> 
+		<module>metadata-batch</module>
+		<module>security/app-schema</module> 
             </modules>
         </profile>
     </profiles>

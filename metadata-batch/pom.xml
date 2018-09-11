@@ -145,10 +145,10 @@
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>9.1-901-1.jdbc4</version>			
-		</dependency>						
+        		<groupId>org.postgresql</groupId>
+        		<artifactId>postgresql</artifactId>
+        		<version>42.1.4</version>
+    		</dependency>					
 	</dependencies>
 
 </project>
