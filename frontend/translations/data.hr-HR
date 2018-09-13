@@ -615,6 +615,9 @@
             "help": "Help",
             "language": "Language"
         },
+        "LoginPanel": {
+            "LoginTitle": "Login"
+        },
         "site_home": {
             "search": "Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones",
             "shirt_title": "BIFISIC",
