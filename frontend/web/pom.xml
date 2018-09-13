@@ -187,7 +187,10 @@
 							<artifactId>geostore-webapp</artifactId>
 							<excludes>
                                 <exclude>WEB-INF/lib/commons-io-*</exclude>
-                                <exclude>WEB-INF/lib/commons-lang-*</exclude>
+				<!--                                
+				<exclude>WEB-INF/lib/commons-lang-*</exclude>
+				-->                                
+				<exclude>WEB-INF/lib/servlet-api-*</exclude>
 								<exclude>WEB-INF/lib/commons-logging-*</exclude>
 							</excludes>
 						</overlay>

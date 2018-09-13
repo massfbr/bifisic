@@ -10,7 +10,7 @@ const React = require('react');
 const {connect} = require('react-redux');
 const {Modal} = require('react-bootstrap');
 const {login, setUser} = require('../actions/userprofile');
-// const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 // const M2LoginPanel = require('../../MapStore2/web/client/components/security/forms/LoginForm');
 
 const M2LoginPanel = connect((state) => ({
@@ -48,7 +48,7 @@ const LoginPanel = React.createClass({
             <Modal
                     show= {this.props.showLoginPanel}>
                     <Modal.Header closeButton onClick={this.props.onClosePanel}>
-                        <Modal.Title>Login</Modal.Title>
+                        <Modal.Title><I18N.Message msgId={"LoginPanel.LoginTitle"}/></Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         {this.renderLoginForm()}
