@@ -1,0 +1,21 @@
+
+<SiraTable
+    style={{width: "100%", height: "200px"}}
+    id="infoTemplateSevesoEstablishment"
+    rowSelection={false}
+    onCellClicked={props.onCellClicked}
+    profile={model.profile}
+    columns={[
+        {
+            width: 30,
+            headerName: '',
+            cellRenderer: reactCellRendererFactory(GoToDetail),
+            id: true,
+            xpath: "@gml:id"
+        }, {
+            headerName: 'HAOP ID broj',
+            width: 256,
+            xpath: "bifisic_sevesoestablishments:idCAEN/text()"
+        }
+    ]}
+    features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_sevesoestablishments:SevesoEstablishment")}/>
