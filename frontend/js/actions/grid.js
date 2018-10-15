@@ -140,7 +140,21 @@ function updateTotalFeatures(data) {
     };
 }
 
+// MODIFIED. Patch for https://osgeo-org.atlassian.net/browse/GEOT-6129
+// this function does'nt send the wfs query to elements count.
+function loadGridModelWithPagination(wfsUrl, data, params, pagination) {
+    let {url} = ConfigUtils.setUrlPlaceholders({url: wfsUrl});
+    for (let param in params) {
+        if (params.hasOwnProperty(param)) {
+            url += "&" + param + "=" + params[param];
+        }
+    }
+    return (dispatch) => {
+        dispatch(createGridDataSource(pagination));
+    };
+}
 
+/** ORIGINAL function
 function loadGridModelWithPagination(wfsUrl, data, params, pagination) {
     let {url} = ConfigUtils.setUrlPlaceholders({url: wfsUrl});
     for (let param in params) {
@@ -164,7 +178,7 @@ function loadGridModelWithPagination(wfsUrl, data, params, pagination) {
         });
     };
 }
-
+*/
 module.exports = {
     GRID_MODEL_LOADED,
     GRID_LOAD_ERROR,
