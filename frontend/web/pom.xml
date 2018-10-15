@@ -13,11 +13,11 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<url.geoserver>http://tst-gisserver.territorio.csi.it</url.geoserver>
-        <url.secure.geoserver>https://tst-conoscenzaambientale.sistemapiemonte.it</url.secure.geoserver>
-        <url.secure.decsiraweb>https://tst-conoscenzaambientale.sistemapiemonte.it/decsiraweb/map.html</url.secure.decsiraweb>
-		<url.secure.VH.decsiraweb>https://tst-conoscenzaambientale.sistemapiemonte.it/</url.secure.VH.decsiraweb>
-        <url.decsiraweb>http://tst-conoscenzaambientale.sistemapiemonte.it/decsiraweb/map.html</url.decsiraweb>
+		<url.geoserver>http://pproo.azo.hr</url.geoserver>
+        <url.secure.geoserver>https://pproo.azo.hr</url.secure.geoserver>
+        <url.secure.decsiraweb>https://pproo.azo.hr/bifisic/map.html</url.secure.decsiraweb>
+		<url.secure.VH.decsiraweb>https://pproo.azo.hr/</url.secure.VH.decsiraweb>
+        <url.decsiraweb>http://pproo.azo.hr/bifisic/map.html</url.decsiraweb>
         <component.name>bifisic</component.name>
 		<component.version>1.0.0</component.version>
 		<tomcat.version>7.0.47</tomcat.version>
@@ -296,7 +296,7 @@
 			<id>produzione</id>
 			<properties>
 				<url.geoserver>http://pproo.azo.hr</url.geoserver>
-                <url.secure.geoserver>http://pproo.azo.hr</url.secure.geoserver>
+                <url.secure.geoserver>https://pproo.azo.hr</url.secure.geoserver>
                 <url.secure.decsiraweb>https://pproo.azo.hr/bifisic/map.html</url.secure.decsiraweb>
 				<url.secure.VH.decsiraweb>https://pproo.azo.hr/</url.secure.VH.decsiraweb>
                 <url.decsiraweb>https://pproo.azo.hr/bifisic/map.html</url.decsiraweb>

@@ -13,7 +13,7 @@
 
     <properties>
         <ui.version>3.0.0</ui.version>
-		<server.host>tst-gisserver.territorio.csi.it</server.host>
+		<server.host>pproo.azo.hr</server.host>
     </properties>
 	
 	<build>
@@ -71,7 +71,7 @@
 		<profile>
 			<id>produzione</id>
 			<properties>
-				 <server.host>gisserver.territorio.csi.it</server.host>
+				 <server.host>pproo.azo.hr</server.host>
 			</properties>
 		</profile>
 	</profiles>
