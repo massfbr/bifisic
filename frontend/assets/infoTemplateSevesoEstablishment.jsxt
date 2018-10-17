@@ -6,16 +6,84 @@
     onCellClicked={props.onCellClicked}
     profile={model.profile}
     columns={[
-        {
-            width: 30,
-            headerName: '',
-            cellRenderer: reactCellRendererFactory(GoToDetail),
-            id: true,
-            xpath: "@gml:id"
-        }, {
-            headerName: 'HAOP ID broj',
-            width: 256,
-            xpath: "bifisic_sevesoestablishments:idCAEN/text()"
-        }
+{
+  "id" : true,
+  "headerName" : '',
+  "xpath" : "@gml:id",
+  "width" : 30,
+  "cellRenderer" : reactCellRendererFactory(GoToDetail)
+}, {
+  "headerName" : "Županija",
+  "xpath" : "bifisic_sevesoestablishments:desCounty/text()",
+  "width" : 100
+}, {
+  "headerName" : "Općina",
+  "xpath" : "bifisic_sevesoestablishments:desMunicipality/text()",
+  "width" : 100
+}, {
+  "headerName" : "OIB",
+  "xpath" : "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:oib/text()",
+  "width" : 100
+}, {
+  "headerName" : "Naziv tvrtke",
+  "xpath" : "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:companyName/text()",
+  "width" : 100
+}, {
+  "headerName" : "Naziv područja postrojenja",
+  "xpath" : "bifisic_sevesoestablishments:establishmentName/text()",
+  "width" : 100
+}, {
+  "headerName" : "HAOP ID broj",
+  "xpath" : "bifisic_sevesoestablishments:idCAEN/text()",
+  "width" : 100
+}, {
+  "headerName" : "Adresa",
+  "xpath" : "bifisic_sevesoestablishments:address/text()",
+  "width" : 100
+}, {
+  "headerName" : "Administrativni položaj",
+  "xpath" : "bifisic_sevesoestablishments:DesAdminPosition/text()",
+  "width" : 100
+}, {
+  "headerName" : "Nac. djelatnost područja postrojenja",
+  "xpath" : "bifisic_sevesoestablishments:SubActivity/text()",
+  "width" : 100
+}, {
+  "headerName" : "Uža djelatnost područja postrojenja",
+  "xpath" : "bifisic_sevesoestablishments:CoreActivity/text()",
+  "width" : 100
+}, {
+  "headerName" : "Obavijest provjerena?",
+  "xpath" : "bifisic_sevesoestablishments:NotificationValidated/text()",
+  "width" : 100
+}, {
+  "headerName" : "Datum odobrenja PSVN-a",
+  "xpath" : "bifisic_sevesoestablishments:datamapp/text()",
+  "width" : 100
+}, {
+  "headerName" : "Date posljednje obavijesti",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateLastNotification/text()",
+  "width" : 100
+}, {
+  "headerName" : "Date posljednjeg Unutarnjeg plana",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateInternalEmergency/text()",
+  "width" : 100
+}, {
+  "headerName" : "Date posljednjeg Operativnog plana",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateProtectRescuePlan/text()",
+  "width" : 100
+}, {
+  "headerName" : "Datum podnošenja odobrenog IOS-a",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateSafetyReportApproved/text()",
+  "width" : 100
+}, {
+  "headerName" : "Datum suglasnosti na posljednji IOS",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateClassSafetyReportApproved/text()",
+  "width" : 100
+}, {
+  "headerName" : "Klasa posljednjeg IOS-a",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:ClassSafetyReportApproved/text()",
+  "width" : 100
+}
     ]}
     features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_sevesoestablishments:SevesoEstablishment")}/>
