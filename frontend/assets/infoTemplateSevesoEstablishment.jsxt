@@ -8,7 +8,7 @@
     columns={[
 {
   "id" : true,
-  "headerName" : '',
+  "headerName" : "''",
   "xpath" : "@gml:id",
   "width" : 30,
   "cellRenderer" : reactCellRendererFactory(GoToDetail)
@@ -30,7 +30,7 @@
   "width" : 100
 }, {
   "headerName" : "Naziv područja postrojenja",
-  "xpath" : "bifisic_sevesoestablishments:establishmentName/text()",
+  "xpath" : "bifisic_sevesoestablishments:EstablishmentName/text()",
   "width" : 100
 }, {
   "headerName" : "HAOP ID broj",
@@ -53,7 +53,7 @@
   "xpath" : "bifisic_sevesoestablishments:CoreActivity/text()",
   "width" : 100
 }, {
-  "headerName" : "Obavijest provjerena?",
+  "headerName" : "Obavijest provjerena",
   "xpath" : "bifisic_sevesoestablishments:NotificationValidated/text()",
   "width" : 100
 }, {

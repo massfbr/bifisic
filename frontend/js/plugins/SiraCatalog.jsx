@@ -142,8 +142,8 @@ const LayerTree = React.createClass({
               </div>
              </div>
             <Tabs className="catalog-tabs" activeKey={this.props.subcat} onSelect={this.props.selectSubCategory}>
-                <Tab eventKey={'objects'} title={`Oggetti (${objects ? objects.length : 0})`}>{tocObjects}</Tab>
-                <Tab eventKey={'views'} title={`Viste Tematiche (${views ? views.length : 0})`}>{viste}</Tab>
+                <Tab eventKey={'objects'} title={`<I18N.Message msgId={"dataset.objects"}/> (${objects ? objects.length : 0})`}>{tocObjects}</Tab>
+                <Tab eventKey={'views'} title={`<I18N.Message msgId={"dataset.views"}/> (${views ? views.length : 0})`}>{viste}</Tab>
             </Tabs>
             {this.props.loading ? (
                 <div style={{position: "absolute", top: 0, left: 0, bottom: 0, right: 0, backgoroundColor: "rgba(125,125,125,.5)"}}><Spinner style={{position: "absolute", top: "calc(50%)", left: "calc(50% - 30px)", width: "60px"}} spinnerName="three-bounce" noFadeIn/></div>) : null}

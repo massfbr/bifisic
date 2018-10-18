@@ -7,6 +7,7 @@
  */
 
 const React = require('react');
+const I18N = require('../../MapStore2/web/client/components/I18N/I18N');
 const Dialog = require('../../MapStore2/web/client/components/misc/Dialog.jsx');
 const Select = require('react-select');
 const {Button, Glyphicon, Alert} = require('react-bootstrap');
@@ -59,8 +60,8 @@ const SiraExporter = React.createClass({
                 clearable={false}
                 value={this.state.outputformat}
                 options={[
-                    { value: 'csv', label: 'CSV' },
-                    { value: 'shp', label: 'Shape file' }]}
+                    { value: 'csv', label: <I18N.Message msgId={"SiraExporter.csv"}/> },
+                    { value: 'shp', label: <I18N.Message msgId={"SiraExporter.shp"}/> }]}
                 onChange={(val) => this.setState({outputformat: val.value})}
             />
             <Select
@@ -68,14 +69,14 @@ const SiraExporter = React.createClass({
                 clearable={false}
                 value={this.state.type}
                 options={[
-                    { value: 'all', label: 'Tutti gli oggetti' },
-                    { value: 'page', label: 'Pagina corrente' }]}
+                    { value: 'all', label: <I18N.Message msgId={"SiraExporter.all"}/> },
+                    { value: 'page', label: <I18N.Message msgId={"SiraExporter.current"}/> }]}
                 onChange={(val) => this.setState({type: val.value})}
             />
             {this.state.outputformat === 'shp' ? (<Alert bsStyle="info" >
-                Solo gli elementi dotati di geometria verranno esportati
+                <I18N.Message msgId={"SiraExporter.alert"}/>
               </Alert>) : null}
-            <Button bsStyle="primary" style={{alignSelf: "flex-end"}} onClick={this.exportFeatures}><span>Export</span><Glyphicon glyph="download-alt" /></Button>
+            <Button bsStyle="primary" style={{alignSelf: "flex-end"}} onClick={this.exportFeatures}><span><I18N.Message msgId={"SiraExporter.btn"}/></span><Glyphicon glyph="download-alt" /></Button>
             </div>);
     },
     render() {
@@ -88,7 +89,7 @@ const SiraExporter = React.createClass({
             onClickOut={this.props.toggleExporter.bind(null, 'exporter')}
             >
             <span role="header">
-                <span>Export Data</span>
+                <span><I18N.Message msgId={"SiraExporter.title"}/></span>
                 <button onClick={this.props.toggleExporter.bind(null, 'exporter')} className="exporter-close close"><Glyphicon glyph="1-close"/></button>
             </span>
             <div role="header"></div>
