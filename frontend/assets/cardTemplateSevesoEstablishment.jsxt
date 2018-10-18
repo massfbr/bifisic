@@ -19,7 +19,7 @@
           }/>
 
           <LabeledField label='Adresa' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:Address/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:address/text()")
           }/>
 
           <LabeledField label='Poštanski broj' value={
@@ -39,7 +39,7 @@
           }/>
 
           <LabeledField label='Rang' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:desRegulationAnnex/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:DesRegulationAnnex/text()")
           }/>
 
           <LabeledField label='Telefon' value={
@@ -81,11 +81,11 @@
           }/>
 
           <LabeledField label='Adresa' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:Address/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:address/text()")
           }/>
 
           <LabeledField label='Poštanski broj' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:postalCode/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:postalcode/text()")
           }/>
 
           <LabeledField label='Općina' value={
@@ -343,7 +343,7 @@
                 id="Cooperator"
                 selectedRow={model.Cooperator}
                 wfsVersion="2.0"
-                rowSelection={"single"}
+                rowSelection={false}
                                     dependsOn={{
                         tableId: "MeasurePreventingMitigating",
                         parentFeatures: model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:measurePreventingMitigating"),
@@ -354,7 +354,12 @@
 
                 columns={
                     [
-                                                {
+                        {
+                            hide: true,
+                            id: true,
+                            xpath:"../../bifisic_sevesoestablishments:MeasurePreventingMitigating/@gml:id"
+                        },
+                        {
                             headerName: 'Ime i prezime',
                             width: 100,
                             xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorName/text()"
@@ -547,7 +552,7 @@
                 id="Classification"
                 selectedRow={model.Classification}
                 wfsVersion="2.0"
-                rowSelection={"single"}
+                rowSelection={false}
                                     dependsOn={{
                         tableId: "DangerousSubstance",
                         parentFeatures: model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:dangerousSubstance"),
@@ -558,7 +563,12 @@
 
                 columns={
                     [
-                                                {
+                        {
+                                    hide: true,
+                                    id: true,
+                                    xpath:"../../bifisic_sevesoestablishments:DangerousSubstance/@gml:id"
+                        },
+                        {
                             headerName: 'Šifra ',
                             width: 100,
                             xpath:"bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:codClassification/text()"

@@ -20,13 +20,13 @@
             "geometryType": "Polygon"
         },
         "featureType": "sevesoEstablishment",
-        "group": "Oggetti",
+        "group": "Objects",
         "format": "image/png"
         },
    "geometryName": "geometria",
    "geometryType": "Point",
    "card": {
-        "pdfname": "Scheda_Stabilimento_{{/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:establishmentName/text()}}.pdf",
+        "pdfname": "Establishment_card_{{/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:establishmentName/text()}}.pdf",
         "template": "assets/cardTemplateSevesoEstablishment.jsxt",
         "service": {
              "url":"{geoserverUrl}/ows?service=WFS&request=GetFeature",
@@ -73,7 +73,7 @@
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv područja postrojenja",
-  "xpath" : [ "bifisic_sevesoestablishments:establishmentName/text()" ],
+  "xpath" : [ "bifisic_sevesoestablishments:EstablishmentName/text()" ],
   "type" : 2
 }, {
   "suppressSorting" : true,
@@ -102,7 +102,7 @@
   "type" : 2
 }, {
   "suppressSorting" : true,
-  "headerName" : "Obavijest provjerena?",
+  "headerName" : "Obavijest provjerena",
   "xpath" : [ "bifisic_sevesoestablishments:NotificationValidated/text()" ],
   "type" : 2
 }, {
@@ -146,9 +146,15 @@
   "headerName" : "Klasa posljednjeg IOS-a",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:classSafetyReportApproved/text()" ],
   "type" : 2
-}       ],
+},
+{
+  "hide": true,
+  "headerName": "Geometry",
+  "xpath": ["bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()"],
+  "type": 6
+}        ],
        "exporter":{
-         "addFile":"assets/licenza/Stabilimenti_soggetti_a_autorizzazione_ambientale_licenzaCC25BY.pdf"
+         "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
      }
    },
@@ -160,23 +166,87 @@
          "outputFormat": "application/json"
        }
      },
-     "fields":[
-{
+     "fields":[ {
+  "index" : 1,
+  "attribute" : "bifisic_sevesoestablishments:idCounty",
+  "label" : "Županija",
+  "type" : "list",
+  "valueId" : "id",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:rpot_zupanija",
+      "propertyName" : "naziv",
+      "sortBy" : "naziv"
+    }
+  },
+  "valueLabel" : "naziv"
+}, {
+  "index" : 2,
+  "attribute" : "bifisic_sevesoestablishments:idMunicipality",
+  "label" : "Općina",
+  "type" : "list",
+  "valueId" : "id",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:rpot_postanskiured",
+      "propertyName" : "id,naziv,zupanija",
+      "sortBy" : "naziv"
+    }
+  },
+  "valueLabel" : "naziv",
+  "dependson":{
+     "field": "bifisic_decodif:idCounty",
+     "from": "id",
+     "to": "zupanija"
+  }
+}, {
   "index" : 3,
   "attribute" : "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:oib",
-  "label" : "OIB"
+  "label" : "OIB",
+  "type" : "string"
 }, {
   "index" : 4,
   "attribute" : "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:companyName",
-  "label" : "Naziv tvrtke"
+  "label" : "Naziv tvrtke",
+  "type" : "string"
 }, {
   "index" : 5,
-  "attribute" : "bifisic_sevesoestablishments:establishmentName",
-  "label" : "Naziv područja postrojenja"
+  "attribute" : "bifisic_sevesoestablishments:EstablishmentName",
+  "label" : "Naziv područja postrojenja",
+  "type" : "string"
 }, {
   "index" : 6,
   "attribute" : "bifisic_sevesoestablishments:idCAEN",
-  "label" : "HAOP ID broj područja postrojenja"
+  "label" : "HAOP ID broj područja postrojenja",
+  "type" : "string"
+}, {
+  "index" : 7,
+  "attribute" : "bifisic_sevesoestablishments:IdSubActivity",
+  "label" : "NKD",
+  "type" : "list",
+  "valueId" : "id_nkd",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_nkd",
+      "propertyName" : "des_nkd",
+      "sortBy" : "des_nkd"
+    }
+  },
+  "valueLabel" : "des_nkd"
+}, {
+  "index" : 8,
+  "attribute" : "bifisic_sevesoestablishments:idAdminPosition",
+  "label" : "Administrativni položaj područja postrojenja",
+  "type" : "list",
+  "valueId" : "id_admin_position",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_admin_position",
+      "propertyName" : "des_admin_position",
+      "sortBy" : "des_admin_position"
+    }
+  },
+  "valueLabel" : "des_admin_position"
 }, {
   "index" : 9,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:entryDateLastNotification",
@@ -196,8 +266,17 @@
 }, {
   "index" : 11,
   "attribute" : "bifisic_sevesoestablishments:NotificationValidated",
-  "label" : "Obavijest provjerena?",
-  "type" : "boolean"
+  "label" : "Obavijest provjerena",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
 }, {
   "index" : 12,
   "attribute" : "bifisic_sevesoestablishments:dataMAPP",
@@ -209,18 +288,45 @@
 }, {
   "index" : 13,
   "attribute" : "bifisic_sevesoestablishments:eprtr",
-  "label" : "E-PRTR postrojenje?",
-  "type" : "boolean"
+  "label" : "E-PRTR postrojenje",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
 }, {
   "index" : 14,
   "attribute" : "bifisic_sevesoestablishments:ied",
-  "label" : "IED postrojenje?",
-  "type" : "boolean"
+  "label" : "IED postrojenje",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
 }, {
   "index" : 15,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:fireBrigadeWithinSite",
-  "label" : "Vatrogasna postrojba na lokaciji?",
-  "type" : "boolean"
+  "label" : "Vatrogasna postrojba na lokaciji",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
 }, {
   "index" : 16,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateProtectRescuePlan",
@@ -248,12 +354,22 @@
 }, {
   "index" : 19,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:ClassSafetyReportApproved",
-  "label" : "Klasa posljednjeg IOS-a"
+  "label" : "Klasa posljednjeg IOS-a",
+  "type" : "string"
 }, {
   "index" : 20,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:newSafetyReport",
-  "label" : "Izdavanje suglasnosti na IOS u tijeku?",
-  "type" : "boolean"
+  "label" : "Izdavanje suglasnosti na IOS u tijeku",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
 }, {
   "index" : 21,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateSubmissionInfoExternalPlan",
@@ -265,39 +381,144 @@
 }, {
   "index" : 22,
   "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:CASNumber",
-  "label" : "Opasna tvar, CAS broj"
+  "label" : "Opasna tvar - CAS broj",
+  "type" : "string"
 }, {
   "index" : 23,
   "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:Index",
-  "label" : "Europski inventar kemikalija (EINECS)"
+  "label" : "Europski inventar kemikalija (EINECS)",
+  "type" : "string"
 }, {
   "index" : 24,
   "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:ec",
-  "label" : "EK"
+  "label" : "EK",
+  "type" : "string"
 }, {
   "index" : 25,
   "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:chemicalName",
-  "label" : "Opasna tvar, kemijski naziv"
+  "label" : "Opasna tvar - kemijski naziv",
+  "type" : "string"
 }, {
   "index" : 26,
   "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:commercialName",
-  "label" : "Opasna tvar, trgovački naziv"
+  "label" : "Opasna tvar -trgovački naziv",
+  "type" : "string"
+}, {
+  "index" : 27,
+  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:HazardType",
+  "label" : "Opasna tvar - vrsta opasnosti",
+  "type" : "list",
+  "valueId" : "naziv",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:rpot_vrstaopasnosti",
+      "propertyName" : "naziv"
+    }
+  },
+  "valueLabel" : "naziv"
+}, {
+  "index" : 28,
+  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:idDangerousSubstance",
+  "label" : "Opasne tvari mješavina (Prilog 1.A, Dio 2.)",
+  "type" : "list",
+  "valueId" : "id_dangerous_substance",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_dangersubstance_dio2",
+      "propertyName" : "des_dangerous_substance",
+      "sortBy" : "des_dangerous_substance"
+    }
+  },
+  "valueLabel" : "des_dangerous_substance"
+}, {
+  "index" : 29,
+  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:idDangerousSubstance",
+  "label" : "Opasne tvari mješavina (Prilog 1.A, Dio 1.)",
+  "type" : "list",
+  "valueId" : "id_dangerous_substance",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_dangersubstance_dio1",
+      "propertyName" : "des_dangerous_substance",
+      "sortBy" : "des_dangerous_substance"
+    }
+  },
+  "valueLabel" : "des_dangerous_substance"
+}, {
+  "index" : 30,
+  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:idDangerousSubstance",
+  "label" : "Kategorija opasne tvari (Prilog 1.A, Dio 1.)",
+  "type" : "list",
+  "valueId" : "id_category",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_dangersubstance_category",
+      "propertyName" : "des_category",
+      "sortBy" : "des_category"
+    }
+  },
+  "valueLabel" : "des_category"
+}, {
+  "index" : 31,
+  "attribute" : "bifisic_sevesoestablishments:classification/bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:idClassification",
+  "label" : "Razvrstavanje",
+  "type" : "list",
+  "valueId" : "id_classification",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_classification",
+      "propertyName" : "des_classification",
+      "sortBy" : "des_classification"
+    }
+  },
+  "valueLabel" : "des_classification"
+}, {
+  "index" : 32,
+  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments::storagesubstancetype",
+  "label" : "Skladištenje opasnih tvari",
+  "type" : "list",
+  "valueId" : "naziv",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:rpot_tvarnacinskladistenja",
+      "propertyName" : "naziv",
+      "sortBy" : "naziv"
+    }
+  },
+  "valueLabel" : "naziv"
 }, {
   "index" : 33,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:LikeEvent",
-  "label" : "Scenarij-vjerojatnost događaja (broj/god)"
+  "label" : "Scenarij-vjerojatnost događaja (broj/god)",
+  "type" : "string"
 }, {
   "index" : 34,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:substanceEvent",
-  "label" : "Scenarij-tvari koje su sudjelovale u događaju"
+  "label" : "Scenarij-tvari koje su sudjelovale u događaju",
+  "type" : "string"
 }, {
   "index" : 35,
   "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:maxImpactArea",
   "label" : "Scenarij - maks. područje učinka (m2)"
 }, {
+  "index" : 36,
+  "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:phenomTypeScenario",
+  "label" : "Scenarij-vrsta pojave",
+  "type" : "list",
+  "valueId" : "des_phenom_type",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_phenom_type_scenario",
+      "propertyName" : "des_phenom_type",
+      "sortBy" : "des_phenom_type"
+    }
+  },
+  "valueLabel" : "des_phenom_type"
+}, {
   "index" : 37,
   "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:likScenario",
-  "label" : "Scenarij-vjerojatnost pojave (broj/god)"
+  "label" : "Scenarij-vjerojatnost pojave (broj/god)",
+  "type" : "string"
 }, {
   "index" : 38,
   "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:assessCasualties",
@@ -306,23 +527,60 @@
   "index" : 39,
   "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:domHazard",
   "label" : "Scenarij-domino efekt?",
-  "type" : "boolean"
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
 }, {
   "index" : 40,
   "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:extImpact",
-  "label" : "Scenarij-podr. učinka nesreće izvan lokacije?",
-  "type" : "boolean"
+  "label" : "Scenarij-podr. učinka nesreće izvan lokacije",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
 }, {
   "index" : 41,
   "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:FacNotified",
-  "label" : "Scenarij-ugrožena postrojenja obaviještena?",
-  "type" : "boolean"
+  "label" : "Scenarij-ugrožena postrojenja obaviještena",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
 }, {
   "index" : 42,
   "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:transbImpact",
-  "label" : "Scenarij-prekogranični utjecaj?",
-  "type" : "boolean"
-}    ]
+  "label" : "Scenarij-prekogranični utjecaj",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+} ]
+
 
    }
 

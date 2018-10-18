@@ -357,7 +357,7 @@ const SiraGrid = React.createClass({
                                     style={{marginBottom: "12px"}}
                                     onClick={() => this.onGridClose(true)}><span><Message msgId={this.props.backToSearch}/></span>
                                 </Button>
-                                <h5>Risultati - {this.props.totalFeatures !== -1 ? this.props.totalFeatures : (<I18N.Message msgId={"sira.noQueryResult"}/>)}</h5>
+                                <h5><I18N.Message msgId={"QueryResult.results"}/> - {this.props.totalFeatures !== -1 ? this.props.totalFeatures : (<I18N.Message msgId={"sira.noQueryResult"}/>)}</h5>
 
                                 <FeatureGrid
                                     changeMapView={this.props.changeMapView}

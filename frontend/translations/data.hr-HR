@@ -236,7 +236,9 @@
         },
         "dataset": {
             "showCategories": "Show Categories",
-            "hideCategories": "Hide Categories"
+            "hideCategories": "Hide Categories",
+            "objects": "Objects",
+            "views": "Thematic Views"
         },
         "home": {
             "Applications": "Applications",
@@ -580,7 +582,7 @@
             "zoomOutTooltip": "Decrease Zoom"
         },
         "sira": {
-            "noQueryResult": "Unkonwn"
+            "noQueryResult": "Unknown"
         },
         "topology": {
             "tooltip": "Query topology objects"
@@ -661,6 +663,17 @@
         },
         "ChangeLanguage": {
             "language": "Odaberite jezik"
+        },
+        "QueryResult": {
+            "results": "Results"
+        },
+        "SiraExporter": {
+            "csv": "CSV",
+            "shp": "Shape File",
+            "title": "Export Data",
+            "all": "All objects",
+            "current": "Current page",
+            "alert": "Only the features with geometry will be exported"
         }
     }
 }
