@@ -70,12 +70,12 @@ module.exports = {
             path: new RegExp("/proxy(.*)"),
             rewrite: rewriteUrl("/bifisic/proxy$1"),
             host: "localhost",
-            target: "http://pproo.azo.hr/"
+            target: "http://192.168.1.226/"
         }, {
             path: new RegExp("/services/metadata/(.*)"),
             rewrite: rewriteUrl("/bifisic/services/metadata/$1"),
             host: "localhost",
-            target: "http://pproo.azo.hr/"
+            target: "http://192.168.1.226/"
         }, {
             path: new RegExp("/services/iride/(.*)"),
             rewrite: rewriteUrl("/bifisic/services/iride/$1"),
@@ -85,15 +85,15 @@ module.exports = {
             path: new RegExp("/services/httpbasicauth/(.*)"),
             rewrite: rewriteUrl("/bifisic/services/httpbasicauth/$1"),
             host: "localhost",
-            target: "http://pproo.azo.hr/"
+            target: "http://192.168.1.226/"
         }, {
             path: new RegExp("/bifisic/services/queryformconfig(.*)"),
             host: "localhost",
-            target: "http://pproo.azo.hr/"
+            target: "http://192.168.1.226/"
         }, {
             path: new RegExp("/geoserver/ows(.*)"),
             host: "localhost",
-            target: "http://pproo.azo.hr/"
+            target: "http://192.168.1.226/"
         }, {
             path: new RegExp("/territoriosliv1sisp/(.*)"),
             host: "localhost",
