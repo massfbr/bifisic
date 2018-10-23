@@ -11,7 +11,7 @@
   "headerName" : "''",
   "xpath" : "@gml:id",
   "width" : 30,
-  "cellRenderer" : reactCellRendererFactory(GoToDetail)
+  "cellRenderer" : "reactCellRendererFactory(GoToDetail)"
 }, {
   "headerName" : "Županija",
   "xpath" : "bifisic_sevesoestablishments:desCounty/text()",
@@ -53,12 +53,12 @@
   "xpath" : "bifisic_sevesoestablishments:CoreActivity/text()",
   "width" : 100
 }, {
-  "headerName" : "Obavijest provjerena",
+  "headerName" : "Obavijest provjerena?",
   "xpath" : "bifisic_sevesoestablishments:NotificationValidated/text()",
   "width" : 100
 }, {
   "headerName" : "Datum odobrenja PSVN-a",
-  "xpath" : "bifisic_sevesoestablishments:datamapp/text()",
+  "xpath" : "bifisic_sevesoestablishments:dataMAPP/text()",
   "width" : 100
 }, {
   "headerName" : "Date posljednje obavijesti",

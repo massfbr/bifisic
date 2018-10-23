@@ -1,5 +1,5 @@
-{
-    "locale": "hr-HR",
+﻿{
+    "locale": "en-US",
     "messages": {
         "Language": "Language",
         "aboutLbl": "About",
@@ -18,17 +18,17 @@
         "about_ul0_li1": "MapPublisher has been developed to create, save and share in a simple and intuitive way maps and mashups created selecting contents by server like OpenStreetMap, Google Maps, MapQuest or specific servers provided by your organization or third party. For more information check the",
         "background": "Background",
         "backgroundSwither": {
-            "tooltip": "Select Background"
+            "tooltip": "Odaberi pozadinu"
         },
         "toc": {
-            "toggleLayerVisibility": "Activate or deactivate the visibility of the level",
-            "displayLegendAndTools": "View legend and additional tools",
-            "zoomToLayerExtent": "Zoom to the extension of the level",
-            "editLayerProperties": "Edit properties from the level",
-            "searchFeatures": "Do a search on this level ...",
-            "removeLayer": "Remove level",
-            "loadingerror": "The level has not been loaded correctly",
-            "tooltip": "Map Contents"
+            "toggleLayerVisibility": "Aktviraj ili deaktiviraj sloj",
+            "displayLegendAndTools": "Legenda i dodatni alati",
+            "zoomToLayerExtent": "Uvećaj za prikaz sloja",
+            "editLayerProperties": "Uredi svojstva sloja",
+            "searchFeatures": "Pretraži na sloju ... ",
+            "removeLayer": "Ukloni sloj",
+            "loadingerror": "Sloj nije pravilno učitan",
+            "tooltip": "Sadržaj karte"
         },
         "bandselector": {
             "algorithm": {
@@ -64,7 +64,7 @@
             "share": "Share",
             "textSearchPlaceholder": "text to search...",
             "title": "Catalog",
-            "tooltip": "Browse Catalog",
+            "tooltip": "Pretraži katalog",
             "wfsGetCapLink": "WFS",
             "wmsGetCapLink": "WMS"
         },
@@ -136,32 +136,32 @@
                 "handlers": {
                     "edit": {
                         "tooltip": {
-                            "subtext": "Click cancel to undo changes.",
-                            "text": "Drag handles, or marker to edit feature."
+                            "subtext": "Klikni 'Odbaci' kako bi se poništile promjene.",
+                            "text": "Povuci ručicu za pomicanje ili oznaku za uređivanje elementa."
                         }
                     },
                     "remove": {
                         "tooltip": {
-                            "text": "Click on a feature to remove"
+                            "text": "Klikni na element za njegovo uklanjanje"
                         }
                     }
                 },
                 "toolbar": {
                     "actions": {
                         "cancel": {
-                            "text": "Cancel",
-                            "title": "Cancel editing, discards all changes."
+                            "text": "Otkaži",
+                            "title": "Otkaži uređivanje, odbaci sve promjene."
                         },
                         "save": {
-                            "text": "Save",
-                            "title": "Save changes."
+                            "text": "Spremi",
+                            "title": "Spremi promjene."
                         }
                     },
                     "buttons": {
-                        "edit": "Edit layers.",
-                        "editDisabled": "No layers to edit.",
-                        "remove": "Delete layers.",
-                        "removeDisabled": "No layers to delete."
+                        "edit": "Uredi slojeve.",
+                        "editDisabled": "Nema slojeva za urediti.",
+                        "remove": "Izbriši slojeve.",
+                        "removeDisabled": "Nema slojeva za izbrisati."
                     }
                 }
             }
@@ -177,30 +177,30 @@
             "ramp": "Color Ramp"
         },
         "expandtoolbar": {
-            "tooltip": "Expand / Collapse"
+            "tooltip": "Proširi / Smanji"
         },
         "featuregrid": {
-            "deselectall": "Clear Selection",
-            "export": "Export",
-            "header": "Search results list",
-            "header_all": "Objects list",
-            "backtosearch": "Back to search",
-            "opensearch": "Open search panel",
+            "deselectall": "Poništi odabir",
+            "export": "Izvoz podataka",
+            "header": "Pretraži popis rezultata",
+            "header_all": "Popis objekata",
+            "backtosearch": "Natrag na pretraživanje",
+            "opensearch": "Otvori traku za pretraživanje",
             "pagination": {
-                "more": "more",
-                "of": "of",
-                "page": "Page",
-                "to": "to"
+                "more": "više",
+                "of": "od",
+                "page": "Stranica",
+                "to": "do"
             },
-            "selectall": "Select All",
-            "tools": "Tool Panel"
-        },
+            "selectall": "Označi sve",
+            "tools": "Alatna traka"
+       },
         "getFeatureInfoError": {
             "text": "An error has occurred during this <b>GetFeatureInfo</b> request",
             "title": "Ooops! Something's wrong"
         },
         "siraSearchBar": {
-            "placeholder": "Search objects"
+            "placeholder": "Pretraži objekte"
         },
         "getFeatureInfoTitle": "Feature Info",
         "gohome": "Go home",
@@ -231,14 +231,14 @@
         },
         "history": {
             "barLabel": "Map history",
-            "redoBtnTooltip": "Go  forward",
-            "undoBtnTooltip": "Go back"
+            "redoBtnTooltip": "Naprijed",
+            "undoBtnTooltip": "Natrag"
         },
         "dataset": {
-            "showCategories": "Show Categories",
-            "hideCategories": "Hide Categories",
-            "objects": "Objects",
-            "views": "Thematic Views"
+            "showCategories": "Prikaži kategorije",
+            "hideCategories": "Sakrij kategorije",
+            "objects": "Objekti",
+            "views": "Tematski prikazi"
         },
         "home": {
             "Applications": "Applications",
@@ -297,7 +297,7 @@
         "identifyRevGeocodeSubmitText": "More Info",
         "identifyTitle": "Feature Info",
         "info": {
-            "tooltip": "Query objects on map"
+            "tooltip": "Pretraži objekte na karti"
         },
         "infoFormatLbl": "GetFeatureInfo response format",
         "labeledfield": {
@@ -322,7 +322,7 @@
             "metersUnit": "meters",
             "outsideMapBoundsMsg": "You seem located outside the boundaries of the map",
             "popup": "You are within {distance} {unit} from this point",
-            "tooltip": "Locate me"
+            "tooltip": "Lociraj me"
         },
         "manager": {
             "deleteMap": "Delete Map",
@@ -411,36 +411,36 @@
         },
         "queryform": {
             "attributefilter": {
-                "add_condition": " Add Condition",
-                "add_group": " Add Group",
-                "attribute_filter_header": "Attribute Filter",
-                "combo_placeholder": "Select",
+                "add_condition": " Dodaj uvjet",
+                "add_group": " Dodaj skupinu",
+                "attribute_filter_header": "Filtar značajki",
+                "combo_placeholder": "Odaberi",
                 "datefield": {
-                    "wrong_date_range": "Start date must be lower than end date"
+                    "wrong_date_range": "Datum početka mora biti raniji od datuma završetka"
                 },
                 "groupField": {
-                    "all": "all",
-                    "any": "any",
-                    "none": "none"
+                    "all": "svi",
+                    "any": "bilo koji",
+                    "none": "ne postoji"
                 },
-                "group_label_a": "Match",
-                "group_label_b": "of the following conditions:",
+                "group_label_a": "Ispuni",
+                "group_label_b": "sljedeće uvjete:",
                 "numberfield": {
-                    "isRequired": "Field value required",
-                    "wrong_range": "Lower boundary must be lower upper boundary"
+                    "isRequired": "Potrebno je polje koje sadrži vrijednost",
+                    "wrong_range": "Donja granica mora biti niža od gornje granice"
                 },
-                "text_placeholder": "Type text to search"
+                "text_placeholder": "Unesi tekst za pretragu"
             },
             "config": {
-                "load_config_exception": "Error Loading Configuration"
+                "load_config_exception": "Greška prilikom učitavanja"
             },
             "form": {
-                "dataset_header": "Dataset",
-                "header": "Find in the dataset"
+                "dataset_header": "Skup podataka",
+                "header": "Pronađi u skupu podataka"
             },
-            "query": "Search",
-            "query_request_exception": "Request Error",
-            "reset": "Reset",
+            "query": "Traži",
+            "query_request_exception": "Greška s upitom",
+            "reset": "Poništi",
             "spatialfilter": {
                 "details": {
                     "detail_button_label": "Details",
@@ -535,17 +535,17 @@
             "date": "Date",
             "downloadingSnapshots": "pending snapshot generation",
             "googleBingError": "Google and Bing layers aren't available for the snapshot, due to copyright restrictions.",
-            "layers": "Layers",
-            "notsupported": "Snapshot not supported",
-            "save": "Save",
-            "size": "Size",
-            "title": "Snapshot Preview",
-            "tooltip": "Save a snapshot of the map."
+            "layers": "Slojevi",
+            "notsupported": "Snimka nije podržana",
+            "save": "Spremi",
+            "size": "Veličina",
+            "title": "Pregled snimke",
+            "tooltip": "Spremni snimku karte."
         },
         "styler": {
-            "layerlabel": "Layer",
-            "paneltitle": "Styler",
-            "tooltip": "Create and edit layer style"
+            "layerlabel": "Sloj",
+            "paneltitle": "Uređivač",
+            "tooltip": "Izradi i uredi sloj"
         },
         "user": {
             "changePwd": "Change Password",
@@ -577,12 +577,12 @@
             "tooltip": "Create and edit vector layer style"
         },
         "zoombuttons": {
-            "zoomAllTooltip": "Zoom To Max Extent",
-            "zoomInTooltip": "Increase Zoom",
-            "zoomOutTooltip": "Decrease Zoom"
+            "zoomAllTooltip": "Maksimalno uvećaj",
+            "zoomInTooltip": "Uvećaj",
+            "zoomOutTooltip": "Smanji"
         },
         "sira": {
-            "noQueryResult": "Unknown"
+            "noQueryResult": "Nepoznato"
         },
         "topology": {
             "tooltip": "Query topology objects"
@@ -603,45 +603,45 @@
             "panelMsg": "todo"
         },
         "cartpanel": {
-            "list": "List",
-            "map": "Map",
-            "title": "Cart Layers",
-            "goToMap": "Map",
-            "tooltip_map": "Go to Map",
-            "tooltip_list": "Go to List"
+            "list": "Popis",
+            "map": "Karta",
+            "title": "Skup slojeva",
+            "goToMap": "Karta",
+            "tooltip_map": "Idi na kartu",
+            "tooltip_list": "Idi na popis"
         },
         "RightMenu": {
-            "ConoscenzeAmbTitle": "About BIFISIC",
-            "ToggleLanguageTitle": "Toggle Language",
-            "CreditsTitle": "Credits and Copyright",
-            "help": "Help",
-            "language": "Language"
+            "ConoscenzeAmbTitle": "O BIFISIC-u",
+            "ToggleLanguageTitle": "Promijeni jezik",
+            "CreditsTitle": "Zasluge i autorsko pravo",
+            "help": "Pomoć",
+            "language": "Jezik"
         },
         "LoginPanel": {
-            "LoginTitle": "Login"
+            "LoginTitle": "Prijava"
         },
         "site_home": {
-            "search": "Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones",
+            "search": "Alat za prikaz alfanumeričkih i zemljopisnih podataka iz baze podataka HAOP-a i vanjskih baza podataka",
             "shirt_title": "BIFISIC",
-            "long_title": "Better Information for Industrial Safety in Croatia"
+            "long_title": "Objedinjene informacije za industrijsku sigurnost u Republici Hrvatskoj"
         },
         "PlatformNumbers": {
-        "the_numbers": "The platform numbers",
-        "view_maps": "Maps displayable",
-        "details_search_available": "Details search available",
-        "tematic_view_available": "Thematic view available"
+        "the_numbers": "Broj platforme",
+        "view_maps": "Karte za prikaz",
+        "details_search_available": "Dostupni detalji pretrage",
+        "tematic_view_available": "Dostupni tematski prikaz"
         },
         "dataset_container": {
-            "object": "OBJECTS",
-            "tematic_view": "THEMATICS VIEWS"
+            "object": "INFORMACIJE",
+            "tematic_view": "TEME"
         },
         "footer": {
-            "cookie_policy": "Cookie policy"
+            "cookie_policy": "Politika korištenja kolačića"
         },
-    	"header": {
-                "bifisic_acronym": "BIFISIC",
-                "bifisic_name": "Better Information for Industrial Safety in Croatia"
-            },
+	"header": {
+            "bifisic_acronym": "BIFISIC",
+            "bifisic_name": "Objedinjene informacije za industrijsku sigurnost u Republici Hrvatskoj."
+	},
         "MosaicTile": {
             "objects": "OBJECTS",
             "thematicViews": "THEMATIC VIEWS",
@@ -654,26 +654,27 @@
             "removelayerConfirmingText": "Are you sure"
         },
         "DefaultNode": {
-            "tooltipSira": "Detailed Search",
-            "tooltipMap": "Load on Map",
-            "tooltipList": "Object List"
+            "tooltipSira": "Detaljna pretraga",
+            "tooltipMap": "Učitaj na kartu",
+            "tooltipList": "Popis objekata"
         },
         "SideQueryPanel": {
-            "tooltipCloseSearch": "Close Detailed Search"
-        },
-        "ChangeLanguage": {
-            "language": "Odaberite jezik"
+            "tooltipCloseSearch": "Zatvori detaljnu pretragu"
+	     },
+         "ChangeLanguage": {
+             "language": "Odaberi jezik"
         },
         "QueryResult": {
-            "results": "Results"
+            "results": "Rezultati"
         },
         "SiraExporter": {
-            "csv": "CSV",
-            "shp": "Shape File",
-            "title": "Export Data",
-            "all": "All objects",
-            "current": "Current page",
-            "alert": "Only the features with geometry will be exported"
+            "csv": "CSV format",
+            "shp": "Shapefile format",
+            "title": "Izvoz podataka",
+            "all": "Svi objekti",
+            "current": "Trenutna stranica",
+            "alert": "Izvoz isključivo geometrijskih elemenata",
+            "btn": "Izvoz podataka"
         }
     }
 }
