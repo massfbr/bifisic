@@ -6,20 +6,26 @@
  * LICENSE file in the root directory of this source tree.
  */
 const FilterUtils = require('../../MapStore2/web/client/utils/FilterUtils');
+const ol = require('openlayers');
 
 function getWSNameByFeatureName(ftName = "") {
     if (ftName === "" ) return "";
     return ftName.split(':')[0];
 }
 
-FilterUtils.toOGCFilterSira = function(ftName, json, version, sortOptions = null, hits = false, format = null, nsplaceholder = "fes") {
+FilterUtils.toOGCFilterSira = function(ftName, json, version, projection = null, sortOptions = null, hits = false, format = null, nsplaceholder = "fes") {
+    // let gjson = null;
+    // gjson = json && json.spatialField ? FilterUtils.reProjectGeometry(json.spatialField.geometry) : null;
+    // json.spatialField.geometry = gjson;
+    json.spatialField.attribute = "geometry";
     let newFilter = this.toOGCFilter(ftName, json, version, sortOptions, hits, format);
     let undefFilter = `<${nsplaceholder}:Filter>undefined</${nsplaceholder}:Filter>`;
+    // newFilter = projection ? newFilter.replace("EPSG:3857", "EPSG:31469") : newFilter;
     newFilter = newFilter.replace(undefFilter, '');
     newFilter = nsplaceholder === "ogc" ? newFilter.replace("<ogc:PropertyName>geometria</ogc:PropertyName>", "<ogc:PropertyName>" + getWSNameByFeatureName(ftName) + ":geometria</ogc:PropertyName>") : newFilter;
     return newFilter;
-
 };
+
 FilterUtils.toCQLFilterSira = function(json) {
     let filter = this.toCQLFilter(json);
     return filter === "(undefined)" ? "(INCLUDE)" : filter;
@@ -57,6 +63,29 @@ FilterUtils.getFilterByIds = function(ftName, ids, idField, pagination) {
     pagination
     };
     return this.toOGCFilter(ftName, filterObj, "2.0");
+};
+
+// not used
+FilterUtils.reProjectGeometry = function(geometry) {
+    if (!geometry) return "";
+    let polyCoords = [];
+    geometry.coordinates[0].forEach((element) => {
+        polyCoords.push(ol.proj.transform([parseFloat(element[0]), parseFloat(element[1])], 'EPSG:3857', 'EPSG:31469'));
+    });
+    let feature = new ol.Feature({
+        geometry: new ol.geom.Polygon([polyCoords])
+    });
+    let jsonGeometry = {};
+    if (!feature) return null;
+    jsonGeometry.extent = feature.getGeometry().getExtent();
+    jsonGeometry.center = [
+        ((jsonGeometry.extent[2] - jsonGeometry.extent[0]) / 2) + jsonGeometry.extent[0],
+        ((jsonGeometry.extent[3] - jsonGeometry.extent[1]) / 2) + jsonGeometry.extent[3]
+    ];
+    jsonGeometry.coordinates = feature.getGeometry().getCoordinates();
+    jsonGeometry.projection = "EPSG:31469";
+    jsonGeometry.type = geometry.type;
+    return jsonGeometry;
 };
 
 module.exports = FilterUtils;

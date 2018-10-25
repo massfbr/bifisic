@@ -241,7 +241,7 @@ const SiraGrid = React.createClass({
                 spatialField: {},
                 pagination
                 };
-                let filter = FilterUtils.toOGCFilterSira(this.props.featureTypeName, filterObj, this.props.ogcVersion, this.getSortOptions(params));
+                let filter = FilterUtils.toOGCFilterSira(this.props.featureTypeName, filterObj, this.props.ogcVersion, this.props.map.projection, this.getSortOptions(params));
                 this.featureLoaded = params;
                 this.sortModel = params.sortModel;
                 this.props.onQuery(this.props.searchUrl, filter, this.props.params, reqId);
