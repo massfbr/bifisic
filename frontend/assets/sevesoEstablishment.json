@@ -6,7 +6,7 @@
    },
    "layer": {
         "type": "wms",
-        "url": "{geoserverUrl}/wms",
+        "url": "{geoserverUrl}/ows",
         "visibility": true,
         "title": "Seveso Establishments",
         "name": "bifisic_sevesoestablishments:SevesoEstablishment",

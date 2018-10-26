@@ -17,13 +17,20 @@ FilterUtils.toOGCFilterSira = function(ftName, json, version, projection = null,
     // let gjson = null;
     // gjson = json && json.spatialField ? FilterUtils.reProjectGeometry(json.spatialField.geometry) : null;
     // json.spatialField.geometry = gjson;
-    json.spatialField.attribute = "geometry";
+    json.spatialField.attribute = this.getWorkSpaceNameByLayerName(ftName) ? this.getWorkSpaceNameByLayerName(ftName) + ":geometry" : "geometry";
     let newFilter = this.toOGCFilter(ftName, json, version, sortOptions, hits, format);
     let undefFilter = `<${nsplaceholder}:Filter>undefined</${nsplaceholder}:Filter>`;
     // newFilter = projection ? newFilter.replace("EPSG:3857", "EPSG:31469") : newFilter;
     newFilter = newFilter.replace(undefFilter, '');
     newFilter = nsplaceholder === "ogc" ? newFilter.replace("<ogc:PropertyName>geometria</ogc:PropertyName>", "<ogc:PropertyName>" + getWSNameByFeatureName(ftName) + ":geometria</ogc:PropertyName>") : newFilter;
     return newFilter;
+};
+
+FilterUtils.getWorkSpaceNameByLayerName = function(name) {
+    if (name && name.indexOf(":") > -2) {
+        return name.split(":")[0];
+    }
+    return null;
 };
 
 FilterUtils.toCQLFilterSira = function(json) {

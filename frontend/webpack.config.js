@@ -95,6 +95,10 @@ module.exports = {
             host: "localhost",
             target: "http://192.168.1.226/"
         }, {
+            path: new RegExp("/geoserver/wms(.*)"),
+            host: "localhost",
+            target: "http://192.168.1.226/"
+        }, {
             path: new RegExp("/territoriosliv1sisp/(.*)"),
             host: "localhost",
             target: "https://TODO/"
