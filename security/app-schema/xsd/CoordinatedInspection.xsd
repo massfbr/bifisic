@@ -1,0 +1,673 @@
+<?xml version="1.0"?>
+<schema version="1.0" 
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:bifisic_cide="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"
+    targetNamespace="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<import namespace="http://www.opengis.net/gml/3.2" 
+	schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" />
+	
+	<!-- elements -->
+	<!-- gml:AbstractObject or gml:AbstractFeature -->
+	
+	<!-- (bifisic_t_coordinated_inspection  id=id_coordinated_inspection)-->
+	<element name="CoordinatedInspection" type="bifisic_cide:CoordinatedInspectionType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (bifisic_geo_establishment  id=id_establishment)-->
+	<element name="SimplifiedSevesoEstablishment" type="bifisic_cide:SimplifiedSevesoEstablishmentType" substitutionGroup="gml:AbstractFeature" />
+
+	<!-- (bifisic_t_company   id=id_company)-->
+	<element name="Company" type="bifisic_cide:CompanyType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (bifisic_t_specific_inspection   id=id_specific_inspection)-->
+	<element name="SpecificInspection" type="bifisic_cide:SpecificInspectionType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (bifisic_t_criteriorscore   id=id_criterior_score)-->
+	<element name="CriterionScore" type="bifisic_cide:CriterionScoreType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (bifisic_t_open_issue   id=id_open_issue)-->
+	<element name="OpenIssue" type="bifisic_cide:OpenIssueType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- types -->
+	<!-- here gml:AbstractGMLType or gml:AbstractFeatureType -->
+	
+	<complexType name="CoordinatedInspectionType">
+        <complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					
+					<xs:element name="idEstablishment" type="xs:integer"/>
+					<xs:element name="idCoordinatedInspection" type="xs:integer"/>
+					<xs:element name="mappDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="inspectionDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="idInspectionCoordinator" type="xs:integer" minOccurs="0"/>
+					<xs:element name="coordinatorName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="totalScore" type="xs:integer" minOccurs="0"/>
+					<xs:element name="lastUpdateUserId" type="xs:integer" minOccurs="0"/>
+					<xs:element name="lastUpdateUserName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="lastUpdateDate" type="xs:date" minOccurs="0"/>
+
+					<!-- complex feature -->
+					<xs:element name="simplifiedSevesoEstablishment" type="bifisic_cide:SimplifiedSevesoEstablishmentPropertyType"/>
+					<xs:element name="specificInspection" type="bifisic_cide:SpecificInspectionPropertyType"/>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+        </complexType>
+	
+
+	<complexType name="SimplifiedSevesoEstablishmentType">
+        <complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					
+					<xs:element name="idEstablishment" type="xs:integer"/>
+					<xs:element name="statusEstablish" type="xs:integer"/>
+					
+					<xs:element name="statusEstablishDesc">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="geometry" type="gml:GeometryPropertyType"/>
+					
+					<xs:element name="idCAEN">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="11" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+				
+					<xs:element name="establishmentName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="300" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="address" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+				
+				
+					<xs:element name="postalCode" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="idMunicipality" type="xs:integer"/>
+					
+					<xs:element name="desMunicipality">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="idCounty" type="xs:integer"/>
+					
+					<xs:element name="desCounty">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="idAdminPosition" type="xs:integer"/>
+					
+					<xs:element name="desAdminPosition">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="idSubActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="subActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="coreActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="eprtr">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="ied">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respLegPosition">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respLegNameSurname">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respLegPhone">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respLegFax">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respLegEmail">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="150" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respUnEventPosition">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respUnEventNameSurname">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respUnEventPhone">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respUnEventFax">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="respUnEventEMail">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="150" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="otherPosition">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="otherNameSurname">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="otherPhone">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="otherFax">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="otherEMail">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="150" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="surroundingsDes">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="4000" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="flagOtherEstablish">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="otherEstablish">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="15" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="otherEstablishName">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="notificationValidated">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="idCompany" type="xs:integer"/>
+					<xs:element name="dataMAPP" type="xs:date"/>
+					
+					<!-- complex feature -->
+					<xs:element name="company" type="bifisic_cide:CompanyPropertyType"/>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+        </complexType>
+
+
+	<complexType name="CompanyType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+                <sequence>
+					<xs:element name="idCompany" type="xs:integer"/>
+					
+					<xs:element name="oib" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="13" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="companyName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="address" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="idMunicipality" type="xs:integer"/>
+					
+					<xs:element name="desMunicipality">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="postalCode">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="idCounty" type="xs:integer"/>
+					
+					<xs:element name="desCounty">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="idActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="desActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="200" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="idRegulationAnnex" type="xs:integer"/>
+					
+					<xs:element name="desRegulationAnnex">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="telephone">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="fax">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+					<xs:element name="email">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="150" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="SpecificInspectionType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+					<xs:element name="idSpecificInspection" type="xs:integer"/>
+					<xs:element name="idCoordinatedInspection" type="xs:integer"/>
+					<xs:element name="specInspectionTypeId" type="xs:integer" minOccurs="0"/>
+					<xs:element name="specInspectionTypeDesc" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					<xs:element name="idInspector" type="xs:integer" minOccurs="0"/>
+					<xs:element name="inspectorName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					<xs:element name="inspectionDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="specInspectionTotalScore" type="xs:integer" minOccurs="0"/>					
+					<xs:element name="lastUpdateUserId" type="xs:integer" minOccurs="0"/>					
+					<xs:element name="lastUpdateUserName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					<xs:element name="lastUpdateDate" type="xs:date" minOccurs="0"/>
+					
+					<!-- complex feature -->
+					<xs:element name="criterionScore" type="bifisic_cide:CriterionScorePropertyType" maxOccurs="unbounded" />
+					<xs:element name="openIssue" type="bifisic_cide:OpenIssuePropertyType" maxOccurs="unbounded" />
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    	</complexType>
+	
+	<complexType name="CriterionScoreType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+				
+					<xs:element name="idCriterionScore" type="xs:integer"/>
+					<xs:element name="idSpecificInspection" type="xs:integer"/>
+					<xs:element name="idCriterion" type="xs:integer"/>
+					
+					<xs:element name="desCriterion">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="desScore" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="40" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="scoreNum" type="xs:integer" minOccurs="0"/>					
+					
+					<xs:element name="scoreNotes" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="lastUpdateUserId" type="xs:integer" minOccurs="0"/>					
+					<xs:element name="lastUpdateUserName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					<xs:element name="lastUpdateDate" type="xs:date" minOccurs="0"/>
+				
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+			
+	<complexType name="OpenIssueType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+				
+					<xs:element name="idOpenIssue" type="xs:integer"/>
+					<xs:element name="idSpecificInspection" type="xs:integer"/>
+					
+					<xs:element name="desOpenIssue" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="1000" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="accPrescriptions" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+
+					<xs:element name="deadlineWarning" type="xs:date" minOccurs="0"/>					
+
+					<xs:element name="accWarning" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+
+					<xs:element name="desIndictment" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="1000" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+
+					<xs:element name="lastUpdateUserId" type="xs:integer" minOccurs="0"/>					
+					<xs:element name="lastUpdateUserName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    			</xs:element>
+					<xs:element name="lastUpdateDate" type="xs:date" minOccurs="0"/>
+				
+				</sequence>
+			</extension>
+		</complexContent>
+    	</complexType>
+	
+	<!-- property types -->
+	<complexType name="SimplifiedSevesoEstablishmentPropertyType">
+		<sequence minOccurs="0">
+		    <element ref="bifisic_cide:SimplifiedSevesoEstablishment" />
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup" />
+		<attributeGroup ref="gml:OwnershipAttributeGroup" />
+    	</complexType>
+	
+	<complexType name="SpecificInspectionPropertyType">
+		<sequence minOccurs="0">
+		    <element ref="bifisic_cide:SpecificInspection" />
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup" />
+		<attributeGroup ref="gml:OwnershipAttributeGroup" />
+	</complexType>
+	
+	<complexType name="CompanyPropertyType">
+		<sequence minOccurs="0">
+		    <element ref="bifisic_cide:Company" />
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup" />
+		<attributeGroup ref="gml:OwnershipAttributeGroup" />
+	</complexType>
+	
+	<complexType name="CriterionScorePropertyType">
+		<sequence minOccurs="0">
+		    <element ref="bifisic_cide:CriterionScore" />
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup" />
+		<attributeGroup ref="gml:OwnershipAttributeGroup" />
+	</complexType>
+	
+	<complexType name="OpenIssuePropertyType">
+		<sequence minOccurs="0">
+		    <element ref="bifisic_cide:OpenIssue" />
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup" />
+		<attributeGroup ref="gml:OwnershipAttributeGroup" />
+	</complexType>
+	
+	
+</schema>

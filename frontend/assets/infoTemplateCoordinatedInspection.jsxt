@@ -1,0 +1,73 @@
+
+<SiraTable
+    style={{width: "100%", height: "200px"}}
+    id="infoTemplateSevesoEstablishment"
+    rowSelection={false}
+    onCellClicked={props.onCellClicked}
+    profile={model.profile}
+    columns={[
+{
+  "id" : true,
+  "headerName" : "''",
+  "xpath" : "@gml:id",
+  "width" : 30,
+  "cellRenderer" : reactCellRendererFactory(GoToDetail)
+}, {
+  "headerName" : "Županija područja postrojenja",
+  "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:desCounty/text()",
+  "width" : 100
+}, {
+  "headerName" : "Općina područja postrojenja",
+  "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:desMunicipality/text()",
+  "width" : 100
+}, {
+  "headerName" : "OIB",
+  "xpath" : "bifisic_cide:company/bifisic_cide:Company/bifisic_cide:oib/text()",
+  "width" : 100
+}, {
+  "headerName" : "Naziv tvrtke",
+  "xpath" : "bifisic_cide:company/bifisic_cide:Company/bifisic_cide:companyName/text()",
+  "width" : 100
+}, {
+  "headerName" : "Naziv područja postrojenja",
+  "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:establishmentName/text()",
+  "width" : 100
+}, {
+  "headerName" : "HAOP ID područja postrojenja",
+  "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCAEN/text()",
+  "width" : 100
+}, {
+  "headerName" : "Adresa područja postrojenja",
+  "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:address/text()",
+  "width" : 100
+}, {
+  "headerName" : "E-PRTR postrojenje?",
+  "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:eprtr/text()",
+  "width" : 100
+}, {
+  "headerName" : "IED postrojenje?",
+  "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:ied/text()",
+  "width" : 100
+}, {
+  "headerName" : "Datum odobrenja PSVN",
+  "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:mapp/text()",
+  "width" : 100
+}, {
+  "headerName" : "Datum inspekcijskog nadzora",
+  "xpath" : "bifisic_cide:InspectionDate/text()",
+  "width" : 100
+}, {
+  "headerName" : "Koordinator inspekcijskog nadzora",
+  "xpath" : "bifisic_cide:coordinatorName/text()",
+  "width" : 100
+}, {
+  "headerName" : "Ostale vrste nadzora",
+  "xpath" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTypeDesc/text()",
+  "width" : 100
+}, {
+  "headerName" : "Rezultati inspekcijskog nadzora",
+  "xpath" : "bifisic_cide:totalScore/text()",
+  "width" : 100
+}
+    ]}
+    features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_sevesoestablishments:SevesoEstablishment")}/>

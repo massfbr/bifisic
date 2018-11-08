@@ -1,0 +1,392 @@
+{
+   "featureTypeName":"bifisic_cide:CoordinatedInspection",
+   "featureTypeNameLabel":"Coordinated Inspections",
+   "nameSpaces": {
+     "bifisic_establishments": "http://pproo.azo.hr/bifisic/bifisic_establishments/1.0"
+   },
+   "layer": {
+        "type": "wms",
+        "url": "{geoserverUrl}/ows",
+        "visibility": true,
+        "title": "Coordinated Inspections",
+        "name": "bifisic_cide:CoordinatedInspection",
+        "infoFormat": "application/vnd.ogc.gml/3.1.1",
+        "topologyConfig": {
+            "wfsUrl": "http://geomap.reteunitaria.piemonte.it/ws/siradec/rp-01/siradecwfs/wfs_srrqa_zones_airquality?srsName=EPSG:4326",
+            "wfsVersion": "1.1.0",
+            "layerName": "ZONES_IPR",
+            "layerTitle": "Zonizzazione qualita' dell'aria vigente",
+            "geomAttribute": "msGeometry",
+            "geometryType": "Polygon"
+        },
+        "featureType": "sevesoEstablishment",
+        "group": "Objects",
+        "format": "image/png"
+        },
+   "geometryName": "geometria",
+   "geometryType": "Point",
+   "card": {
+        "pdfname": "Inspection_card_{{/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:idCoordinatedInspection/text()}}.pdf",
+        "template": "assets/cardTemplateCoordinatedInspection.jsxt",
+        "service": {
+             "url":"{geoserverUrl}/ows?service=WFS&request=GetFeature",
+                "params": {
+                   "typeName": "bifisic_cide:CoordinatedInspection",
+                    "version": "2.0",
+                    "srsName": "EPSG:4326"
+                }
+          }
+   },
+   "featureinfo":{
+     "templateURL": "assets/infoTemplateCoordinatedInspection.jsxt"
+   },
+   "featuregrid": {
+     "grid": {
+       "root": "/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection",
+       "columns": [
+{
+  "hide" : true,
+  "id" : true,
+  "headerName" : "Id",
+  "xpath" : [ "@gml:id" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Županija područja postrojenja",
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:desCounty/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Općina područja postrojenja",
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:desMunicipality/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "OIB",
+  "xpath" : [ "bifisic_cide:company/bifisic_cide:Company/bifisic_cide:oib/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Naziv tvrtke",
+  "xpath" : [ "bifisic_cide:company/bifisic_cide:Company/bifisic_cide:companyName/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Naziv područja postrojenja",
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:establishmentName/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "HAOP ID područja postrojenja",
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCAEN/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Adresa područja postrojenja",
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:address/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "E-PRTR postrojenje?",
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:eprtr/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "IED postrojenje?",
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:ied/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Datum odobrenja PSVN",
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:mapp/text()" ],
+  "dateFormat" : "DD/MM/YYYY",
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Datum inspekcijskog nadzora",
+  "xpath" : [ "bifisic_cide:InspectionDate/text()" ],
+  "dateFormat" : "DD/MM/YYYY",
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Koordinator inspekcijskog nadzora",
+  "xpath" : [ "bifisic_cide:coordinatorName/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Ostale vrste nadzora",
+  "xpath" : [ "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTypeDesc/text()" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Rezultati inspekcijskog nadzora",
+  "xpath" : [ "bifisic_cide:totalScore/text()" ]
+}        ],
+       "exporter":{
+         "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
+       }
+     }
+   },
+   "query": {
+     "service": {
+       "url":"{geoserverUrl}/ows?service=WFS&request=GetFeature",
+       "urlParams": {
+         "version": "1.1.0",
+         "outputFormat": "application/json"
+       }
+     },
+     "fields":[ {
+  "index" : 1,
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCounty",
+  "label" : "Županija područja postrojenja",
+  "type" : "list",
+  "valueId" : "id",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:rpot_zupanija"
+    }
+  },
+  "valueLabel" : "id"
+}, {
+  "index" : 2,
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idMunicipality",
+  "label" : "Općina područja postrojenja",
+  "type" : "list",
+  "valueId" : "id",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:rpot_postanskiured"
+    }
+  },
+  "valueLabel" : "id"
+}, {
+  "index" : 3,
+  "attribute" : "bifisic_cide:company/bifisic_cide:Company/bifisic_cide:oib",
+  "label" : "OIB",
+  "type" : "string"
+}, {
+  "index" : 4,
+  "attribute" : "bifisic_cide:company/bifisic_cide:Company/bifisic_cide:companyName",
+  "label" : "Naziv tvrtke",
+  "type" : "string"
+}, {
+  "index" : 5,
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:establishmentName",
+  "label" : "Naziv područja postrojenja",
+  "type" : "string"
+}, {
+  "index" : 6,
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCAEN",
+  "label" : "HAOP ID broj područja postrojenja",
+  "type" : "string"
+}, {
+  "index" : 7,
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idAdminPosition",
+  "label" : "Administrativni položaj",
+  "valueId" : " id_admin_position",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_admin_position"
+    }
+  },
+  "valueLabel" : " id_admin_position"
+}, {
+  "index" : 8,
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:eprtr",
+  "label" : "E-PRTR postrojenje?",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 9,
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:ied",
+  "label" : "IED postrojenje?",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 10,
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:IdSubActivity",
+  "label" : "Nacionalna djelatnost područja postrojenja",
+  "type" : "list",
+  "valueId" : "id_nkd",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_nkd"
+    }
+  },
+  "valueLabel" : "id_nkd"
+}, {
+  "index" : 11,
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:datamapp",
+  "label" : "Datum odobrenja PSVN-a",
+  "type" : "date",
+  "fieldOptions" : {
+    "dateFormat" : "DD/MM/YYYY"
+  }
+}, {
+  "index" : 12,
+  "attribute" : "bifisic_cide:inspectionDate",
+  "label" : "Datum koordiniranog inspekcijskog nadzora",
+  "type" : "date",
+  "fieldOptions" : {
+    "dateFormat" : "DD/MM/YYYY"
+  }
+}, {
+  "index" : 13,
+  "attribute" : "bifisic_cide:idInspectionCoordinator",
+  "label" : "Koordinator",
+  "type" : "list",
+  "valueId" : "id_coordinator",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_coordinator"
+    }
+  },
+  "valueLabel" : "id_coordinator"
+}, {
+  "index" : 14,
+  "attribute" : "bifisic_cide:totalScore",
+  "label" : "Rezultati koordiniranog inspekcijskog nadzora",
+  "type" : "number"
+}, {
+  "index" : 15,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:idSpecificInspection",
+  "label" : "Ostale vrste nadzora",
+  "type" : "list",
+  "valueId" : "id_inspection_type",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:cide_specific_inspection_type"
+    }
+  },
+  "valueLabel" : "id_inspection_type"
+}, {
+  "index" : 16,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:idInspector",
+  "label" : "Inspektor",
+  "type" : "list",
+  "valueId" : "id_inspector",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_inspector"
+    }
+  },
+  "valueLabel" : "id_inspector"
+}, {
+  "index" : 17,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTotalScore",
+  "label" : "Ocjena pojedinačnog nadzora",
+  "type" : "number"
+}, {
+  "index" : 18,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:CriterionScore/bifisic_cide:desCriterion",
+  "label" : "Kriterij pojedinačnog nadzora",
+  "type" : "list",
+  "valueId" : "id_criterior",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:cide_criterior"
+    }
+  },
+  "valueLabel" : "id_criterior"
+}, {
+  "index" : 19,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:CriterionScore/bifisic_cide:scoreNum",
+  "label" : "Ocjena kriterija pojedinačnog nadzora"
+}, {
+  "index" : 20,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:OpenIssue/bifisic_cide:accPrescriptions",
+  "label" : "Provedene naložene mjere?",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 21,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:OpenIssue/bifisic_cide:deadlineWarning",
+  "label" : "Inspekcijski zapisnik/mjere, rokovi",
+  "type" : "date",
+  "fieldOptions" : {
+    "dateFormat" : "DD/MM/YYYY"
+  }
+}, {
+  "index" : 22,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:OpenIssue/bifisic_cide:accWarning",
+  "label" : "Inspekcijski zapisnik/mjere - provedene?",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 23,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:OpenIssue/bifisic_cide:accIndictment",
+  "label" : "Optužni prijedlog/prekršajni nalog",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 24,
+  "attribute" : "bifisic_cide:lastUpdateDate",
+  "label" : "Koord. insp. nadzor - vrijeme poslj. promjene?",
+  "type" : "date",
+  "fieldOptions" : {
+    "dateFormat" : "DD/MM/YYYY"
+  }
+}, {
+  "index" : 25,
+  "attribute" : "bifisic_cide:lastUpdateUserName",
+  "label" : "Koord. insp. nadzor - poslj. promjena, korisnik",
+  "type" : "string"
+}, {
+  "index" : 26,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateDate",
+  "label" : "Ostali insp. nadzori - vrijeme poslj. promjene",
+  "type" : "date",
+  "fieldOptions" : {
+    "dateFormat" : "DD/MM/YYYY"
+  }
+}, {
+  "index" : 27,
+  "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName",
+  "label" : "Ostali insp. nadzori - poslj. promjena, korisnik",
+  "type" : "string"
+} ]
+
+
+   }
+
+}
