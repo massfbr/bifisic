@@ -128,7 +128,8 @@ module.exports = connect((state) => {
     const activeConfig = state.siradec.configOggetti[state.siradec.activeFeatureType] || {};
     return {
         card: state.cardtemplate || {},
-        pdfname: activeConfig.card && activeConfig.card.pdfname
+        pdfname: activeConfig.card && activeConfig.card.pdfname,
+        withMap: activeConfig.card.withMap === true ? true : false
     };
 }, {
     generatePDF: generatePDF.bind(null, false),
