@@ -7,6 +7,7 @@
  */
 const FilterUtils = require('../../MapStore2/web/client/utils/FilterUtils');
 const ol = require('openlayers');
+const moment = require('moment');
 
 function getWSNameByFeatureName(ftName = "") {
     if (ftName === "" ) return "";
@@ -94,5 +95,52 @@ FilterUtils.reProjectGeometry = function(geometry) {
     jsonGeometry.type = geometry.type;
     return jsonGeometry;
 };
+
+var ogcComparisonOperators = {
+    "=": {startTag: "<fes:PropertyIsEqualTo>", endTag: "</fes:PropertyIsEqualTo>"},
+    ">": {startTag: "<fes:PropertyIsGreaterThan>", endTag: "</fes:PropertyIsGreaterThan>"},
+    "<": {startTag: "<fes:PropertyIsLessThan>", endTag: "</fes:PropertyIsLessThan>"},
+    ">=": {startTag: "<fes:PropertyIsGreaterThanOrEqualTo>", endTag: "</fes:PropertyIsGreaterThanOrEqualTo>"},
+    "<=": {startTag: "<fes:PropertyIsLessThanOrEqualTo>", endTag: "</fes:PropertyIsLessThanOrEqualTo>"},
+    "<>": {startTag: "<fes:PropertyIsNotEqualTo>", endTag: "</fes:PropertyIsNotEqualTo>"},
+    "><": {startTag: "<fes:PropertyIsBetween>", endTag: "</fes:PropertyIsBetween>"},
+    "like": {startTag: "<fes:PropertyIsLike matchCase=\"true\" wildCard=\"*\" singleChar=\".\" escapeChar=\"!\">", endTag: "</fes:PropertyIsLike>"},
+    "ilike": {startTag: "<fes:PropertyIsLike matchCase=\"false\" wildCard=\"*\" singleChar=\".\" escapeChar=\"!\">  ", endTag: "</fes:PropertyIsLike>"},
+    "isNull": {startTag: "<fes:PropertyIsNull>", endTag: "</fes:PropertyIsNull>"}
+};
+var propertyTagReference = {
+    "ogc": {startTag: "<ogc:PropertyName>", endTag: "</ogc:PropertyName>"},
+    "fes": {startTag: "<fes:ValueReference>", endTag: "</fes:ValueReference>"}
+};
+    FilterUtils.ogcDateField = function(attribute, operator, value, nsplaceholder) {
+        let fieldFilter;
+        if (operator === "><") {
+            if (value.startDate && value.endDate) {
+                fieldFilter =
+                            ogcComparisonOperators[operator].startTag +
+                                propertyTagReference[nsplaceholder].startTag +
+                                    attribute +
+                                propertyTagReference[nsplaceholder].endTag +
+                                "<" + nsplaceholder + ":LowerBoundary>" +
+                                    "<" + nsplaceholder + ":Literal>" + value.startDate.toLocaleDateString()/*toISOString()*/ + "</" + nsplaceholder + ":Literal>" +
+                                "</" + nsplaceholder + ":LowerBoundary>" +
+                                "<" + nsplaceholder + ":UpperBoundary>" +
+                                    "<" + nsplaceholder + ":Literal>" + value.endDate.toLocaleDateString()/*.toISOString()*/ + "</" + nsplaceholder + ":Literal>" +
+                                "</" + nsplaceholder + ":UpperBoundary>" +
+                            ogcComparisonOperators[operator].endTag;
+            }
+        } else {
+            if (value.startDate) {
+                fieldFilter =
+                            ogcComparisonOperators[operator].startTag +
+                                propertyTagReference[nsplaceholder].startTag +
+                                    attribute +
+                                propertyTagReference[nsplaceholder].endTag +
+                                "<" + nsplaceholder + ":Literal>" + moment(value.startDate).format('YYYY-MM-DD') + "</" + nsplaceholder + ":Literal>" +
+                            ogcComparisonOperators[operator].endTag;
+            }
+        }
+        return fieldFilter;
+    };
 
 module.exports = FilterUtils;

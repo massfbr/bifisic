@@ -1,0 +1,341 @@
+<Panel
+    bsStyle="primary"
+    header={(
+        <DetailTitle title='Detail form / Obrazac s detaljnim podacima'
+        	subtitle={['']}
+			/>
+    )}>
+
+    <Panel className="template">
+
+                <Section header='Područje postrojenja' eventKey='1' expanded={true}>
+          
+                    <LabeledField label='Županija područja postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:desCounty/text()")
+          }/>
+
+          <LabeledField label='Općina područja postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:desMunicipality/text()")
+          }/>
+
+          <LabeledField label='OIB' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:company/bifisic_cides:Company/bifisic_cide:oib/text()")
+          }/>
+
+          <LabeledField label='Naziv tvrtke' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:company/bifisic_cides:Company/bifisic_cide:companyName/text()")
+          }/>
+
+          <LabeledField label='Naziv područja postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:establishmentName/text()")
+          }/>
+
+          <LabeledField label='HAOP ID broj područja postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCAEN/text()")
+          }/>
+
+          <LabeledField label='E-PRTR postrojenje?' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:eprtr/text()")
+          }/>
+
+          <LabeledField label='IED postrojenje?' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:ied/text()")
+          }/>
+
+          <LabeledField label='Datum odobrenja PSVN' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:mapp/text()")
+          }/>
+
+
+
+        </Section>
+
+        <Section header='Koordinirani inspekcijski nadzori' eventKey='2' expanded={false}>
+          
+                    <LabeledField label='Datum inspekcijskog nadzora' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:inspectionDate/text()")
+          }/>
+
+          <LabeledField label='Koordinator inspekcijskog nadzora' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:coordinatorName/text()")
+          }/>
+
+          <LabeledField label='Rezultati inspekcijskog nadzora' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:totalScore/text()")
+          }/>
+
+          <LabeledField label='Završno izvješće' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:finalReport/text()")
+          }/>
+
+          <LabeledField label='Vrijeme posljednje promjene' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:lastUpdateDate/text()")
+          }/>
+
+          <LabeledField label='Posljednja promjena, korisnik' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:lastUpdateUserName/text()")
+          }/>
+
+        <Section header='Ostali inspekcijski nadzori' eventKey='3' expanded={false}>
+
+          <SiraTable
+                id="SpecificInspection"
+                selectedRow={model.SpecificInspection}
+                wfsVersion="2.0"
+                rowSelection={"single"}
+                
+                columns={
+                    [
+                        						{
+                            hide: true,
+                            id: true,
+                            xpath: "bifisic_cide:SpecificInspection/@gml:id"
+                        },
+                        {
+                            hide: false,
+                            headerName: 'Vrsta ostalih inspekcijskog nadzora',
+                            width: 100,
+                            xpath:"bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTypeDesc/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Datum ostalih inspekcijskih nadzora',
+                            width: 100,
+                            xpath:"bifisic_cide:SpecificInspection/bifisic_cide:inspectionDate/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Inspektor',
+                            width: 100,
+                            xpath:"bifisic_cide:SpecificInspection/bifisic_cide:inspectorName/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Završno izvješće',
+                            width: 100,
+                            xpath:"bifisic_cide:SpecificInspection/bifisic_cide:finalReport/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Rezultati ostalih vrsta inspekcijskih nadzora',
+                            width: 100,
+                            xpath:"bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTotalScore/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Vrijeme posljednje promjene',
+                            width: 100,
+                            xpath:"bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateDate/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Posljednja promjena, korisnik',
+                            width: 100,
+                            xpath:"bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName/text()"
+                        }
+
+
+                    ]
+                }
+                features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:specificInspection")}
+                
+          />
+                        <Section header='   Kriteriji ocjenjivanja' eventKey='4' expanded={(model.SpecificInspection !== undefined && model.SpecificInspection !== null ) ? true: false}>
+
+          <SiraTable
+                id="CriterionScore"
+                selectedRow={model.CriterionScore}
+                wfsVersion="2.0"
+                rowSelection={"single"}
+                                    dependsOn={{
+                        tableId: "SpecificInspection",
+                        parentFeatures: model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:specificInspection"),
+                        xpath: "bifisic_cide:SpecificInspection/@gml:id",
+                        pdfTitle: "   Kriteriji ocjenjivanja "
+                    }}
+
+
+                columns={
+                    [
+                        						{
+                            hide: true,
+                            id: true,
+                            xpath: "../../bifisic_cide:SpecificInspection/@gml:id"
+                        },
+                        {
+                            hide: false,
+                            headerName: 'Kriterij',
+                            width: 100,
+                            xpath:"bifisic_cide:CriterionScore/bifisic_cide:desCriterion/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Opis rezultata',
+                            width: 100,
+                            xpath:"bifisic_cide:CriterionScore/bifisic_cide:desScore/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Broj rezultata',
+                            width: 100,
+                            xpath:"bifisic_cide:CriterionScore/bifisic_cide:scoreNum/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Bilješke',
+                            width: 100,
+                            xpath:"bifisic_cide:CriterionScore/bifisic_cide:scoreNotes/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Vrijeme posljednje promjene',
+                            width: 100,
+                            xpath:"bifisic_cide:CriterionScore/bifisic_cide:lastUpdateDate/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Posljednja promjena, korisnik',
+                            width: 100,
+                            xpath:"bifisic_cide:CriterionScore/bifisic_cide:lastUpdateUserName/text()"
+                        }
+
+
+                    ]
+                }
+                features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:criterionScore")}
+                
+          />
+                
+
+        </Section>
+          
+        <Section header='    Otvorena pitanja' eventKey='5' expanded={(model.SpecificInspection !== undefined && model.SpecificInspection !== null ) ? true: false}>
+
+          <SiraTable
+                id="OpenIssue"
+                selectedRow={model.OpenIssue}
+                wfsVersion="2.0"
+                rowSelection={"single"}
+                                    dependsOn={{
+                        tableId: "SpecificInspection",
+                        parentFeatures: model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:specificInspection"),
+                        xpath: "bifisic_cide:SpecificInspection/@gml:id",
+                        pdfTitle: "    Otvorena pitanja "
+                    }}
+
+
+                columns={
+                    [
+                        						{
+                            hide: true,
+                            id: true,
+                            xpath: "../../bifisic_cide:SpecificInspection/@gml:id"
+                        },
+                        {
+                            hide: false,
+                            headerName: 'Opis problema',
+                            width: 100,
+                            xpath:"bifisic_cide:OpenIssue/bifisic_cide:desOpenIssue/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Mjere provedene na temelju insp. zapisnika?',
+                            width: 100,
+                            xpath:"bifisic_cide:OpenIssue/bifisic_cide:accPrescriptions/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Inspekcijski zapisnik/mjere - rokovi',
+                            width: 100,
+                            xpath:"bifisic_cide:OpenIssue/bifisic_cide:deadlineWarning/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Inspekcijski zapisnik/mjere - provedeno',
+                            width: 100,
+                            xpath:"bifisic_cide:OpenIssue/bifisic_cide:accWarning/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Optužni prijedlog/prekršajni nalog',
+                            width: 100,
+                            xpath:"bifisic_cide:OpenIssue/bifisic_cide:desIndictment/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Vrijeme posljednje promjene',
+                            width: 100,
+                            xpath:"bifisic_cide:OpenIssue/bifisic_cide:lastUpdateDate/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Posljednja promjena, korisnik',
+                            width: 100,
+                            xpath:"bifisic_cide:OpenIssue/bifisic_cide:lastUpdateUserName/text()"
+                        }
+
+,
+        <Section header='KARTA' eventKey='6' expanded={false}>
+          
+          
+
+        </Section>
+
+
+                    ]
+                }
+                features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:openIssue")}
+                
+          />
+                
+
+        </Section>
+          
+
+
+        </Section>
+          
+
+
+        </Section>
+
+
+
+    </Panel>
+        
+</Panel>
+

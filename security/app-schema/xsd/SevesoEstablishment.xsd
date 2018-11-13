@@ -1,0 +1,1380 @@
+<?xml version="1.0"?>
+<schema version="1.0" 
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:bifisic_establishments="http://pproo.azo.hr/geoserver/bifisic_establishments/1.0"
+    targetNamespace="http://pproo.azo.hr/geoserver/bifisic_establishments/1.0"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<import namespace="http://www.opengis.net/gml/3.2" 
+	schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" />
+	
+	<!-- elements -->
+	<!-- gml:AbstractObject or gml:AbstractFeature -->
+	
+	<!-- (BIFISIC_geo_establishment  id=id_establishment)-->
+	<element name="SevesoEstablishment" type="bifisic_establishments:SevesoEstablishmentType" substitutionGroup="gml:AbstractFeature" />
+
+	<!-- (BIFISIC_t_company   id=id_company)-->
+	<element name="Company" type="bifisic_establishments:CompanyType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_measurePrevMitig   id=id_Measures_PrevMitig)-->
+	<element name="MeasurePreventingMitigating" type="bifisic_establishments:MeasurePreventingMitigatingType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_measurePrevMitig   id=id_Measures_PrevMitig)-->
+	<element name="MeasurePreventingMitigating" type="bifisic_establishments:MeasurePreventingMitigatingType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_Cooperator   id=id_cooperator)-->
+	<element name="Cooperator" type="bifisic_establishments:CooperatorType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_geo_dangerous_Substance   id=Id_Subst_Mixture)-->
+	<element name="DangerousSubstance" type="bifisic_establishments:DangerousSubstanceType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_Substance_Type   id=id_Substance_Type)-->
+	<element name="SubstanceType" type="bifisic_establishments:SubstanceTypeType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_Classification   id=id_classification)-->
+	<element name="Classification" type="bifisic_establishments:ClassificationType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_event   id=idEvent)-->
+	<element name="Event" type="bifisic_establishments:EventType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_geo_hazard_source   id=id_hazard_source)-->
+	<element name="HazardSource" type="bifisic_establishments:HazardSourceType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_accidental_scenario   id=idScenario)-->
+	<element name="AccidentalScenario" type="bifisic_establishments:AccidentalScenarioType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_domino_establ   id=id_dom_establish)-->
+	<element name="DomEffectEstablish" type="bifisic_establishments:DomEffectEstablishType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_Archived_Notification   id=id_Archived_Notification)-->
+	<element name="ArchivedNotifications" type="bifisic_establishments:ArchivedNotificationsType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_worst_event   id=idEvent)-->
+	<element name="WorstEvent" type="bifisic_establishments:WorstEventType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- (BIFISIC_t_worst_scenario   id=idWorstScenario)-->
+	<element name="WorstScenario" type="bifisic_establishments:WorstScenarioType" substitutionGroup="gml:AbstractObject" />
+
+	<!-- types -->
+	<!-- here gml:AbstractGMLType or gml:AbstractFeatureType -->
+	
+	<complexType name="SevesoEstablishmentType">
+        <complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					
+					<xs:element name="idEstablishment" type="xs:integer"/>
+					<xs:element name="statusEstablish" type="xs:integer"/>
+					
+					<xs:element name="statusEstablishDesc">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="geometry" type="gml:GeometryPropertyType"/>
+					
+					<xs:element name="idCAEN">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="11" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+				
+					<xs:element name="EstablishmentName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="300" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="address" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+				
+				
+					<xs:element name="postalcode" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="idMunicipality" type="xs:integer"/>
+					
+					<xs:element name="desMunicipality">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="idCounty" type="xs:integer"/>
+					
+					<xs:element name="desCounty">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="idAdminPosition" type="xs:integer"/>
+					
+					<xs:element name="DesAdminPosition">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="IdSubActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="SubActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="CoreActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="eprtr">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="ied">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respLegPosition">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respLegNameSurname">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respLegPhone">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respLegFax">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respLegEmail">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="150" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respUnEventPosition">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respUnEventNameSurname">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respUnEventPhone">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respUnEventFax">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="respUnEventEMail">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="150" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="OtherPosition">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="OtherNameSurname">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="OtherPhone">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="OtherFax">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="OtherEMail">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="150" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="surroundingsDes">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="4000" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="flagOtherEstablish">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="OtherEstablish">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="15" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="OtherEstablishName">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="NotificationValidated">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="idCompany" type="xs:integer"/>
+					<xs:element name="dataMAPP" type="xs:date"/>
+					
+					<!-- complex feature -->
+					<xs:element name="company" type="bifisic_establishments:CompanyPropertyType"/>
+					<xs:element name="measurePreventingMitigating" type="bifisic_establishments:MeasurePreventingMitigatingPropertyType"/>
+					<xs:element name="dangerousSubstance" type="bifisic_establishments:DangerousSubstancePropertyType" maxOccurs="unbounded" />
+					<xs:element name="event" type="bifisic_establishments:EventPropertyType" maxOccurs="unbounded" />
+					<xs:element name="archivedNotifications" type="bifisic_establishments:ArchivedNotificationsPropertyType" maxOccurs="unbounded" />
+					<xs:element name="worstEvent" type="bifisic_establishments:WorstEventPropertyType" />
+					<xs:element name="worstScenario" type="bifisic_establishments:WorstScenarioPropertyType" />
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="CompanyType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+                <sequence>
+					<xs:element name="idCompany" type="xs:integer"/>
+					
+					<xs:element name="oib" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="13" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="companyName" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="address" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="idMunicipality" type="xs:integer"/>
+					
+					<xs:element name="desMunicipality">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="postalCode">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="idCounty" type="xs:integer"/>
+					
+					<xs:element name="desCounty">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="idActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="desActivity">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="200" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="idRegulationAnnex" type="xs:integer"/>
+					
+					<xs:element name="DesRegulationAnnex">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="telephone">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="fax">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="email">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="150" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="MeasurePreventingMitigatingType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+					<xs:element name="IdMeasuresPrevMitig" type="xs:integer"/>
+					<xs:element name="idEstablishment" type="xs:integer"/>
+					
+					<xs:element name="desMeasUncontrolEvent">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+				
+					<xs:element name="desMeasPrevEvent">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="desMeasEquipmdesMeasEquipm">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="fireBrigadeWithinSite">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="fireBrigadeWithinSite">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="entrydateLastNotification" type="xs:date"/>
+					<xs:element name="dateLastNotification" type="xs:date"/>
+					<xs:element name="dateInternalEmergency" type="xs:date"/>
+					<xs:element name="dateProtectRescuePlan" type="xs:date"/>
+					<xs:element name="dateSafetyReportApproved" type="xs:date"/>
+					
+					<xs:element name="classSafetyReportApproved">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="dateClassSafetyReportApproved" type="xs:date"/>
+					
+					<xs:element name="newSafetyReport">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="dateNewSafetyReport" type="xs:date"/>
+					<xs:element name="dateSubmissionInfoExternalPlan" type="xs:date"/>
+					
+					<xs:element name="trainingEmployeesUncontrolEvent">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<xs:element name="trainingEmployeesMajorAccident">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+                    </xs:element>
+					
+					<!-- complex feature -->
+					<xs:element name="cooperator" type="bifisic_establishments:CooperatorPropertyType" maxOccurs="unbounded" />
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="CooperatorType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+				
+					<xs:element name="idCooperator" type="xs:integer"/>
+					<xs:element name="idMeasuresPrevMitig" type="xs:integer"/>
+					
+					<xs:element name="coOperatorname">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="200" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="idMunicicCoOperat">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="500" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					
+					<xs:element name="desMunicipCoOperator">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="coOperatorphone">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="faxCoOperator">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="emailCoOperator">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="100" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+			
+	<complexType name="DangerousSubstanceType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+				
+					<xs:element name="IdSubstMixture" type="xs:integer"/>
+					<xs:element name="idEstablishment" type="xs:integer"/>
+					
+					<xs:element name="substMixture">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="composition">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="referenceAnnex">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="commercialName">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="categoryList">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1000" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="idchemicalSubstance" type="xs:integer"/>
+					
+					<xs:element name="chemicalName">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="CASNumber">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="INDEX">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="EC">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+				
+					<xs:element name="annexPart">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="maxQuantityTon" type="xs:decimal"/>
+					<xs:element name="idphysCondition" type="xs:integer"/>
+					
+					<xs:element name="DesphysCondition">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+				
+					<xs:element name="SubstLocation">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="surveillanceSubstance">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="desSurveillanceSubstance">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="HazardType">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1000" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="storagesubstancetype">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1000" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<!-- complex feature -->
+					<xs:element name="substanceType" type="bifisic_establishments:SubstanceTypePropertyType" maxOccurs="unbounded" />
+					
+					<!-- complex feature -->
+					<xs:element name="classification" type="bifisic_establishments:ClassificationPropertyType" maxOccurs="unbounded" />
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="SubstanceTypeType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+				
+					<xs:element name="IdSubstanceType">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1000" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="SubstanceTypeDesc">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="IdSubstMixture" type="xs:integer"/>
+				
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="ClassificationType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+				
+					<xs:element name="idClassification">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="codClassification">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="255" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+				
+					<xs:element name="classification">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="255" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="IdSubstMixture" type="xs:integer"/>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="EventType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+				
+					<xs:element name="idEvent" type="xs:integer"/>
+					<xs:element name="idEstablishment" type="xs:integer"/>
+					
+					<xs:element name="nameEvent">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="desEvent">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1000" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="substanceEvent">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1000" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="likeEvent">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<!-- complex feature -->
+					<xs:element name="hazardSource" type="bifisic_establishments:HazardSourcePropertyType" maxOccurs="unbounded" />
+					
+					<!-- complex feature -->
+					<xs:element name="accidentalScenario" type="bifisic_establishments:AccidentalScenarioPropertyType" maxOccurs="unbounded" />
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="HazardSourceType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+				
+					<xs:element name="idEvent" type="xs:integer"/>
+					<xs:element name="idHazardSource" type="xs:integer"/>
+					
+					<xs:element name="desHazardSource">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="AccidentalScenarioType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+				
+					<xs:element name="idScenario" type="xs:integer"/>
+					<xs:element name="idEvent" type="xs:integer"/>
+					
+					<xs:element name="phenomTypeDes">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="likeScenario">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="highMortality" type="xs:integer" minOccurs="0"/>
+					<xs:element name="mortality" type="xs:integer" minOccurs="0"/>
+					<xs:element name="permConseq" type="xs:integer" minOccurs="0"/>
+					<xs:element name="tempConseq" type="xs:integer" minOccurs="0"/>
+					<xs:element name="assessCasualties" type="xs:integer" minOccurs="0"/>
+					<xs:element name="maxImpactArea" type="xs:integer" minOccurs="0"/>
+					<xs:element name="domArea" type="xs:integer" minOccurs="0"/>
+					
+					<xs:element name="extImpact">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="FacNotified">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="domHazard">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+				
+					<xs:element name="domInformed">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="domOtherEstablishments">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="transbImpact">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="transbCountry" type="xs:integer" minOccurs="0"/>
+					
+					<!-- complex feature -->
+					<xs:element name="domEffectEstablish" type="bifisic_establishments:DomEffectEstablishPropertyType" minOccurs="0" maxOccurs="unbounded" />
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="DomEffectEstablishType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+					
+					<xs:element name="idDomEstablish">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="idScenario" type="xs:integer" />
+					
+					<xs:element name="establishmentName" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="address" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+				
+					<xs:element name="postalcode" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="5" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="desMunicipality">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="desCounty">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="desAdminPosition">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="IdSubActivity">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="subActivity">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="coreActivity">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="eprtr">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="ied">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="respLegPosition">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="respLegNameSurname">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="respLegPhone">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="respLegFax">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="respLegEmail">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="150" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+		
+	<complexType name="ArchivedNotificationsType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+					
+					<xs:element name="idEstablishment" type="xs:integer" />
+					<xs:element name="idArchivedNotification" type="xs:integer" />
+					<xs:element name="statusEstablish" type="xs:integer" />
+					
+					<xs:element name="statusEstablishDesc">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="entryDateNotification" type="xs:date" />
+					<xs:element name="dateNotification" type="xs:date" />
+					
+					<xs:element name="notificationValidated">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="10" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="WorstEventType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+					
+					<xs:element name="idWorstEvent" type="xs:integer" />
+					<xs:element name="idEstablishment" type="xs:integer" />
+					
+					<xs:element name="worstEventName">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="worstEventDes">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1000" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="worstEventSubstancet">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1500" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="worstEventLike">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<complexType name="WorstScenarioType">
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+				<sequence>
+					
+					<xs:element name="idWorstScenario" type="xs:integer" />
+					<xs:element name="idEstablishment" type="xs:integer" />
+					
+					<xs:element name="worstScenarioPhenomTypeDes">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="worstScenariolike">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="worstScenarioHighMortality" type="xs:integer" minOccurs="0"/>
+					<xs:element name="worstScenarioMortality" type="xs:integer" minOccurs="0"/>
+					<xs:element name="worstScenarioPermConseq" type="xs:integer" minOccurs="0"/>
+					<xs:element name="worstScenarioTempConseq" type="xs:integer" minOccurs="0"/>
+					<xs:element name="worstScenarioAssessCasualties" type="xs:integer" minOccurs="0"/>
+					
+				</sequence>
+			</extension>
+		</complexContent>
+    </complexType>
+	
+	<!-- property types -->
+	<complexType name="CompanyPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:Company" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="MeasurePreventingMitigatingPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:MeasurePreventingMitigating" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="DangerousSubstancePropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:DangerousSubstance" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="EventPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:Event" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="ArchivedNotificationsPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:ArchivedNotifications" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="WorstEventPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:WorstEvent" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="WorstScenarioPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:WorstScenario" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="SubstanceTypePropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:SubstanceType" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="ClassificationPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:Classification" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="HazardSourcePropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:HazardSource" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="AccidentalScenarioPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:AccidentalScenario" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="DomEffectEstablishPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:DomEffectEstablish" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	<complexType name="CooperatorPropertyType">
+        <sequence minOccurs="0">
+            <element ref="bifisic_establishments:Cooperator" />
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup" />
+        <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+	
+	
+</schema>
