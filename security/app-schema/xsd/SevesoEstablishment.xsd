@@ -3,8 +3,8 @@
     xmlns="http://www.w3.org/2001/XMLSchema"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-	xmlns:bifisic_establishments="http://pproo.azo.hr/geoserver/bifisic_establishments/1.0"
-    targetNamespace="http://pproo.azo.hr/geoserver/bifisic_establishments/1.0"
+	xmlns:bifisic_sevesoestablishments="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"
+    targetNamespace="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
 	
 	<import namespace="http://www.opengis.net/gml/3.2" 
@@ -14,49 +14,49 @@
 	<!-- gml:AbstractObject or gml:AbstractFeature -->
 	
 	<!-- (BIFISIC_geo_establishment  id=id_establishment)-->
-	<element name="SevesoEstablishment" type="bifisic_establishments:SevesoEstablishmentType" substitutionGroup="gml:AbstractFeature" />
+	<element name="SevesoEstablishment" type="bifisic_sevesoestablishments:SevesoEstablishmentType" substitutionGroup="gml:AbstractFeature" />
 
 	<!-- (BIFISIC_t_company   id=id_company)-->
-	<element name="Company" type="bifisic_establishments:CompanyType" substitutionGroup="gml:AbstractObject" />
+	<element name="Company" type="bifisic_sevesoestablishments:CompanyType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_measurePrevMitig   id=id_Measures_PrevMitig)-->
-	<element name="MeasurePreventingMitigating" type="bifisic_establishments:MeasurePreventingMitigatingType" substitutionGroup="gml:AbstractObject" />
+	<element name="MeasurePreventingMitigating" type="bifisic_sevesoestablishments:MeasurePreventingMitigatingType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_measurePrevMitig   id=id_Measures_PrevMitig)-->
-	<element name="MeasurePreventingMitigating" type="bifisic_establishments:MeasurePreventingMitigatingType" substitutionGroup="gml:AbstractObject" />
+	<element name="MeasurePreventingMitigating" type="bifisic_sevesoestablishments:MeasurePreventingMitigatingType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_Cooperator   id=id_cooperator)-->
-	<element name="Cooperator" type="bifisic_establishments:CooperatorType" substitutionGroup="gml:AbstractObject" />
+	<element name="Cooperator" type="bifisic_sevesoestablishments:CooperatorType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_geo_dangerous_Substance   id=Id_Subst_Mixture)-->
-	<element name="DangerousSubstance" type="bifisic_establishments:DangerousSubstanceType" substitutionGroup="gml:AbstractObject" />
+	<element name="DangerousSubstance" type="bifisic_sevesoestablishments:DangerousSubstanceType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_Substance_Type   id=id_Substance_Type)-->
-	<element name="SubstanceType" type="bifisic_establishments:SubstanceTypeType" substitutionGroup="gml:AbstractObject" />
+	<element name="SubstanceType" type="bifisic_sevesoestablishments:SubstanceTypeType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_Classification   id=id_classification)-->
-	<element name="Classification" type="bifisic_establishments:ClassificationType" substitutionGroup="gml:AbstractObject" />
+	<element name="Classification" type="bifisic_sevesoestablishments:ClassificationType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_event   id=idEvent)-->
-	<element name="Event" type="bifisic_establishments:EventType" substitutionGroup="gml:AbstractObject" />
+	<element name="Event" type="bifisic_sevesoestablishments:EventType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_geo_hazard_source   id=id_hazard_source)-->
-	<element name="HazardSource" type="bifisic_establishments:HazardSourceType" substitutionGroup="gml:AbstractObject" />
+	<element name="HazardSource" type="bifisic_sevesoestablishments:HazardSourceType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_accidental_scenario   id=idScenario)-->
-	<element name="AccidentalScenario" type="bifisic_establishments:AccidentalScenarioType" substitutionGroup="gml:AbstractObject" />
+	<element name="AccidentalScenario" type="bifisic_sevesoestablishments:AccidentalScenarioType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_domino_establ   id=id_dom_establish)-->
-	<element name="DomEffectEstablish" type="bifisic_establishments:DomEffectEstablishType" substitutionGroup="gml:AbstractObject" />
+	<element name="DomEffectEstablish" type="bifisic_sevesoestablishments:DomEffectEstablishType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_Archived_Notification   id=id_Archived_Notification)-->
-	<element name="ArchivedNotifications" type="bifisic_establishments:ArchivedNotificationsType" substitutionGroup="gml:AbstractObject" />
+	<element name="ArchivedNotifications" type="bifisic_sevesoestablishments:ArchivedNotificationsType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_worst_event   id=idEvent)-->
-	<element name="WorstEvent" type="bifisic_establishments:WorstEventType" substitutionGroup="gml:AbstractObject" />
+	<element name="WorstEvent" type="bifisic_sevesoestablishments:WorstEventType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_worst_scenario   id=idWorstScenario)-->
-	<element name="WorstScenario" type="bifisic_establishments:WorstScenarioType" substitutionGroup="gml:AbstractObject" />
+	<element name="WorstScenario" type="bifisic_sevesoestablishments:WorstScenarioType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- types -->
 	<!-- here gml:AbstractGMLType or gml:AbstractFeatureType -->
@@ -346,13 +346,13 @@
 					<xs:element name="dataMAPP" type="xs:date"/>
 					
 					<!-- complex feature -->
-					<xs:element name="company" type="bifisic_establishments:CompanyPropertyType"/>
-					<xs:element name="measurePreventingMitigating" type="bifisic_establishments:MeasurePreventingMitigatingPropertyType"/>
-					<xs:element name="dangerousSubstance" type="bifisic_establishments:DangerousSubstancePropertyType" maxOccurs="unbounded" />
-					<xs:element name="event" type="bifisic_establishments:EventPropertyType" maxOccurs="unbounded" />
-					<xs:element name="archivedNotifications" type="bifisic_establishments:ArchivedNotificationsPropertyType" maxOccurs="unbounded" />
-					<xs:element name="worstEvent" type="bifisic_establishments:WorstEventPropertyType" />
-					<xs:element name="worstScenario" type="bifisic_establishments:WorstScenarioPropertyType" />
+					<xs:element name="company" type="bifisic_sevesoestablishments:CompanyPropertyType"/>
+					<xs:element name="measurePreventingMitigating" type="bifisic_sevesoestablishments:MeasurePreventingMitigatingPropertyType"/>
+					<xs:element name="dangerousSubstance" type="bifisic_sevesoestablishments:DangerousSubstancePropertyType" maxOccurs="unbounded" />
+					<xs:element name="event" type="bifisic_sevesoestablishments:EventPropertyType" maxOccurs="unbounded" />
+					<xs:element name="archivedNotifications" type="bifisic_sevesoestablishments:ArchivedNotificationsPropertyType" maxOccurs="unbounded" />
+					<xs:element name="worstEvent" type="bifisic_sevesoestablishments:WorstEventPropertyType" />
+					<xs:element name="worstScenario" type="bifisic_sevesoestablishments:WorstScenarioPropertyType" />
 					
 				</sequence>
 			</extension>
@@ -563,7 +563,7 @@
                     </xs:element>
 					
 					<!-- complex feature -->
-					<xs:element name="cooperator" type="bifisic_establishments:CooperatorPropertyType" maxOccurs="unbounded" />
+					<xs:element name="cooperator" type="bifisic_sevesoestablishments:CooperatorPropertyType" maxOccurs="unbounded" />
 					
 				</sequence>
 			</extension>
@@ -774,10 +774,10 @@
 					</xs:element>
 					
 					<!-- complex feature -->
-					<xs:element name="substanceType" type="bifisic_establishments:SubstanceTypePropertyType" maxOccurs="unbounded" />
+					<xs:element name="substanceType" type="bifisic_sevesoestablishments:SubstanceTypePropertyType" maxOccurs="unbounded" />
 					
 					<!-- complex feature -->
-					<xs:element name="classification" type="bifisic_establishments:ClassificationPropertyType" maxOccurs="unbounded" />
+					<xs:element name="classification" type="bifisic_sevesoestablishments:ClassificationPropertyType" maxOccurs="unbounded" />
 					
 				</sequence>
 			</extension>
@@ -889,10 +889,10 @@
 					</xs:element>
 					
 					<!-- complex feature -->
-					<xs:element name="hazardSource" type="bifisic_establishments:HazardSourcePropertyType" maxOccurs="unbounded" />
+					<xs:element name="hazardSource" type="bifisic_sevesoestablishments:HazardSourcePropertyType" maxOccurs="unbounded" />
 					
 					<!-- complex feature -->
-					<xs:element name="accidentalScenario" type="bifisic_establishments:AccidentalScenarioPropertyType" maxOccurs="unbounded" />
+					<xs:element name="accidentalScenario" type="bifisic_sevesoestablishments:AccidentalScenarioPropertyType" maxOccurs="unbounded" />
 					
 				</sequence>
 			</extension>
@@ -1003,7 +1003,7 @@
 					<xs:element name="transbCountry" type="xs:integer" minOccurs="0"/>
 					
 					<!-- complex feature -->
-					<xs:element name="domEffectEstablish" type="bifisic_establishments:DomEffectEstablishPropertyType" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element name="domEffectEstablish" type="bifisic_sevesoestablishments:DomEffectEstablishPropertyType" minOccurs="0" maxOccurs="unbounded" />
 					
 				</sequence>
 			</extension>
@@ -1274,7 +1274,7 @@
 	<!-- property types -->
 	<complexType name="CompanyPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:Company" />
+            <element ref="bifisic_sevesoestablishments:Company" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1282,7 +1282,7 @@
 	
 	<complexType name="MeasurePreventingMitigatingPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:MeasurePreventingMitigating" />
+            <element ref="bifisic_sevesoestablishments:MeasurePreventingMitigating" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1290,7 +1290,7 @@
 	
 	<complexType name="DangerousSubstancePropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:DangerousSubstance" />
+            <element ref="bifisic_sevesoestablishments:DangerousSubstance" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1298,7 +1298,7 @@
 	
 	<complexType name="EventPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:Event" />
+            <element ref="bifisic_sevesoestablishments:Event" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1306,7 +1306,7 @@
 	
 	<complexType name="ArchivedNotificationsPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:ArchivedNotifications" />
+            <element ref="bifisic_sevesoestablishments:ArchivedNotifications" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1314,7 +1314,7 @@
 	
 	<complexType name="WorstEventPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:WorstEvent" />
+            <element ref="bifisic_sevesoestablishments:WorstEvent" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1322,7 +1322,7 @@
 	
 	<complexType name="WorstScenarioPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:WorstScenario" />
+            <element ref="bifisic_sevesoestablishments:WorstScenario" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1330,7 +1330,7 @@
 	
 	<complexType name="SubstanceTypePropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:SubstanceType" />
+            <element ref="bifisic_sevesoestablishments:SubstanceType" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1338,7 +1338,7 @@
 	
 	<complexType name="ClassificationPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:Classification" />
+            <element ref="bifisic_sevesoestablishments:Classification" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1346,7 +1346,7 @@
 	
 	<complexType name="HazardSourcePropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:HazardSource" />
+            <element ref="bifisic_sevesoestablishments:HazardSource" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1354,7 +1354,7 @@
 	
 	<complexType name="AccidentalScenarioPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:AccidentalScenario" />
+            <element ref="bifisic_sevesoestablishments:AccidentalScenario" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1362,7 +1362,7 @@
 	
 	<complexType name="DomEffectEstablishPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:DomEffectEstablish" />
+            <element ref="bifisic_sevesoestablishments:DomEffectEstablish" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
@@ -1370,7 +1370,7 @@
 	
 	<complexType name="CooperatorPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_establishments:Cooperator" />
+            <element ref="bifisic_sevesoestablishments:Cooperator" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
