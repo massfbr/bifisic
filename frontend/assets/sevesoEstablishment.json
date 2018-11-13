@@ -26,7 +26,8 @@
    "geometryName": "geometria",
    "geometryType": "Point",
    "card": {
-        "pdfname": "Establishment_card_{{/wfs:FeatureCollection/wfs:member/bifisic_establishments:SevesoEstablishment/bifisic_establishments:establishmentName/text()}}.pdf",
+        "withMap": false,
+        "pdfname": "EstablishmentDetail.pdf",
         "template": "assets/cardTemplateSevesoEstablishment.jsxt",
         "service": {
              "url":"{geoserverUrl}/ows?service=WFS&request=GetFeature",
