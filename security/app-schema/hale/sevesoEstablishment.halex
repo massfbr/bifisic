@@ -3,7 +3,7 @@
     <name>bifisic-seveso-establishment</name>
     <author>massfbr</author>
     <created>2018-10-30T13:01:14.941+01:00</created>
-    <modified>2018-11-05T11:41:25.059+01:00</modified>
+    <modified>2018-11-13T10:33:23.199+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="projectFiles.separate">false</setting>
         <setting name="target">file:/media/fabri/seagate2/apps/csi/temp5/bifisic/security/app-schema/hale/sevesoEstablishment.halex</setting>
@@ -616,24 +616,25 @@
                 <hsd:types>
                     <hsd:type index="0">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">_bool</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.sql.Array"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="1">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">_float8</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.sql.Array"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="2">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">_text</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.sql.Array"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="3">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_admin_position</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -641,9 +642,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_admin_position</hsd:name>
@@ -661,6 +661,7 @@
                     </hsd:type>
                     <hsd:type index="4">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_classification</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -668,9 +669,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_classification</hsd:name>
@@ -700,6 +700,7 @@
                     </hsd:type>
                     <hsd:type index="5">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_coordinator</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -707,9 +708,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_coordinator</hsd:name>
@@ -733,6 +733,7 @@
                     </hsd:type>
                     <hsd:type index="6">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_dangersubstance_category</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -740,9 +741,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_category</hsd:name>
@@ -766,6 +766,7 @@
                     </hsd:type>
                     <hsd:type index="7">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_dangersubstance_dio1</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -773,9 +774,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_dangerous_substance</hsd:name>
@@ -799,6 +799,7 @@
                     </hsd:type>
                     <hsd:type index="8">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_dangersubstance_dio2</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -806,9 +807,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_dangerous_substance</hsd:name>
@@ -832,6 +832,7 @@
                     </hsd:type>
                     <hsd:type index="9">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_inspector</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -839,9 +840,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_inspector</hsd:name>
@@ -865,6 +865,7 @@
                     </hsd:type>
                     <hsd:type index="10">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_nkd</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -872,9 +873,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_nkd</hsd:name>
@@ -892,6 +892,7 @@
                     </hsd:type>
                     <hsd:type index="11">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_phenom_type_scenario</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -899,9 +900,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_phenom_type</hsd:name>
@@ -919,6 +919,7 @@
                     </hsd:type>
                     <hsd:type index="12">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_d_referenceannex</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -926,9 +927,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>reference_annex</hsd:name>
@@ -940,6 +940,7 @@
                     </hsd:type>
                     <hsd:type index="13">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_geo_dangerous_substance</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -947,9 +948,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_subst_mixture</hsd:name>
@@ -1087,6 +1087,7 @@
                     </hsd:type>
                     <hsd:type index="14">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_geo_establishment</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1094,9 +1095,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_establishment</hsd:name>
@@ -1360,6 +1360,7 @@
                     </hsd:type>
                     <hsd:type index="15">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_geo_hazard_source</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1367,9 +1368,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_hazard_source</hsd:name>
@@ -1399,6 +1399,7 @@
                     </hsd:type>
                     <hsd:type index="16">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_geo_scenario</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1406,9 +1407,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -1475,8 +1475,8 @@
                     <hsd:type index="17">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_geo_scenario_copia</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -1542,6 +1542,7 @@
                     </hsd:type>
                     <hsd:type index="18">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_geo_scenario_old</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1549,9 +1550,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -1587,6 +1587,7 @@
                     </hsd:type>
                     <hsd:type index="19">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_geo_scenario_union</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1594,9 +1595,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_scenario</hsd:name>
@@ -1620,6 +1620,7 @@
                     </hsd:type>
                     <hsd:type index="20">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_geo_scenario_union_new</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1627,9 +1628,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_scenario</hsd:name>
@@ -1653,6 +1653,7 @@
                     </hsd:type>
                     <hsd:type index="21">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_geo_worst_scenario</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1660,9 +1661,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_worst_scenario</hsd:name>
@@ -1740,6 +1740,7 @@
                     </hsd:type>
                     <hsd:type index="22">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_d_category_type</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1747,9 +1748,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_category_type</hsd:name>
@@ -1767,6 +1767,7 @@
                     </hsd:type>
                     <hsd:type index="23">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_d_datasource</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1774,9 +1775,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_datasource</hsd:name>
@@ -1838,6 +1838,7 @@
                     </hsd:type>
                     <hsd:type index="24">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_d_function_type</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1845,9 +1846,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_function_type</hsd:name>
@@ -1877,6 +1877,7 @@
                     </hsd:type>
                     <hsd:type index="25">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_d_language</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1884,9 +1885,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_language</hsd:name>
@@ -1904,6 +1904,7 @@
                     </hsd:type>
                     <hsd:type index="26">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_d_object_type</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1911,9 +1912,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_object_type</hsd:name>
@@ -1931,6 +1931,7 @@
                     </hsd:type>
                     <hsd:type index="27">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_d_standard_expos</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -1938,9 +1939,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_standard_expos</hsd:name>
@@ -1959,8 +1959,8 @@
                     <hsd:type index="28">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_r_categ_language</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_category</hsd:name>
@@ -2025,8 +2025,8 @@
                     <hsd:type index="29">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_r_categapp_category</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_category_appl</hsd:name>
@@ -2073,8 +2073,8 @@
                     <hsd:type index="30">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_r_category_mtd</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_category</hsd:name>
@@ -2121,8 +2121,8 @@
                     <hsd:type index="31">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_r_fm_view_appl</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_function</hsd:name>
@@ -2169,8 +2169,8 @@
                     <hsd:type index="32">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_r_keyword_mtd</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_metadata</hsd:name>
@@ -2216,6 +2216,7 @@
                     </hsd:type>
                     <hsd:type index="33">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_category</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2223,9 +2224,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_category</hsd:name>
@@ -2257,6 +2257,7 @@
                     </hsd:type>
                     <hsd:type index="34">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_category_appl</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2264,9 +2265,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_category_appl</hsd:name>
@@ -2334,6 +2334,7 @@
                     </hsd:type>
                     <hsd:type index="35">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_detlog</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2341,9 +2342,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_det_log</hsd:name>
@@ -2381,6 +2381,7 @@
                     </hsd:type>
                     <hsd:type index="36">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_function</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2388,9 +2389,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_function</hsd:name>
@@ -2448,6 +2448,7 @@
                     </hsd:type>
                     <hsd:type index="37">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_function_history</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2455,9 +2456,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_function_history</hsd:name>
@@ -2501,6 +2501,7 @@
                     </hsd:type>
                     <hsd:type index="38">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_history_mtd_csw</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2508,9 +2509,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_metadata_history</hsd:name>
@@ -2584,6 +2584,7 @@
                     </hsd:type>
                     <hsd:type index="39">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_keyword</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2591,9 +2592,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_keyword</hsd:name>
@@ -2611,6 +2611,7 @@
                     </hsd:type>
                     <hsd:type index="40">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_log</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2618,9 +2619,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_log</hsd:name>
@@ -2644,6 +2644,7 @@
                     </hsd:type>
                     <hsd:type index="41">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_metadata</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2651,9 +2652,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_metadata</hsd:name>
@@ -2697,6 +2697,7 @@
                     </hsd:type>
                     <hsd:type index="42">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_mtd_csw</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2704,9 +2705,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_metadata</hsd:name>
@@ -2780,6 +2780,7 @@
                     </hsd:type>
                     <hsd:type index="43">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_mtd_plus</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2787,9 +2788,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_metadata</hsd:name>
@@ -2841,6 +2841,7 @@
                     </hsd:type>
                     <hsd:type index="44">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_news_home_page</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2848,9 +2849,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_news</hsd:name>
@@ -2892,6 +2892,7 @@
                     </hsd:type>
                     <hsd:type index="45">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_mtd_t_texts_home_page</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2899,9 +2900,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_text</hsd:name>
@@ -2943,6 +2943,7 @@
                     </hsd:type>
                     <hsd:type index="46">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_accidental_scenario</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -2950,9 +2951,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_scenario</hsd:name>
@@ -3072,6 +3072,7 @@
                     </hsd:type>
                     <hsd:type index="47">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_archived_notification</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3079,9 +3080,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_archived_notification</hsd:name>
@@ -3129,6 +3129,7 @@
                     </hsd:type>
                     <hsd:type index="48">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_classification</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3136,9 +3137,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_classification</hsd:name>
@@ -3168,6 +3168,7 @@
                     </hsd:type>
                     <hsd:type index="49">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_company</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3175,9 +3176,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_company</hsd:name>
@@ -3279,6 +3279,7 @@
                     </hsd:type>
                     <hsd:type index="50">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_cooperator</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3286,9 +3287,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_cooperator</hsd:name>
@@ -3348,6 +3348,7 @@
                     </hsd:type>
                     <hsd:type index="51">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_coordinated_inspection</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3355,9 +3356,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_coordinated_inspection</hsd:name>
@@ -3423,6 +3423,7 @@
                     </hsd:type>
                     <hsd:type index="52">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_criteriorscore</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3430,9 +3431,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_criterior_score</hsd:name>
@@ -3504,6 +3504,7 @@
                     </hsd:type>
                     <hsd:type index="53">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_domino_establishment</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3511,9 +3512,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_dom_establish</hsd:name>
@@ -3627,6 +3627,7 @@
                     </hsd:type>
                     <hsd:type index="54">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_event</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3634,9 +3635,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_event</hsd:name>
@@ -3678,6 +3678,7 @@
                     </hsd:type>
                     <hsd:type index="55">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_measureprevmitig</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3685,9 +3686,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_measures_prevmitig</hsd:name>
@@ -3801,6 +3801,7 @@
                     </hsd:type>
                     <hsd:type index="56">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_open_issue</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3808,9 +3809,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_open_issue</hsd:name>
@@ -3876,6 +3876,7 @@
                     </hsd:type>
                     <hsd:type index="57">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_specific_inspection</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3883,9 +3884,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_specific_inspection</hsd:name>
@@ -3963,6 +3963,7 @@
                     </hsd:type>
                     <hsd:type index="58">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_substance_type</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -3970,9 +3971,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_substance_type</hsd:name>
@@ -3996,6 +3996,7 @@
                     </hsd:type>
                     <hsd:type index="59">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_worst_event</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4003,9 +4004,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_worst_event</hsd:name>
@@ -4047,6 +4047,7 @@
                     </hsd:type>
                     <hsd:type index="60">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_worst_event_old</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4054,9 +4055,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_worst_event</hsd:name>
@@ -4098,6 +4098,7 @@
                     </hsd:type>
                     <hsd:type index="61">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_worst_scenario</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4105,9 +4106,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_worst_scenario</hsd:name>
@@ -4179,6 +4179,7 @@
                     </hsd:type>
                     <hsd:type index="62">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">bifisic_t_worst_scenario_old</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4186,9 +4187,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_worst_scenario</hsd:name>
@@ -4248,31 +4248,32 @@
                     </hsd:type>
                     <hsd:type index="63">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">bigserial</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="64">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">bool</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.Boolean"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="65">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">bpchar</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="66">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">bytea</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="[B"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="67">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_coordinated_inspection</hsd:name>
                         <hsd:description>table containing coordinated inspections. Each coordinated inspection is related to an establishment and it's done by a person with the role of inspection coordinator and no specific inspection type connected. Each coordinated inspection can have one or more specific inspections related to it.</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4280,9 +4281,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_coordinated_inspection</hsd:name>
@@ -4368,6 +4368,7 @@
                     <hsd:type index="68">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_criterior</hsd:name>
                         <hsd:description>table containing the criteriors list</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4375,9 +4376,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_criterior</hsd:name>
@@ -4430,6 +4430,7 @@
                     <hsd:type index="69">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_criterior_family</hsd:name>
                         <hsd:description>table containg the list oh criterior family</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4437,9 +4438,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_criterior_family</hsd:name>
@@ -4473,8 +4473,8 @@
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_criterior_score</hsd:name>
                         <hsd:description>table containing all the possible combinations between criterior and score</hsd:description>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_criterior</hsd:name>
@@ -4527,6 +4527,7 @@
                     <hsd:type index="71">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_establishment</hsd:name>
                         <hsd:description>table containing bifisic's establishment, daily updated by data coming from REDS database. It is a copy, with a subset of fields, of rpot_obrazac table.</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4534,9 +4535,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -4597,6 +4597,7 @@
                     </hsd:type>
                     <hsd:type index="72">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_establishment_prova</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4604,9 +4605,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -4662,8 +4662,8 @@
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_history_table</hsd:name>
                         <hsd:description>table containing the history of all tables</hsd:description>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>table_name</hsd:name>
@@ -4691,12 +4691,13 @@
                     <hsd:type index="74">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_inspector_inspection_type</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                     </hsd:type>
                     <hsd:type index="75">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_open_issue</hsd:name>
                         <hsd:description>table containing open issues related to a specific inspection</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4704,9 +4705,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_open_issue</hsd:name>
@@ -4788,6 +4788,7 @@
                     <hsd:type index="76">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_person</hsd:name>
                         <hsd:description>Table containing the list of persons involved in data entry operations or inspections activities</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4795,9 +4796,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_person</hsd:name>
@@ -4851,6 +4851,7 @@
                     <hsd:type index="77">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_person_role</hsd:name>
                         <hsd:description>table containing all the possible combination between a person a role and eventually a specific inspection type. i.e : a person can be an inspector who does SMS/Seveso inspection</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4858,9 +4859,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_person_role</hsd:name>
@@ -4933,6 +4933,7 @@
                     <hsd:type index="78">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_role</hsd:name>
                         <hsd:description>table containing all the possible roles a person can have such as : user, inspection coordinator, inspector</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4940,9 +4941,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_role</hsd:name>
@@ -4967,6 +4967,7 @@
                     </hsd:type>
                     <hsd:type index="79">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_score</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -4974,9 +4975,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_score</hsd:name>
@@ -5011,8 +5011,8 @@
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_specific_insp_criteria</hsd:name>
                         <hsd:description>table containing comments referring to each combination of specific inspection-criterior-score</hsd:description>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_specific_inspection</hsd:name>
@@ -5099,6 +5099,7 @@
                     <hsd:type index="81">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_specific_inspection</hsd:name>
                         <hsd:description>table containing specific inspections. Each specific inspection is related to a coordinated inspection and it's done by a person with the role of inspector with a specific inspection type connected</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5106,9 +5107,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_specific_inspection</hsd:name>
@@ -5191,6 +5191,7 @@
                     <hsd:type index="82">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_specific_inspection_type</hsd:name>
                         <hsd:description>table containing all the specific inspection types such as : SMS/Seveso inspection, IED/emissions inspection, EONTO/waste inspection, etc...</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5198,9 +5199,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_inspection_type</hsd:name>
@@ -5233,8 +5233,8 @@
                     <hsd:type index="83">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_specification_type_criterior</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_inspection_type</hsd:name>
@@ -5281,8 +5281,8 @@
                     <hsd:type index="84">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">cide_user_group</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_user</hsd:name>
@@ -5300,21 +5300,21 @@
                     </hsd:type>
                     <hsd:type index="85">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">date</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.sql.Date"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="86">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">float8</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.Double"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="87">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:public">geography_columns</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>f_table_catalog</hsd:name>
@@ -5362,113 +5362,113 @@
                     </hsd:type>
                     <hsd:type index="88">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/bifisic_geo_dangerous_substance/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="89">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/bifisic_geo_establishment/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="90">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/bifisic_geo_hazard_source/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="91">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/bifisic_geo_scenario/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="92">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/bifisic_geo_scenario_copia/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="93">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/bifisic_geo_scenario_old/st_buffer">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="94">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/bifisic_geo_scenario_union/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="95">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/bifisic_geo_scenario_union_new/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="96">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/bifisic_geo_worst_scenario/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="97">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/meteo_grad/geom">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="98">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/sipra_t_comuni/geometria">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="99">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/v_old_bifisic_geo_establishment/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="100">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/v_old_bifisic_koordinate/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="101">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic/v_old_bifisic_t_dangeroussubstance/geometry">geometry</hsd:name>
-                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="geometry-type" value="com.vividsolutions.jts.geom.Geometry"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="102">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:public/raster_columns/extent">geometry</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="103">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:public">geometry_columns</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>f_table_catalog</hsd:name>
@@ -5516,6 +5516,7 @@
                     </hsd:type>
                     <hsd:type index="104">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:geostore">gs_attribute</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5523,9 +5524,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -5587,6 +5587,7 @@
                     </hsd:type>
                     <hsd:type index="105">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:geostore">gs_category</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5594,9 +5595,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -5614,6 +5614,7 @@
                     </hsd:type>
                     <hsd:type index="106">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:geostore">gs_resource</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5621,9 +5622,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -5685,6 +5685,7 @@
                     </hsd:type>
                     <hsd:type index="107">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:geostore">gs_security</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5692,9 +5693,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -5778,6 +5778,7 @@
                     </hsd:type>
                     <hsd:type index="108">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:geostore">gs_stored_data</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5785,9 +5786,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -5825,6 +5825,7 @@
                     </hsd:type>
                     <hsd:type index="109">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:public">gs_stored_data</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5832,9 +5833,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -5858,6 +5858,7 @@
                     </hsd:type>
                     <hsd:type index="110">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:geostore">gs_user</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5865,9 +5866,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -5903,6 +5903,7 @@
                     </hsd:type>
                     <hsd:type index="111">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:geostore">gs_user_attribute</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5910,9 +5911,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -5956,6 +5956,7 @@
                     </hsd:type>
                     <hsd:type index="112">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:geostore">gs_usergroup</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -5963,9 +5964,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -5996,8 +5996,8 @@
                     <hsd:type index="113">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:geostore">gs_usergroup_members</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>user_id</hsd:name>
@@ -6044,8 +6044,8 @@
                     <hsd:type index="114">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:public">gs_usergroup_members</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>user_id</hsd:name>
@@ -6063,33 +6063,33 @@
                     </hsd:type>
                     <hsd:type index="115">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">int2</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.Short"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="116">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">int4</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="117">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">int8</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="118">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">jsonb</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.Object"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="119">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:topology">layer</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>topology_id</hsd:name>
@@ -6157,6 +6157,7 @@
                     </hsd:type>
                     <hsd:type index="120">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">meteo_grad</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -6164,9 +6165,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>oid</hsd:name>
@@ -6196,6 +6196,7 @@
                     </hsd:type>
                     <hsd:type index="121">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">meteo_observation</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -6203,9 +6204,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>oid</hsd:name>
@@ -6249,27 +6249,27 @@
                     </hsd:type>
                     <hsd:type index="122">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">name</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="123">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">numeric</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.math.BigDecimal"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="124">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">oid</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="125">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">pippo</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>codice</hsd:name>
@@ -6282,8 +6282,8 @@
                     <hsd:type index="126">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:public">raster_columns</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>r_table_catalog</hsd:name>
@@ -6392,8 +6392,8 @@
                     <hsd:type index="127">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:public">raster_overviews</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>o_table_catalog</hsd:name>
@@ -6453,6 +6453,7 @@
                     </hsd:type>
                     <hsd:type index="128">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_hoznaka</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -6460,9 +6461,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -6504,6 +6504,7 @@
                     </hsd:type>
                     <hsd:type index="129">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_koordinate</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -6511,9 +6512,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -6549,6 +6549,7 @@
                     </hsd:type>
                     <hsd:type index="130">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_lokacija</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -6556,9 +6557,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -6708,6 +6708,7 @@
                     </hsd:type>
                     <hsd:type index="131">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_mjeresprecavanja</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -6715,9 +6716,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -6857,6 +6857,7 @@
                     </hsd:type>
                     <hsd:type index="132">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_nkd</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -6864,9 +6865,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>sifra</hsd:name>
@@ -6896,6 +6896,7 @@
                     </hsd:type>
                     <hsd:type index="133">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_obrazac</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -6903,9 +6904,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -7301,6 +7301,7 @@
                     </hsd:type>
                     <hsd:type index="134">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_poduzecezasanacije</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -7308,9 +7309,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -7390,6 +7390,7 @@
                     </hsd:type>
                     <hsd:type index="135">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_postanskiured</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -7397,9 +7398,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>broj</hsd:name>
@@ -7444,6 +7444,7 @@
                     <hsd:type index="136">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_pravnisubjekt</hsd:name>
                         <hsd:description>Company</hsd:description>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -7451,9 +7452,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -7633,6 +7633,7 @@
                     </hsd:type>
                     <hsd:type index="137">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_pravnisubjektobrazac</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -7640,9 +7641,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -7750,6 +7750,7 @@
                     </hsd:type>
                     <hsd:type index="138">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_procjenarizika</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -7757,9 +7758,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -7905,6 +7905,7 @@
                     </hsd:type>
                     <hsd:type index="139">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_procjenarizikakoordinate</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -7912,9 +7913,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -7972,6 +7972,7 @@
                     </hsd:type>
                     <hsd:type index="140">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_procjenarizikascenarij</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -7979,9 +7980,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -8154,8 +8154,8 @@
                     <hsd:type index="141">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_procjenarizikascenarijdominolokacija</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>lokacijaid</hsd:name>
@@ -8174,8 +8174,8 @@
                     <hsd:type index="142">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_procjenarizikatvar</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>procjenarizikaid</hsd:name>
@@ -8208,8 +8208,8 @@
                     <hsd:type index="143">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_procjenarizikatvarnalokaciji</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>procjenarizikaid</hsd:name>
@@ -8255,6 +8255,7 @@
                     </hsd:type>
                     <hsd:type index="144">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_scenarij</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8262,9 +8263,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -8318,6 +8318,7 @@
                     </hsd:type>
                     <hsd:type index="145">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_tvar</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8325,9 +8326,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -8411,6 +8411,7 @@
                     </hsd:type>
                     <hsd:type index="146">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_tvarnacinskladistenja</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8418,9 +8419,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -8444,6 +8444,7 @@
                     </hsd:type>
                     <hsd:type index="147">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_tvarnalokaciji</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8451,9 +8452,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -8630,8 +8630,8 @@
                     <hsd:type index="148">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_tvarnalokacijihoznaka</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>tvarnalokacijiid</hsd:name>
@@ -8650,8 +8650,8 @@
                     <hsd:type index="149">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_tvarnalokacijitvar</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>tvarnalokacijiid</hsd:name>
@@ -8698,8 +8698,8 @@
                     <hsd:type index="150">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_tvarnalokacijitvarnacinskladistenja</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>tvarnacinskladistenjaid</hsd:name>
@@ -8746,8 +8746,8 @@
                     <hsd:type index="151">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_tvarnalokacijivrstaopasnosti</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>tvarnalokacijiid</hsd:name>
@@ -8779,6 +8779,7 @@
                     </hsd:type>
                     <hsd:type index="152">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_vrstaopasnosti</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8786,9 +8787,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -8806,6 +8806,7 @@
                     </hsd:type>
                     <hsd:type index="153">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">rpot_zupanija</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8813,9 +8814,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -8833,12 +8833,13 @@
                     </hsd:type>
                     <hsd:type index="154">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">serial</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="155">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_d_fontedati</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8846,9 +8847,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_fontedati</hsd:name>
@@ -8910,6 +8910,7 @@
                     </hsd:type>
                     <hsd:type index="156">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_d_lingua</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8917,9 +8918,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_lingua</hsd:name>
@@ -8937,6 +8937,7 @@
                     </hsd:type>
                     <hsd:type index="157">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_d_standard_espos</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8944,9 +8945,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_standard_espos</hsd:name>
@@ -8964,6 +8964,7 @@
                     </hsd:type>
                     <hsd:type index="158">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_d_tipo_categoria</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8971,9 +8972,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_tipo_categoria</hsd:name>
@@ -8991,6 +8991,7 @@
                     </hsd:type>
                     <hsd:type index="159">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_d_tipo_funzione</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -8998,9 +8999,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_tipo_funzione</hsd:name>
@@ -9030,6 +9030,7 @@
                     </hsd:type>
                     <hsd:type index="160">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_d_tipo_oggetto</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9037,9 +9038,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_tipo_oggetto</hsd:name>
@@ -9058,8 +9058,8 @@
                     <hsd:type index="161">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_r_categ_lingua</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_categoria</hsd:name>
@@ -9124,8 +9124,8 @@
                     <hsd:type index="162">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_r_categapp_categori</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_categoria_appl</hsd:name>
@@ -9172,8 +9172,8 @@
                     <hsd:type index="163">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_r_categoria_mtd</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_categoria</hsd:name>
@@ -9220,8 +9220,8 @@
                     <hsd:type index="164">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_r_fm_vista_appl</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_funzione</hsd:name>
@@ -9268,8 +9268,8 @@
                     <hsd:type index="165">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_r_parolachiave_mtd</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_metadato</hsd:name>
@@ -9315,6 +9315,7 @@
                     </hsd:type>
                     <hsd:type index="166">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_categoria</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9322,9 +9323,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_categoria</hsd:name>
@@ -9356,6 +9356,7 @@
                     </hsd:type>
                     <hsd:type index="167">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_categoria_appl</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9363,9 +9364,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_categoria_appl</hsd:name>
@@ -9433,6 +9433,7 @@
                     </hsd:type>
                     <hsd:type index="168">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_dettlog</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9440,9 +9441,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_dett_log</hsd:name>
@@ -9480,6 +9480,7 @@
                     </hsd:type>
                     <hsd:type index="169">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_funzione</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9487,9 +9488,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_funzione</hsd:name>
@@ -9547,6 +9547,7 @@
                     </hsd:type>
                     <hsd:type index="170">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_log</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9554,9 +9555,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_log</hsd:name>
@@ -9580,6 +9580,7 @@
                     </hsd:type>
                     <hsd:type index="171">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_metadato</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9587,9 +9588,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_metadato</hsd:name>
@@ -9633,6 +9633,7 @@
                     </hsd:type>
                     <hsd:type index="172">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_mtd_csw</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9640,9 +9641,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_metadato</hsd:name>
@@ -9716,6 +9716,7 @@
                     </hsd:type>
                     <hsd:type index="173">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_mtd_plus</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9723,9 +9724,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_metadato</hsd:name>
@@ -9777,6 +9777,7 @@
                     </hsd:type>
                     <hsd:type index="174">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_news_home_page</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9784,9 +9785,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_news</hsd:name>
@@ -9828,6 +9828,7 @@
                     </hsd:type>
                     <hsd:type index="175">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_parola_chiave</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9835,9 +9836,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_parola_chiave</hsd:name>
@@ -9855,6 +9855,7 @@
                     </hsd:type>
                     <hsd:type index="176">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_storico_funzione</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9862,9 +9863,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_storico_funzione</hsd:name>
@@ -9908,6 +9908,7 @@
                     </hsd:type>
                     <hsd:type index="177">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_storico_mtd_csw</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9915,9 +9916,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_storico_metadato</hsd:name>
@@ -9991,6 +9991,7 @@
                     </hsd:type>
                     <hsd:type index="178">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_mtd_t_testi_home_page</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -9998,9 +9999,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_testo</hsd:name>
@@ -10042,6 +10042,7 @@
                     </hsd:type>
                     <hsd:type index="179">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_t_comuni</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -10049,9 +10050,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_comune</hsd:name>
@@ -10101,6 +10101,7 @@
                     </hsd:type>
                     <hsd:type index="180">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">sipra_t_province</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -10108,9 +10109,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_provincia</hsd:name>
@@ -10134,6 +10134,7 @@
                     </hsd:type>
                     <hsd:type index="181">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:public">spatial_ref_sys</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -10141,9 +10142,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>srid</hsd:name>
@@ -10179,12 +10179,13 @@
                     </hsd:type>
                     <hsd:type index="182">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">text</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="183">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:gwc">tilepage</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -10192,9 +10193,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>key</hsd:name>
@@ -10274,6 +10274,7 @@
                     </hsd:type>
                     <hsd:type index="184">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:gwc">tileset</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -10281,9 +10282,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>key</hsd:name>
@@ -10325,18 +10325,19 @@
                     </hsd:type>
                     <hsd:type index="185">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">timestamp</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.sql.Timestamp"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="186">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">timestamptz</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.sql.Timestamp"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                     <hsd:type index="187">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:topology">topology</hsd:name>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:constraint type="primary-key">
                             <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
 <core:entry>
@@ -10344,9 +10345,8 @@
 </core:entry>
                             </core:list>
                         </hsd:constraint>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -10383,8 +10383,8 @@
                     <hsd:type index="188">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">v_old_bifisic_geo_establishment</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_establishment</hsd:name>
@@ -10649,8 +10649,8 @@
                     <hsd:type index="189">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">v_old_bifisic_koordinate</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id</hsd:name>
@@ -10711,8 +10711,8 @@
                     <hsd:type index="190">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">v_old_bifisic_t_classification</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_classification</hsd:name>
@@ -10737,8 +10737,8 @@
                     <hsd:type index="191">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">v_old_bifisic_t_cooperator</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_cooperator</hsd:name>
@@ -10799,8 +10799,8 @@
                     <hsd:type index="192">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">v_old_bifisic_t_dangeroussubstance</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_subst_mixture</hsd:name>
@@ -10915,8 +10915,8 @@
                     <hsd:type index="193">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">v_old_bifisic_t_hazardtype</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_hazardtype</hsd:name>
@@ -10941,8 +10941,8 @@
                     <hsd:type index="194">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">v_old_bifisic_t_measureprevmitig</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_measures_prevmitig</hsd:name>
@@ -11051,8 +11051,8 @@
                     <hsd:type index="195">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC:bifisic">v_old_bifisic_t_storagesubstance</hsd:name>
                         <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>id_storage_type</hsd:name>
@@ -11076,8 +11076,8 @@
                     </hsd:type>
                     <hsd:type index="196">
                         <hsd:name namespace="jdbc:postgresql:BIFISIC">varchar</hsd:name>
-                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
                         <hsd:constraint type="has-value" value="true"/>
                     </hsd:type>
                 </hsd:types>
@@ -11094,9 +11094,9 @@
     <file name="styles.sld" location="sevesoEstablishment.halex.styles.sld"/>
     <file name="alignment.xml" location="sevesoEstablishment.halex.alignment.xml"/>
     <property name="compatibilityMode">eu.esdihumboldt.hale.io.appschema.compatibility</property>
-    <property name="defaultGeometry:{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}SevesoEstablishmentType/1">{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}geometry</property>
-    <property name="defaultGeometry:{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}SevesoEstablishmentType/2">{http://www.opengis.net/gml/3.2/AbstractGeometry}choice</property>
-    <property name="defaultGeometry:{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}SevesoEstablishmentType/count">2</property>
+    <property name="defaultGeometry:{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}SevesoEstablishmentType/1">{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}geometry</property>
+    <property name="defaultGeometry:{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}SevesoEstablishmentType/2">{http://www.opengis.net/gml/3.2/AbstractGeometry}choice</property>
+    <property name="defaultGeometry:{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}SevesoEstablishmentType/count">2</property>
     <property name="defaultGeometry:{http://www.isotc211.org/2005/gmd}EX_BoundingPolygon_Type/1">{http://www.isotc211.org/2005/gmd}polygon</property>
     <property name="defaultGeometry:{http://www.isotc211.org/2005/gmd}EX_BoundingPolygon_Type/2">{http://www.opengis.net/gml/3.2/AbstractGeometry}choice</property>
     <property name="defaultGeometry:{http://www.isotc211.org/2005/gmd}EX_BoundingPolygon_Type/count">2</property>
@@ -11285,16 +11285,16 @@
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FaceType/2">{http://www.opengis.net/gml/3.2/AbstractSurface}choice</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FaceType/count">2</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureArrayPropertyType/1">{http://www.opengis.net/gml/3.2/AbstractFeature}choice</property>
-    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureArrayPropertyType/2">{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}SevesoEstablishment</property>
-    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureArrayPropertyType/3">{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}geometry</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureArrayPropertyType/2">{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}SevesoEstablishment</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureArrayPropertyType/3">{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}geometry</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureArrayPropertyType/4">{http://www.opengis.net/gml/3.2/AbstractGeometry}choice</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureArrayPropertyType/count">4</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureCollectionType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureCollectionType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeatureCollectionType/count">2</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeaturePropertyType/1">{http://www.opengis.net/gml/3.2/AbstractFeature}choice</property>
-    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeaturePropertyType/2">{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}SevesoEstablishment</property>
-    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeaturePropertyType/3">{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}geometry</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeaturePropertyType/2">{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}SevesoEstablishment</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeaturePropertyType/3">{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}geometry</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeaturePropertyType/4">{http://www.opengis.net/gml/3.2/AbstractGeometry}choice</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}FeaturePropertyType/count">4</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}GeodesicStringType/1">{http://www.opengis.net/gml/3.2/GeodesicStringType}choice_1</property>
@@ -11393,8 +11393,8 @@
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}PriorityLocationPropertyType/1">{http://www.opengis.net/gml/3.2/LocationPropertyType}choice_1</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}PriorityLocationPropertyType/count">1</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}ProcedurePropertyType/1">{http://www.opengis.net/gml/3.2/AbstractFeature}choice</property>
-    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}ProcedurePropertyType/2">{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}SevesoEstablishment</property>
-    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}ProcedurePropertyType/3">{http://pproo.azo.hr/geoserver/bifisic_establishments/1.0}geometry</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}ProcedurePropertyType/2">{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}SevesoEstablishment</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}ProcedurePropertyType/3">{http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0}geometry</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}ProcedurePropertyType/4">{http://www.opengis.net/gml/3.2/AbstractGeometry}choice</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}ProcedurePropertyType/count">4</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}RangeSetType/1">{http://www.opengis.net/gml/3.2/RangeSetType}choice_1</property>

@@ -308,13 +308,6 @@
                             xpath:"bifisic_cide:OpenIssue/bifisic_cide:lastUpdateUserName/text()"
                         }
 
-,
-        <Section header='KARTA' eventKey='6' expanded={false}>
-          
-          
-
-        </Section>
-
 
                     ]
                 }
@@ -333,6 +326,38 @@
 
         </Section>
 
+        <Section header='Coordinated Inspection on OpenStreetMap background courtesy by http://www.openstreetmap.org' eventKey='6' expanded={true}>
+	      <MappaScheda
+	              center={
+	                      model.getValue({
+	                          type: TemplateUtils.GEOMETRY_TYPE,
+	                          xpath: "/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:geometry/gml:Point/gml:pos/text()"
+	                      })
+	              }
+	              layers={[
+	                      {
+					          "type": "osm",
+					          "title": "Open Street Map",
+					          "name": "mapnik",
+	                          "source": "osm",
+					          "group": "background",
+	                          "visibility": true
+				          },
+	                      {
+	                          "type": "wms",
+	                          "url": "{geoserverUrl}/wms",
+	                          "visibility": true,
+	                          "title": "Coordinated Inspection Preview",
+	                          "name": "bifisic_cide:SimplifiedSevesoEstablishment",
+	                          "group": "Overlays",
+	                          "format": "image/png"
+	                      }
+	              ]}
+	              authParam={model.authParam}
+	              withMap={model.withMap}/>
+	              
+        </Section>
+	              
 
 
     </Panel>

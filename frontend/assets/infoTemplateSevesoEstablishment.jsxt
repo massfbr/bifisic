@@ -14,75 +14,75 @@
   "cellRenderer" : reactCellRendererFactory(GoToDetail)
 }, {
   "headerName" : "Županija",
-  "xpath" : "bifisic_establishments:desCounty/text()",
+  "xpath" : "bifisic_sevesoestablishments:desCounty/text()",
   "width" : 100
 }, {
   "headerName" : "Općina",
-  "xpath" : "bifisic_establishments:desMunicipality/text()",
+  "xpath" : "bifisic_sevesoestablishments:desMunicipality/text()",
   "width" : 100
 }, {
   "headerName" : "OIB",
-  "xpath" : "bifisic_establishments:company/bifisic_establishments:Company/bifisic_establishments:oib/text()",
+  "xpath" : "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:oib/text()",
   "width" : 100
 }, {
   "headerName" : "Naziv tvrtke",
-  "xpath" : "bifisic_establishments:company/bifisic_establishments:Company/bifisic_establishments:companyName/text()",
+  "xpath" : "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:companyName/text()",
   "width" : 100
 }, {
   "headerName" : "Naziv područja postrojenja",
-  "xpath" : "bifisic_establishments:EstablishmentName/text()",
+  "xpath" : "bifisic_sevesoestablishments:EstablishmentName/text()",
   "width" : 100
 }, {
   "headerName" : "HAOP ID broj",
-  "xpath" : "bifisic_establishments:idCAEN/text()",
+  "xpath" : "bifisic_sevesoestablishments:idCAEN/text()",
   "width" : 100
 }, {
   "headerName" : "Adresa",
-  "xpath" : "bifisic_establishments:address/text()",
+  "xpath" : "bifisic_sevesoestablishments:address/text()",
   "width" : 100
 }, {
   "headerName" : "Administrativni položaj",
-  "xpath" : "bifisic_establishments:DesAdminPosition/text()",
+  "xpath" : "bifisic_sevesoestablishments:DesAdminPosition/text()",
   "width" : 100
 }, {
   "headerName" : "Nac. djelatnost područja postrojenja",
-  "xpath" : "bifisic_establishments:SubActivity/text()",
+  "xpath" : "bifisic_sevesoestablishments:SubActivity/text()",
   "width" : 100
 }, {
   "headerName" : "Uža djelatnost područja postrojenja",
-  "xpath" : "bifisic_establishments:CoreActivity/text()",
+  "xpath" : "bifisic_sevesoestablishments:CoreActivity/text()",
   "width" : 100
 }, {
   "headerName" : "Obavijest provjerena?",
-  "xpath" : "bifisic_establishments:NotificationValidated/text()",
+  "xpath" : "bifisic_sevesoestablishments:NotificationValidated/text()",
   "width" : 100
 }, {
   "headerName" : "Datum odobrenja PSVN-a",
-  "xpath" : "bifisic_establishments:dataMAPP/text()",
+  "xpath" : "bifisic_sevesoestablishments:dataMAPP/text()",
   "width" : 100
 }, {
   "headerName" : "Date posljednje obavijesti",
-  "xpath" : "bifisic_establishments:measurePreventingMitigating/bifisic_establishments:MeasurePreventingMitigating/bifisic_establishments:dateLastNotification/text()",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateLastNotification/text()",
   "width" : 100
 }, {
   "headerName" : "Date posljednjeg Unutarnjeg plana",
-  "xpath" : "bifisic_establishments:measurePreventingMitigating/bifisic_establishments:MeasurePreventingMitigating/bifisic_establishments:dateInternalEmergency/text()",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateInternalEmergency/text()",
   "width" : 100
 }, {
   "headerName" : "Date posljednjeg Operativnog plana",
-  "xpath" : "bifisic_establishments:measurePreventingMitigating/bifisic_establishments:MeasurePreventingMitigating/bifisic_establishments:dateProtectRescuePlan/text()",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateProtectRescuePlan/text()",
   "width" : 100
 }, {
   "headerName" : "Datum podnošenja odobrenog IOS-a",
-  "xpath" : "bifisic_establishments:measurePreventingMitigating/bifisic_establishments:MeasurePreventingMitigating/bifisic_establishments:dateSafetyReportApproved/text()",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateSafetyReportApproved/text()",
   "width" : 100
 }, {
   "headerName" : "Datum suglasnosti na posljednji IOS",
-  "xpath" : "bifisic_establishments:measurePreventingMitigating/bifisic_establishments:MeasurePreventingMitigating/bifisic_establishments:dateClassSafetyReportApproved/text()",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateClassSafetyReportApproved/text()",
   "width" : 100
 }, {
   "headerName" : "Klasa posljednjeg IOS-a",
-  "xpath" : "bifisic_establishments:measurePreventingMitigating/bifisic_establishments:MeasurePreventingMitigating/bifisic_establishments:ClassSafetyReportApproved/text()",
+  "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:ClassSafetyReportApproved/text()",
   "width" : 100
 }
     ]}

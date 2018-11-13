@@ -2,7 +2,7 @@
    "featureTypeName":"bifisic_cide:CoordinatedInspection",
    "featureTypeNameLabel":"Coordinated Inspections",
    "nameSpaces": {
-     "bifisic_establishments": "http://pproo.azo.hr/bifisic/bifisic_establishments/1.0"
+     "bifisic_cide": "http://pproo.azo.hr/bifisic/bifisic_cide/1.0"
    },
    "layer": {
         "type": "wms",
@@ -121,6 +121,11 @@
   "suppressSorting" : true,
   "headerName" : "Rezultati inspekcijskog nadzora",
   "xpath" : [ "bifisic_cide:totalScore/text()" ]
+}, {
+  "suppressSorting" : true,
+  "headerName" : "geometry",
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:geometry/gml:Point/gml:pos/text()" ],
+  "type" : 6
 }        ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
