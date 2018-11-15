@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
-    <cell relation="eu.esdihumboldt.hale.align.retype" id="Ceac4a52d-0fe8-4d0c-b921-8589a57677b2" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cd7d6a0e4-00df-4c6f-a9e9-36995739ea44" priority="normal">
         <source>
             <class>
                 <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -14,21 +14,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cb60d967d-b29b-4f91-b92f-77aa061ca99a" priority="normal">
-        <source>
-            <class>
-                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-            </class>
-        </source>
-        <target>
-            <class>
-                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </class>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.retype" id="Ce070e9a4-c863-4502-a3bf-68e33292d9f2" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C30916f6c-f6a3-4b80-8a80-fbf2e2401187" priority="normal">
         <source>
             <class>
                 <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -42,7 +28,21 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cedc6fd87-d072-4705-8845-0f539113bfb2" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cdabb1f56-9c64-4792-a471-88220971b2fe" priority="normal">
+        <source>
+            <class>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C3bf46a9b-1d02-40d4-837b-a497e1151140" priority="normal">
         <source>
             <class>
                 <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -56,7 +56,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.retype" id="C794f1a5a-55cc-448c-aa9b-c24322e18236" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C76f02354-c177-4a98-bb51-61185473db40" priority="normal">
         <source>
             <class>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -70,7 +70,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.retype" id="C67595640-c305-4dc6-a11b-22b15880cf5d" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C503fab38-ccda-4c66-aeb6-e5d88eac1365" priority="normal">
         <source>
             <class>
                 <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -84,23 +84,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C28b6ff21-f8ed-47fe-b9ad-99cac13a233f" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_establishment"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idEstablishment" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca0a77b21-102f-4cb8-89ef-88e7ef9a2745" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C998cbad8-e12a-40e1-819b-7735b7a723e4" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -116,11 +100,11 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C49b6b804-1386-4206-9b9a-444a96af2992" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cce1b3053-149e-4e67-81bd-62db9f7cbeb0" priority="normal">
         <source name="var">
             <property>
                 <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_establishment"/>
+                <child name="id_coordinated_inspection"/>
             </property>
         </source>
         <target>
@@ -129,57 +113,9 @@
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="coordinated_inspection.{id_establishment}" name="pattern"/>
+        <parameter value="coordinated_inspection.{id_coordinated_inspection}" name="pattern"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf673e915-77a8-4eee-8e51-d8e382869770" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="data_mapp"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="mappDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2cc86b27-756b-4c01-9d52-4b92295bde1c" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="inspection_date"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="inspectionDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C79801961-6963-45b4-a951-4df07daa4dd3" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_inspection_coordinator"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idInspectionCoordinator" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ccdad34e9-d625-4ff7-8888-e36892be2552" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5dcb23f7-ef3e-4135-a5ce-8feee72248ed" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -195,7 +131,103 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C79edae55-d751-4d43-be62-b7720ec335f7" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C21ce82fc-ba8e-4714-a339-8ef4bc945ce5" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_establishment"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idEstablishment" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb2dfa07c-5ff6-4fee-92f8-e21e05a6242d" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_inspection_coordinator"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idInspectionCoordinator" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cddbb171d-a349-4766-bbc3-7b71ef36c411" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="inspection_date"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="inspectionDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C02967df3-e4c5-4074-8197-a29b4c22dd99" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_date"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C0542e915-90f1-41b1-8c2a-0dbae42de6f4" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_userid"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateUserId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C565e3b01-1c67-4397-b6cf-b0e2dc890a4f" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_username"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateUserName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbc45220e-cfdb-4c09-a5a7-9a49805cc468" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -211,55 +243,39 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C537001a5-b782-449b-8a23-584c7d1c3ac4" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cfecfd735-28f8-4854-8c73-a751f7cef91c" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_userid"/>
+                <child name="data_mapp"/>
             </property>
         </source>
         <target>
             <property>
                 <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateUserId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="mappDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C97d5ded6-29aa-4dbd-8b76-d736378222b9" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C03fb0e09-0acd-413b-b323-2b146c9754bb" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_username"/>
+                <child name="geometry"/>
             </property>
         </source>
         <target>
             <property>
                 <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateUserName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="geometry" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1e2595c7-e9cd-4506-bb11-c98d5aa6ef02" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_date"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbd424702-383b-4108-be42-8973e8009338" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5984b1c6-a261-4314-a02f-3fb35159b8c0" priority="normal">
         <source>
             <property>
                 <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -275,7 +291,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Ccc761e6e-b402-499b-a339-4623481c0197" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cf819f18f-3f64-47a0-ab39-249aeb07731b" priority="normal">
         <source name="var">
             <property>
                 <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -288,89 +304,9 @@
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="establisment.{id_establishment}" name="pattern"/>
+        <parameter value="establishment.{id_establishment}" name="pattern"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1a4cb413-c9a5-4848-a481-e08163d91358" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="status_establish"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="statusEstablish" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C48c11ad0-23f9-42a2-ae5b-3257f63aac31" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="des_status_establish"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="statusEstablishDesc" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C96f137c4-493c-4a39-8c3f-1d23933be49a" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="geometry"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="geometry" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3a82ef62-4164-4853-9675-063a53c2a62c" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_caen"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idCAEN" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc2b6575f-6eca-4680-9b21-e7833b4e4e8b" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="establishment_name"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="establishmentName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce6bd526c-a46a-4059-920d-410b09c976d3" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca9a7ebf9-9220-472d-911d-f9694e3d73a5" priority="normal">
         <source>
             <property>
                 <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -386,151 +322,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C41c0f916-867f-4eda-967c-619866d4151a" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="postal_code"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="postalCode" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C16eabf41-7012-4de2-b956-231160a82c47" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_municipality"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idMunicipality" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb219709a-22d3-4252-9281-29e88d44632f" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="des_municipality"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="desMunicipality" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C06027b8d-1518-4090-b999-3b2d1d9e1bf8" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_county"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idCounty" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cab69b73e-13ef-4edc-9c32-d3508e915f4d" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="des_county"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="desCounty" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7999a91a-c430-47f9-97dd-0c9b1e94f489" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_admin_position"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idAdminPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C45bb817d-e2b9-4d31-a59e-2fc20d83df52" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="des_admin_position"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="desAdminPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb22aa7f0-b97c-4033-9a55-2d84c494166b" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_sub_activity"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idSubActivity" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C6596cfa9-afd6-40e7-8e1f-88bbdcc16f4e" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="sub_activity"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="subActivity" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3c5483ef-38d2-424a-888e-c77b4e3d6a07" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc85f2732-b041-402f-a94d-2fd8a8c90131" priority="normal">
         <source>
             <property>
                 <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -546,375 +338,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cce450e3f-e020-4b41-81de-77398241703f" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="eprtr"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="eprtr" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C90b12b1f-d29f-4c75-9dc1-97f218bf3204" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="ied"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="ied" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C42bab4ab-79c4-4657-a259-97f0d4ae8404" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_leg_position"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respLegPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb9d2298b-03dc-4156-b898-3345c2e97915" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_leg_namesurname"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respLegNameSurname" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C37c6c1dd-25bc-4845-a47a-a527eb7f35bb" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_leg_phone"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respLegPhone" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd3eedc09-1797-4e96-8bc0-f32da9a0827b" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_leg_fax"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respLegFax" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca2e3961d-ad78-48aa-b867-686cd56102aa" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_leg_email"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respLegEmail" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C651edb27-f1e0-4f6d-a235-05f420cc020b" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_unevent_position"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respUnEventPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9ec1d15f-9447-4c20-9ea0-638f653544f1" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_unevent_namesurname"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respUnEventNameSurname" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce6538858-be54-438f-a44b-749e7a54b40b" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_unevent_phone"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respUnEventPhone" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce41224a1-41da-44f6-a038-42c7b55f5235" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_unevent_fax"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respUnEventFax" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C99cec84f-05ee-4f38-9dc0-18dfa1e40243" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="resp_unevent_email"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="respUnEventEMail" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbb2f854d-a1de-48cf-84e8-846920142f9a" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="other_position"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="otherPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc82fb2bc-b24a-43fd-a6fd-313ed7cc64cc" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="other_namesurname"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="otherNameSurname" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C15a53f13-ffdf-46e9-8c3d-59ed4d4e8b40" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="other_phone"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="otherPhone" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C334abd95-3cb9-4e04-aa31-ab6a383a1e37" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="other_fax"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="otherFax" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf721d433-97c0-47f9-b603-5ffdfd81e007" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="other_email"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="otherEMail" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc6f7962b-13d7-45c0-bee1-08d554e38e0a" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="surroundings_des"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="surroundingsDes" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3ecbb752-43a5-4037-9bf0-a0072259b98f" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="flag_other_establish"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="flagOtherEstablish" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce1a1dbba-229f-431b-9cd0-0f59d7b93328" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="oib_other_establish"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="otherEstablish" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8b9f294d-8d11-4163-a999-07343abcb3e7" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="name_other_establish"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="otherEstablishName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C94ba43d5-2802-4ba0-98ed-6454f5670641" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="notification_validated"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="notificationValidated" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C12a6e8b2-b821-4854-b0e5-c0666dbe3b7b" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_company"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idCompany" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce3039c6f-37a7-4234-b78e-56edffe9dce5" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9e13573b-2bb9-4edd-b66c-cbc23608cfa4" priority="normal">
         <source>
             <property>
                 <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -930,198 +354,870 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C80a1327f-06e8-4fc7-9c3a-6ba3ef965798" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9fc634ac-72d4-4f5f-9465-d9c3b238ade1" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_specific_inspection"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="des_admin_position"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idSpecificInspection" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="desAdminPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8a3e00fa-2016-4fc5-8f50-ce4f47266be2" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2146e42c-3349-46d8-8cba-8c5c72b0df9b" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_coordinated_inspection"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="des_county"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idCoordinatedInspection" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="desCounty" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce21a2b92-dc2f-4c34-b19d-77b1ab6f22de" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2f22af71-67ad-4bed-8cfa-f08f19a26469" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="spec_inspectiontype_id"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="des_municipality"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="specInspectionTypeId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="desMunicipality" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7cf29b52-f042-49e2-8ee1-ed136e15a98a" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C98abab73-29ba-436a-8a41-b72b05709754" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="spec_inspectiontype_desc"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="des_status_establish"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="specInspectionTypeDesc" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="statusEstablishDesc" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C15e075e2-e32a-4fc9-92d1-73ecb0b4e124" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1d407461-2d27-4288-830b-fd26c32e4296" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_inspector"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="eprtr"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idInspector" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="eprtr" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C94b340f6-a820-4da4-9862-8b25e20bdc95" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C25aa008d-2ab1-4bff-9de3-4ca28e45ed9c" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="inspector_name"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="establishment_name"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="inspectorName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="establishmentName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1a0fb393-804c-4673-9e88-d16a1cf87a1d" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C19b91f45-7c28-4708-af68-54fa6e2f39c2" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="inspection_date"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="flag_other_establish"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="inspectionDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="flagOtherEstablish" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C92ba82d1-7519-40e6-9e46-897b20de0f8a" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb473e1a4-66cb-4c9f-ae9b-7c44be28d987" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="spec_inspection_total_score"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="geometry"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="specInspectionTotalScore" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="geometry" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce3b3e4e2-f9c8-4610-88b7-444861887ca2" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C73bfc0ce-9f46-483a-83ae-d26bf7333ab7" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_userid"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_admin_position"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateUserId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idAdminPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7a5ce836-dee7-4dfb-bbbd-19ce2065a19f" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1cb05e0f-6aaf-4713-b125-245aed7a72c7" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_username"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_caen"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateUserName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idCAEN" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C6ff1507e-ec31-429e-9d50-d5b8d26961a4" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4a1f9bf5-9de2-482f-9116-c835ffc65609" priority="normal">
         <source>
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_date"/>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_company"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idCompany" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C98c651f9-81a4-4e2a-a988-0ec6c8b0a4ab" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc4909393-7c76-4eb7-be08-81a808e520a7" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_county"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idCounty" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8abb5ca5-b85e-48a7-803d-67fd4bea46cc" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_municipality"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idMunicipality" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc80356fc-c1f6-4f1d-9e5e-ffb8e0e519f8" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_sub_activity"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idSubActivity" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc0fa15bb-2c22-4ee9-8a9b-055e308c1e52" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="ied"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="ied" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9d17f3eb-d97e-4fbb-b85d-a2d31a9b15bb" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="name_other_establish"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="otherEstablishName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7841b60b-e8c5-43a4-881a-c5b14b804da8" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="notification_validated"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="notificationValidated" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C50a6f157-d980-4153-863c-ea9a1c26b323" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="oib"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="otherEstablish" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cfb2f2220-0f0a-4a42-a3cc-f2a79ca12f14" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="other_email"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="otherEMail" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5ad31b32-e81a-441a-badc-9789c6d73d75" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="other_fax"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="otherFax" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf8d20ef5-d581-44ae-9ce3-cce503ec7de8" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="other_namesurname"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="otherNameSurname" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca1f84a0f-54a1-47d0-83f2-2ff0e0c01926" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="other_phone"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="otherPhone" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2177f416-ee56-4b79-9203-4be3ea706290" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="other_position"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="otherPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb920e61b-2dfe-4b4c-9c8a-5a0feba5ee8d" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="postal_code"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="postalCode" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cfb97cabd-2e73-4158-9e97-7bcb8a8d9acc" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_leg_email"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respLegEmail" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf4754e09-ddda-40d0-bb63-ecf6acb7aa9e" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_leg_fax"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respLegFax" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cfdc2d377-096e-458f-83eb-750721ec54a4" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_leg_namesurname"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respLegNameSurname" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc9aaaaef-fdd7-44d6-befb-e29b2b71b203" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_leg_phone"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respLegPhone" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C41f0723b-ef84-4079-806d-63327100899c" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_leg_position"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respLegPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca6627329-404d-4fab-93da-b791663362d9" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_unevent_email"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respUnEventEMail" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf3c40720-c4be-4129-aa60-96cd258a280f" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_unevent_fax"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respUnEventFax" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5fe79c3f-82ab-4082-b5f0-b914da422905" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_unevent_namesurname"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respUnEventNameSurname" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C851ad133-6f1d-42df-8e24-82bc3cf36fcc" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_unevent_phone"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respUnEventPhone" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C181edf01-8c57-41df-9f9f-e4e0be70d392" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="resp_unevent_position"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="respUnEventPosition" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C820e9c16-f2c3-45f9-b2ea-6fb127fc3a26" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="status_establish"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="statusEstablish" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C41ff8681-a719-485e-adb2-e3a24b26d0ba" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="sub_activity"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="subActivity" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9dfcac6b-8770-4648-921f-ee6b941a6b20" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="surroundings_des"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="surroundingsDes" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2afdb183-5fca-4ef3-b762-394fb30dc612" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_company"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idCompany" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C75bf47da-6a78-49ac-b488-ca6a1d5ba91a" priority="normal">
         <source name="var">
             <property>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_specific_inspection"/>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_company"/>
             </property>
         </source>
         <target>
             <property>
-                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="specific_inspection.{id_specific_inspection}" name="pattern"/>
+        <parameter value="company.{id_company}" name="pattern"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C82441b5c-8206-4f7b-a63d-87fc604ee86c" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca872fd0d-8e61-45c3-ae6f-c8ccb91da9ef" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="address"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="address" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8c5de569-9360-4b73-b7f0-6c3f017ec4aa" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="company_name"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="companyName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C33ed74f5-bc9a-4a47-96f9-3174b3381829" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="des_activity"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="desActivity" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8c580376-b0a7-42ab-8403-4267c369aaa4" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="des_county"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="desCounty" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc5648c31-6a2b-46aa-ac74-d8f3941dca52" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="des_municipality"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="desMunicipality" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C584b6c7b-4787-4e55-927d-ac153f118d9c" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="des_regulation_annex"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="desRegulationAnnex" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5765322a-c057-405c-8c0c-58ede6e15dc1" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="email"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="email" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C76531e30-98b2-46e2-a502-e39d0d4ad278" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="fax"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="fax" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4d58e906-9022-4bdf-853c-4f6a6a209dee" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_activity"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idActivity" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Caeb4a94c-b090-4013-b66e-6dde8309d98d" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_county"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idCounty" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf692dd34-3332-4f55-9611-85376288fa09" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_municipality"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idMunicipality" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C97aee671-75d0-42cb-bb8e-6b7306db082a" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_regulation_annex"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idRegulationAnnex" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C22d712e0-977f-4792-a59c-8648a2dca66c" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="oib"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="oib" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3e74d8e1-ba7a-4978-9a1d-0b837549a676" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="postal_code"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="postalCode" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C21cf4fbf-fe4b-49b9-acca-897bcae03ba3" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="tel"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CompanyType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="telephone" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C709b467a-55f0-4072-976b-74dd77f71592" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1137,7 +1233,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cbb2fc340-71a5-44a1-9d1a-52d48e19f927" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C2c79427d-04e1-405c-a915-a3556db546d6" priority="normal">
         <source name="var">
             <property>
                 <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1152,39 +1248,7 @@
         </target>
         <parameter value="criterion_score.{id_criterior_score}" name="pattern"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3a07cc6b-db90-4b8d-9aac-fbab035978f2" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_specific_inspection"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idSpecificInspection" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C0c9aaef4-9287-467c-98d3-ebe154bfbb7a" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_criterior"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idCriterion" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7973b325-1e16-4118-9a4c-60fa43ab854f" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7a85285b-7699-4ef5-bc43-e4f91b62bf76" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1200,7 +1264,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb4aa6dab-3ab1-4fad-a10d-ab324d3ab08a" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C34ef9235-04ca-4e6e-adb1-eb87117fe18c" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1216,23 +1280,87 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb4be64b2-a5bf-4d70-ab3e-7d27c329acd4" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C6fe1297f-145c-415e-b578-a57e11a26ed4" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="score_num"/>
+                <child name="id_criterior"/>
             </property>
         </source>
         <target>
             <property>
                 <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="scoreNum" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idCriterion" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cba8e615f-7c6e-4507-ac85-5a0892f9c8c7" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cdec1f1d7-66d1-4737-8f8c-01833f3a2781" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_specific_inspection"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idSpecificInspection" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2b7f8b08-1639-41c5-9a76-5da377da613c" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_date"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9be7193e-2eda-4f8d-a211-a78c5afd216e" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_userid"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateUserId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd0dcc099-6da6-4ed2-ac06-5e0145267bb0" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_username"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateUserName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd3b5a8ec-d01f-42e2-83fb-deb4badafa7c" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1248,55 +1376,23 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb188f3fa-8e75-4c5a-a795-e7060935b6dc" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd2bda3e4-1461-4092-a60d-e51d11c6126d" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_userid"/>
+                <child name="score_num"/>
             </property>
         </source>
         <target>
             <property>
                 <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateUserId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="scoreNum" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5561c152-c2cb-43a3-9344-4484dd4b013c" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_username"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateUserName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7e01f1be-40e1-4d1b-8b55-ca86c1090631" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_date"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="CriterionScoreType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C952ffc0f-79e4-4ee1-a06c-ded7fc1baeac" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3d31c5e4-b8a7-4ca0-99de-b3ff053eee35" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1312,7 +1408,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Ca919128c-ec46-43e7-bc51-43d686e30ee4" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C15338f0a-042e-4e81-9d39-97a6cbc24520" priority="normal">
         <source name="var">
             <property>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1325,41 +1421,9 @@
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="open_issue.{id_open_issue}" name="pattern"/>
+        <parameter value="open_issue{id_open_issue}" name="pattern"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd595753e-bd81-45d0-b65d-0ac9de533e39" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="id_specific_inspection"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="OpenIssueType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="idSpecificInspection" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7df7081e-3fc5-46b0-afa9-618a9e635976" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="des_open_issue"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="OpenIssueType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="desOpenIssue" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4ab5f094-1032-4289-9aec-42e1c2d5dfd3" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C857ff5e0-7d33-45b7-9aa8-779d868dda37" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1375,23 +1439,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C528fe7f8-93da-47f7-a24e-6fe8687d7808" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="deadline_warning"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="OpenIssueType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="deadlineWarning" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2fe1931e-fb1c-4657-a250-3c7fbd5111d9" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8f2735d8-806b-4ff8-84ec-f760696ce4c4" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1407,7 +1455,23 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca674c73b-60a0-45f7-a834-f1f163c13c9d" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C6cfec84c-cb01-4ab9-b513-601847408aba" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="deadline_warning"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="OpenIssueType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="deadlineWarning" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9be2a0ea-d6aa-4b6a-ba0c-053a3d5a70e8" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1423,39 +1487,39 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C42630374-6333-4879-95a7-9893286a3716" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3da3f255-7277-4dd0-b9ed-b5c6cef26a9f" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_userid"/>
+                <child name="des_open_issue"/>
             </property>
         </source>
         <target>
             <property>
                 <type name="OpenIssueType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateUserId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="desOpenIssue" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C461706d6-cdf0-4280-a5c7-e9ce021ae7b8" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C0fc46993-2a4f-4efe-a1a4-5390a5ca2a4d" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="lastupdate_username"/>
+                <child name="id_specific_inspection"/>
             </property>
         </source>
         <target>
             <property>
                 <type name="OpenIssueType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-                <child name="lastUpdateUserName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idSpecificInspection" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5bde6072-4e75-4893-bdc9-88ff22964233" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb848b20f-6ced-47de-ad12-1c7600636c48" priority="normal">
         <source>
             <property>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1471,155 +1535,304 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.join" id="C0b6cde26-0cc0-4977-a632-1819822ac095" priority="normal">
-        <source name="types">
-            <class>
-                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-            </class>
-        </source>
-        <source name="types">
-            <class>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-            </class>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cfbb9b4b0-b800-4e19-ae7c-54613b874c87" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_userid"/>
+            </property>
         </source>
         <target>
-            <class>
-                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </class>
+            <property>
+                <type name="OpenIssueType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateUserId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
         </target>
-        <complexParameter name="join">
-            <jp:join-parameter xmlns:jp="http://www.esdi-humboldt.eu/hale/join">
-                <class>
-                    <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                </class>
-                <class>
-                    <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                </class>
-                <jp:condition>
-                    <property>
-                        <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                        <child name="id_establishment"/>
-                    </property>
-                    <property>
-                        <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                        <child name="id_establishment"/>
-                    </property>
-                </jp:condition>
-            </jp:join-parameter>
-        </complexParameter>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.join" id="Ce55dd084-bfeb-4b1e-96b3-61aeb6bb2031" priority="normal">
-        <source name="types">
-            <class>
-                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-            </class>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C852ae2de-5474-4960-b441-e4cc862dc5c2" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_username"/>
+            </property>
         </source>
-        <source name="types">
-            <class>
+        <target>
+            <property>
+                <type name="OpenIssueType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateUserName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2ae6dc55-2c6c-4b66-b206-56c91ed2972b" priority="normal">
+        <source>
+            <property>
                 <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-            </class>
+                <child name="id_specific_inspection"/>
+            </property>
         </source>
         <target>
-            <class>
-                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </class>
-        </target>
-        <complexParameter name="join">
-            <jp:join-parameter xmlns:jp="http://www.esdi-humboldt.eu/hale/join">
-                <class>
-                    <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                </class>
-                <class>
-                    <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                </class>
-                <jp:condition>
-                    <property>
-                        <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                        <child name="id_coordinated_inspection"/>
-                    </property>
-                    <property>
-                        <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                        <child name="id_coordinated_inspection"/>
-                    </property>
-                </jp:condition>
-            </jp:join-parameter>
-        </complexParameter>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.join" id="C1d3dec9f-8816-48d7-898b-3dfc7cdc2d0c" priority="normal">
-        <source name="types">
-            <class>
-                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-            </class>
-        </source>
-        <source name="types">
-            <class>
-                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-            </class>
-        </source>
-        <target>
-            <class>
-                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
-            </class>
-        </target>
-        <complexParameter name="join">
-            <jp:join-parameter xmlns:jp="http://www.esdi-humboldt.eu/hale/join">
-                <class>
-                    <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                </class>
-                <class>
-                    <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                </class>
-                <jp:condition>
-                    <property>
-                        <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                        <child name="id_company"/>
-                    </property>
-                    <property>
-                        <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                        <child name="id_company"/>
-                    </property>
-                </jp:condition>
-            </jp:join-parameter>
-        </complexParameter>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.join" id="Cf74659d6-94b6-403b-b5b5-8d2bbbc89b29" priority="normal">
-        <source name="types">
-            <class>
-                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-            </class>
-        </source>
-        <source name="types">
-            <class>
-                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-            </class>
-        </source>
-        <target>
-            <class>
+            <property>
                 <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idSpecificInspection" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cf934fc79-7300-482d-a326-36311d81a97c" priority="normal">
+        <source name="var">
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_specific_inspection"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="specific_inspection.{id_specific_inspection}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C89cfe0ec-2503-4563-a720-687ce613285a" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_coordinated_inspection"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idCoordinatedInspection" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C0da3488d-9011-4a91-8998-00e3c4ce7a30" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="id_inspector"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="idInspector" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc50abec1-d1f9-44e3-8f15-0cc32fcc9c34" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="inspection_date"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="inspectionDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cda3e4885-373b-4ba5-8098-f02c9cd65d48" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="inspector_name"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="inspectorName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1604b08c-52c6-48c2-ae91-33d9d5852b46" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_date"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateDate" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd2fab7c1-4a0e-41f0-b582-2e89b73b1f10" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_userid"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateUserId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C881b92f5-4966-44f5-8f51-a0ad37510dd4" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="lastupdate_username"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="lastUpdateUserName" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8e725a89-e91c-40ee-93a3-2161580ac598" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="spec_inspection_total_score"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="specInspectionTotalScore" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C02b3f2c8-40c3-4cc8-ba9a-ac2ec66914ac" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="spec_inspectiontype_desc"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="specInspectionTypeDesc" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7a48dba6-54bf-4cc6-8017-659bb129588e" priority="normal">
+        <source>
+            <property>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="spec_inspectiontype_id"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+                <child name="specInspectionTypeId" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.join" id="C18a5ca74-5df9-4154-8b52-cf395bb91652" priority="normal">
+        <source name="types">
+            <class>
+                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+            </class>
+        </source>
+        <source name="types">
+            <class>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
             </class>
         </target>
         <complexParameter name="join">
             <jp:join-parameter xmlns:jp="http://www.esdi-humboldt.eu/hale/join">
                 <class>
-                    <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                    <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
                 </class>
                 <class>
-                    <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                    <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
                 </class>
                 <jp:condition>
                     <property>
-                        <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                        <child name="id_specific_inspection"/>
+                        <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                        <child name="id_establishment"/>
                     </property>
                     <property>
-                        <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                        <child name="id_specific_inspection"/>
+                        <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                        <child name="id_establishment"/>
                     </property>
                 </jp:condition>
             </jp:join-parameter>
         </complexParameter>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.join" id="C33b2bba1-cf16-414e-9577-1d5311242a06" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.join" id="C739375a9-73f3-41c7-a0a3-c6b014236cf5" priority="normal">
+        <source name="types">
+            <class>
+                <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+            </class>
+        </source>
+        <source name="types">
+            <class>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="CoordinatedInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </class>
+        </target>
+        <complexParameter name="join">
+            <jp:join-parameter xmlns:jp="http://www.esdi-humboldt.eu/hale/join">
+                <class>
+                    <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                </class>
+                <class>
+                    <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                </class>
+                <jp:condition>
+                    <property>
+                        <type name="bifisic_t_coordinated_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                        <child name="id_coordinated_inspection"/>
+                    </property>
+                    <property>
+                        <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                        <child name="id_coordinated_inspection"/>
+                    </property>
+                </jp:condition>
+            </jp:join-parameter>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.join" id="C147e8700-c2ec-4a1f-87b2-ff799b7020f1" priority="normal">
         <source name="types">
             <class>
                 <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
@@ -1650,6 +1863,80 @@
                     </property>
                     <property>
                         <type name="bifisic_t_open_issue" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                        <child name="id_specific_inspection"/>
+                    </property>
+                </jp:condition>
+            </jp:join-parameter>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.join" id="C65bed28d-66cc-420d-b758-44892c82eb09" priority="normal">
+        <source name="types">
+            <class>
+                <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+            </class>
+        </source>
+        <source name="types">
+            <class>
+                <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="SimplifiedSevesoEstablishmentType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </class>
+        </target>
+        <complexParameter name="join">
+            <jp:join-parameter xmlns:jp="http://www.esdi-humboldt.eu/hale/join">
+                <class>
+                    <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                </class>
+                <class>
+                    <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                </class>
+                <jp:condition>
+                    <property>
+                        <type name="bifisic_geo_establishment" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                        <child name="id_company"/>
+                    </property>
+                    <property>
+                        <type name="bifisic_t_company" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                        <child name="id_company"/>
+                    </property>
+                </jp:condition>
+            </jp:join-parameter>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.join" id="C9572849b-9859-4b45-9e75-7cc9fa65e4be" priority="normal">
+        <source name="types">
+            <class>
+                <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+            </class>
+        </source>
+        <source name="types">
+            <class>
+                <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="SpecificInspectionType" ns="http://pproo.azo.hr/geoserver/bifisic_cide/1.0"/>
+            </class>
+        </target>
+        <complexParameter name="join">
+            <jp:join-parameter xmlns:jp="http://www.esdi-humboldt.eu/hale/join">
+                <class>
+                    <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                </class>
+                <class>
+                    <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                </class>
+                <jp:condition>
+                    <property>
+                        <type name="bifisic_t_specific_inspection" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                        <child name="id_specific_inspection"/>
+                    </property>
+                    <property>
+                        <type name="bifisic_t_criteriorscore" ns="jdbc:postgresql:BIFISIC:bifisic"/>
                         <child name="id_specific_inspection"/>
                     </property>
                 </jp:condition>

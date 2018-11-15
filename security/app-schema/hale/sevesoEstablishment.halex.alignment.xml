@@ -2324,22 +2324,6 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd239a971-d37c-459d-b185-604bba575d1d" priority="normal">
-        <source>
-            <property>
-                <type name="bifisic_t_accidental_scenario" ns="jdbc:postgresql:BIFISIC:bifisic"/>
-                <child name="max_impact_area"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="AccidentalScenarioType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
-                <child name="maxImpactArea" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
-    </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C23f14451-d9f3-4d86-ac36-9a8b2f44d2e1" priority="normal">
         <source>
             <property>
@@ -2778,7 +2762,7 @@
         </source>
         <target>
             <class>
-                <type name="ArchivedNotificationsType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <type name="ArchivedNotificationType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
             </class>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
@@ -2793,7 +2777,7 @@
         </source>
         <target>
             <property>
-                <type name="ArchivedNotificationsType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <type name="ArchivedNotificationType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
                 <child name="idEstablishment" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
             </property>
         </target>
@@ -2809,7 +2793,7 @@
         </source>
         <target>
             <property>
-                <type name="ArchivedNotificationsType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <type name="ArchivedNotificationType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
                 <child name="idArchivedNotification" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
             </property>
         </target>
@@ -2825,7 +2809,7 @@
         </source>
         <target>
             <property>
-                <type name="ArchivedNotificationsType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <type name="ArchivedNotificationType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
@@ -2840,7 +2824,7 @@
         </source>
         <target>
             <property>
-                <type name="ArchivedNotificationsType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <type name="ArchivedNotificationType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
                 <child name="statusEstablish" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
             </property>
         </target>
@@ -2856,7 +2840,7 @@
         </source>
         <target>
             <property>
-                <type name="ArchivedNotificationsType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <type name="ArchivedNotificationType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
                 <child name="statusEstablishDesc" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
             </property>
         </target>
@@ -2872,7 +2856,7 @@
         </source>
         <target>
             <property>
-                <type name="ArchivedNotificationsType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <type name="ArchivedNotificationType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
                 <child name="entryDateNotification" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
             </property>
         </target>
@@ -2888,7 +2872,7 @@
         </source>
         <target>
             <property>
-                <type name="ArchivedNotificationsType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <type name="ArchivedNotificationType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
                 <child name="dateNotification" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
             </property>
         </target>
@@ -2904,7 +2888,7 @@
         </source>
         <target>
             <property>
-                <type name="ArchivedNotificationsType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <type name="ArchivedNotificationType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
                 <child name="notificationValidated" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
             </property>
         </target>
@@ -3719,5 +3703,20 @@
                 </jp:condition>
             </jp:join-parameter>
         </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cebca295e-56c0-4d51-b7d1-3b19f416e9b1" priority="normal">
+        <source name="var">
+            <property>
+                <type name="bifisic_t_accidental_scenario" ns="jdbc:postgresql:BIFISIC:bifisic"/>
+                <child name="max_impact_area"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AccidentalScenarioType" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+                <child name="maxImpactArea" ns="http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"/>
+            </property>
+        </target>
+        <parameter value="accidental_scenario.{max_impact_area}" name="pattern"/>
     </cell>
 </alignment>

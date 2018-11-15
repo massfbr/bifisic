@@ -19,11 +19,11 @@
             "geomAttribute": "msGeometry",
             "geometryType": "Polygon"
         },
-        "featureType": "sevesoEstablishment",
+        "featureType": "coordinatedInspection",
         "group": "Objects",
         "format": "image/png"
         },
-   "geometryName": "geometria",
+   "geometryName": "geometry",
    "geometryType": "Point",
    "card": {
         "pdfname": "Inspection_card_{{/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:idCoordinatedInspection/text()}}.pdf",
@@ -54,37 +54,43 @@
   "suppressSorting" : true,
   "headerName" : "Županija područja postrojenja",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:desCounty/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 175
 }, {
   "suppressSorting" : true,
   "headerName" : "Općina područja postrojenja",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:desMunicipality/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 120
 }, {
   "suppressSorting" : true,
   "headerName" : "OIB",
-  "xpath" : [ "bifisic_cide:company/bifisic_cide:Company/bifisic_cide:oib/text()" ],
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:company/bifisic_cide:Company/bifisic_cide:oib/text()" ],
   "type" : 2
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv tvrtke",
-  "xpath" : [ "bifisic_cide:company/bifisic_cide:Company/bifisic_cide:companyName/text()" ],
-  "type" : 2
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:company/bifisic_cide:Company/bifisic_cide:companyName/text()" ],
+  "type" : 2,
+  "width" : 250
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv područja postrojenja",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:establishmentName/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 175
 }, {
   "suppressSorting" : true,
   "headerName" : "HAOP ID područja postrojenja",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCAEN/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 120
 }, {
   "suppressSorting" : true,
   "headerName" : "Adresa područja postrojenja",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:address/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 175
 }, {
   "suppressSorting" : true,
   "headerName" : "E-PRTR postrojenje?",
@@ -100,18 +106,21 @@
   "headerName" : "Datum odobrenja PSVN",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:mapp/text()" ],
   "dateFormat" : "DD/MM/YYYY",
-  "type" : 2
+  "type" : 2,
+  "width" : 80
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum inspekcijskog nadzora",
   "xpath" : [ "bifisic_cide:InspectionDate/text()" ],
   "dateFormat" : "DD/MM/YYYY",
-  "type" : 2
+  "type" : 2,
+  "width" : 80
 }, {
   "suppressSorting" : true,
   "headerName" : "Koordinator inspekcijskog nadzora",
   "xpath" : [ "bifisic_cide:coordinatorName/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 120
 }, {
   "suppressSorting" : true,
   "headerName" : "Ostale vrste nadzora",
@@ -122,11 +131,12 @@
   "headerName" : "Rezultati inspekcijskog nadzora",
   "xpath" : [ "bifisic_cide:totalScore/text()" ]
 }, {
+  "hide" : true,
   "suppressSorting" : true,
   "headerName" : "geometry",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}        ],
+}      ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
@@ -148,10 +158,11 @@
   "valueId" : "id",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:rpot_zupanija"
+      "typeName" : "bifisic_decodif:rpot_zupanija",
+      "propertyName" : "naziv"
     }
   },
-  "valueLabel" : "id"
+  "valueLabel" : "naziv"
 }, {
   "index" : 2,
   "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idMunicipality",
@@ -160,10 +171,11 @@
   "valueId" : "id",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:rpot_postanskiured"
+      "typeName" : "bifisic_decodif:rpot_postanskiured",
+      "propertyName" : "naziv"
     }
   },
-  "valueLabel" : "id"
+  "valueLabel" : "naziv"
 }, {
   "index" : 3,
   "attribute" : "bifisic_cide:company/bifisic_cide:Company/bifisic_cide:oib",
@@ -191,10 +203,11 @@
   "valueId" : " id_admin_position",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:bifisic_d_admin_position"
+      "typeName" : "bifisic_decodif:bifisic_d_admin_position",
+      "propertyName" : "des_admin_position"
     }
   },
-  "valueLabel" : " id_admin_position"
+  "valueLabel" : "des_admin_position"
 }, {
   "index" : 8,
   "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:eprtr",
@@ -231,10 +244,11 @@
   "valueId" : "id_nkd",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:bifisic_d_nkd"
+      "typeName" : "bifisic_decodif:bifisic_d_nkd",
+      "propertyName" : "des_nkd"
     }
   },
-  "valueLabel" : "id_nkd"
+  "valueLabel" : "des_nkd"
 }, {
   "index" : 11,
   "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:datamapp",
@@ -259,10 +273,11 @@
   "valueId" : "id_coordinator",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:bifisic_d_coordinator"
+      "typeName" : "bifisic_decodif:bifisic_d_coordinator",
+      "propertyName" : "coordinator_surname"
     }
   },
-  "valueLabel" : "id_coordinator"
+  "valueLabel" : "coordinator_surname"
 }, {
   "index" : 14,
   "attribute" : "bifisic_cide:totalScore",
@@ -288,10 +303,11 @@
   "valueId" : "id_inspector",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:bifisic_d_inspector"
+      "typeName" : "bifisic_decodif:bifisic_d_inspector",
+      "propertyName" : "inspector_surname"
     }
   },
-  "valueLabel" : "id_inspector"
+  "valueLabel" : "inspector_surname order by inspector_surname"
 }, {
   "index" : 17,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTotalScore",
@@ -305,10 +321,11 @@
   "valueId" : "id_criterior",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:cide_criterior"
+      "typeName" : "bifisic_decodif:cide_criterior",
+      "propertyName" : "des_criterior"
     }
   },
-  "valueLabel" : "id_criterior"
+  "valueLabel" : "des_criterior"
 }, {
   "index" : 19,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:CriterionScore/bifisic_cide:scoreNum",

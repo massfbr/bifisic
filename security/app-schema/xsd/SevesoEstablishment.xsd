@@ -50,7 +50,7 @@
 	<element name="DomEffectEstablish" type="bifisic_sevesoestablishments:DomEffectEstablishType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_Archived_Notification   id=id_Archived_Notification)-->
-	<element name="ArchivedNotifications" type="bifisic_sevesoestablishments:ArchivedNotificationsType" substitutionGroup="gml:AbstractObject" />
+	<element name="ArchivedNotification" type="bifisic_sevesoestablishments:ArchivedNotificationType" substitutionGroup="gml:AbstractObject" />
 
 	<!-- (BIFISIC_t_worst_event   id=idEvent)-->
 	<element name="WorstEvent" type="bifisic_sevesoestablishments:WorstEventType" substitutionGroup="gml:AbstractObject" />
@@ -350,7 +350,7 @@
 					<xs:element name="measurePreventingMitigating" type="bifisic_sevesoestablishments:MeasurePreventingMitigatingPropertyType"/>
 					<xs:element name="dangerousSubstance" type="bifisic_sevesoestablishments:DangerousSubstancePropertyType" maxOccurs="unbounded" />
 					<xs:element name="event" type="bifisic_sevesoestablishments:EventPropertyType" maxOccurs="unbounded" />
-					<xs:element name="archivedNotifications" type="bifisic_sevesoestablishments:ArchivedNotificationsPropertyType" maxOccurs="unbounded" />
+					<xs:element name="archivedNotification" type="bifisic_sevesoestablishments:ArchivedNotificationPropertyType" maxOccurs="unbounded" />
 					<xs:element name="worstEvent" type="bifisic_sevesoestablishments:WorstEventPropertyType" />
 					<xs:element name="worstScenario" type="bifisic_sevesoestablishments:WorstScenarioPropertyType" />
 					
@@ -1158,7 +1158,7 @@
 		</complexContent>
     </complexType>
 		
-	<complexType name="ArchivedNotificationsType">
+	<complexType name="ArchivedNotificationType">
         <complexContent>
             <extension base="gml:AbstractGMLType">
 				<sequence>
@@ -1304,9 +1304,9 @@
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
     </complexType>
 	
-	<complexType name="ArchivedNotificationsPropertyType">
+	<complexType name="ArchivedNotificationPropertyType">
         <sequence minOccurs="0">
-            <element ref="bifisic_sevesoestablishments:ArchivedNotifications" />
+            <element ref="bifisic_sevesoestablishments:ArchivedNotification" />
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup" />
         <attributeGroup ref="gml:OwnershipAttributeGroup" />
