@@ -19,11 +19,11 @@
           }/>
 
           <LabeledField label='OIB' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:company/bifisic_cides:Company/bifisic_cide:oib/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:company/bifisic_cide:Company/bifisic_cide:oib/text()")
           }/>
 
           <LabeledField label='Naziv tvrtke' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:company/bifisic_cides:Company/bifisic_cide:companyName/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:company/bifisic_cide:Company/bifisic_cide:companyName/text()")
           }/>
 
           <LabeledField label='Naziv područja postrojenja' value={
@@ -93,8 +93,16 @@
                         },
                         {
                             hide: false,
+                            headerName: 'Specific Inspection Id',
+                            width: 50.0,
+                            xpath:"bifisic_cide:SpecificInspection/bifisic_cide:idSpecificInspection/text()"
+                        }
+
+,
+                        {
+                            hide: false,
                             headerName: 'Vrsta ostalih inspekcijskog nadzora',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTypeDesc/text()"
                         }
 
@@ -102,7 +110,7 @@
                         {
                             hide: false,
                             headerName: 'Datum ostalih inspekcijskih nadzora',
-                            width: 100,
+                            width: 150.0,
                             xpath:"bifisic_cide:SpecificInspection/bifisic_cide:inspectionDate/text()"
                         }
 
@@ -110,7 +118,7 @@
                         {
                             hide: false,
                             headerName: 'Inspektor',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:SpecificInspection/bifisic_cide:inspectorName/text()"
                         }
 
@@ -118,7 +126,7 @@
                         {
                             hide: false,
                             headerName: 'Završno izvješće',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:SpecificInspection/bifisic_cide:finalReport/text()"
                         }
 
@@ -126,7 +134,7 @@
                         {
                             hide: false,
                             headerName: 'Rezultati ostalih vrsta inspekcijskih nadzora',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTotalScore/text()"
                         }
 
@@ -134,7 +142,7 @@
                         {
                             hide: false,
                             headerName: 'Vrijeme posljednje promjene',
-                            width: 100,
+                            width: 150.0,
                             xpath:"bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateDate/text()"
                         }
 
@@ -142,7 +150,7 @@
                         {
                             hide: false,
                             headerName: 'Posljednja promjena, korisnik',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName/text()"
                         }
 
@@ -158,7 +166,7 @@
                 id="CriterionScore"
                 selectedRow={model.CriterionScore}
                 wfsVersion="2.0"
-                rowSelection={"single"}
+                rowSelection={false}
                                     dependsOn={{
                         tableId: "SpecificInspection",
                         parentFeatures: model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:specificInspection"),
@@ -185,7 +193,7 @@
                         {
                             hide: false,
                             headerName: 'Opis rezultata',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_cide:CriterionScore/bifisic_cide:desScore/text()"
                         }
 
@@ -193,7 +201,7 @@
                         {
                             hide: false,
                             headerName: 'Broj rezultata',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:CriterionScore/bifisic_cide:scoreNum/text()"
                         }
 
@@ -201,7 +209,7 @@
                         {
                             hide: false,
                             headerName: 'Bilješke',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:CriterionScore/bifisic_cide:scoreNotes/text()"
                         }
 
@@ -209,7 +217,7 @@
                         {
                             hide: false,
                             headerName: 'Vrijeme posljednje promjene',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:CriterionScore/bifisic_cide:lastUpdateDate/text()"
                         }
 
@@ -217,7 +225,7 @@
                         {
                             hide: false,
                             headerName: 'Posljednja promjena, korisnik',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:CriterionScore/bifisic_cide:lastUpdateUserName/text()"
                         }
 
@@ -237,7 +245,7 @@
                 id="OpenIssue"
                 selectedRow={model.OpenIssue}
                 wfsVersion="2.0"
-                rowSelection={"single"}
+                rowSelection={false}
                                     dependsOn={{
                         tableId: "SpecificInspection",
                         parentFeatures: model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:specificInspection"),
@@ -256,7 +264,7 @@
                         {
                             hide: false,
                             headerName: 'Opis problema',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:OpenIssue/bifisic_cide:desOpenIssue/text()"
                         }
 
@@ -272,7 +280,7 @@
                         {
                             hide: false,
                             headerName: 'Inspekcijski zapisnik/mjere - rokovi',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_cide:OpenIssue/bifisic_cide:deadlineWarning/text()"
                         }
 
@@ -280,7 +288,7 @@
                         {
                             hide: false,
                             headerName: 'Inspekcijski zapisnik/mjere - provedeno',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:OpenIssue/bifisic_cide:accWarning/text()"
                         }
 
@@ -288,7 +296,7 @@
                         {
                             hide: false,
                             headerName: 'Optužni prijedlog/prekršajni nalog',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:OpenIssue/bifisic_cide:desIndictment/text()"
                         }
 
@@ -296,7 +304,7 @@
                         {
                             hide: false,
                             headerName: 'Vrijeme posljednje promjene',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:OpenIssue/bifisic_cide:lastUpdateDate/text()"
                         }
 
@@ -304,7 +312,7 @@
                         {
                             hide: false,
                             headerName: 'Posljednja promjena, korisnik',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_cide:OpenIssue/bifisic_cide:lastUpdateUserName/text()"
                         }
 

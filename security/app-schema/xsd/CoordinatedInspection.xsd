@@ -62,6 +62,8 @@
 					</xs:element>
 					<xs:element name="lastUpdateDate" type="xs:date" minOccurs="0"/>
 
+					<xs:element name="geometry" type="gml:GeometryPropertyType"/>
+
 					<!-- complex feature -->
 					<xs:element name="simplifiedSevesoEstablishment" type="bifisic_cide:SimplifiedSevesoEstablishmentPropertyType"/>
 					<xs:element name="specificInspection" type="bifisic_cide:SpecificInspectionPropertyType"/>

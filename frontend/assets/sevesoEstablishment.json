@@ -148,11 +148,12 @@
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:ClassSafetyReportApproved/text()" ],
   "type" : 2
 }, {
+  "hide" : true,
   "suppressSorting" : true,
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}       ],
+}     ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
@@ -189,14 +190,14 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_postanskiured",
-      "propertyName" : "id,naziv,zupanija",
+      "propertyName" : "naziv",
       "sortBy" : "naziv"
     }
   },
   "dependson" : {
-    "field" : "bifisic_decodif:idCounty",
+    "field" : "null:null",
     "from" : "id",
-    "to" : "zupanija"
+    "to" : "id"
   },
   "valueLabel" : "naziv"
 }, {
@@ -486,7 +487,7 @@
   "valueLabel" : "des_phenom_type"
 }, {
   "index" : 35,
-  "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:phenomTypeScenario",
+  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:phenomTypeScenario",
   "label" : "Scenarij nesreće - vrsta pojave",
   "type" : "list",
   "valueId" : "des_phenom_type",
@@ -500,22 +501,22 @@
   "valueLabel" : "des_phenom_type"
 }, {
   "index" : 36,
-  "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:likeScenario",
+  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:likeScenario",
   "label" : "Scenarij-vjerojatnost pojave [broj/god]",
   "type" : "string"
 }, {
   "index" : 37,
-  "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:maxImpactArea",
+  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:maxImpactArea",
   "label" : "Scenarij-područje učinka [m]",
   "type" : "number"
 }, {
   "index" : 38,
-  "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:assessCasualties",
+  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:assessCasualties",
   "label" : "Scenarij nesreće - procjena broja žrtava",
   "type" : "number"
 }, {
   "index" : 39,
-  "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:domHazard",
+  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:domHazard",
   "label" : "Scenarij-domino efekt",
   "type" : "list",
   "valueId" : "value",
@@ -529,7 +530,7 @@
   "valueLabel" : "name"
 }, {
   "index" : 40,
-  "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:extImpact",
+  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:extImpact",
   "label" : "Scenarij nesreće - područje učinka nesreće izvan lokacije",
   "type" : "list",
   "valueId" : "value",
@@ -543,7 +544,7 @@
   "valueLabel" : "name"
 }, {
   "index" : 41,
-  "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:FacNotified",
+  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:FacNotified",
   "label" : "Scenarij-ugrožena postrojenja obaviještena",
   "type" : "list",
   "valueId" : "value",
@@ -557,7 +558,7 @@
   "valueLabel" : "name"
 }, {
   "index" : 42,
-  "attribute" : "bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:transbImpact",
+  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:transbImpact",
   "label" : "Scenarij-prekogranični utjecaj",
   "type" : "list",
   "valueId" : "value",
@@ -569,7 +570,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-} ]
+}  ]
 
 
    }
