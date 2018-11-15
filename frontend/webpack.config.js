@@ -35,6 +35,7 @@ module.exports = {
         new NormalModuleReplacementPlugin(/WMSLayer/, path.join(__dirname, "js", "Ms2Override", "WMSLayer.js")),
         new NormalModuleReplacementPlugin(/map\/openlayers\/Feature/, path.join(__dirname, "js", "Ms2Override", "Feature.jsx")),
         new NormalModuleReplacementPlugin(/VectorLayer/, path.join(__dirname, "js", "Ms2Override", "VectorLayer.jsx")),
+        new NormalModuleReplacementPlugin(/WMSLegend/, path.join(__dirname, "js", "Ms2Override", "WMSLegend.jsx")),
         new NoErrorsPlugin()
     ],
     resolve: {
