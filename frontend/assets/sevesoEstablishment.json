@@ -190,14 +190,14 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_postanskiured",
-      "propertyName" : "naziv",
+      "propertyName" : "id,naziv,zupanija",
       "sortBy" : "naziv"
     }
   },
   "dependson" : {
-    "field" : "null:null",
+    "field" : "bifisic_sevesoestablishments:idCounty",
     "from" : "id",
-    "to" : "id"
+    "to" : "zupanija"
   },
   "valueLabel" : "naziv"
 }, {
