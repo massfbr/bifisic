@@ -305,7 +305,7 @@
                             hide: false,
                             headerName: 'Klasa posljednjeg IOS-a',
                             width: 100.0,
-                            xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:ClassSafetyReportApproved/text()"
+                            xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:classSafetyReportApproved/text()"
                         }
 
 ,
@@ -794,7 +794,8 @@
                             hide: false,
                             headerName: 'Vjerojatnost događaja  [broj/god]',
                             width: 100,
-                            xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:likeEvent/text()"
+                            xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:likeEvent/text()",
+                            toExponential: 3
                         }
 
 
@@ -1038,4 +1039,3 @@
     </Panel>
         
 </Panel>
-

@@ -13,6 +13,7 @@ const {connect} = require('react-redux');
 const {selectRows} = require('../../actions/card');
 const GridCellDate = require('../GridCellDate');
 const GridCellLink = require('../GridCellLink');
+const GridCellToExponential = require('../GridCellToExponential');
 const TemplateUtils = require('../../utils/TemplateUtils');
 const {reactCellRendererFactory} = require('ag-grid-react');
 const assign = require('object-assign');
@@ -100,7 +101,8 @@ const SiraTable = React.createClass({
                     column,
                     {field: fieldName},
                     column.dateFormat ? {cellRenderer: reactCellRendererFactory(GridCellDate)} : {},
-                    column.linkToDetail ? {onCellClicked: this.goToDetail, cellRenderer: reactCellRendererFactory(GridCellLink)} : {}
+                    column.linkToDetail ? {onCellClicked: this.goToDetail, cellRenderer: reactCellRendererFactory(GridCellLink)} : {},
+                    column.toExponential ? {cellRenderer: reactCellRendererFactory(GridCellToExponential)} : {}
                 );
             }
         }, this).filter((c) => c);
