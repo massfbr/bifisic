@@ -45,7 +45,7 @@
      "grid": {
        "root": "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment",
        "columns": [
-{
+ {
   "hide" : true,
   "id" : true,
   "headerName" : "Id",
@@ -153,7 +153,8 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}     ],
+} 
+     ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
@@ -167,7 +168,8 @@
          "outputFormat": "application/json"
        }
      },
-     "fields":[ {
+     "fields":[
+{
   "index" : 1,
   "attribute" : "bifisic_sevesoestablishments:idCounty",
   "label" : "Županija",
@@ -190,7 +192,7 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_postanskiured",
-      "propertyName" : "id,naziv,zupanija",
+      "propertyName" : "naziv",
       "sortBy" : "naziv"
     }
   },
@@ -200,7 +202,7 @@
     "to" : "zupanija"
   },
   "valueLabel" : "naziv"
-}, {
+},  {
   "index" : 3,
   "attribute" : "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:oib",
   "label" : "OIB",
@@ -352,9 +354,9 @@
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
   }
-}, {
+},  {
   "index" : 19,
-  "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:ClassSafetyReportApproved",
+  "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:classSafetyReportApproved",
   "label" : "Klasa posljednjeg IOS-a",
   "type" : "string"
 }, {
@@ -406,7 +408,7 @@
   "type" : "string"
 }, {
   "index" : 27,
-  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:HazardType (it is a concatenation field so the search have to be done with like operator (es. hazardtype like '%naviz%))'",
+  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:HazardType",
   "label" : "Opasna tvar- vrsta opasnosti",
   "type" : "string"
 }, {
@@ -437,7 +439,7 @@
   "valueLabel" : "des_category"
 }, {
   "index" : 30,
-  "attribute" : "bifisic_sevesoestablishments:classification/bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:codClassification",
+  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:classification/bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:codClassification",
   "label" : "Razvrstavanje",
   "type" : "list",
   "valueId" : "cod_classification",
@@ -570,7 +572,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}  ]
+}   ]
 
 
    }

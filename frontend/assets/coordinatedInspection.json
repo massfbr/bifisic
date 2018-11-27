@@ -151,7 +151,7 @@
        }
      },
      "fields":[ 
- {
+  {
   "index" : 1,
   "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCounty",
   "label" : "Županija područja postrojenja",
@@ -174,7 +174,7 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_postanskiured",
-      "propertyName" : "id,naziv,zupanija",
+      "propertyName" : "naziv",
       "sortBy" : "naziv"
     }
   },
@@ -213,7 +213,7 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_admin_position",
-      "propertyName" : "id_admin_position,des_admin_position",
+      "propertyName" : "des_admin_position",
       "sortBy" : "des_admin_position"
     }
   },
@@ -422,7 +422,8 @@
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName",
   "label" : "Ostali insp. nadzori - poslj. promjena, korisnik",
   "type" : "string"
-}  ]
+} 
+  ]
 
 
    }
