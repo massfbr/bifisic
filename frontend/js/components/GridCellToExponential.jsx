@@ -13,7 +13,7 @@ const GridCellToExponential = React.createClass({
         params: React.PropTypes.object.isRequired
     },
     render() {
-        return this.props.params.value!=null && this.props.params.colDef.toExponential!=null ? (<span title='{this.props.params.value}'>{Number.parseFloat(this.props.params.value.replace(',','.')).toExponential(this.props.params.colDef.toExponential)}</span>) : (<noscript/>);
+        return this.props.params.value!=null && this.props.params.colDef.toExponential!=null ? (<span title={this.props.params.value}>{Number.parseFloat(this.props.params.value.replace(',','.')).toExponential(this.props.params.colDef.toExponential)}</span>) : (<noscript/>);
     }
 });
 
