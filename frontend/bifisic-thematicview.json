@@ -103,7 +103,7 @@
           "tiled": false,
           "tileSize": 512,
           "thumbURL": "assets/img/DOF.jpg"
-		}, 
+		},
 		{
   			"type": "wms",
         "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
@@ -168,7 +168,7 @@
           "sld_version": "1.1.0"
         },
         "tileSize": 512
-  		},	
+  		},
 		{
   			"type": "wms",
         "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
@@ -197,7 +197,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "{geoserverUrl}/wms",
+        "url": "{geoserverUrl}/ows",
         "visibility": true,
   		"title": "Postrojenja u kojima su prisutne opasne tvari / Seveso Establishments",
   		"name": "bifisic_sevesoestablishments:SevesoEstablishment",
