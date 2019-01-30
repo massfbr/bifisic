@@ -28,19 +28,19 @@ public class SipraMtdTCategoriaApplDAOImpl extends GenericDAO<SipraMtdTCategoria
 	}
 
 	private final static String QUERY_PRIMARY_KEY =
-		"select * from sipra_mtd_t_categoria_appl where id_categoria_appl = :id_categoria_appl";
+		"select * from bifisic_mtd_t_category_appl where id_category_appl = :id_category_appl";
 
 	private final static String QUERY_INSERT =
-		"insert into sipra_mtd_t_categoria_appl(id_categoria_appl,fk_padre,livello,des_categoria,url_icona,object_number,view_number) values(:id_categoria_appl,:fk_padre,:livello,:des_categoria,:url_icona,:object_number,:view_number)";
+		"insert into bifisic_mtd_t_category_appl(id_category_appl,fk_parent,level,des_category,url_icon,object_number,view_number) values(:id_category_appl,:fk_parent,:level,:des_category,:url_icon,:object_number,:view_number)";
 
 	private final static String QUERY_UPDATE =
-		"update sipra_mtd_t_categoria_appl set fk_padre = :fk_padre, livello = :livello, des_categoria = :des_categoria, url_icona = :url_icona, object_number = :object_number, view_number = :view_number  where id_categoria_appl = :id_categoria_appl";
+		"update bifisic_mtd_t_category_appl set fk_parent = :fk_parent, level = :level, des_category = :des_category, url_icon = :url_icon, object_number = :object_number, view_number = :view_number  where id_category_appl = :id_category_appl";
 
 	private final static String QUERY_DELETE =
-		"delete from sipra_mtd_t_categoria_appl where  id_categoria_appl = :id_categoria_appl";
+		"delete from bifisic_mtd_t_category_appl where  id_category_appl = :id_category_appl";
 
 	private final static String SQL_COUNT_ALL =
-		"select count(*) from sipra_mtd_t_categoria_appl";
+		"select count(*) from bifisic_mtd_t_category_appl";
 
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdTCategoriaApplDAOImpl extends GenericDAO<SipraMtdTCategoria
 
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_categoria_appl";
+		return "bifisic_mtd_t_category_appl";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_categoria_appl order by id_categoria_appl";
+		return "select * from bifisic_mtd_t_category_appl order by id_category_appl";
 	}
 
 	@Override
@@ -79,24 +79,24 @@ public class SipraMtdTCategoriaApplDAOImpl extends GenericDAO<SipraMtdTCategoria
 
 	public SipraMtdTCategoriaAppl findByPK(Integer idCategoriaAppl) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", idCategoriaAppl);
+		map.put("id_category_appl", idCategoriaAppl);
 		return super.findByPK(map);
 	}
 
 	public int deleteByPK(Integer idCategoriaAppl) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", idCategoriaAppl);
+		map.put("id_category_appl", idCategoriaAppl);
 		return super.delete(getSqlDelete(), map);
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTCategoriaAppl sipraMtdTCategoriaAppl) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", sipraMtdTCategoriaAppl.getIdCategoriaAppl());
-		map.put("fk_padre", sipraMtdTCategoriaAppl.getFkPadre());
-		map.put("livello", sipraMtdTCategoriaAppl.getLivello());
-		map.put("des_categoria", sipraMtdTCategoriaAppl.getDesCategoria());
-		map.put("url_icona", sipraMtdTCategoriaAppl.getUrlIcona());
+		map.put("id_category_appl", sipraMtdTCategoriaAppl.getIdCategoriaAppl());
+		map.put("fk_parent", sipraMtdTCategoriaAppl.getFkPadre());
+		map.put("level", sipraMtdTCategoriaAppl.getLivello());
+		map.put("des_category", sipraMtdTCategoriaAppl.getDesCategoria());
+		map.put("url_icon", sipraMtdTCategoriaAppl.getUrlIcona());
 		map.put("object_number", sipraMtdTCategoriaAppl.getObjectNumber());
 		map.put("view_number", sipraMtdTCategoriaAppl.getViewNumber());
 		return map;
@@ -105,26 +105,26 @@ public class SipraMtdTCategoriaApplDAOImpl extends GenericDAO<SipraMtdTCategoria
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTCategoriaAppl sipraMtdTCategoriaAppl) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("fk_padre", sipraMtdTCategoriaAppl.getFkPadre());
-		map.put("livello", sipraMtdTCategoriaAppl.getLivello());
-		map.put("des_categoria", sipraMtdTCategoriaAppl.getDesCategoria());
-		map.put("url_icona", sipraMtdTCategoriaAppl.getUrlIcona());
+		map.put("fk_parent", sipraMtdTCategoriaAppl.getFkPadre());
+		map.put("level", sipraMtdTCategoriaAppl.getLivello());
+		map.put("des_category", sipraMtdTCategoriaAppl.getDesCategoria());
+		map.put("url_icon", sipraMtdTCategoriaAppl.getUrlIcona());
 		map.put("object_number", sipraMtdTCategoriaAppl.getObjectNumber());
 		map.put("view_number", sipraMtdTCategoriaAppl.getViewNumber());
-		map.put("id_categoria_appl", sipraMtdTCategoriaAppl.getIdCategoriaAppl());
+		map.put("id_category_appl", sipraMtdTCategoriaAppl.getIdCategoriaAppl());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdTCategoriaAppl sipraMtdTCategoriaAppl) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", sipraMtdTCategoriaAppl.getIdCategoriaAppl());
+		map.put("id_category_appl", sipraMtdTCategoriaAppl.getIdCategoriaAppl());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdTCategoriaAppl sipraMtdTCategoriaAppl) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_categoria_appl", sipraMtdTCategoriaAppl.getIdCategoriaAppl());
+		map.put("id_category_appl", sipraMtdTCategoriaAppl.getIdCategoriaAppl());
 		return map;
 	}
 
@@ -146,14 +146,14 @@ public class SipraMtdTCategoriaApplDAOImpl extends GenericDAO<SipraMtdTCategoria
 	private static void populateBean(ResultSet rs, SipraMtdTCategoriaAppl sipraMtdTCategoriaAppl) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdTCategoriaAppl.setIdCategoriaAppl(rs.getInt("id_categoria_appl")); // java.lang.Integer
+		sipraMtdTCategoriaAppl.setIdCategoriaAppl(rs.getInt("id_category_appl")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTCategoriaAppl.setIdCategoriaAppl(null); }; // not primitive number => keep null value if any
-		sipraMtdTCategoriaAppl.setFkPadre(rs.getInt("fk_padre")); // java.lang.Integer
+		sipraMtdTCategoriaAppl.setFkPadre(rs.getInt("fk_parent")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTCategoriaAppl.setFkPadre(null); }; // not primitive number => keep null value if any
-		sipraMtdTCategoriaAppl.setLivello(rs.getInt("livello")); // java.lang.Integer
+		sipraMtdTCategoriaAppl.setLivello(rs.getInt("level")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTCategoriaAppl.setLivello(null); }; // not primitive number => keep null value if any
-		sipraMtdTCategoriaAppl.setDesCategoria(rs.getString("des_categoria")); // java.lang.String
-		sipraMtdTCategoriaAppl.setUrlIcona(rs.getString("url_icona")); // java.lang.String
+		sipraMtdTCategoriaAppl.setDesCategoria(rs.getString("des_category")); // java.lang.String
+		sipraMtdTCategoriaAppl.setUrlIcona(rs.getString("url_icon")); // java.lang.String
 		sipraMtdTCategoriaAppl.setObjectNumber(rs.getInt("object_number")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTCategoriaAppl.setObjectNumber(null); }; // not primitive number => keep null value if any
 		sipraMtdTCategoriaAppl.setViewNumber(rs.getInt("view_number")); // java.lang.Integer

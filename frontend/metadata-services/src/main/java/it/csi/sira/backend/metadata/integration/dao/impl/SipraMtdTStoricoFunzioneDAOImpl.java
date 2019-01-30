@@ -28,19 +28,19 @@ public class SipraMtdTStoricoFunzioneDAOImpl extends GenericDAO<SipraMtdTStorico
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_t_storico_funzione where id_storico_funzione = :id_storico_funzione";
+		"select * from bifisic_mtd_t_function_history where id_function_history = :id_function_history";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_storico_funzione(fk_tipo_funzione,id_storico_funzione,request_url,fk_metadato) values(:fk_tipo_funzione,:id_storico_funzione,:request_url,:fk_metadato)";
+		"insert into bifisic_mtd_t_function_history(fk_function_type,id_function_history,request_url,fk_metadata) values(:fk_function_type,:id_function_history,:request_url,:fk_metadata)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_storico_funzione set fk_tipo_funzione = :fk_tipo_funzione, request_url = :request_url, fk_metadato = :fk_metadato  where id_storico_funzione = :id_storico_funzione";
+		"update bifisic_mtd_t_function_history set fk_function_type = :fk_function_type, request_url = :request_url, fk_metadata = :fk_metadata  where id_function_history = :id_function_history";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_t_storico_funzione where  id_storico_funzione = :id_storico_funzione";
+		"delete from bifisic_mtd_t_function_history where  id_function_history = :id_function_history";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_t_storico_funzione";
+		"select count(*) from bifisic_mtd_t_function_history";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdTStoricoFunzioneDAOImpl extends GenericDAO<SipraMtdTStorico
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_storico_funzione";
+		return "bifisic_mtd_t_function_history";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_storico_funzione";
+		return "select * from bifisic_mtd_t_function_history";
 	}
 
 	@Override
@@ -79,46 +79,46 @@ public class SipraMtdTStoricoFunzioneDAOImpl extends GenericDAO<SipraMtdTStorico
 
 	public SipraMtdTStoricoFunzione findByPK(Integer idStoricoFunzione) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_storico_funzione", idStoricoFunzione);
+		map.put("id_function_history", idStoricoFunzione);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idStoricoFunzione) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_storico_funzione", idStoricoFunzione);
+		map.put("id_function_history", idStoricoFunzione);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTStoricoFunzione sipraMtdTStoricoFunzione) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("fk_tipo_funzione", sipraMtdTStoricoFunzione.getFkTipoFunzione());
-		map.put("id_storico_funzione", sipraMtdTStoricoFunzione.getIdStoricoFunzione());
+		map.put("fk_function_type", sipraMtdTStoricoFunzione.getFkTipoFunzione());
+		map.put("id_function_history", sipraMtdTStoricoFunzione.getIdStoricoFunzione());
 		map.put("request_url", sipraMtdTStoricoFunzione.getRequestUrl());
-		map.put("fk_metadato", sipraMtdTStoricoFunzione.getFkMetadato());
+		map.put("fk_metadata", sipraMtdTStoricoFunzione.getFkMetadato());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTStoricoFunzione sipraMtdTStoricoFunzione) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("fk_tipo_funzione", sipraMtdTStoricoFunzione.getFkTipoFunzione());
+		map.put("fk_function_type", sipraMtdTStoricoFunzione.getFkTipoFunzione());
 		map.put("request_url", sipraMtdTStoricoFunzione.getRequestUrl());
-		map.put("fk_metadato", sipraMtdTStoricoFunzione.getFkMetadato());
-		map.put("id_storico_funzione", sipraMtdTStoricoFunzione.getIdStoricoFunzione());
+		map.put("fk_metadata", sipraMtdTStoricoFunzione.getFkMetadato());
+		map.put("id_function_history", sipraMtdTStoricoFunzione.getIdStoricoFunzione());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdTStoricoFunzione sipraMtdTStoricoFunzione) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_storico_funzione", sipraMtdTStoricoFunzione.getIdStoricoFunzione());
+		map.put("id_function_history", sipraMtdTStoricoFunzione.getIdStoricoFunzione());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdTStoricoFunzione sipraMtdTStoricoFunzione) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_storico_funzione", sipraMtdTStoricoFunzione.getIdStoricoFunzione());
+		map.put("id_function_history", sipraMtdTStoricoFunzione.getIdStoricoFunzione());
 		return map;
 	}
 
@@ -140,12 +140,12 @@ public class SipraMtdTStoricoFunzioneDAOImpl extends GenericDAO<SipraMtdTStorico
 	private static void populateBean(ResultSet rs, SipraMtdTStoricoFunzione sipraMtdTStoricoFunzione) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdTStoricoFunzione.setFkTipoFunzione(rs.getInt("fk_tipo_funzione")); // java.lang.Integer
+		sipraMtdTStoricoFunzione.setFkTipoFunzione(rs.getInt("fk_function_type")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTStoricoFunzione.setFkTipoFunzione(null); }; // not primitive number => keep null value if any
-		sipraMtdTStoricoFunzione.setIdStoricoFunzione(rs.getInt("id_storico_funzione")); // java.lang.Integer
+		sipraMtdTStoricoFunzione.setIdStoricoFunzione(rs.getInt("id_function_history")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTStoricoFunzione.setIdStoricoFunzione(null); }; // not primitive number => keep null value if any
 		sipraMtdTStoricoFunzione.setRequestUrl(rs.getString("request_url")); // java.lang.String
-		sipraMtdTStoricoFunzione.setFkMetadato(rs.getInt("fk_metadato")); // java.lang.Integer
+		sipraMtdTStoricoFunzione.setFkMetadato(rs.getInt("fk_metadata")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTStoricoFunzione.setFkMetadato(null); }; // not primitive number => keep null value if any
 	}
 

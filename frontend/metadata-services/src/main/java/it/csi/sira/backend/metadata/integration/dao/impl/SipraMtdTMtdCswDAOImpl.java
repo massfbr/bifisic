@@ -28,19 +28,19 @@ public class SipraMtdTMtdCswDAOImpl extends GenericDAO<SipraMtdTMtdCsw> implemen
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_t_mtd_csw where id_metadato = :id_metadato";
+		"select * from bifisic_mtd_t_mtd_csw where id_metadata = :id_metadata";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_mtd_csw(id_metadato,dc_identifier,titolo,testo_abstract,tipo_metadato,url_metadato_calc,bound_box_crs,bound_box_lower_corner,bound_box_upper_corner) values(:id_metadato,:dc_identifier,:titolo,:testo_abstract,:tipo_metadato,:url_metadato_calc,:bound_box_crs,:bound_box_lower_corner,:bound_box_upper_corner)";
+		"insert into bifisic_mtd_t_mtd_csw(id_metadata,dc_identifier,title,text_abstract,metadata_type,metadata_calc_url,bound_box_crs,bound_box_lower_corner,bound_box_upper_corner) values(:id_metadata,:dc_identifier,:title,:text_abstract,:metadata_type,:metadata_calc_url,:bound_box_crs,:bound_box_lower_corner,:bound_box_upper_corner)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_mtd_csw set dc_identifier = :dc_identifier, titolo = :titolo, testo_abstract = :testo_abstract, tipo_metadato = :tipo_metadato, url_metadato_calc = :url_metadato_calc, bound_box_crs = :bound_box_crs, bound_box_lower_corner = :bound_box_lower_corner, bound_box_upper_corner = :bound_box_upper_corner  where id_metadato = :id_metadato";
+		"update bifisic_mtd_t_mtd_csw set dc_identifier = :dc_identifier, title = :title, text_abstract = :text_abstract, metadata_type = :metadata_type, metadata_calc_url = :metadata_calc_url, bound_box_crs = :bound_box_crs, bound_box_lower_corner = :bound_box_lower_corner, bound_box_upper_corner = :bound_box_upper_corner  where id_metadata = :id_metadata";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_t_mtd_csw where  id_metadato = :id_metadato";
+		"delete from bifisic_mtd_t_mtd_csw where  id_metadata = :id_metadata";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_t_mtd_csw";
+		"select count(*) from bifisic_mtd_t_mtd_csw";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdTMtdCswDAOImpl extends GenericDAO<SipraMtdTMtdCsw> implemen
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_mtd_csw";
+		return "bifisic_mtd_t_mtd_csw";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_mtd_csw";
+		return "select * from bifisic_mtd_t_mtd_csw";
 	}
 
 	@Override
@@ -79,25 +79,25 @@ public class SipraMtdTMtdCswDAOImpl extends GenericDAO<SipraMtdTMtdCsw> implemen
 
 	public SipraMtdTMtdCsw findByPK(Integer idMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", idMetadato);
+		map.put("id_metadata", idMetadato);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idMetadato) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", idMetadato);
+		map.put("id_metadata", idMetadato);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTMtdCsw sipraMtdTMtdCsw) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", sipraMtdTMtdCsw.getIdMetadato());
+		map.put("id_metadata", sipraMtdTMtdCsw.getIdMetadato());
 		map.put("dc_identifier", sipraMtdTMtdCsw.getDcIdentifier());
-		map.put("titolo", sipraMtdTMtdCsw.getTitolo());
-		map.put("testo_abstract", sipraMtdTMtdCsw.getTestoAbstract());
-		map.put("tipo_metadato", sipraMtdTMtdCsw.getTipoMetadato());
-		map.put("url_metadato_calc", sipraMtdTMtdCsw.getUrlMetadatoCalc());
+		map.put("title", sipraMtdTMtdCsw.getTitolo());
+		map.put("text_abstract", sipraMtdTMtdCsw.getTestoAbstract());
+		map.put("metadata_type", sipraMtdTMtdCsw.getTipoMetadato());
+		map.put("metadata_calc_url", sipraMtdTMtdCsw.getUrlMetadatoCalc());
 		map.put("bound_box_crs", sipraMtdTMtdCsw.getBoundBoxCrs());
 		map.put("bound_box_lower_corner", sipraMtdTMtdCsw.getBoundBoxLowerCorner());
 		map.put("bound_box_upper_corner", sipraMtdTMtdCsw.getBoundBoxUpperCorner());
@@ -108,27 +108,27 @@ public class SipraMtdTMtdCswDAOImpl extends GenericDAO<SipraMtdTMtdCsw> implemen
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTMtdCsw sipraMtdTMtdCsw) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
 		map.put("dc_identifier", sipraMtdTMtdCsw.getDcIdentifier());
-		map.put("titolo", sipraMtdTMtdCsw.getTitolo());
-		map.put("testo_abstract", sipraMtdTMtdCsw.getTestoAbstract());
-		map.put("tipo_metadato", sipraMtdTMtdCsw.getTipoMetadato());
-		map.put("url_metadato_calc", sipraMtdTMtdCsw.getUrlMetadatoCalc());
+		map.put("title", sipraMtdTMtdCsw.getTitolo());
+		map.put("text_abstract", sipraMtdTMtdCsw.getTestoAbstract());
+		map.put("metadata_type", sipraMtdTMtdCsw.getTipoMetadato());
+		map.put("metadata_calc_url", sipraMtdTMtdCsw.getUrlMetadatoCalc());
 		map.put("bound_box_crs", sipraMtdTMtdCsw.getBoundBoxCrs());
 		map.put("bound_box_lower_corner", sipraMtdTMtdCsw.getBoundBoxLowerCorner());
 		map.put("bound_box_upper_corner", sipraMtdTMtdCsw.getBoundBoxUpperCorner());
-		map.put("id_metadato", sipraMtdTMtdCsw.getIdMetadato());
+		map.put("id_metadata", sipraMtdTMtdCsw.getIdMetadato());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdTMtdCsw sipraMtdTMtdCsw) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", sipraMtdTMtdCsw.getIdMetadato());
+		map.put("id_metadata", sipraMtdTMtdCsw.getIdMetadato());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdTMtdCsw sipraMtdTMtdCsw) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_metadato", sipraMtdTMtdCsw.getIdMetadato());
+		map.put("id_metadata", sipraMtdTMtdCsw.getIdMetadato());
 		return map;
 	}
 
@@ -150,13 +150,13 @@ public class SipraMtdTMtdCswDAOImpl extends GenericDAO<SipraMtdTMtdCsw> implemen
 	private static void populateBean(ResultSet rs, SipraMtdTMtdCsw sipraMtdTMtdCsw) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdTMtdCsw.setIdMetadato(rs.getInt("id_metadato")); // java.lang.Integer
+		sipraMtdTMtdCsw.setIdMetadato(rs.getInt("id_metadata")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTMtdCsw.setIdMetadato(null); }; // not primitive number => keep null value if any
 		sipraMtdTMtdCsw.setDcIdentifier(rs.getString("dc_identifier")); // java.lang.String
-		sipraMtdTMtdCsw.setTitolo(rs.getString("titolo")); // java.lang.String
-		sipraMtdTMtdCsw.setTestoAbstract(rs.getString("testo_abstract")); // java.lang.String
-		sipraMtdTMtdCsw.setTipoMetadato(rs.getString("tipo_metadato")); // java.lang.String
-		sipraMtdTMtdCsw.setUrlMetadatoCalc(rs.getString("url_metadato_calc")); // java.lang.String
+		sipraMtdTMtdCsw.setTitolo(rs.getString("title")); // java.lang.String
+		sipraMtdTMtdCsw.setTestoAbstract(rs.getString("text_abstract")); // java.lang.String
+		sipraMtdTMtdCsw.setTipoMetadato(rs.getString("metadata_type")); // java.lang.String
+		sipraMtdTMtdCsw.setUrlMetadatoCalc(rs.getString("metadata_calc_url")); // java.lang.String
 		sipraMtdTMtdCsw.setBoundBoxCrs(rs.getString("bound_box_crs")); // java.lang.String
 		sipraMtdTMtdCsw.setBoundBoxLowerCorner(rs.getString("bound_box_lower_corner")); // java.lang.String
 		sipraMtdTMtdCsw.setBoundBoxUpperCorner(rs.getString("bound_box_upper_corner")); // java.lang.String

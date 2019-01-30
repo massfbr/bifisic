@@ -28,19 +28,19 @@ public class SipraMtdTDettlogDAOImpl extends GenericDAO<SipraMtdTDettlog> implem
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_t_dettlog where id_dett_log = :id_dett_log";
+		"select * from bifisic_mtd_t_detlog where id_det_log = :id_det_log";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_dettlog(id_dett_log,fk_log,cod_errore) values(:id_dett_log,:fk_log,:cod_errore)";
+		"insert into bifisic_mtd_t_detlog(id_det_log,fk_log,cod_error) values(:id_det_log,:fk_log,:cod_error)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_dettlog set fk_log = :fk_log, cod_errore = :cod_errore  where id_dett_log = :id_dett_log";
+		"update bifisic_mtd_t_detlog set fk_log = :fk_log, cod_error = :cod_error  where id_det_log = :id_det_log";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_t_dettlog where  id_dett_log = :id_dett_log";
+		"delete from bifisic_mtd_t_detlog where  id_det_log = :id_det_log";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_t_dettlog";
+		"select count(*) from bifisic_mtd_t_detlog";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdTDettlogDAOImpl extends GenericDAO<SipraMtdTDettlog> implem
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_dettlog";
+		return "bifisic_mtd_t_detlog";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_dettlog";
+		return "select * from bifisic_mtd_t_detlog";
 	}
 
 	@Override
@@ -79,22 +79,22 @@ public class SipraMtdTDettlogDAOImpl extends GenericDAO<SipraMtdTDettlog> implem
 
 	public SipraMtdTDettlog findByPK(Integer idDettLog) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_dett_log", idDettLog);
+		map.put("id_det_log", idDettLog);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idDettLog) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_dett_log", idDettLog);
+		map.put("id_det_log", idDettLog);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTDettlog sipraMtdTDettlog) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_dett_log", sipraMtdTDettlog.getIdDettLog());
+		map.put("id_det_log", sipraMtdTDettlog.getIdDettLog());
 		map.put("fk_log", sipraMtdTDettlog.getFkLog());
-		map.put("cod_errore", sipraMtdTDettlog.getCodErrore());
+		map.put("cod_error", sipraMtdTDettlog.getCodErrore());
 		return map;
 	}
 
@@ -102,21 +102,21 @@ public class SipraMtdTDettlogDAOImpl extends GenericDAO<SipraMtdTDettlog> implem
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTDettlog sipraMtdTDettlog) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
 		map.put("fk_log", sipraMtdTDettlog.getFkLog());
-		map.put("cod_errore", sipraMtdTDettlog.getCodErrore());
-		map.put("id_dett_log", sipraMtdTDettlog.getIdDettLog());
+		map.put("cod_error", sipraMtdTDettlog.getCodErrore());
+		map.put("id_det_log", sipraMtdTDettlog.getIdDettLog());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdTDettlog sipraMtdTDettlog) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_dett_log", sipraMtdTDettlog.getIdDettLog());
+		map.put("id_det_log", sipraMtdTDettlog.getIdDettLog());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdTDettlog sipraMtdTDettlog) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_dett_log", sipraMtdTDettlog.getIdDettLog());
+		map.put("id_det_log", sipraMtdTDettlog.getIdDettLog());
 		return map;
 	}
 
@@ -138,11 +138,11 @@ public class SipraMtdTDettlogDAOImpl extends GenericDAO<SipraMtdTDettlog> implem
 	private static void populateBean(ResultSet rs, SipraMtdTDettlog sipraMtdTDettlog) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdTDettlog.setIdDettLog(rs.getInt("id_dett_log")); // java.lang.Integer
+		sipraMtdTDettlog.setIdDettLog(rs.getInt("id_det_log")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTDettlog.setIdDettLog(null); }; // not primitive number => keep null value if any
 		sipraMtdTDettlog.setFkLog(rs.getInt("fk_log")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTDettlog.setFkLog(null); }; // not primitive number => keep null value if any
-		sipraMtdTDettlog.setCodErrore(rs.getString("cod_errore")); // java.lang.String
+		sipraMtdTDettlog.setCodErrore(rs.getString("cod_error")); // java.lang.String
 	}
 
 

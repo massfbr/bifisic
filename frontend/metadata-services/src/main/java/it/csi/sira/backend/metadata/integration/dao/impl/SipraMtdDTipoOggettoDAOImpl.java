@@ -28,19 +28,19 @@ public class SipraMtdDTipoOggettoDAOImpl extends GenericDAO<SipraMtdDTipoOggetto
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_d_tipo_oggetto where id_tipo_oggetto = :id_tipo_oggetto";
+		"select * from bifisic_mtd_d_object_type where id_object_type = :id_object_type";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_d_tipo_oggetto(id_tipo_oggetto,des_tipo_oggetto) values(:id_tipo_oggetto,:des_tipo_oggetto)";
+		"insert into bifisic_mtd_d_object_type(id_object_type,des_tipo_oggetto) values(:id_object_type,:des_tipo_oggetto)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_d_tipo_oggetto set des_tipo_oggetto = :des_tipo_oggetto  where id_tipo_oggetto = :id_tipo_oggetto";
+		"update bifisic_mtd_d_object_type set des_tipo_oggetto = :des_tipo_oggetto  where id_object_type = :id_object_type";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_d_tipo_oggetto where  id_tipo_oggetto = :id_tipo_oggetto";
+		"delete from bifisic_mtd_d_object_type where  id_object_type = :id_object_type";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_d_tipo_oggetto";
+		"select count(*) from bifisic_mtd_d_object_type";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdDTipoOggettoDAOImpl extends GenericDAO<SipraMtdDTipoOggetto
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_d_tipo_oggetto";
+		return "bifisic_mtd_d_object_type";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_d_tipo_oggetto";
+		return "select * from bifisic_mtd_d_object_type";
 	}
 
 	@Override
@@ -79,20 +79,20 @@ public class SipraMtdDTipoOggettoDAOImpl extends GenericDAO<SipraMtdDTipoOggetto
 
 	public SipraMtdDTipoOggetto findByPK(Integer idTipoOggetto) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_tipo_oggetto", idTipoOggetto);
+		map.put("id_object_type", idTipoOggetto);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idTipoOggetto) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_tipo_oggetto", idTipoOggetto);
+		map.put("id_object_type", idTipoOggetto);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdDTipoOggetto sipraMtdDTipoOggetto) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_tipo_oggetto", sipraMtdDTipoOggetto.getIdTipoOggetto());
+		map.put("id_object_type", sipraMtdDTipoOggetto.getIdTipoOggetto());
 		map.put("des_tipo_oggetto", sipraMtdDTipoOggetto.getDesTipoOggetto());
 		return map;
 	}
@@ -101,20 +101,20 @@ public class SipraMtdDTipoOggettoDAOImpl extends GenericDAO<SipraMtdDTipoOggetto
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdDTipoOggetto sipraMtdDTipoOggetto) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
 		map.put("des_tipo_oggetto", sipraMtdDTipoOggetto.getDesTipoOggetto());
-		map.put("id_tipo_oggetto", sipraMtdDTipoOggetto.getIdTipoOggetto());
+		map.put("id_object_type", sipraMtdDTipoOggetto.getIdTipoOggetto());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdDTipoOggetto sipraMtdDTipoOggetto) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_tipo_oggetto", sipraMtdDTipoOggetto.getIdTipoOggetto());
+		map.put("id_object_type", sipraMtdDTipoOggetto.getIdTipoOggetto());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdDTipoOggetto sipraMtdDTipoOggetto) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_tipo_oggetto", sipraMtdDTipoOggetto.getIdTipoOggetto());
+		map.put("id_object_type", sipraMtdDTipoOggetto.getIdTipoOggetto());
 		return map;
 	}
 
@@ -136,7 +136,7 @@ public class SipraMtdDTipoOggettoDAOImpl extends GenericDAO<SipraMtdDTipoOggetto
 	private static void populateBean(ResultSet rs, SipraMtdDTipoOggetto sipraMtdDTipoOggetto) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdDTipoOggetto.setIdTipoOggetto(rs.getInt("id_tipo_oggetto")); // java.lang.Integer
+		sipraMtdDTipoOggetto.setIdTipoOggetto(rs.getInt("id_object_type")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdDTipoOggetto.setIdTipoOggetto(null); }; // not primitive number => keep null value if any
 		sipraMtdDTipoOggetto.setDesTipoOggetto(rs.getString("des_tipo_oggetto")); // java.lang.String
 	}

@@ -28,19 +28,19 @@ public class SipraMtdTParolaChiaveDAOImpl extends GenericDAO<SipraMtdTParolaChia
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_t_parola_chiave where id_parola_chiave = :id_parola_chiave";
+		"select * from bifisic_mtd_t_keyword where id_keyword = :id_keyword";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_parola_chiave(id_parola_chiave,des_parola_chiave) values(:id_parola_chiave,:des_parola_chiave)";
+		"insert into bifisic_mtd_t_keyword(id_keyword,des_keyword) values(:id_keyword,:des_keyword)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_parola_chiave set des_parola_chiave = :des_parola_chiave  where id_parola_chiave = :id_parola_chiave";
+		"update bifisic_mtd_t_keyword set des_keyword = :des_keyword  where id_keyword = :id_keyword";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_t_parola_chiave where  id_parola_chiave = :id_parola_chiave";
+		"delete from bifisic_mtd_t_keyword where  id_keyword = :id_keyword";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_t_parola_chiave";
+		"select count(*) from bifisic_mtd_t_keyword";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -49,12 +49,12 @@ public class SipraMtdTParolaChiaveDAOImpl extends GenericDAO<SipraMtdTParolaChia
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_parola_chiave";
+		return "bifisic_mtd_t_keyword";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_parola_chiave";
+		return "select * from bifisic_mtd_t_keyword";
 	}
 
 	@Override
@@ -79,42 +79,42 @@ public class SipraMtdTParolaChiaveDAOImpl extends GenericDAO<SipraMtdTParolaChia
 
 	public SipraMtdTParolaChiave findByPK(Integer idParolaChiave) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_parola_chiave", idParolaChiave);
+		map.put("id_keyword", idParolaChiave);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idParolaChiave) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_parola_chiave", idParolaChiave);
+		map.put("id_keyword", idParolaChiave);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTParolaChiave sipraMtdTParolaChiave) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_parola_chiave", sipraMtdTParolaChiave.getIdParolaChiave());
-		map.put("des_parola_chiave", sipraMtdTParolaChiave.getDesParolaChiave());
+		map.put("id_keyword", sipraMtdTParolaChiave.getIdParolaChiave());
+		map.put("des_keyword", sipraMtdTParolaChiave.getDesParolaChiave());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTParolaChiave sipraMtdTParolaChiave) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("des_parola_chiave", sipraMtdTParolaChiave.getDesParolaChiave());
-		map.put("id_parola_chiave", sipraMtdTParolaChiave.getIdParolaChiave());
+		map.put("des_keyword", sipraMtdTParolaChiave.getDesParolaChiave());
+		map.put("id_keyword", sipraMtdTParolaChiave.getIdParolaChiave());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdTParolaChiave sipraMtdTParolaChiave) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_parola_chiave", sipraMtdTParolaChiave.getIdParolaChiave());
+		map.put("id_keyword", sipraMtdTParolaChiave.getIdParolaChiave());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdTParolaChiave sipraMtdTParolaChiave) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_parola_chiave", sipraMtdTParolaChiave.getIdParolaChiave());
+		map.put("id_keyword", sipraMtdTParolaChiave.getIdParolaChiave());
 		return map;
 	}
 
@@ -136,9 +136,9 @@ public class SipraMtdTParolaChiaveDAOImpl extends GenericDAO<SipraMtdTParolaChia
 	private static void populateBean(ResultSet rs, SipraMtdTParolaChiave sipraMtdTParolaChiave) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdTParolaChiave.setIdParolaChiave(rs.getInt("id_parola_chiave")); // java.lang.Integer
+		sipraMtdTParolaChiave.setIdParolaChiave(rs.getInt("id_keyword")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTParolaChiave.setIdParolaChiave(null); }; // not primitive number => keep null value if any
-		sipraMtdTParolaChiave.setDesParolaChiave(rs.getString("des_parola_chiave")); // java.lang.String
+		sipraMtdTParolaChiave.setDesParolaChiave(rs.getString("des_keyword")); // java.lang.String
 	}
 
 

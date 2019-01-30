@@ -31,10 +31,10 @@ public class SipraMtdTSottocategoriaDAOImpl extends GenericDAO<SipraMtdTSottocat
 		"select * from sipra_mtd_t_sottocategoria where id_sottocategoria = :id_sottocategoria";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_sottocategoria(id_sottocategoria,fk_padre,des_sottocategoria,livello) values(:id_sottocategoria,:fk_padre,:des_sottocategoria,:livello)";
+		"insert into sipra_mtd_t_sottocategoria(id_sottocategoria,fk_parent,des_sottocategoria,livello) values(:id_sottocategoria,:fk_parent,:des_sottocategoria,:livello)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_sottocategoria set fk_padre = :fk_padre, des_sottocategoria = :des_sottocategoria, livello = :livello  where id_sottocategoria = :id_sottocategoria";
+		"update sipra_mtd_t_sottocategoria set fk_parent = :fk_parent, des_sottocategoria = :des_sottocategoria, livello = :livello  where id_sottocategoria = :id_sottocategoria";
 
 	private final static String QUERY_DELETE = 
 		"delete from sipra_mtd_t_sottocategoria where  id_sottocategoria = :id_sottocategoria";
@@ -93,7 +93,7 @@ public class SipraMtdTSottocategoriaDAOImpl extends GenericDAO<SipraMtdTSottocat
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTSottocategoria sipraMtdTSottocategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
 		map.put("id_sottocategoria", sipraMtdTSottocategoria.getIdSottocategoria());
-		map.put("fk_padre", sipraMtdTSottocategoria.getFkPadre());
+		map.put("fk_parent", sipraMtdTSottocategoria.getFkPadre());
 		map.put("des_sottocategoria", sipraMtdTSottocategoria.getDesSottocategoria());
 		map.put("livello", sipraMtdTSottocategoria.getLivello());
 		return map;
@@ -102,7 +102,7 @@ public class SipraMtdTSottocategoriaDAOImpl extends GenericDAO<SipraMtdTSottocat
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTSottocategoria sipraMtdTSottocategoria) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("fk_padre", sipraMtdTSottocategoria.getFkPadre());
+		map.put("fk_parent", sipraMtdTSottocategoria.getFkPadre());
 		map.put("des_sottocategoria", sipraMtdTSottocategoria.getDesSottocategoria());
 		map.put("livello", sipraMtdTSottocategoria.getLivello());
 		map.put("id_sottocategoria", sipraMtdTSottocategoria.getIdSottocategoria());
@@ -142,7 +142,7 @@ public class SipraMtdTSottocategoriaDAOImpl extends GenericDAO<SipraMtdTSottocat
 		//--- Set data from ResultSet to Bean attributes
 		sipraMtdTSottocategoria.setIdSottocategoria(rs.getInt("id_sottocategoria")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTSottocategoria.setIdSottocategoria(null); }; // not primitive number => keep null value if any
-		sipraMtdTSottocategoria.setFkPadre(rs.getInt("fk_padre")); // java.lang.Integer
+		sipraMtdTSottocategoria.setFkPadre(rs.getInt("fk_parent")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTSottocategoria.setFkPadre(null); }; // not primitive number => keep null value if any
 		sipraMtdTSottocategoria.setDesSottocategoria(rs.getString("des_sottocategoria")); // java.lang.String
 		sipraMtdTSottocategoria.setLivello(rs.getInt("livello")); // java.lang.Integer

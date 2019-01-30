@@ -26,7 +26,7 @@ public class SipraMtdTSottocategoria implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : fk_padre int4 
+    // DB : fk_parent int4 
     private Integer fkPadre;
 
     // DB : des_sottocategoria varchar 
