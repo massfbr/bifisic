@@ -1,0 +1,222 @@
+{
+  "map": {
+
+    "projection": "EPSG:3857",
+    "units": "m",
+    "center": {"x": 1500000.000, "y": 5591000.000, "crs": "EPSG:3857"},
+    "zoom": 7,
+    "maxExtent": [
+        -20037508.34, -20037508.34,
+        20037508.34, 20037508.34
+    ],
+
+    "layers":[
+	    {
+        "type": "ol",
+        "title": "None",
+        "name": "None",
+        "source": "ol",
+        "group": "background",
+        "visibility": false
+        },
+		{
+				"type": "osm",
+				"title": "Open Street Map",
+				"name": "mapnik",
+        "source": "osm",
+				"group": "background",
+        "visibility": true
+		},
+        {
+        "type": "bing",
+        "title": "Bing Aerial",
+        "name": "Aerial",
+        "source": "bing",
+        "group": "background",
+        "visibility": false
+        },
+        {
+        "type": "bing",
+        "title": "Bing Aerial With Labels",
+        "name": "AerialWithLabels",
+        "source": "bing",
+        "group": "background",
+        "visibility": false
+      },
+      {
+        "type": "google",
+        "title": "Google Satellite",
+        "name": "SATELLITE",
+        "source": "google",
+        "group": "background",
+        "visibility": false
+      },
+      {
+        "type": "google",
+        "title": "Google Hybrid",
+        "name": "HYBRID",
+        "source": "google",
+        "group": "background",
+        "visibility": false
+      },
+      {
+        "type": "tileprovider",
+        "title": "NASAGIBS Night 2012",
+        "provider": "NASAGIBS.ViirsEarthAtNight2012",
+        "name": "Night2012",
+        "source": "nasagibs",
+        "group": "background",
+        "visibility": false
+      },
+      {
+          "type": "wms",
+          "url": "http://geoportal.dgu.hr/wms?",
+          "name": "TK25",
+          "title": "Topografska karta 1:25000 / Topographic map 1: 25000",
+          "group": "background",
+          "visibility": false,
+          "format": "image/png",
+          "tiled": true,
+          "tileSize": 512,
+          "thumbURL": "assets/img/TK25.jpg"
+        },
+		    {
+          "type": "wms",
+          "url": "http://geoportal.dgu.hr/wms?",
+          "name": "HOK",
+          "title": "Hrvatska osnovna karta / Croatian base map",
+          "group": "background",
+          "visibility": false,
+          "format": "image/png",
+          "tiled": false,
+          "tileSize": 512,
+          "thumbURL": "assets/img/HOK.jpg"
+        },
+		    {
+          "type": "wms",
+          "url": "http://geoportal.dgu.hr/wms?",
+          "name": "DOF",
+          "title": "Digitalni ortofoto / Digital orthophoto",
+          "group": "background",
+          "visibility": false,
+          "format": "image/png",
+          "tiled": false,
+          "tileSize": 512,
+          "thumbURL": "assets/img/DOF.jpg"
+		}, 
+		{
+  			"type": "wms",
+        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "visibility": false,
+  			"title": "Relativna vlažnost",
+  			"name": "foi_vlaga",
+  			"group": "Meteorological and hydrological institute of Croatia",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
+        },
+        "tileSize": 512
+  		},
+		{
+  			"type": "wms",
+        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "visibility": false,
+  			"title": "Vjetar smjer",
+  			"name": "foi_vjetar_smjer",
+  			"group": "Meteorological and hydrological institute of Croatia",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
+        },
+        "tileSize": 512
+  		},
+		{
+  			"type": "wms",
+        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "visibility": false,
+  			"title": "Vjetar brzina",
+  			"name": "foi_vjetar_brzina",
+  			"group": "Meteorological and hydrological institute of Croatia",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
+        },
+        "tileSize": 512
+  		},
+		{
+  			"type": "wms",
+        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "visibility": false,
+  			"title": "Tendencija tlaka",
+  			"name": "foi_tlak_tendencija",
+  			"group": "Meteorological and hydrological institute of Croatia",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
+        },
+        "tileSize": 512
+  		},
+		{
+  			"type": "wms",
+        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "visibility": false,
+  			"title": "Tlak zraka",
+  			"name": "foi_tlak",
+  			"group": "Meteorological and hydrological institute of Croatia",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
+        },
+        "tileSize": 512
+  		},	
+		{
+  			"type": "wms",
+        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "visibility": false,
+  			"title": "Vrijeme - sve parametre",
+  			"name": "foi_all_params",
+  			"group": "Meteorological and hydrological institute of Croatia",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
+        },
+        "tileSize": 512
+  		},
+		{
+  			"type": "wms",
+        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "visibility": false,
+  			"title": "Vrijeme Stanje a Temperatura",
+  			"name": "foi_vrijeme_stanje_temp",
+  			"group": "Meteorological and hydrological institute of Croatia",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
+        },
+        "tileSize": 512
+  		},
+		{
+  			"type": "wms",
+        "url": "{geoserverUrl}/wms",
+        "visibility": true,
+  		"title": "Postrojenja u kojima su prisutne opasne tvari / Seveso Establishments",
+  		"name": "bifisic_sevesoestablishments:SevesoEstablishment",
+        "infoFormat": "application/vnd.ogc.gml/3.1.1",
+        "featureType": "sevesoEstablishment",
+        "group": "BIFISIC Informacije / Objects",
+        "format": "image/png"
+        },
+        {
+  			"type": "wms",
+        "url": "{geoserverUrl}/wms",
+        "visibility": true,
+  		"title": "Koordinirani Inspekcijski Nadzori / Coordinated Inspection",
+  		"name": "bifisic_cide:CoordinatedInspection",
+        "infoFormat": "application/vnd.ogc.gml/3.1.1",
+        "featureType": "coordinatedInspection",
+        "group": "BIFISIC Informacije / Objects",
+        "format": "image/png"
+        }
+      ]
+  }
+}
