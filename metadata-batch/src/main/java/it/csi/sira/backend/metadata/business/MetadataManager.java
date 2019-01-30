@@ -22,12 +22,23 @@ import it.csi.sira.backend.metadata.utils.Constants;
 import it.csi.sira.backend.metadata.utils.IntegratioManager;
 import it.csi.sira.backend.metadata.utils.LogFormatter;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -382,7 +393,12 @@ public class MetadataManager {
 			  cswStorico.setBoundBoxLowerCorner(csw.getBoundBoxLowerCorner());
 			  cswStorico.setBoundBoxCrs(csw.getBoundBoxCrs());
 
-			  integratioManager.getDaoManager().getMtdTStoricoMtdCswDAO().insert(cswStorico);
+			  try {
+				integratioManager.getDaoManager().getMtdTStoricoMtdCswDAO().insert(cswStorico);
+			} catch (Exception e) {
+				logger.error("exception inserting " + cswStorico.toString() + ": " + e.getMessage());
+				e.printStackTrace();
+			}
 			  integratioManager.getDaoManager().getMtdTMtdCswDAO().deleteByPK(csw.getIdMetadato());
 
 			  params = new HashMap<String, Object>();
@@ -484,7 +500,7 @@ public class MetadataManager {
    * @return the image at the specified URL
    * @throws Exception
    */
-  public void updateMetadata() throws Exception {
+  public void updateMetadata(String fileName) throws Exception {
 	final String methodName = new Object() {
 	}.getClass().getEnclosingMethod().getName();
 
@@ -510,53 +526,70 @@ public class MetadataManager {
 	}
 	// ***
 
-	params = new HashMap<String, Object>();
-	params.put("fl_active", "S");
-	List<MtdDFontedati> elencoFontiDati = integratioManager.getDaoManager().getMtdDFontedatiDAO().findByCriteria(params);
-
-	for (int f = 0; f < elencoFontiDati.size(); f++) {
-
-	  MtdDFontedati fonteDati = elencoFontiDati.get(f);
-
-	  logger.info(LogFormatter.format(className, methodName, "----------"));
-	  logger.info(LogFormatter.format(className, methodName, "URL SERVIZIO: " + fonteDati.getUrlServizio()));
-	  logger.info(LogFormatter.format(className, methodName, "----------"));
-	  logger.info(LogFormatter.format(className, methodName, "FONTE DATI: " + fonteDati.getDesFontedati() + " (" + fonteDati.getPrefissoFontedati()
-		  + ") "));
-	  logger.info(LogFormatter.format(className, methodName, "----------"));
-
-	  cswService.setUrlService(fonteDati.getUrlServizio());
-
-	  for (int i = 0; i < filterAategories.size(); i++) {
-
-		MtdRCategLingua categoria = filterAategories.get(i);
-
-		logger.info(LogFormatter.format(className, methodName, "---------: "));
-		logger.info(LogFormatter.format(className, methodName, "CATEGORIA: " + categoria.getDesCategoria()));
-		logger.info(LogFormatter.format(className, methodName, "---------: "));
-
-		try {
-		  xmlCSW = cswService.getRecords(categoria.getDesCategoria(), 1, 100000);
-		  List<CswRecord> cswRecords = cswAdapter.getCswRecords(xmlCSW, fonteDati);
-
-		  logger.info(LogFormatter.format(className, methodName, "RECORD ESTRATTI: " + cswRecords.size()));
-
-		  List<CswRecord> cswValidRecords = this.filterOnCategory(cswRecords, filterAategoriesMap);
-
-		  logger.info(LogFormatter.format(className, methodName, "RECORD VALIDI: " + cswValidRecords.size()));
-
-		  if (cswValidRecords.size() > 0) {
-			this.saveMetadata(cswValidRecords, fonteDati.getIdFontedati());
+	FileWriter writer = null;
+	try {
+	    //create a temporary file
+	    String timeLog = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+	    File logFile = new File(fileName+timeLog);
+	
+	    // This will output the full path where the file will be written to...
+	    System.out.println(logFile.getCanonicalPath());
+	
+	    writer = new FileWriter(logFile);
+	
+		params = new HashMap<String, Object>();
+		params.put("fl_active", "S");
+		List<MtdDFontedati> elencoFontiDati = integratioManager.getDaoManager().getMtdDFontedatiDAO().findByCriteria(params);
+	
+		for (int f = 0; f < elencoFontiDati.size(); f++) {
+	
+		  MtdDFontedati fonteDati = elencoFontiDati.get(f);
+	
+		  logger.info(LogFormatter.format(className, methodName, "----------"));
+		  logger.info(LogFormatter.format(className, methodName, "URL SERVIZIO: " + fonteDati.getUrlServizio()));
+		  logger.info(LogFormatter.format(className, methodName, "----------"));
+		  logger.info(LogFormatter.format(className, methodName, "FONTE DATI: " + fonteDati.getDesFontedati() + " (" + fonteDati.getPrefissoFontedati()
+			  + ") "));
+		  logger.info(LogFormatter.format(className, methodName, "----------"));
+	
+		  cswService.setUrlService(fonteDati.getUrlServizio());
+	
+		  for (int i = 0; i < filterAategories.size(); i++) {
+	
+			MtdRCategLingua categoria = filterAategories.get(i);
+	
+			logger.info(LogFormatter.format(className, methodName, "---------: "));
+			logger.info(LogFormatter.format(className, methodName, "CATEGORIA: " + categoria.getDesCategoria()));
+			logger.info(LogFormatter.format(className, methodName, "---------: "));
+	
+			try {
+			  xmlCSW = cswService.getRecords(categoria.getDesCategoria(), 1, 100000);
+			  List<CswRecord> cswRecords = cswAdapter.getCswRecords(xmlCSW, fonteDati);
+	
+			  logger.info(LogFormatter.format(className, methodName, "RECORD ESTRATTI: " + cswRecords.size()));
+	
+			  List<CswRecord> cswValidRecords = this.filterOnCategory(cswRecords, filterAategoriesMap);
+	
+			  logger.info(LogFormatter.format(className, methodName, "RECORD VALIDI: " + cswValidRecords.size()));
+	
+			  if (cswValidRecords.size() > 0) {
+				this.saveMetadata(cswValidRecords, fonteDati.getIdFontedati(), writer);
+			  }
+			} catch (Exception e) {
+			  e.printStackTrace();
+			  throw new Exception(e);
+			}
 		  }
-		} catch (Exception e) {
-		  e.printStackTrace();
-		  throw new Exception(e);
 		}
-	  }
-	}
-
-	logger.debug(LogFormatter.format(className, methodName, "END"));
+    } finally {
+        try {
+          // Close the writer regardless of what happens...
+          writer.close();
+        } catch (Exception e) {
+    }
   }
+	logger.debug(LogFormatter.format(className, methodName, "END"));
+}
 
   /**
    * filter metadata
@@ -618,7 +651,7 @@ public class MetadataManager {
    * @return void
    * @throws Exception
    */
-  public void saveMetadata(List<CswRecord> cswRecords, int idFonteDati) throws Exception {
+  public void saveMetadata(List<CswRecord> cswRecords, int idFonteDati, FileWriter writer) throws Exception {
 	final String methodName = new Object() {
 	}.getClass().getEnclosingMethod().getName();
 
@@ -720,7 +753,12 @@ public class MetadataManager {
 				beanT.setIdParolaChiave(integratioManager.getSequenceManager().getSeqMtdTParolaChiave().nextIntValue());
 				beanT.setDesParolaChiave(txtSubject);
 
-				integratioManager.getDaoManager().getMtdTParolaChiaveDAO().insert(beanT);
+				try {
+					integratioManager.getDaoManager().getMtdTParolaChiaveDAO().insert(beanT);
+				} catch (Exception e) {
+					logger.error("Exception inserting bean: " + beanT.toString(), e);
+					e.printStackTrace();
+				}
 
 				MtdRParolachiaveMtd beanR = new MtdRParolachiaveMtd();
 				beanR.setIdMetadato(cswRecord.getIdMetadato());
@@ -760,6 +798,67 @@ public class MetadataManager {
 
 			MtdTFunzione funzione = new MtdTFunzione();
 
+			// map service validation
+			// https://geoportal.zagreb.hr/Public/GUPZagreb_Public/MapServer/WMSServer?SERVICE=WMS&REQUEST=GetCapabilities
+			try {
+				if (uri.getTipo()==1) {
+					// try to send a getCapabilities
+					String url = uri.getUrl();
+					writer.write("\nverifying url " + url + "...\n");
+					if (url.contains("?")) {
+						String[] urlParams = url.split("\\?");
+						if (urlParams.length==2) {
+							if (!urlParams[1].toLowerCase().contains("service=wms")) {
+								url += "&" + "SERVICE=WMS";
+							}
+							if (!urlParams[1].toLowerCase().contains("request=getcapabilities")) {
+								url += "&" + "REQUEST=GetCapabilities";
+							}
+						} else if (urlParams.length==1) {
+							url += "SERVICE=WMS&REQUEST=GetCapabilities";
+						}
+					} else {
+						if (!url.toLowerCase().contains("service=wms") && !url.toLowerCase().contains("request=getcapabilities")) {
+							url += "?" + "SERVICE=WMS&REQUEST=GetCapabilities";
+						}
+					}
+					// try the modified url
+					writer.write("url modified in " + url + ", launching...\n");
+					CloseableHttpResponse response1 = null;
+					try {
+						CloseableHttpClient httpclient = HttpClients.createDefault();
+						HttpGet httpGet = new HttpGet(url);
+						response1 = httpclient.execute(httpGet);
+						// The underlying HTTP connection is still held by the response object
+						// to allow the response content to be streamed directly from the network socket.
+						// In order to ensure correct deallocation of system resources
+						// the user MUST call CloseableHttpResponse#close() from a finally clause.
+						// Please note that if response content is not fully consumed the underlying
+						// connection cannot be safely re-used and will be shut down and discarded
+						// by the connection manager. 
+					    writer.write(response1.getStatusLine() + "\n");
+					    HttpEntity entity1 = response1.getEntity();
+					    // do something useful with the response body
+					    // and ensure it is fully consumed
+					    EntityUtils.consume(entity1);
+					    int statusCode = response1.getStatusLine().getStatusCode();
+					    if (statusCode!=200) {
+					    	writer.write("flagging url " + url + "as disabled, status code is: " + statusCode + "\n");
+					    	uri.setTipo(99);
+					    }
+					} finally {
+					    if (response1!=null) response1.close();
+					}
+
+				}
+			} catch (Exception e) {
+				logger.error("Exception verifying service: " + uri.getUrl(), e);
+				e.printStackTrace();
+				writer.write("Exception verifying service: " + uri.getUrl() + " -> " + e.getMessage() + "\n\n");
+			}
+			
+			writer.flush();
+			
 			funzione.setIdFunzione(integratioManager.getSequenceManager().getSeqMtdTFunzione().nextIntValue());
 			funzione.setFkTipoFunzione(uri.getTipo());
 			funzione.setFkMetadato(cswRecord.getIdMetadato());
@@ -776,7 +875,7 @@ public class MetadataManager {
 	  transactionManager.rollback(transactionStatus);
 	  e.printStackTrace();
 	  throw new Exception(e);
-	}
+  }
 
 	logger.debug(LogFormatter.format(className, methodName, "END"));
   }
