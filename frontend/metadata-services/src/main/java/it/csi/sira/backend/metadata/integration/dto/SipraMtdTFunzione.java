@@ -26,10 +26,10 @@ public class SipraMtdTFunzione implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : fk_tipo_funzione int4 
+    // DB : fk_function_type int4 
     private Integer fkTipoFunzione;
 
-    // DB : fk_metadato int4 
+    // DB : fk_metadata int4 
     private Integer fkMetadato;
 
     // DB : request_url varchar 

@@ -29,19 +29,19 @@ public class SipraMtdTLogDAOImpl extends GenericDAO<SipraMtdTLog> implements Sip
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_t_log where id_log = :id_log";
+		"select * from bifisic_mtd_t_log where id_log = :id_log";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_log(id_log,des_log,data_log) values(:id_log,:des_log,:data_log)";
+		"insert into bifisic_mtd_t_log(id_log,des_log,data_log) values(:id_log,:des_log,:data_log)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_log set des_log = :des_log, data_log = :data_log  where id_log = :id_log";
+		"update bifisic_mtd_t_log set des_log = :des_log, data_log = :data_log  where id_log = :id_log";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_t_log where  id_log = :id_log";
+		"delete from bifisic_mtd_t_log where  id_log = :id_log";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_t_log";
+		"select count(*) from bifisic_mtd_t_log";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -50,12 +50,12 @@ public class SipraMtdTLogDAOImpl extends GenericDAO<SipraMtdTLog> implements Sip
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_log";
+		return "bifisic_mtd_t_log";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_log";
+		return "select * from bifisic_mtd_t_log";
 	}
 
 	@Override

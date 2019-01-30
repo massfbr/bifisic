@@ -13,13 +13,13 @@
 	<bean id="seqSipraMtdTMetadato"
 		class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
 		<constructor-arg ref="dataSource" />
-		<constructor-arg value="seq_sipra_mtd_t_metadato" />
+		<constructor-arg value="seq_bifisic_mtd_t_metadata" />
 	</bean>
 
 	<bean id="seqSipraMtdTFunzione"
 		class="org.springframework.jdbc.support.incrementer.PostgreSQLSequenceMaxValueIncrementer">
 		<constructor-arg ref="dataSource" />
-		<constructor-arg value="seq_sipra_mtd_t_funzione" />
+		<constructor-arg value="seq_bifisic_mtd_t_function" />
 	</bean>	
 
 

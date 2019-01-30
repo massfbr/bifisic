@@ -29,19 +29,19 @@ public class SipraMtdTTestiHomePageDAOImpl extends GenericDAO<SipraMtdTTestiHome
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_t_testi_home_page where id_testo = :id_testo";
+		"select * from bifisic_mtd_t_texts_home_page where id_text = :id_text";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_testi_home_page(id_testo,tipo_testo,titolo_testo,abstract_testo,data_inizio,data_fine) values(:id_testo,:tipo_testo,:titolo_testo,:abstract_testo,:data_inizio,:data_fine)";
+		"insert into bifisic_mtd_t_texts_home_page(id_text,text_type,text_title,abstract_title,start_date,end_date) values(:id_text,:text_type,:text_title,:abstract_title,:start_date,:end_date)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_testi_home_page set tipo_testo = :tipo_testo, titolo_testo = :titolo_testo, abstract_testo = :abstract_testo, data_inizio = :data_inizio, data_fine = :data_fine  where id_testo = :id_testo";
+		"update bifisic_mtd_t_texts_home_page set text_type = :text_type, text_title = :text_title, abstract_title = :abstract_title, start_date = :start_date, end_date = :end_date  where id_text = :id_text";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_t_testi_home_page where  id_testo = :id_testo";
+		"delete from bifisic_mtd_t_texts_home_page where  id_text = :id_text";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_t_testi_home_page";
+		"select count(*) from bifisic_mtd_t_texts_home_page";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -50,12 +50,12 @@ public class SipraMtdTTestiHomePageDAOImpl extends GenericDAO<SipraMtdTTestiHome
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_testi_home_page";
+		return "bifisic_mtd_t_texts_home_page";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_testi_home_page";
+		return "select * from bifisic_mtd_t_texts_home_page";
 	}
 
 	@Override
@@ -80,50 +80,50 @@ public class SipraMtdTTestiHomePageDAOImpl extends GenericDAO<SipraMtdTTestiHome
 
 	public SipraMtdTTestiHomePage findByPK(Integer idTesto) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_testo", idTesto);
+		map.put("id_text", idTesto);
 		return super.findByPK(map);		
 	}
 
 	public int deleteByPK(Integer idTesto) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_testo", idTesto);
+		map.put("id_text", idTesto);
 		return super.delete(getSqlDelete(), map);		
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTTestiHomePage sipraMtdTTestiHomePage) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_testo", sipraMtdTTestiHomePage.getIdTesto());
-		map.put("tipo_testo", sipraMtdTTestiHomePage.getTipoTesto());
-		map.put("titolo_testo", sipraMtdTTestiHomePage.getTitoloTesto());
-		map.put("abstract_testo", sipraMtdTTestiHomePage.getAbstractTesto());
-		map.put("data_inizio", sipraMtdTTestiHomePage.getDataInizio());
-		map.put("data_fine", sipraMtdTTestiHomePage.getDataFine());
+		map.put("id_text", sipraMtdTTestiHomePage.getIdTesto());
+		map.put("text_type", sipraMtdTTestiHomePage.getTipoTesto());
+		map.put("text_title", sipraMtdTTestiHomePage.getTitoloTesto());
+		map.put("abstract_title", sipraMtdTTestiHomePage.getAbstractTesto());
+		map.put("start_date", sipraMtdTTestiHomePage.getDataInizio());
+		map.put("end_date", sipraMtdTTestiHomePage.getDataFine());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTTestiHomePage sipraMtdTTestiHomePage) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("tipo_testo", sipraMtdTTestiHomePage.getTipoTesto());
-		map.put("titolo_testo", sipraMtdTTestiHomePage.getTitoloTesto());
-		map.put("abstract_testo", sipraMtdTTestiHomePage.getAbstractTesto());
-		map.put("data_inizio", sipraMtdTTestiHomePage.getDataInizio());
-		map.put("data_fine", sipraMtdTTestiHomePage.getDataFine());
-		map.put("id_testo", sipraMtdTTestiHomePage.getIdTesto());
+		map.put("text_type", sipraMtdTTestiHomePage.getTipoTesto());
+		map.put("text_title", sipraMtdTTestiHomePage.getTitoloTesto());
+		map.put("abstract_title", sipraMtdTTestiHomePage.getAbstractTesto());
+		map.put("start_date", sipraMtdTTestiHomePage.getDataInizio());
+		map.put("end_date", sipraMtdTTestiHomePage.getDataFine());
+		map.put("id_text", sipraMtdTTestiHomePage.getIdTesto());
 		return map;
 	}
 
 	public java.util.Map<String, Object> getValuesForPrimaryKey(SipraMtdTTestiHomePage sipraMtdTTestiHomePage) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_testo", sipraMtdTTestiHomePage.getIdTesto());
+		map.put("id_text", sipraMtdTTestiHomePage.getIdTesto());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForDelete(SipraMtdTTestiHomePage sipraMtdTTestiHomePage) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("id_testo", sipraMtdTTestiHomePage.getIdTesto());
+		map.put("id_text", sipraMtdTTestiHomePage.getIdTesto());
 		return map;
 	}
 
@@ -145,13 +145,13 @@ public class SipraMtdTTestiHomePageDAOImpl extends GenericDAO<SipraMtdTTestiHome
 	private static void populateBean(ResultSet rs, SipraMtdTTestiHomePage sipraMtdTTestiHomePage) throws SQLException {
 
 		//--- Set data from ResultSet to Bean attributes
-		sipraMtdTTestiHomePage.setIdTesto(rs.getInt("id_testo")); // java.lang.Integer
+		sipraMtdTTestiHomePage.setIdTesto(rs.getInt("id_text")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTTestiHomePage.setIdTesto(null); }; // not primitive number => keep null value if any
-		sipraMtdTTestiHomePage.setTipoTesto(rs.getString("tipo_testo")); // java.lang.String
-		sipraMtdTTestiHomePage.setTitoloTesto(rs.getString("titolo_testo")); // java.lang.String
-		sipraMtdTTestiHomePage.setAbstractTesto(rs.getString("abstract_testo")); // java.lang.String
-		sipraMtdTTestiHomePage.setDataInizio(rs.getDate("data_inizio")); // java.util.Date
-		sipraMtdTTestiHomePage.setDataFine(rs.getDate("data_fine")); // java.util.Date
+		sipraMtdTTestiHomePage.setTipoTesto(rs.getString("text_type")); // java.lang.String
+		sipraMtdTTestiHomePage.setTitoloTesto(rs.getString("text_title")); // java.lang.String
+		sipraMtdTTestiHomePage.setAbstractTesto(rs.getString("abstract_title")); // java.lang.String
+		sipraMtdTTestiHomePage.setDataInizio(rs.getDate("start_date")); // java.util.Date
+		sipraMtdTTestiHomePage.setDataFine(rs.getDate("end_date")); // java.util.Date
 	}
 
 

@@ -26,7 +26,7 @@ public class SipraMtdTMtdPlus implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : nr_oggetti_dataset_calc int4 
+    // DB : object_num_dataset_calc int4 
     private Integer nrOggettiDatasetCalc;
 
     // DB : fk_tipo_oggetto int4 

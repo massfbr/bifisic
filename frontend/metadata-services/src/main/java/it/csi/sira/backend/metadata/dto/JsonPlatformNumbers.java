@@ -6,7 +6,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 public class JsonPlatformNumbers {
 
 	// 1) Numero dei record gestiti e pubblicati in SIRADEC: quindi somma dei
-	// dati nr_oggetti_dataset_calc della tavola sipra_mtd_t_mtd_plus
+	// dati object_num_dataset_calc della tavola bifisic_mtd_t_mtd_plus
 	private Long siradecObject;
 
 	// 2) Numero dei WMS resi fruibili: ossia numero di dati che hanno come tipo

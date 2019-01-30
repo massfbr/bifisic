@@ -30,19 +30,19 @@ public class SipraMtdTNewsHomePageDAOImpl extends GenericDAO<SipraMtdTNewsHomePa
 	}
 
 	private final static String QUERY_PRIMARY_KEY = 
-		"select * from sipra_mtd_t_news_home_page where id_news = :id_news";
+		"select * from bifisic_mtd_t_news_home_page where id_news = :id_news";
 	
 	private final static String QUERY_INSERT = 
-		"insert into sipra_mtd_t_news_home_page(id_news,titolo_news,abstract_news,priorita,data_inizio,data_fine) values(:id_news,:titolo_news,:abstract_news,:priorita,:data_inizio,:data_fine)";
+		"insert into bifisic_mtd_t_news_home_page(id_news,title_news,abstract_news,priority,start_date,end_date) values(:id_news,:title_news,:abstract_news,:priority,:start_date,:end_date)";
 
 	private final static String QUERY_UPDATE = 
-		"update sipra_mtd_t_news_home_page set titolo_news = :titolo_news, abstract_news = :abstract_news, priorita = :priorita, data_inizio = :data_inizio, data_fine = :data_fine  where id_news = :id_news";
+		"update bifisic_mtd_t_news_home_page set title_news = :title_news, abstract_news = :abstract_news, priority = :priority, start_date = :start_date, end_date = :end_date  where id_news = :id_news";
 
 	private final static String QUERY_DELETE = 
-		"delete from sipra_mtd_t_news_home_page where  id_news = :id_news";
+		"delete from bifisic_mtd_t_news_home_page where  id_news = :id_news";
 
 	private final static String SQL_COUNT_ALL = 
-		"select count(*) from sipra_mtd_t_news_home_page";
+		"select count(*) from bifisic_mtd_t_news_home_page";
 	
 	@Override
 	public String getPrimaryKeySelect() {
@@ -51,12 +51,12 @@ public class SipraMtdTNewsHomePageDAOImpl extends GenericDAO<SipraMtdTNewsHomePa
 	
 	@Override
 	public String getTableName(){
-		return "sipra_mtd_t_news_home_page";
+		return "bifisic_mtd_t_news_home_page";
 	}
 
 	@Override
 	public String getSqlSelect() {
-		return "select * from sipra_mtd_t_news_home_page";
+		return "select * from bifisic_mtd_t_news_home_page";
 	}
 
 	@Override
@@ -95,22 +95,22 @@ public class SipraMtdTNewsHomePageDAOImpl extends GenericDAO<SipraMtdTNewsHomePa
 	public java.util.Map<String, Object> getValuesForInsert(SipraMtdTNewsHomePage sipraMtdTNewsHomePage) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
 		map.put("id_news", sipraMtdTNewsHomePage.getIdNews());
-		map.put("titolo_news", sipraMtdTNewsHomePage.getTitoloNews());
+		map.put("title_news", sipraMtdTNewsHomePage.getTitoloNews());
 		map.put("abstract_news", sipraMtdTNewsHomePage.getAbstractNews());
-		map.put("priorita", sipraMtdTNewsHomePage.getPriorita());
-		map.put("data_inizio", sipraMtdTNewsHomePage.getDataInizio());
-		map.put("data_fine", sipraMtdTNewsHomePage.getDataFine());
+		map.put("priority", sipraMtdTNewsHomePage.getPriorita());
+		map.put("start_date", sipraMtdTNewsHomePage.getDataInizio());
+		map.put("end_date", sipraMtdTNewsHomePage.getDataFine());
 		return map;
 	}
 
 	@Override
 	public java.util.Map<String, Object> getValuesForUpdate(SipraMtdTNewsHomePage sipraMtdTNewsHomePage) {
 		java.util.Map<String, Object> map = new java.util.HashMap<String, Object>();
-		map.put("titolo_news", sipraMtdTNewsHomePage.getTitoloNews());
+		map.put("title_news", sipraMtdTNewsHomePage.getTitoloNews());
 		map.put("abstract_news", sipraMtdTNewsHomePage.getAbstractNews());
-		map.put("priorita", sipraMtdTNewsHomePage.getPriorita());
-		map.put("data_inizio", sipraMtdTNewsHomePage.getDataInizio());
-		map.put("data_fine", sipraMtdTNewsHomePage.getDataFine());
+		map.put("priority", sipraMtdTNewsHomePage.getPriorita());
+		map.put("start_date", sipraMtdTNewsHomePage.getDataInizio());
+		map.put("end_date", sipraMtdTNewsHomePage.getDataFine());
 		map.put("id_news", sipraMtdTNewsHomePage.getIdNews());
 		return map;
 	}
@@ -148,12 +148,12 @@ public class SipraMtdTNewsHomePageDAOImpl extends GenericDAO<SipraMtdTNewsHomePa
 		//--- Set data from ResultSet to Bean attributes
 		sipraMtdTNewsHomePage.setIdNews(rs.getInt("id_news")); // java.lang.Integer
 		if ( rs.wasNull() ) { sipraMtdTNewsHomePage.setIdNews(null); }; // not primitive number => keep null value if any
-		sipraMtdTNewsHomePage.setTitoloNews(rs.getString("titolo_news")); // java.lang.String
+		sipraMtdTNewsHomePage.setTitoloNews(rs.getString("title_news")); // java.lang.String
 		sipraMtdTNewsHomePage.setAbstractNews(rs.getString("abstract_news")); // java.lang.String
-		sipraMtdTNewsHomePage.setPriorita(rs.getBigDecimal("priorita")); // java.math.BigDecimal
+		sipraMtdTNewsHomePage.setPriorita(rs.getBigDecimal("priority")); // java.math.BigDecimal
 		if ( rs.wasNull() ) { sipraMtdTNewsHomePage.setPriorita(null); }; // not primitive number => keep null value if any
-		sipraMtdTNewsHomePage.setDataInizio(rs.getDate("data_inizio")); // java.util.Date
-		sipraMtdTNewsHomePage.setDataFine(rs.getDate("data_fine")); // java.util.Date
+		sipraMtdTNewsHomePage.setDataInizio(rs.getDate("start_date")); // java.util.Date
+		sipraMtdTNewsHomePage.setDataFine(rs.getDate("end_date")); // java.util.Date
 	}
 
 

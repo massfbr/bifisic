@@ -20,13 +20,13 @@ public class SipraMtdTCategoriaAppl implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_categoria_appl int4 
+    // DB : id_category_appl int4 
     private Integer idCategoriaAppl;
 
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    // DB : fk_padre int4 
+    // DB : fk_parent int4 
     private Integer fkPadre;
 
     // DB : livello int4 

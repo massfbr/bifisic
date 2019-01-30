@@ -20,9 +20,9 @@ public class SipraMtdRCategappCategori implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    // DB : id_categoria_appl int4 
+    // DB : id_category_appl int4 
     private Integer idCategoriaAppl;
-    // DB : id_categoria int4 
+    // DB : id_category int4 
     private Integer idCategoria;
 
     //----------------------------------------------------------------------

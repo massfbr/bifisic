@@ -64,7 +64,7 @@ public class MetadataManager {
 	  query = integratioManager.getQueries().getProperty("GET_FUNCTION_OBJECT_NUMBER");
 
 	  params = new HashMap<String, Object>();
-	  params.put("fk_tipo_funzione", Constants.FUNZIONE_MAPPA);
+	  params.put("fk_function_type", Constants.FUNZIONE_MAPPA);
 	  List<Long> functionObjectMapNumber = integratioManager.getDaoManager().getSipraMtdTFunzioneDAO()
 		  .findByGenericCriteria(query, new LongRowMapper(), params);
 
@@ -73,7 +73,7 @@ public class MetadataManager {
 	  }
 
 	  params = new HashMap<String, Object>();
-	  params.put("fk_tipo_funzione", Constants.FUNZIONE_CERCA);
+	  params.put("fk_function_type", Constants.FUNZIONE_CERCA);
 	  List<Long> functionObjectSearchNumber = integratioManager.getDaoManager().getSipraMtdTFunzioneDAO()
 		  .findByGenericCriteria(query, new LongRowMapper(), params);
 
@@ -82,7 +82,7 @@ public class MetadataManager {
 	  }
 
 	  params = new HashMap<String, Object>();
-	  params.put("fk_tipo_funzione", Constants.FUNZIONE_VISTA);
+	  params.put("fk_function_type", Constants.FUNZIONE_VISTA);
 	  List<Long> functionObjectViewNumber = integratioManager.getDaoManager().getSipraMtdTFunzioneDAO()
 		  .findByGenericCriteria(query, new LongRowMapper(), params);
 
@@ -108,7 +108,7 @@ public class MetadataManager {
 	Logger.getLogger(Constants.LOGGER).debug(LogFormatter.format(className, methodName, "BEGIN"));
 
 	Map<String, Object> params = new HashMap<String, Object>();
-	params.put("id_metadato", idMetadato);
+	params.put("id_metadata", idMetadato);
 	JsonInfoBox jsonInfoBox = new JsonInfoBox();
 
 	try {
@@ -130,8 +130,8 @@ public class MetadataManager {
 		  jsonInfoBox.setUrlMetadatoCalc(elementiInfoBox.get(0).getUrlMetadatoCalc());
 
 		  params = new HashMap<String, Object>();
-		  params.put("fk_metadato", idMetadato);
-		  params.put("fk_tipo_funzione", Constants.FUNZIONE_MAPPA);
+		  params.put("fk_metadata", idMetadato);
+		  params.put("fk_function_type", Constants.FUNZIONE_MAPPA);
 		  List<SipraMtdTFunzione> functionWMS = integratioManager.getDaoManager().getSipraMtdTFunzioneDAO().findByCriteria(params);
 
 		  if (functionWMS != null && functionWMS.size() > 0) {
@@ -144,8 +144,8 @@ public class MetadataManager {
 		  }
 
 		  params = new HashMap<String, Object>();
-		  params.put("fk_metadato", idMetadato);
-		  params.put("fk_tipo_funzione", Constants.FUNZIONE_DOWNLOAD);
+		  params.put("fk_metadata", idMetadato);
+		  params.put("fk_function_type", Constants.FUNZIONE_DOWNLOAD);
 		  List<SipraMtdTFunzione> functionWFS = integratioManager.getDaoManager().getSipraMtdTFunzioneDAO().findByCriteria(params);
 
 		  if (functionWFS != null && functionWFS.size() > 0) {
@@ -186,7 +186,7 @@ public class MetadataManager {
 	  news = integratioManager
 		  .getDaoManager()
 		  .getSipraMtdTNewsHomePageDAO()
-		  .findByGenericCriteria("select * from sipra_mtd_t_news_home_page where data_fine is null order by priorita desc, data_inizio desc",
+		  .findByGenericCriteria("select * from bifisic_mtd_t_news_home_page where end_date is null order by priority desc, start_date desc",
 			  integratioManager.getDaoManager().getSipraMtdTNewsHomePageDAO().getRowMapper(), params);
 
 	} catch (Exception e) {
@@ -228,7 +228,7 @@ public class MetadataManager {
 	  note = integratioManager
 		  .getDaoManager()
 		  .getSipraMtdTTestiHomePageDAO()
-		  .findByGenericCriteria("select * from sipra_mtd_t_testi_home_page where data_fine is null order by data_inizio desc",
+		  .findByGenericCriteria("select * from bifisic_mtd_t_texts_home_page where end_date is null order by start_date desc",
 			  integratioManager.getDaoManager().getSipraMtdTTestiHomePageDAO().getRowMapper(), params);
 
 	} catch (Exception e) {
@@ -303,7 +303,7 @@ public class MetadataManager {
 	Map<String, Object> params = null;
 
 	params = new HashMap<String, Object>();
-	params.put("livello", 1);
+	params.put("level", 1);
 
 	List<SipraMtdTCategoriaAppl> allFirstCategories = null;
 
@@ -393,11 +393,11 @@ public class MetadataManager {
 		appCategory.setTitle(appCat.getDesCategoria());
 
 	  } else {
-		throw new MetadataManagerException("Category not found in sipra_mtd_t_sottocategoria!!");
+		throw new MetadataManagerException("Category not found in bifisic_mtd_t_subcategory!!");
 	  }
 
 	  params = new HashMap<String, Object>();
-	  params.put("fk_padre", idCategoria);
+	  params.put("fk_parent", idCategoria);
 	  List<SipraMtdTCategoriaAppl> appCategories = integratioManager.getDaoManager().getSipraMtdTCategoriaApplDAO().findByCriteria(params);
 
 	  if (appCategories != null && appCategories.size() > 0) {
@@ -416,7 +416,7 @@ public class MetadataManager {
 			appCategory.setTematicViewCounter(appCategory.getCategories()[c].getTematicViewCounter() + appCategory.getTematicViewCounter());
 		  }
 		}
-
+		
 	  } else {
 
 		appCategory.setCategories(getMetaCategories(idCategoria, text, type));
@@ -449,7 +449,7 @@ public class MetadataManager {
 
 	Map<String, Object> params = null;
 	params = new HashMap<String, Object>();
-	params.put("id_categoria_appl", idCategoria);
+	params.put("id_category_appl", idCategoria);
 
 	try {
 
@@ -526,7 +526,7 @@ public class MetadataManager {
 
 	if (text != null && !text.equals("")) {
 
-	  params.put("id_categoria", idCategory);
+	  params.put("id_category", idCategory);
 	  text = text.trim();
 	  text = text.replace(' ', '%');
 	  text = "%"+text+"%";
@@ -536,7 +536,7 @@ public class MetadataManager {
 	  query = integratioManager.getQueries().getProperty("GET_METADATA_OBJECTS_BY_ID_CATEDORIA_AND_TEXT");
 
 	} else {
-	  params.put("id_categoria", idCategory);
+	  params.put("id_category", idCategory);
 	  query = integratioManager.getQueries().getProperty("GET_METADATA_OBJECTS_BY_ID_CATEGORIA");
 	}
 
@@ -594,13 +594,13 @@ public class MetadataManager {
 
 	if (text != null && !text.equals("")) {
 
-	  params.put("id_categoria", idCategory);
+	  params.put("id_category", idCategory);
 	  params.put("text", "%" + text.trim() + "%");
 
 	  query = integratioManager.getQueries().getProperty("GET_METADATA_VIEWS_BY_ID_CATEDORIA_AND_TEXT");
 
 	} else {
-	  params.put("id_categoria", idCategory);
+	  params.put("id_category", idCategory);
 	  query = integratioManager.getQueries().getProperty("GET_METADATA_VIEWS_BY_ID_CATEGORIA");
 	}
 
@@ -648,7 +648,7 @@ public class MetadataManager {
 
 	Map<String, Object> params = null;
 	params = new HashMap<String, Object>();
-	params.put("fk_metadato", idMetadato);
+	params.put("fk_metadata", idMetadato);
 
 	try {
 	  List<SipraMtdTFunzione> functions = integratioManager.getDaoManager().getSipraMtdTFunzioneDAO().findByCriteria(params);
