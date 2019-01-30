@@ -24,7 +24,7 @@ const {setProfile} = require('../actions/userprofile');
 const {configureInlineMap} = require('../actions/siradec');
 const url = require('url');
 const urlQuery = url.parse(window.location.href, true).query;
-require("../components/WMSLayer.js");
+require("../components/WMSBifisicLayer.js");
 require('../../MapStore2/web/client/components/map/openlayers/plugins/OSMLayer');
 require('../../MapStore2/web/client/components/map/openlayers/plugins/GoogleLayer');
 const authParams = {

@@ -20,6 +20,7 @@ webpackConfig.plugins = [
     new NormalModuleReplacementPlugin(/map\/openlayers\/plugins\/VectorLayer/, path.join(__dirname, "js", "Ms2Override", "VectorLayer.jsx")),
     new NormalModuleReplacementPlugin(/ConfigUtils/, path.join(__dirname, "js", "utils", "ConfigUtils.js")),
     new NormalModuleReplacementPlugin(/WMSLayer/, path.join(__dirname, "js", "Ms2Override", "WMSLayer.js")),
+    new NormalModuleReplacementPlugin(/map\/openlayers\/plugins\/WMSLayer/, path.join(__dirname, "js", "Ms2Override", "WMSLayer.jsx")),
     new NormalModuleReplacementPlugin(/WMSLegend/, path.join(__dirname, "js", "Ms2Override", "WMSLegend.jsx")),
     new NormalModuleReplacementPlugin(/RecordItem/, path.join(__dirname, "js", "Ms2Override", "RecordItem.jsx")),
     new UglifyJsPlugin({

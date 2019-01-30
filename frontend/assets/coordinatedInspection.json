@@ -2,7 +2,7 @@
    "featureTypeName":"bifisic_cide:CoordinatedInspection",
    "featureTypeNameLabel":"Coordinated Inspections",
    "nameSpaces": {
-     "bifisic_cide": "http://pproo.azo.hr/bifisic/bifisic_cide/1.0"
+     "bifisic_cide": "http://pproo.azo.hr/geoserver/bifisic_cide/1.0"
    },
    "layer": {
         "type": "wms",
@@ -150,7 +150,7 @@
          "outputFormat": "application/json"
        }
      },
-     "fields":[ 
+     "fields":[
   {
   "index" : 1,
   "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCounty",
@@ -422,7 +422,7 @@
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName",
   "label" : "Ostali insp. nadzori - poslj. promjena, korisnik",
   "type" : "string"
-} 
+}
   ]
 
 
