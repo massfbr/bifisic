@@ -588,7 +588,7 @@
             "tooltip": "Query topology objects"
         },
         "metadataInfoBox": {
-            "entePA": "Government Institution",
+            "entePA": "Metadata Access Point",
             "urlWMS": "Services WMS",
             "urlWFS": "Services WFS",
             "urlMetadato": "Metadata",

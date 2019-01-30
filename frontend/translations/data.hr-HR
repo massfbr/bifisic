@@ -588,15 +588,15 @@
             "tooltip": "Query topology objects"
         },
         "metadataInfoBox": {
-            "entePA": "Government Institution",
-            "urlWMS": "Services WMS",
-            "urlWFS": "Services WFS",
-            "urlMetadato": "Metadata",
-            "legendPanelTitle": "Legend",
-            "errorLoadMetadata": "There was an error loading records from the metadata service.",
-            "panelTitle": "Infobox",
-            "link_to_metadata": "Open Metadata",
-            "link_to_ogc_service": "Go to service"
+            "entePA": "Pristupna točka metapodacima",
+            "urlWMS": "WMS usluge",
+            "urlWFS": "WFS usluge",
+            "urlMetadato": "Metapodaci",
+            "legendPanelTitle": "Legenda",
+            "errorLoadMetadata": "Greška servisa metapodataka prilikom učitavanja zapisa",
+            "panelTitle": "Informacije",
+            "link_to_metadata": "Otvoreni metapodaci	",
+            "link_to_ogc_service": "Poveznica na servis"
         },
         "loginpanel": {
             "okButton": "go",
