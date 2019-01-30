@@ -18,9 +18,14 @@ public class Main {
 	ApplicationContext ctx = new ClassPathXmlApplicationContext("application-context.xml");
 	MetadataManager metadataManager = (MetadataManager) ctx.getBean("metadataManager");
 
+	String fileName = "/tmp/metadata-batch-services-";
+	if (args.length>0) {
+		fileName = args[0];
+	}
+	
 	try {
 
-	  metadataManager.updateMetadata();
+	  metadataManager.updateMetadata(fileName);
 
 	  metadataManager.moveOldMetadata();
 
