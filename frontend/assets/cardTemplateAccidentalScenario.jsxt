@@ -1,0 +1,189 @@
+<Panel
+    bsStyle="primary"
+    header={(
+        <DetailTitle title='Detail form / Obrazac s detaljnim podacima'
+        	subtitle={['']}
+			/>
+    )}>
+
+
+
+    <Panel className="template">
+
+                <Section header='INFORMACIJE O PODRUČJU POSTROJENJA' eventKey='1' expanded={true}>
+          
+                    <LabeledField label='Županija područja postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_county/text()")
+          }/>
+
+          <LabeledField label='Općina područja postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_Municipality/text()")
+          }/>
+
+          <LabeledField label='OIB' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:oib/text()")
+          }/>
+
+          <LabeledField label='Naziv tvrtke' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:company_name/text()")
+          }/>
+
+          <LabeledField label='Naziv područja postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:establishment_name/text()")
+          }/>
+
+          <LabeledField label='HAOP ID broj područja postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_caen/text()")
+          }/>
+
+          <LabeledField label='E-PRTR postrojenje?' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:eprtr/text()")
+          }/>
+
+          <LabeledField label='IED postrojenje?' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:ied/text()")
+          }/>
+
+
+
+        </Section>
+
+        <Section header='SCENARIJ NESREC' eventKey='2' expanded={true}>
+          
+                  <Section header='Događaj' eventKey='3' expanded={true}>
+          
+                    <LabeledField label='Id Događaj' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_event/text()")
+          }/>
+
+          <LabeledField label='Događaj' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:name_event/text()")
+          }/>
+
+          <LabeledField label='Opis' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_event/text()")
+          }/>
+
+          <LabeledField label='Uključena tvar/mješavina' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:substance_event/text()")
+          }/>
+
+          <LabeledField label='Vjerojatnost događaja  [broj/god]' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:like_event/text()")
+          }/>
+
+
+
+        </Section>
+
+        <Section header='Izvor opasnosti' eventKey='4' expanded={true}>
+          
+                    <LabeledField label='Id Događaji' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_event/text()")
+          }/>
+
+          <LabeledField label='Opis' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_hazard_source/text()")
+          }/>
+
+
+
+        </Section>
+
+        <Section header='Scenarij' eventKey='5' expanded={true}>
+          
+                    <LabeledField label='Id Događaji' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_event/text()")
+          }/>
+
+          <LabeledField label='Id Scenarij' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_scenario/text()")
+          }/>
+
+          <LabeledField label='Vrsta pojave' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_phenom_type/text()")
+          }/>
+
+          <LabeledField label='Vjerojatnost događaja (broj/god)' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:like_scenario/text()")
+          }/>
+
+          <LabeledField label='Najgori scenarij' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:worst_scenario/text()")
+          }/>
+
+          <LabeledField label='Procjena broja žrtava' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:assess_casualties/text()")
+          }/>
+
+          <LabeledField label='Scenarij - vrsta ozbiljnosti' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_severity/text()")
+          }/>
+
+          <LabeledField label='Scenarij - radijus  (m)' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:radius/text()")
+          }/>
+
+          <LabeledField label='Područje domino efekta  [m]' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:dom_area/text()")
+          }/>
+
+          <LabeledField label='Područje učinka izvan područja postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:ext_impact/text()")
+          }/>
+
+          <LabeledField label='Scenarij-obaviještena ugrožena postrojenja' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:fac_notified/text()")
+          }/>
+
+
+
+        </Section>
+
+
+
+        </Section>
+
+        <Section header='Accidental Scenarios on OpenStreetMap background courtesy by http://www.openstreetmap.org' eventKey='6' expanded={true}>
+	      <MappaScheda
+	              center={
+	                      model.getValue({
+	                          type: TemplateUtils.GEOMETRY_TYPE,
+	                          xpath: "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:geometry/gml:Polygon/gml:outerBoundaryIs/gml:LinearRing/gml:coordinates/text()"
+	                      })
+	              }
+	              layers={[
+	                      {
+					          "type": "osm",
+					          "title": "Open Street Map",
+					          "name": "mapnik",
+	                          "source": "osm",
+					          "group": "background",
+	                          "visibility": true
+				          },
+	                      {
+	                          "type": "wms",
+	                          "url": "{geoserverUrl}/wms",
+	                          "visibility": true,
+	                          "title": "Accidental Scenarios Preview",
+	                          "name": "bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
+	                          "group": "Overlays",
+	                          "format": "image/png"
+	                      }
+	              ]}
+	              authParam={model.authParam}
+	              withMap={model.withMap}/>
+	              
+        </Section>
+	              
+        <Section header='META PODACI' eventKey='7' expanded={true}>
+          
+          
+
+        </Section>
+
+
+
+    </Panel>
+        
+</Panel>

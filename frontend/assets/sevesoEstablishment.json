@@ -12,10 +12,10 @@
         "name": "bifisic_sevesoestablishments:SevesoEstablishment",
         "infoFormat": "application/vnd.ogc.gml/3.1.1",
         "topologyConfig": {
-            "wfsUrl": "http://geomap.reteunitaria.piemonte.it/ws/siradec/rp-01/siradecwfs/wfs_srrqa_zones_airquality?srsName=EPSG:4326",
+            "wfsUrl": "",
             "wfsVersion": "1.1.0",
-            "layerName": "ZONES_IPR",
-            "layerTitle": "Zonizzazione qualita' dell'aria vigente",
+            "layerName": "",
+            "layerTitle": "",
             "geomAttribute": "msGeometry",
             "geometryType": "Polygon"
         },
@@ -439,14 +439,14 @@
   "valueLabel" : "des_category"
 }, {
   "index" : 30,
-  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:classification/bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:codClassification",
+  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:classification/bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:idClassification",
   "label" : "Razvrstavanje",
   "type" : "list",
-  "valueId" : "cod_classification",
+  "valueId" : "id_classification",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_classification",
-      "propertyName" : "des_classification",
+      "propertyName" : "id_classification,des_classification",
       "sortBy" : "des_classification"
     }
   },
