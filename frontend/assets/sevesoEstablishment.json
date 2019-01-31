@@ -2,7 +2,7 @@
    "featureTypeName":"bifisic_sevesoestablishments:SevesoEstablishment",
    "featureTypeNameLabel":"Seveso Establishments",
    "nameSpaces": {
-     "bifisic_sevesoestablishments": "http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"
+     "bifisic_sevesoestablishments": "http://pproo.azo.hr/bifisic/bifisic_sevesoestablishments/1.0"
    },
    "layer": {
         "type": "wms",
@@ -153,10 +153,10 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}
+} 
      ],
        "exporter":{
-         "addFile":""
+         "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
      }
    },

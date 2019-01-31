@@ -173,13 +173,14 @@
       "propertyName" : "naziv",
       "sortBy" : "naziv"
     }
-  }
+  },
+  "valueLabel" : "naziv"
 }, {
   "index" : 2,
-  "attribute" : "bifisic_sevesoestablishments:desMunicipality",
+  "attribute" : "bifisic_sevesoestablishments:des_municipality",
   "label" : "Općina",
   "type" : "list",
-  "valueId" : "id",
+  "valueId" : "naziv",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_municipality",
@@ -188,10 +189,11 @@
     }
   },
   "dependson" : {
-    "field" : "bifisic_sevesoestablishments:idCounty",
+    "field" : "bifisic_sevesoestablishments:id_county",
     "from" : "id",
     "to" : "zupanija"
-  }
+  },
+  "valueLabel" : "naziv"
 }, {
   "index" : 3,
   "attribute" : "bifisic_sevesoestablishments:oib",
@@ -216,12 +218,16 @@
   "index" : 7,
   "attribute" : "bifisic_sevesoestablishments:id_admin_position",
   "label" : "Administrativni položaj područja postrojenja",
+  "valueId" : "id_admin_position",
   "type" : "list",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:bifisic_d_admin_position"
+      "typeName" : "bifisic_decodif:bifisic_d_admin_position",
+      "propertyName" : "des_admin_position",
+      "sortBy" : "des_admin_position"
     }
-  }
+  },
+  "valueLabel" : "des_admin_position"
 }, {
   "index" : 8,
   "attribute" : "bifisic_sevesoestablishments:eprtr",
