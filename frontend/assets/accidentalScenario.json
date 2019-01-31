@@ -24,7 +24,7 @@
         "format": "image/png"
         },
    "geometryName": "geometry",
-   "geometryType": "Point",
+   "geometryType": "Polygon",
    "card": {
         "pdfname": "Inspection_card_{{/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:idAccidentalScenarios/text()}}.pdf",
         "template": "assets/cardTemplateAccidentalScenario.jsxt",
@@ -160,7 +160,7 @@
          "outputFormat": "application/json"
        }
      },
-     "fields":[ 
+     "fields":[
   {
   "index" : 1,
   "attribute" : "bifisic_sevesoestablishments:id_county",
@@ -365,7 +365,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}  
+}
   ]
 
 
