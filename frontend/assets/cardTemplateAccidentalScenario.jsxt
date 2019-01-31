@@ -11,7 +11,7 @@
     <Panel className="template">
 
                 <Section header='INFORMACIJE O PODRUČJU POSTROJENJA' eventKey='1' expanded={true}>
-          
+
                     <LabeledField label='Županija područja postrojenja' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_county/text()")
           }/>
@@ -49,9 +49,9 @@
         </Section>
 
         <Section header='SCENARIJ NESREC' eventKey='2' expanded={true}>
-          
+
                   <Section header='Događaj' eventKey='3' expanded={true}>
-          
+
                     <LabeledField label='Id Događaj' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_event/text()")
           }/>
@@ -77,7 +77,7 @@
         </Section>
 
         <Section header='Izvor opasnosti' eventKey='4' expanded={true}>
-          
+
                     <LabeledField label='Id Događaji' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_event/text()")
           }/>
@@ -91,7 +91,7 @@
         </Section>
 
         <Section header='Scenarij' eventKey='5' expanded={true}>
-          
+
                     <LabeledField label='Id Događaji' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_event/text()")
           }/>
@@ -149,7 +149,7 @@
 	              center={
 	                      model.getValue({
 	                          type: TemplateUtils.GEOMETRY_TYPE,
-	                          xpath: "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:geometry/gml:Polygon/gml:outerBoundaryIs/gml:LinearRing/gml:coordinates/text()"
+	                          xpath: "/gml:featureMember/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:geometry/gml:Polygon/gml:outerBoundaryIs/gml:LinearRing/gml:coordinates/text()"
 	                      })
 	              }
 	              layers={[
@@ -173,17 +173,17 @@
 	              ]}
 	              authParam={model.authParam}
 	              withMap={model.withMap}/>
-	              
+
         </Section>
-	              
+
         <Section header='META PODACI' eventKey='7' expanded={true}>
-          
-          
+
+
 
         </Section>
 
 
 
     </Panel>
-        
+
 </Panel>
