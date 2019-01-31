@@ -26,7 +26,7 @@
    "geometryName": "geometry",
    "geometryType": "Point",
    "card": {
-        "pdfname": "Inspection_card_{{/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:idCoordinatedInspection/text()}}.pdf",
+        "pdfname": "",
         "template": "assets/cardTemplateCoordinatedInspection.jsxt",
         "service": {
              "url":"{geoserverUrl}/ows?service=WFS&request=GetFeature",
