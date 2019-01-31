@@ -706,9 +706,25 @@ public class MetadataManager {
 
 		params = new HashMap<String, Object>();
 		params.put("id_metadata", cswRecord.getIdMetadato());
-		integratioManager.getDaoManager().getMtdRCategoriaMtdDAO()
-			.delete("delete from bifisic_mtd_r_category_mtd where id_metadata = :id_metadata", params);
+		
+		if (cswRecord.getIdMetadato()>=1000000) {
+			boolean stopme = true;
+		}
+		
+		//integratioManager.getDaoManager().getMtdRCategoriaMtdDAO()
+		//	.delete("delete from bifisic_mtd_r_category_mtd where id_metadata = :id_metadata", params);
 
+		integratioManager.getDaoManager().getMtdRCategoriaMtdDAO()
+		.delete("delete from bifisic_mtd_r_category_mtd where id_metadata = :id_metadata " +
+				"and id_category in " +
+				"( " +
+				"select r.id_category from bifisic_mtd_r_category_mtd r, bifisic_mtd_t_category t " +
+				"where r.id_metadata = :id_metadata " +
+				"and r.id_category=t.id_category " +
+				"and t.fk_category_type<>3 " +
+				")", params);
+		
+		
 		if (cswRecord.getSubjects() != null) {
 		  for (int s = 0; s < cswRecord.getSubjects().length; s++) {
 
@@ -784,6 +800,7 @@ public class MetadataManager {
 
 		params = new HashMap<String, Object>();
 		params.put("id_metadata", cswRecord.getIdMetadato());
+		
 		integratioManager
 			.getDaoManager()
 			.getMtdRCategoriaMtdDAO()
