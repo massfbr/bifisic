@@ -595,7 +595,7 @@
             "legendPanelTitle": "Legenda",
             "errorLoadMetadata": "Greška servisa metapodataka prilikom učitavanja zapisa",
             "panelTitle": "Informacije",
-            "link_to_metadata": "Otvoreni metapodaci	",
+            "link_to_metadata": "Otvoreni metapodaci",
             "link_to_ogc_service": "Poveznica na servis"
         },
         "loginpanel": {
