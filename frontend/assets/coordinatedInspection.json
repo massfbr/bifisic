@@ -12,10 +12,10 @@
         "name": "bifisic_cide:CoordinatedInspection",
         "infoFormat": "application/vnd.ogc.gml/3.1.1",
         "topologyConfig": {
-            "wfsUrl": "http://geomap.reteunitaria.piemonte.it/ws/siradec/rp-01/siradecwfs/wfs_srrqa_zones_airquality?srsName=EPSG:4326",
+            "wfsUrl": "",
             "wfsVersion": "1.1.0",
-            "layerName": "ZONES_IPR",
-            "layerTitle": "Zonizzazione qualita' dell'aria vigente",
+            "layerName": "",
+            "layerTitle": "",
             "geomAttribute": "msGeometry",
             "geometryType": "Polygon"
         },

@@ -1,0 +1,374 @@
+{
+   "featureTypeName":"bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
+   "featureTypeNameLabel":"Accidental Scenarios",
+   "nameSpaces": {
+     "bifisic_sevesoestablishments": "http://pproo.azo.hr/bifisic/bifisic_sevesoestablishments/1.0"
+   },
+   "layer": {
+        "type": "wms",
+        "url": "{geoserverUrl}/ows",
+        "visibility": true,
+        "title": "Accidental Scenarios",
+        "name": "bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
+        "infoFormat": "application/vnd.ogc.gml/3.1.1",
+        "topologyConfig": {
+            "wfsUrl": "",
+            "wfsVersion": "1.1.0",
+            "layerName": "",
+            "layerTitle": "",
+            "geomAttribute": "msGeometry",
+            "geometryType": "Polygon"
+        },
+        "featureType": "bifisic_geo_area_accidental_scenario",
+        "group": "Objects",
+        "format": "image/png"
+        },
+   "geometryName": "geometry",
+   "geometryType": "Point",
+   "card": {
+        "pdfname": "Inspection_card_{{/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:idAccidentalScenarios/text()}}.pdf",
+        "template": "assets/cardTemplateAccidentalScenario.jsxt",
+        "service": {
+             "url":"{geoserverUrl}/ows?service=WFS&request=GetFeature",
+                "params": {
+                   "typeName": "bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
+                    "version": "2.0",
+                    "srsName": "EPSG:4326"
+                }
+          }
+   },
+   "featureinfo":{
+     "templateURL": "assets/infoTemplateAccidentalScenario.jsxt"
+   },
+   "featuregrid": {
+     "grid": {
+       "root": "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
+       "columns": [
+ {
+  "hide" : true,
+  "id" : true,
+  "headerName" : "Id",
+  "xpath" : [ "@gml:id" ],
+  "type" : 2
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Županija postrojenja",
+  "xpath" : [ "bifisic_sevesoestablishments:des_county/text()" ],
+  "type" : 2,
+  "width" : 80
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Općina postrojenja",
+  "xpath" : [ "bifisic_sevesoestablishments:des_municipality/text()" ],
+  "type" : 2,
+  "width" : 50
+}, {
+  "suppressSorting" : true,
+  "headerName" : "OIB",
+  "xpath" : [ "bifisic_sevesoestablishments:oib/text()" ],
+  "type" : 2,
+  "width" : 30
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Naziv tvrtke",
+  "xpath" : [ "bifisic_sevesoestablishments:company_name/text()" ],
+  "type" : 2,
+  "width" : 100
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Naziv područja postrojenja",
+  "xpath" : [ "bifisic_sevesoestablishments:establishment_name/text()" ],
+  "type" : 2,
+  "width" : 150
+}, {
+  "suppressSorting" : true,
+  "headerName" : "HAOP ID područja postrojenja",
+  "xpath" : [ "bifisic_sevesoestablishments:id_caen/text()" ],
+  "type" : 2,
+  "width" : 30
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Naziv Događaj",
+  "xpath" : [ "bifisic_sevesoestablishments:name_event/text()" ],
+  "type" : 2,
+  "width" : 100
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Uključena tvar/mješavina Događaj",
+  "xpath" : [ "bifisic_sevesoestablishments:substance_event/text()" ],
+  "type" : 2,
+  "width" : 100
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Vjerojatnost događaja događaj (broj/god)",
+  "xpath" : [ "bifisic_sevesoestablishments:like_event/text()" ],
+  "type" : 2,
+  "width" : 30
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Scenarij-Vrsta pojave",
+  "xpath" : [ "bifisic_sevesoestablishments:des_phenom_type/text()" ],
+  "type" : 2,
+  "width" : 80
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Scenarij - vrsta ozbiljnosti",
+  "xpath" : [ "bifisic_sevesoestablishments:des_severity/text()" ],
+  "type" : 2,
+  "width" : 30
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Scenarij - radijus  (m)",
+  "xpath" : [ "bifisic_sevesoestablishments:radius/text()" ],
+  "type" : 2,
+  "width" : 30
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Scenarij-Vjerojatnost događaja (broj/god)",
+  "xpath" : [ "bifisic_sevesoestablishments:like_scenario/text()" ],
+  "type" : 2,
+  "width" : 30
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Scenarij-Najgori scenarij",
+  "xpath" : [ "bifisic_sevesoestablishments:worst_scenario/text()" ],
+  "type" : 2,
+  "width" : 20
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Scenarij-Procjena broja žrtava",
+  "xpath" : [ "bifisic_sevesoestablishments:assess_casualties/text()" ],
+  "type" : 2,
+  "width" : 30
+}, {
+  "suppressSorting" : true,
+  "headerName" : "Scenarij-Područje domino efekta  (m)",
+  "xpath" : [ "bifisic_sevesoestablishments:dom_area/text()" ],
+  "type" : 2,
+  "width" : 30
+}       ],
+       "exporter":{
+         "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
+       }
+     }
+   },
+   "query": {
+     "service": {
+       "url":"{geoserverUrl}/ows?service=WFS&request=GetFeature",
+       "urlParams": {
+         "version": "1.1.0",
+         "outputFormat": "application/json"
+       }
+     },
+     "fields":[ 
+  {
+  "index" : 1,
+  "attribute" : "bifisic_sevesoestablishments:id_county",
+  "label" : "Županija",
+  "type" : "list",
+  "valueId" : "id",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:rpot_zupanija",
+      "propertyName" : "naziv",
+      "sortBy" : "naziv"
+    }
+  }
+}, {
+  "index" : 2,
+  "attribute" : "bifisic_sevesoestablishments:desMunicipality",
+  "label" : "Općina",
+  "type" : "list",
+  "valueId" : "id",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_municipality",
+      "propertyName" : "naziv",
+      "sortBy" : "naziv"
+    }
+  },
+  "dependson" : {
+    "field" : "bifisic_sevesoestablishments:idCounty",
+    "from" : "id",
+    "to" : "zupanija"
+  }
+}, {
+  "index" : 3,
+  "attribute" : "bifisic_sevesoestablishments:oib",
+  "label" : "OIB",
+  "type" : "string"
+}, {
+  "index" : 4,
+  "attribute" : "bifisic_sevesoestablishments:company_name",
+  "label" : "Naziv tvrtke",
+  "type" : "string"
+}, {
+  "index" : 5,
+  "attribute" : "bifisic_sevesoestablishments:establishment_name",
+  "label" : "Naziv područja postrojenja",
+  "type" : "string"
+}, {
+  "index" : 6,
+  "attribute" : "bifisic_sevesoestablishments:id_caen",
+  "label" : "HAOP ID broj područja postrojenja",
+  "type" : "string"
+}, {
+  "index" : 7,
+  "attribute" : "bifisic_sevesoestablishments:id_admin_position",
+  "label" : "Administrativni položaj područja postrojenja",
+  "type" : "list",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_admin_position"
+    }
+  }
+}, {
+  "index" : 8,
+  "attribute" : "bifisic_sevesoestablishments:eprtr",
+  "label" : "E-PRTR postrojenje",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 9,
+  "attribute" : "bifisic_sevesoestablishments:ied",
+  "label" : "IED postrojenje",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 10,
+  "attribute" : "bifisic_sevesoestablishments:like_event",
+  "label" : "Scenarij-vjerojatnost događaja [broj/god]",
+  "type" : "string"
+}, {
+  "index" : 11,
+  "attribute" : "bifisic_sevesoestablishments:substance_event",
+  "label" : "Scenarij nesreće - tvari koje su sudjelovale u događaju",
+  "type" : "string"
+}, {
+  "index" : 12,
+  "attribute" : "bifisic_sevesoestablishments:des_phenom_type",
+  "label" : "Scenarij nesreće - vrsta pojave",
+  "type" : "list",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:bifisic_d_phenom_type_scenario"
+    }
+  }
+}, {
+  "index" : 13,
+  "attribute" : "bifisic_sevesoestablishments:like_scenario",
+  "label" : "Scenarij-vjerojatnost pojave [broj/god]",
+  "type" : "string"
+}, {
+  "index" : 14,
+  "attribute" : "bifisic_sevesoestablishments:worst_scenario",
+  "label" : "Najgori scenarij?",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 15,
+  "attribute" : "bifisic_sevesoestablishments:des_severity",
+  "label" : "Scenarij - vrsta ozbiljnosti",
+  "type" : "string"
+}, {
+  "index" : 16,
+  "attribute" : "bifisic_sevesoestablishments:radius",
+  "label" : "Scenarij - radijus  (m)",
+  "type" : "numeric"
+}, {
+  "index" : 17,
+  "attribute" : "bifisic_sevesoestablishments:max_impact_area",
+  "label" : "Scenarij-područje učinka [m]",
+  "type" : "numeric"
+}, {
+  "index" : 18,
+  "attribute" : "bifisic_sevesoestablishments:assess_casualties",
+  "label" : "Scenarij nesreće - procjena broja žrtava",
+  "type" : "numeric"
+}, {
+  "index" : 19,
+  "attribute" : "bifisic_sevesoestablishments:dom_hazard",
+  "label" : "Scenarij-domino efekt?",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 20,
+  "attribute" : "bifisic_sevesoestablishments:ext_impact",
+  "label" : "Scenarij nesreće - područje učinka nesreće izvan lokacije?",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 21,
+  "attribute" : "bifisic_sevesoestablishments:fac_notified",
+  "label" : "Scenarij-ugrožena postrojenja obaviještena?",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}, {
+  "index" : 22,
+  "attribute" : "bifisic_sevesoestablishments:transb_impact",
+  "label" : "Scenarij-prekogranični utjecaj?",
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "TRUE",
+    "value" : "true"
+  }, {
+    "name" : "FALSE",
+    "value" : "false"
+  } ],
+  "valueLabel" : "name"
+}  
+  ]
+
+
+   }
+
+}
