@@ -6,7 +6,7 @@
     onCellClicked={props.onCellClicked}
     profile={model.profile}
     columns={[
- {
+  {
   "id" : true,
   "headerName" : "''",
   "xpath" : "@gml:id",
@@ -15,27 +15,27 @@
 }, {
   "headerName" : "Županija postrojenja",
   "xpath" : "bifisic_sevesoestablishments:des_county/text()",
-  "width" : 80
+  "width" : 150
 }, {
   "headerName" : "Općina postrojenja",
   "xpath" : "bifisic_sevesoestablishments:des_municipality/text()",
-  "width" : 50
+  "width" : 100
 }, {
   "headerName" : "OIB",
   "xpath" : "bifisic_sevesoestablishments:oib/text()",
-  "width" : 30
+  "width" : 100
 }, {
   "headerName" : "Naziv tvrtke",
   "xpath" : "bifisic_sevesoestablishments:company_name/text()",
-  "width" : 100
+  "width" : 150
 }, {
   "headerName" : "Naziv područja postrojenja",
   "xpath" : "bifisic_sevesoestablishments:establishment_name/text()",
-  "width" : 150
+  "width" : 250
 }, {
   "headerName" : "HAOP ID područja postrojenja",
   "xpath" : "bifisic_sevesoestablishments:id_caen/text()",
-  "width" : 30
+  "width" : 100
 }, {
   "headerName" : "Naziv Događaj",
   "xpath" : "bifisic_sevesoestablishments:event_name/text()",
@@ -43,39 +43,39 @@
 }, {
   "headerName" : "Uključena tvar/mješavina Događaj",
   "xpath" : "bifisic_sevesoestablishments:substance_event/text()",
-  "width" : 100
+  "width" : 150
 }, {
   "headerName" : "Vjerojatnost događaja događaj (broj/god)",
   "xpath" : "bifisic_sevesoestablishments:like_event/text()",
-  "width" : 30
+  "width" : 80
 }, {
   "headerName" : "Scenarij - Vrsta pojave",
   "xpath" : "bifisic_sevesoestablishments:des_phenom_type/text()",
-  "width" : 80
+  "width" : 150
 }, {
   "headerName" : "Scenarij - vrsta ozbiljnosti",
   "xpath" : "bifisic_sevesoestablishments:des_severity/text()",
-  "width" : 30
+  "width" : 100
 }, {
   "headerName" : "Scenarij - radijus  (m)",
   "xpath" : "bifisic_sevesoestablishments:radius/text()",
-  "width" : 30
+  "width" : 100
 }, {
   "headerName" : "Scenarij - Vjerojatnost događaja (broj/god)",
   "xpath" : "bifisic_sevesoestablishments:like_scenario/text()",
-  "width" : 30
+  "width" : 100
 }, {
   "headerName" : "Scenarij - Najgori scenarij",
   "xpath" : "bifisic_sevesoestablishments:worst_scenario/text()",
-  "width" : 20
+  "width" : 100
 }, {
   "headerName" : "Scenarij - Procjena broja žrtava",
   "xpath" : "bifisic_sevesoestablishments:assess_casualties/text()",
-  "width" : 30
+  "width" : 100
 }, {
   "headerName" : "Scenarij - Područje domino efekta  (m)",
   "xpath" : "bifisic_sevesoestablishments:dom_area/text()",
-  "width" : 30
-}  
+  "width" : 100
+}   
     ]}
     features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario")}/>

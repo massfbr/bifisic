@@ -17,7 +17,7 @@
           }/>
 
           <LabeledField label='Općina područja postrojenja' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_Municipality/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_municipality/text()")
           }/>
 
           <LabeledField label='OIB' value={

@@ -1,6 +1,6 @@
 {
    "featureTypeName":"bifisic_sevesoestablishments:SevesoEstablishment",
-   "featureTypeNameLabel":"Seveso Establishments",
+   "featureTypeNameLabel":"Postrojenja u kojima su prisutne opasne tvari / Seveso Establishments",
    "nameSpaces": {
      "bifisic_sevesoestablishments": "http://pproo.azo.hr/bifisic/bifisic_sevesoestablishments/1.0"
    },
@@ -96,25 +96,25 @@
 }, {
   "suppressSorting" : true,
   "headerName" : "Administrativni položaj",
-  "xpath" : [ "bifisic_sevesoestablishments:desAdminPosition/text()" ],
+  "xpath" : [ "bifisic_sevesoestablishments:DesAdminPosition/text()" ],
   "type" : 2,
   "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Nac. djelatnost područja postrojenja",
-  "xpath" : [ "bifisic_sevesoestablishments:subActivity/text()" ],
+  "xpath" : [ "bifisic_sevesoestablishments:SubActivity/text()" ],
   "type" : 2,
   "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Uža djelatnost područja postrojenja",
-  "xpath" : [ "bifisic_sevesoestablishments:coreActivity/text()" ],
+  "xpath" : [ "bifisic_sevesoestablishments:CoreActivity/text()" ],
   "type" : 2,
   "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Obavijest provjerena",
-  "xpath" : [ "bifisic_sevesoestablishments:notificationValidated/text()" ],
+  "xpath" : [ "bifisic_sevesoestablishments:NotificationValidated/text()" ],
   "type" : 2,
   "width" : 100
 }, {
@@ -123,42 +123,42 @@
   "xpath" : [ "bifisic_sevesoestablishments:dataMAPP/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 100
+  "width" : 80
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum posljednje obavijesti",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateLastNotification/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 100
+  "width" : 80
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum posljednjeg Unutarnjeg plana",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateInternalEmergency/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 100
+  "width" : 80
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum posljednjeg Operativnog plana",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateProtectRescuePlan/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 100
+  "width" : 80
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum podnošenja odobrenog IOS-a",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateSafetyReportApproved/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 100
+  "width" : 80
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum suglasnosti na posljednji IOS",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateClassSafetyReportApproved/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 100
+  "width" : 80
 }, {
   "suppressSorting" : true,
   "headerName" : "Klasa posljednjeg IOS-a",
@@ -171,7 +171,7 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}      
+}       
      ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
@@ -201,7 +201,7 @@
     }
   },
   "valueLabel" : "naziv"
-},  {
+}, {
   "index" : 2,
   "attribute" : "bifisic_sevesoestablishments:idMunicipality",
   "label" : "Općina",
@@ -531,7 +531,7 @@
 }, {
   "index" : 37,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:maxImpactArea",
-  "label" : "Scenarij-područje učinka [m]",
+  "label" : "Scenarij-područje učinka(m)",
   "type" : "number"
 }, {
   "index" : 38,
@@ -594,7 +594,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}       ]
+}        ]
 
 
    }
