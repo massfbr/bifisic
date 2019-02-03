@@ -44,7 +44,7 @@
      "grid": {
        "root": "/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection",
        "columns": [
-{
+ {
   "hide" : true,
   "id" : true,
   "headerName" : "Id",
@@ -66,7 +66,8 @@
   "suppressSorting" : true,
   "headerName" : "OIB",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:company/bifisic_cide:Company/bifisic_cide:oib/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv tvrtke",
@@ -93,14 +94,16 @@
   "width" : 175
 }, {
   "suppressSorting" : true,
-  "headerName" : "E-PRTR postrojenje?",
+  "headerName" : "E-PRTR postrojenje",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:eprtr/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 40
 }, {
   "suppressSorting" : true,
-  "headerName" : "IED postrojenje?",
+  "headerName" : "IED postrojenje",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:ied/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 40
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum odobrenja PSVN",
@@ -111,32 +114,35 @@
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum inspekcijskog nadzora",
-  "xpath" : [ "bifisic_cide:InspectionDate/text()" ],
+  "xpath" : [ "bifisic_cide:inspectionDate/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 80
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Koordinator inspekcijskog nadzora",
   "xpath" : [ "bifisic_cide:coordinatorName/text()" ],
   "type" : 2,
-  "width" : 120
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Ostale vrste nadzora",
   "xpath" : [ "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTypeDesc/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Rezultati inspekcijskog nadzora",
-  "xpath" : [ "bifisic_cide:totalScore/text()" ]
+  "xpath" : [ "bifisic_cide:totalScore/text()" ],
+  "type" : 2,
+  "width" : 80
 }, {
   "hide" : true,
   "suppressSorting" : true,
   "headerName" : "geometry",
-  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:geometry/gml:Point/gml:pos/text()" ],
+  "xpath" : [ "bifisic_cide:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}      ],
+}         ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
@@ -151,7 +157,7 @@
        }
      },
      "fields":[
-  {
+   {
   "index" : 1,
   "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCounty",
   "label" : "Županija područja postrojenja",
@@ -385,7 +391,7 @@
 }, {
   "index" : 23,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:OpenIssue/bifisic_cide:accIndictment",
-  "label" : "Optužni prijedlog/prekršajni nalog",
+  "label" : "Optužni prijedlog/prekršajni nalog?",
   "type" : "list",
   "valueId" : "value",
   "values" : [ {
@@ -399,7 +405,7 @@
 }, {
   "index" : 24,
   "attribute" : "bifisic_cide:lastUpdateDate",
-  "label" : "Koord. insp. nadzor - vrijeme poslj. promjene?",
+  "label" : "Koord. insp. nadzor - vrijeme poslj. Promjene",
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
@@ -422,7 +428,7 @@
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName",
   "label" : "Ostali insp. nadzori - poslj. promjena, korisnik",
   "type" : "string"
-}
+} 
   ]
 
 

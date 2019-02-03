@@ -89,7 +89,7 @@
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv Događaj",
-  "xpath" : [ "bifisic_sevesoestablishments:name_event/text()" ],
+  "xpath" : [ "bifisic_sevesoestablishments:event_name/text()" ],
   "type" : 2,
   "width" : 100
 }, {
@@ -106,7 +106,7 @@
   "width" : 30
 }, {
   "suppressSorting" : true,
-  "headerName" : "Scenarij-Vrsta pojave",
+  "headerName" : "Scenarij - Vrsta pojave",
   "xpath" : [ "bifisic_sevesoestablishments:des_phenom_type/text()" ],
   "type" : 2,
   "width" : 80
@@ -124,28 +124,34 @@
   "width" : 30
 }, {
   "suppressSorting" : true,
-  "headerName" : "Scenarij-Vjerojatnost događaja (broj/god)",
+  "headerName" : "Scenarij - Vjerojatnost događaja (broj/god)",
   "xpath" : [ "bifisic_sevesoestablishments:like_scenario/text()" ],
   "type" : 2,
   "width" : 30
 }, {
   "suppressSorting" : true,
-  "headerName" : "Scenarij-Najgori scenarij",
+  "headerName" : "Scenarij - Najgori scenarij",
   "xpath" : [ "bifisic_sevesoestablishments:worst_scenario/text()" ],
   "type" : 2,
   "width" : 20
 }, {
   "suppressSorting" : true,
-  "headerName" : "Scenarij-Procjena broja žrtava",
+  "headerName" : "Scenarij - Procjena broja žrtava",
   "xpath" : [ "bifisic_sevesoestablishments:assess_casualties/text()" ],
   "type" : 2,
   "width" : 30
 }, {
   "suppressSorting" : true,
-  "headerName" : "Scenarij-Područje domino efekta  (m)",
+  "headerName" : "Scenarij - Područje domino efekta  (m)",
   "xpath" : [ "bifisic_sevesoestablishments:dom_area/text()" ],
   "type" : 2,
   "width" : 30
+}, {
+  "hide" : true,
+  "suppressSorting" : true,
+  "headerName" : "geometry",
+  "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList/text()" ],
+  "type" : 6
 }       ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
@@ -177,19 +183,19 @@
   "valueLabel" : "naziv"
 }, {
   "index" : 2,
-  "attribute" : "bifisic_sevesoestablishments:des_municipality",
+  "attribute" : "bifisic_sevesoestablishments:idMunicipality",
   "label" : "Općina",
   "type" : "list",
   "valueId" : "naziv",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:bifisic_d_municipality",
+      "typeName" : "bifisic_decodif:rpot_postanskiured",
       "propertyName" : "naziv",
       "sortBy" : "naziv"
     }
   },
   "dependson" : {
-    "field" : "bifisic_sevesoestablishments:id_county",
+    "field" : "bifisic_sevesoestablishments:idCounty",
     "from" : "id",
     "to" : "zupanija"
   },
@@ -218,8 +224,8 @@
   "index" : 7,
   "attribute" : "bifisic_sevesoestablishments:id_admin_position",
   "label" : "Administrativni položaj područja postrojenja",
-  "valueId" : "id_admin_position",
   "type" : "list",
+  "valueId" : "id_admin_position",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_admin_position",
@@ -259,8 +265,8 @@
 }, {
   "index" : 10,
   "attribute" : "bifisic_sevesoestablishments:like_event",
-  "label" : "Scenarij-vjerojatnost događaja [broj/god]",
-  "type" : "string"
+  "label" : "Scenarij-vjerojatnost događaja (broj/god)",
+  "type" : "number"
 }, {
   "index" : 11,
   "attribute" : "bifisic_sevesoestablishments:substance_event",
@@ -271,16 +277,20 @@
   "attribute" : "bifisic_sevesoestablishments:des_phenom_type",
   "label" : "Scenarij nesreće - vrsta pojave",
   "type" : "list",
+  "valueId" : "des_phenom_type",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:bifisic_d_phenom_type_scenario"
+      "typeName" : "bifisic_decodif:bifisic_d_phenom_type_scenario",
+      "propertyName" : "des_phenom_type",
+      "sortBy" : "id_phenom_type"
     }
-  }
+  },
+  "valueLabel" : "des_phenom_type"
 }, {
   "index" : 13,
   "attribute" : "bifisic_sevesoestablishments:like_scenario",
-  "label" : "Scenarij-vjerojatnost pojave [broj/god]",
-  "type" : "string"
+  "label" : "Scenarij-vjerojatnost pojave (broj/god)",
+  "type" : "number"
 }, {
   "index" : 14,
   "attribute" : "bifisic_sevesoestablishments:worst_scenario",
@@ -304,17 +314,17 @@
   "index" : 16,
   "attribute" : "bifisic_sevesoestablishments:radius",
   "label" : "Scenarij - radijus  (m)",
-  "type" : "numeric"
+  "type" : "number"
 }, {
   "index" : 17,
   "attribute" : "bifisic_sevesoestablishments:max_impact_area",
-  "label" : "Scenarij-područje učinka [m]",
-  "type" : "numeric"
+  "label" : "Scenarij-područje učinka (m)",
+  "type" : "number"
 }, {
   "index" : 18,
   "attribute" : "bifisic_sevesoestablishments:assess_casualties",
   "label" : "Scenarij nesreće - procjena broja žrtava",
-  "type" : "numeric"
+  "type" : "number"
 }, {
   "index" : 19,
   "attribute" : "bifisic_sevesoestablishments:dom_hazard",
@@ -371,7 +381,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}
+} 
   ]
 
 

@@ -6,6 +6,8 @@
 			/>
     )}>
 
+
+
     <Panel className="template">
 
                 <Section header='OPĆI PODACI O OPERATERU' eventKey='1' expanded={true}>
@@ -23,7 +25,7 @@
           }/>
 
           <LabeledField label='Poštanski broj' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:postalCode/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:postalcode/text()")
           }/>
 
           <LabeledField label='Općina' value={
@@ -39,7 +41,7 @@
           }/>
 
           <LabeledField label='Rang' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:DesRegulationAnnex/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:desRegulationAnnex/text()")
           }/>
 
           <LabeledField label='Telefon' value={
@@ -85,7 +87,7 @@
           }/>
 
           <LabeledField label='Poštanski broj' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:postalcode/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:postalCode/text()")
           }/>
 
           <LabeledField label='Općina' value={
@@ -142,7 +144,7 @@
 
         </Section>
 
-        <Section header='Odgovorna osoba za organizaciju djelovanja kod iznenadnog događaja ' eventKey='4' expanded={false}>
+        <Section header='Odgovorna osoba za organizaciju djelovanja kod iznenadnog događaja' eventKey='4' expanded={false}>
           
                     <LabeledField label='Položaj' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respUnEventPosition/text()")
@@ -198,13 +200,13 @@
 
         </Section>
 
-        <Section header='MJERE ZA SPRJEČAVANJE I UBLAŽAVANJE POSLJEDICA IZNENADNOG DOGAĐAJA' eventKey='6' expanded={true}>
+        <Section header='1- MJERE ZA SPRJEČAVANJE I UBLAŽAVANJE POSLJEDICA IZNENADNOG DOGAĐAJA - 1' eventKey='6' expanded={true}>
 
           <SiraTable
                 id="MeasurePreventingMitigating"
                 selectedRow={model.MeasurePreventingMitigating}
                 wfsVersion="2.0"
-                rowSelection={"single"}
+                rowSelection={false}
                 
                 columns={
                     [
@@ -216,7 +218,7 @@
                         {
                             hide: false,
                             headerName: 'IdMeasuresPrevMitig',
-                            width: 50.0,
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:IdMeasuresPrevMitig/text()"
                         }
 
@@ -241,14 +243,14 @@
                             hide: false,
                             headerName: 'Sredstva i oprema za sprj. i ubl. nesreća',
                             width: 100.0,
-                            xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:desMeasEquipment/text()"
+                            xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:desMeasEquipmdesMeasEquipm/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'Vatr. postrojba u sastavu podr. postrojenja',
-                            width: 100.0,
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:fireBrigadeWithinSite/text()"
                         }
 
@@ -264,15 +266,47 @@
                         {
                             hide: false,
                             headerName: 'Obavijest provjerena?',
-                            width: 100.0,
-                            xpath:"bifisic_sevesoestablishments:Establishment/bifisic_sevesoestablishments:NotificationValidated/text()"
+                            width: 30.0,
+                            xpath:"bifisic_sevesoestablishments:Establishment/bifisic_sevesoestablishments:notificationValidated/text()"
+                        }
+
+
+                    ]
+                }
+                features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:measurePreventingMitigating")}
+                
+          />
+                
+
+        </Section>
+          
+        <Section header='2- MJERE ZA SPRJEČAVANJE I UBLAŽAVANJE POSLJEDICA IZNENADNOG DOGAĐAJA' eventKey='7' expanded={true}>
+
+          <SiraTable
+                id="MeasurePreventingMitigating"
+                selectedRow={model.MeasurePreventingMitigating}
+                wfsVersion="2.0"
+                rowSelection={false}
+                
+                columns={
+                    [
+                        						{
+                            hide: true,
+                            id: true,
+                            xpath: "bifisic_sevesoestablishments:MeasurePreventingMitigating/@gml:id"
+                        },
+                        {
+                            hide: false,
+                            headerName: 'IdMeasuresPrevMitig',
+                            width: 30.0,
+                            xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:IdMeasuresPrevMitig/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'Datum posljednjeg Unutarnjeg plana',
-                            width: 100.0,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateInternalEmergency/text()"
                         }
 
@@ -312,7 +346,7 @@
                         {
                             hide: false,
                             headerName: 'Novi IOS u postupku izdavanja sugl. pri NT',
-                            width: 100.0,
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:newSafetyReport/text()"
                         }
 
@@ -322,6 +356,38 @@
                             headerName: 'Datum podnošenja novog Izvješća o sigurnosti',
                             width: 50.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateNewSafetyReport/text()"
+                        }
+
+
+                    ]
+                }
+                features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:measurePreventingMitigating")}
+                
+          />
+                
+
+        </Section>
+          
+        <Section header='3- MJERE ZA SPRJEČAVANJE I UBLAŽAVANJE POSLJEDICA IZNENADNOG DOGAĐAJA' eventKey='8' expanded={true}>
+
+          <SiraTable
+                id="MeasurePreventingMitigating"
+                selectedRow={model.MeasurePreventingMitigating}
+                wfsVersion="2.0"
+                rowSelection={"single"}
+                
+                columns={
+                    [
+                        						{
+                            hide: true,
+                            id: true,
+                            xpath: "bifisic_sevesoestablishments:MeasurePreventingMitigating/@gml:id"
+                        },
+                        {
+                            hide: false,
+                            headerName: 'IdMeasuresPrevMitig',
+                            width: 30.0,
+                            xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:IdMeasuresPrevMitig/text()"
                         }
 
 ,
@@ -344,7 +410,7 @@
                         {
                             hide: false,
                             headerName: 'Edukacija zaposlenika-iznenadni događaj',
-                            width: 100.0,
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:trainingEmployeesUncontrolEvent/text()"
                         }
 
@@ -352,7 +418,7 @@
                         {
                             hide: false,
                             headerName: 'Edukacija zaposlenika-velika nesreća',
-                            width: 100.0,
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:trainingEmployeesMajorAccident/text()"
                         }
 
@@ -362,7 +428,7 @@
                 features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:measurePreventingMitigating")}
                 
           />
-                        <Section header='Kooperant koji će biti pozvan radi ograničavanja i sanacije posljedica iznenadnog događaja' eventKey='7' expanded={(model.MeasurePreventingMitigating !== undefined && model.MeasurePreventingMitigating !== null ) ? true: false}>
+                        <Section header='Kooperant koji će biti pozvan radi ograničavanja i sanacije posljedica iznenadnog događaja' eventKey='9' expanded={(model.MeasurePreventingMitigating !== undefined && model.MeasurePreventingMitigating !== null ) ? true: false}>
 
           <SiraTable
                 id="Cooperator"
@@ -386,16 +452,24 @@
                         },
                         {
                             hide: true,
+                            headerName: 'IdMeasuresPrevMitig',
+                            width: 100,
+                            xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:IdMeasuresPrevMitig/text()"
+                        }
+
+,
+                        {
+                            hide: false,
                             headerName: 'Ime i prezime',
-                            width: 50.0,
-                            xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorName/text()"
+                            width: 200.0,
+                            xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorname/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'Adresa',
-                            width: 100,
+                            width: 150.0,
                             xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorAddress/text()"
                         }
 
@@ -403,7 +477,7 @@
                         {
                             hide: false,
                             headerName: 'Općina',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:desMunicipCoOperator/text()"
                         }
 
@@ -411,24 +485,24 @@
                         {
                             hide: false,
                             headerName: 'Telefon',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorPhone/text()"
+                            width: 50.0,
+                            xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorphone/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'Telefaks',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorFax/text()"
+                            width: 50.0,
+                            xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:faxCoOperator/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'E-pošta',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorEmail/text()"
+                            width: 50.0,
+                            xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:emailCoOperator/text()"
                         }
 
 
@@ -445,7 +519,103 @@
 
         </Section>
           
-        <Section header='PODACI O OPASNIM TVARIMA ĆIJA JE PRISTUNOST UTVRĐENA U POSTROJENJU' eventKey='8' expanded={true}>
+        <Section header='1- PODACI O OPASNIM TVARIMA ĆIJA JE PRISTUNOST UTVRĐENA U POSTROJENJU' eventKey='10' expanded={true}>
+
+          <SiraTable
+                id="DangerousSubstance"
+                selectedRow={model.DangerousSubstance}
+                wfsVersion="2.0"
+                rowSelection={false}
+                
+                columns={
+                    [
+                        						{
+                            hide: true,
+                            id: true,
+                            xpath: "bifisic_sevesoestablishments:DangerousSubstance/@gml:id"
+                        },
+                        {
+                            hide: false,
+                            headerName: 'id Tvari Mješavine',
+                            width: 30.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:IdSubstMixture/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Prilog- Dio 1. ili Dio 2.',
+                            width: 100.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:annexPart/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Tvar ili mješavina',
+                            width: 30.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:substMixture/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Trgovački naziv',
+                            width: 150.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:commercialName/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Sastav mješavine',
+                            width: 150.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:composition/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'Kemijski naziv',
+                            width: 150.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:chemicalName/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'CAS broj',
+                            width: 50.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:CASNumber/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'INDEKS broj',
+                            width: 50.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:INDEX/text()"
+                        }
+
+,
+                        {
+                            hide: false,
+                            headerName: 'EC broj',
+                            width: 50.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:EC/text()"
+                        }
+
+
+                    ]
+                }
+                features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:dangerousSubstance")}
+                
+          />
+                
+
+        </Section>
+          
+        <Section header='1- PODACI O OPASNIM TVARIMA ĆIJA JE PRISTUNOST UTVRĐENA U POSTROJENJU' eventKey='11' expanded={true}>
 
           <SiraTable
                 id="DangerousSubstance"
@@ -462,88 +632,24 @@
                         },
                         {
                             hide: false,
-                            headerName: ' id Tvari Mješavine',
-                            width: 100,
+                            headerName: 'id Tvari Mješavine',
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:IdSubstMixture/text()"
                         }
 
 ,
                         {
                             hide: false,
-                            headerName: 'Prilog- Dio 1. ili Dio 2.',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:annexPart/text()"
-                        }
-
-,
-                        {
-                            hide: false,
-                            headerName: 'Tvar ili mješavina',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:substMixture/text()"
-                        }
-
-,
-                        {
-                            hide: false,
-                            headerName: 'Trgovački naziv',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:commercialName/text()"
-                        }
-
-,
-                        {
-                            hide: false,
-                            headerName: 'Sastav mješavine',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:composition/text()"
-                        }
-
-,
-                        {
-                            hide: false,
-                            headerName: 'Kemijski naziv',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:chemicalName/text()"
-                        }
-
-,
-                        {
-                            hide: false,
-                            headerName: 'CAS broj',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:casNumber/text()"
-                        }
-
-,
-                        {
-                            hide: false,
-                            headerName: 'INDEKS broj',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:index/text()"
-                        }
-
-,
-                        {
-                            hide: false,
-                            headerName: 'EC broj',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:ec/text()"
-                        }
-
-,
-                        {
-                            hide: false,
                             headerName: 'Vrsta opasnosti',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:hazardType/text()"
+                            width: 100.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:HazardType/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'Kategorija (sukl. Seveso Dir.- Prilog 1.A- Dio 1.)',
-                            width: 100,
+                            width: 150.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:categoryList/text()"
                         }
 
@@ -551,7 +657,7 @@
                         {
                             hide: false,
                             headerName: 'Maksimalna količina (u tonama)',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:maxQuantityTon/text()"
                         }
 
@@ -559,23 +665,23 @@
                         {
                             hide: false,
                             headerName: 'Agregatno stanje',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:desPhysCondition/text()"
+                            width: 100.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:DesphysCondition/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'Skladištenje opasnih tvari u postrojenju',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:storageSubstanceType/text()"
+                            width: 150.0,
+                            xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:storagesubstancetype/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'Stalni nadzor spremnika s opasnim tvarima',
-                            width: 100,
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:surveillanceSubstance/text()"
                         }
 
@@ -583,7 +689,7 @@
                         {
                             hide: false,
                             headerName: 'Opis upravljanja trajnim nadzorom',
-                            width: 100,
+                            width: 250.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:desSurveillanceSubstance/text()"
                         }
 
@@ -593,7 +699,7 @@
                 features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:dangerousSubstance")}
                 
           />
-                        <Section header='Vrsta tvari/mješavine (sukladno Seveso III Direktivi Prilog 1.A Dio 1 i 2)' eventKey='9' expanded={(model.DangerousSubstance !== undefined && model.DangerousSubstance !== null ) ? true: false}>
+                        <Section header='Vrsta tvari/mješavine (sukladno Seveso III Direktivi Prilog 1.A Dio 1 i 2)' eventKey='12' expanded={true}>
 
           <SiraTable
                 id="SubstanceType"
@@ -625,8 +731,8 @@
 ,
                         {
                             hide: false,
-                            headerName: 'Vrsta tvari/mješavine ',
-                            width: 100,
+                            headerName: 'Vrsta tvari/mješavine',
+                            width: 500.0,
                             xpath:"bifisic_sevesoestablishments:SubstanceType/bifisic_sevesoestablishments:SubstanceTypeDesc/text()"
                         }
 
@@ -640,7 +746,7 @@
 
         </Section>
           
-        <Section header='Razvrstavanje' eventKey='10' expanded={(model.DangerousSubstance !== undefined && model.DangerousSubstance !== null ) ? true: false}>
+        <Section header='Razvrstavanje' eventKey='13' expanded={(model.DangerousSubstance !== undefined && model.DangerousSubstance !== null ) ? true: false}>
 
           <SiraTable
                 id="Classification"
@@ -672,8 +778,8 @@
 ,
                         {
                             hide: false,
-                            headerName: 'Šifra ',
-                            width: 100,
+                            headerName: 'Šifra',
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:codClassification/text()"
                         }
 
@@ -681,7 +787,7 @@
                         {
                             hide: false,
                             headerName: 'Opis',
-                            width: 100,
+                            width: 400.0,
                             xpath:"bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:classification/text()"
                         }
 
@@ -699,9 +805,9 @@
 
         </Section>
           
-        <Section header='REZULTATI PROCJENE RIZIKA' eventKey='11' expanded={true}>
+        <Section header='REZULTATI PROCJENE RIZIKA' eventKey='14' expanded={true}>
           
-                  <Section header='Najgori događaj - Najgori scenarij' eventKey='12' expanded={false}>
+                  <Section header='Najgori događaj -Najgori scenarij' eventKey='15' expanded={true}>
           
                     <LabeledField label='Naziv najgoreg događaja' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstEvent/bifisic_sevesoestablishments:WorstEvent/bifisic_sevesoestablishments:worstEventName/text()")
@@ -711,31 +817,31 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstEvent/bifisic_sevesoestablishments:WorstEvent/bifisic_sevesoestablishments:worstEventDes/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij-vrsta fenomena ' value={
+          <LabeledField label='Najgori scenarij - Vrsta fenomena' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioPhenomTypeDes/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij-vjerojatnost događaja [broj/god]' value={
+          <LabeledField label='Najgori scenarij - Vjerojatnost događaja [broj/god]' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenariolike/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij-procjena broja žrtava' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioAssessCasualties/text()")
+          <LabeledField label='Najgori scenarij -Procjena broja žrtava' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:assessCasualties/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij-područje visoke smrtnosti [m]' value={
+          <LabeledField label='Najgori scenarij -Područje visoke smrtnosti [m]' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioHighMortality/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij -područje smrtnosti [m]' value={
+          <LabeledField label='Najgori scenarij -Područje smrtnosti [m]' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioMortality/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij-područje trajnih posljedica [m]' value={
+          <LabeledField label='Područje trajnih posljedica [m]' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioPermConseq/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij-područje privremenih posljedica [m]' value={
+          <LabeledField label='Najgori scenarij -Područje privremenih posljedica [m]' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioTempConseq/text()")
           }/>
 
@@ -743,7 +849,7 @@
 
         </Section>
 
-        <Section header='Događaji' eventKey='13' expanded={false}>
+        <Section header='Događaji' eventKey='16' expanded={true}>
 
           <SiraTable
                 id="Event"
@@ -761,7 +867,7 @@
                         {
                             hide: false,
                             headerName: 'Id Događaji',
-                            width: 100,
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:idEvent/text()"
                         }
 
@@ -769,7 +875,7 @@
                         {
                             hide: false,
                             headerName: 'Događaj',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:nameEvent/text()"
                         }
 
@@ -777,7 +883,7 @@
                         {
                             hide: false,
                             headerName: 'Opis',
-                            width: 100,
+                            width: 300.0,
                             xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:desEvent/text()"
                         }
 
@@ -785,7 +891,7 @@
                         {
                             hide: false,
                             headerName: 'Uključena tvar/mješavina',
-                            width: 100,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:substanceEvent/text()"
                         }
 
@@ -793,9 +899,8 @@
                         {
                             hide: false,
                             headerName: 'Vjerojatnost događaja  [broj/god]',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:likeEvent/text()",
-                            toExponential: 3
+                            width: 30.0,
+                            xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:likeEvent/text()"
                         }
 
 
@@ -804,7 +909,7 @@
                 features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:event")}
                 
           />
-                        <Section header='Izvor opasnosti' eventKey='14' expanded={(model.Event !== undefined && model.Event !== null ) ? true: false}>
+                        <Section header='Izvor opasnosti' eventKey='17' expanded={(model.Event !== undefined && model.Event !== null ) ? true: false}>
 
           <SiraTable
                 id="HazardSource"
@@ -827,9 +932,17 @@
                             xpath: "../../bifisic_sevesoestablishments:Event/@gml:id"
                         },
                         {
+                            hide: true,
+                            headerName: 'Id Događaji',
+                            width: 100,
+                            xpath:"bifisic_sevesoestablishments:HazardSource/bifisic_sevesoestablishments:idEvent/text()"
+                        }
+
+,
+                        {
                             hide: false,
                             headerName: 'Opis',
-                            width: 100,
+                            width: 400.0,
                             xpath:"bifisic_sevesoestablishments:HazardSource/bifisic_sevesoestablishments:desHazardSource/text()"
                         }
 
@@ -843,7 +956,7 @@
 
         </Section>
           
-        <Section header='Scenariji nesreć' eventKey='15' expanded={(model.Event !== undefined && model.Event !== null ) ? true: false}>
+        <Section header='Scenariji nesreć' eventKey='18' expanded={(model.Event !== undefined && model.Event !== null ) ? true: false}>
 
           <SiraTable
                 id="AccidentalScenario"
@@ -866,17 +979,25 @@
                             xpath: "../../bifisic_sevesoestablishments:Event/@gml:id"
                         },
                         {
+                            hide: true,
+                            headerName: 'Id Događaji',
+                            width: 100,
+                            xpath:"bifisic_sevesoestablishments:HazardSource/bifisic_sevesoestablishments:idEvent/text()"
+                        }
+
+,
+                        {
                             hide: false,
                             headerName: 'Vrsta pojave',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:desPhenomType/text()"
+                            width: 100.0,
+                            xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:phenomTypeDes/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'Vjerojatnost događaja (broj/god)',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:likeScenario/text()"
                         }
 
@@ -884,7 +1005,7 @@
                         {
                             hide: false,
                             headerName: 'Procjena broja žrtava',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:assessCasualties/text()"
                         }
 
@@ -892,7 +1013,7 @@
                         {
                             hide: false,
                             headerName: 'Područje visoke smrtnosti  [m]',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:highMortality/text()"
                         }
 
@@ -900,7 +1021,7 @@
                         {
                             hide: false,
                             headerName: 'Područje smrtnosti  [m]',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:mortality/text()"
                         }
 
@@ -908,7 +1029,7 @@
                         {
                             hide: false,
                             headerName: 'Područje trajnih posljedica  [m]',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:permConseq/text()"
                         }
 
@@ -916,7 +1037,7 @@
                         {
                             hide: false,
                             headerName: 'Područje privremenih posljedica  [m]',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:tempConseq/text()"
                         }
 
@@ -924,7 +1045,7 @@
                         {
                             hide: false,
                             headerName: 'Područje domino efekta  [m]',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:domArea/text()"
                         }
 
@@ -932,7 +1053,7 @@
                         {
                             hide: false,
                             headerName: 'Područje učinka izvan područja postrojenja',
-                            width: 100,
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:extImpact/text()"
                         }
 
@@ -940,7 +1061,7 @@
                         {
                             hide: false,
                             headerName: 'Scenarij-obaviještena ugrožena postrojenja',
-                            width: 100,
+                            width: 30.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:FacNotified/text()"
                         }
 
@@ -962,7 +1083,7 @@
 
         </Section>
 
-        <Section header='POHRANJENE OBAVIJESTI' eventKey='16' expanded={false}>
+        <Section header='POHRANJENE OBAVIJESTI' eventKey='19' expanded={false}>
 
           <SiraTable
                 id="ArchivedNotification"
@@ -980,15 +1101,15 @@
                         {
                             hide: false,
                             headerName: 'Datum podnošenja posljednje obavijesti',
-                            width: 100,
-                            xpath:"bifisic_sevesoestablishments:ArchivedNotification/bifisic_sevesoestablishments:dateLastNotification/text()"
+                            width: 150.0,
+                            xpath:"bifisic_sevesoestablishments:ArchivedNotification/bifisic_sevesoestablishments:dateNotification/text()"
                         }
 
 ,
                         {
                             hide: false,
                             headerName: 'Validirana obavijest',
-                            width: 100,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:ArchivedNotification/bifisic_sevesoestablishments:notificationValidated/text()"
                         }
 
@@ -1002,7 +1123,7 @@
 
         </Section>
           
-        <Section header='Seveso Establishments on OpenStreetMap background courtesy by http://www.openstreetmap.org' eventKey='17' expanded={true}>
+        <Section header='Seveso Establishments on OpenStreetMap background courtesy by http://www.openstreetmap.org' eventKey='20' expanded={true}>
 	      <MappaScheda
 	              center={
 	                      model.getValue({
@@ -1034,6 +1155,15 @@
 	              
         </Section>
 	              
+        <Section header='META PODACI' eventKey='21' expanded={true}>
+          
+          <LinkToPage
+            txt="View Metadata"
+            url="http://envi-metapodaci.azo.hr/geonetwork/srv/hrv/catalog.search#/metadata/d0aaac75-d9f6-44d6-97e0-0de151bfabff"
+/>
+
+        </Section>
+
 
 
     </Panel>

@@ -41,25 +41,25 @@
   "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:address/text()",
   "width" : 175
 }, {
-  "headerName" : "E-PRTR postrojenje?",
+  "headerName" : "E-PRTR postrojenje",
   "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:eprtr/text()",
-  "width" : 100
+  "width" : 40
 }, {
-  "headerName" : "IED postrojenje?",
+  "headerName" : "IED postrojenje",
   "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:ied/text()",
-  "width" : 100
+  "width" : 40
 }, {
   "headerName" : "Datum odobrenja PSVN",
   "xpath" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:mapp/text()",
   "width" : 80
 }, {
   "headerName" : "Datum inspekcijskog nadzora",
-  "xpath" : "bifisic_cide:InspectionDate/text()",
-  "width" : 80
+  "xpath" : "bifisic_cide:inspectionDate/text()",
+  "width" : 100
 }, {
   "headerName" : "Koordinator inspekcijskog nadzora",
   "xpath" : "bifisic_cide:coordinatorName/text()",
-  "width" : 120
+  "width" : 100
 }, {
   "headerName" : "Ostale vrste nadzora",
   "xpath" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTypeDesc/text()",
@@ -67,7 +67,7 @@
 }, {
   "headerName" : "Rezultati inspekcijskog nadzora",
   "xpath" : "bifisic_cide:totalScore/text()",
-  "width" : 100
-}
+  "width" : 80
+} 
     ]}
     features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_cide:CoordinatedInspection")}/>
