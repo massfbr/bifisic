@@ -113,7 +113,8 @@ function loadFeaturesWithPagination(wfsUrl, data, params, requestId) {
                 dispatch(configureGridError("GeoServer Exception, query fallita!"));
             }
         }).catch(() => {
-            dispatch(configureGridError("Network problem query fallita!"));
+            //dispatch(configureGridError("Network problem query fallita!"));
+            dispatch(configureGridError("Error loading feature:\nNot sufficient user privileges or feature not present."));
         });
     };
 }

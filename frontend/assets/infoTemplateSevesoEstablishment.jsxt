@@ -42,19 +42,19 @@
   "width" : 150
 }, {
   "headerName" : "Administrativni položaj",
-  "xpath" : "bifisic_sevesoestablishments:desAdminPosition/text()",
+  "xpath" : "bifisic_sevesoestablishments:DesAdminPosition/text()",
   "width" : 100
 }, {
   "headerName" : "Nac. djelatnost područja postrojenja",
-  "xpath" : "bifisic_sevesoestablishments:subActivity/text()",
+  "xpath" : "bifisic_sevesoestablishments:SubActivity/text()",
   "width" : 100
 }, {
   "headerName" : "Uža djelatnost područja postrojenja",
-  "xpath" : "bifisic_sevesoestablishments:coreActivity/text()",
+  "xpath" : "bifisic_sevesoestablishments:CoreActivity/text()",
   "width" : 100
 }, {
   "headerName" : "Obavijest provjerena",
-  "xpath" : "bifisic_sevesoestablishments:notificationValidated/text()",
+  "xpath" : "bifisic_sevesoestablishments:NotificationValidated/text()",
   "width" : 100
 }, {
   "headerName" : "Datum odobrenja PSVN-a",
@@ -84,5 +84,5 @@
   "headerName" : "Klasa posljednjeg IOS-a",
   "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:classSafetyReportApproved/text()",
   "width" : 100
-}      ]}
+}       ]}
     features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_sevesoestablishments:SevesoEstablishment")}/>

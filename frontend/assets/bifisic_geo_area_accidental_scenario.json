@@ -26,7 +26,7 @@
    "geometryName": "geometry",
    "geometryType": "Polygon",
    "card": {
-        "pdfname": "Inspection_card_{{/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:idAccidentalScenarios/text()}}.pdf",
+        "pdfname": "AccidentalScenarioDetail.pdf",
         "template": "assets/cardTemplateAccidentalScenario.jsxt",
         "service": {
              "url":"{geoserverUrl}/ows?service=WFS&request=GetFeature",
@@ -55,37 +55,37 @@
   "headerName" : "Županija postrojenja",
   "xpath" : [ "bifisic_sevesoestablishments:des_county/text()" ],
   "type" : 2,
-  "width" : 80
+  "width" : 150
 }, {
   "suppressSorting" : true,
   "headerName" : "Općina postrojenja",
   "xpath" : [ "bifisic_sevesoestablishments:des_municipality/text()" ],
   "type" : 2,
-  "width" : 50
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "OIB",
   "xpath" : [ "bifisic_sevesoestablishments:oib/text()" ],
   "type" : 2,
-  "width" : 30
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv tvrtke",
   "xpath" : [ "bifisic_sevesoestablishments:company_name/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 150
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv područja postrojenja",
   "xpath" : [ "bifisic_sevesoestablishments:establishment_name/text()" ],
   "type" : 2,
-  "width" : 150
+  "width" : 250
 }, {
   "suppressSorting" : true,
   "headerName" : "HAOP ID područja postrojenja",
   "xpath" : [ "bifisic_sevesoestablishments:id_caen/text()" ],
   "type" : 2,
-  "width" : 30
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv Događaj",
@@ -97,62 +97,62 @@
   "headerName" : "Uključena tvar/mješavina Događaj",
   "xpath" : [ "bifisic_sevesoestablishments:substance_event/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 150
 }, {
   "suppressSorting" : true,
   "headerName" : "Vjerojatnost događaja događaj (broj/god)",
   "xpath" : [ "bifisic_sevesoestablishments:like_event/text()" ],
   "type" : 2,
-  "width" : 30
+  "width" : 80
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - Vrsta pojave",
   "xpath" : [ "bifisic_sevesoestablishments:des_phenom_type/text()" ],
   "type" : 2,
-  "width" : 80
+  "width" : 150
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - vrsta ozbiljnosti",
   "xpath" : [ "bifisic_sevesoestablishments:des_severity/text()" ],
   "type" : 2,
-  "width" : 30
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - radijus  (m)",
   "xpath" : [ "bifisic_sevesoestablishments:radius/text()" ],
   "type" : 2,
-  "width" : 30
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - Vjerojatnost događaja (broj/god)",
   "xpath" : [ "bifisic_sevesoestablishments:like_scenario/text()" ],
   "type" : 2,
-  "width" : 30
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - Najgori scenarij",
   "xpath" : [ "bifisic_sevesoestablishments:worst_scenario/text()" ],
   "type" : 2,
-  "width" : 20
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - Procjena broja žrtava",
   "xpath" : [ "bifisic_sevesoestablishments:assess_casualties/text()" ],
   "type" : 2,
-  "width" : 30
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - Područje domino efekta  (m)",
   "xpath" : [ "bifisic_sevesoestablishments:dom_area/text()" ],
   "type" : 2,
-  "width" : 30
+  "width" : 100
 }, {
   "hide" : true,
   "suppressSorting" : true,
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList/text()" ],
   "type" : 6
-}       ],
+}        ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
@@ -167,7 +167,7 @@
        }
      },
      "fields":[
-  {
+   {
   "index" : 1,
   "attribute" : "bifisic_sevesoestablishments:id_county",
   "label" : "Županija",
@@ -381,7 +381,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-} 
+}  
   ]
 
 

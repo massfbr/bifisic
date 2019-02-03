@@ -200,7 +200,7 @@
 
         </Section>
 
-        <Section header='1- MJERE ZA SPRJEČAVANJE I UBLAŽAVANJE POSLJEDICA IZNENADNOG DOGAĐAJA - 1' eventKey='6' expanded={true}>
+        <Section header='1- MJERE ZA SPRJEČAVANJE I UBLAŽAVANJE POSLJEDICA IZNENADNOG DOGAĐAJA' eventKey='6' expanded={true}>
 
           <SiraTable
                 id="MeasurePreventingMitigating"
@@ -218,7 +218,7 @@
                         {
                             hide: false,
                             headerName: 'IdMeasuresPrevMitig',
-                            width: 30.0,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:IdMeasuresPrevMitig/text()"
                         }
 
@@ -226,7 +226,7 @@
                         {
                             hide: false,
                             headerName: 'Mjere za sprj. posljedica iznenadnog događaja',
-                            width: 100.0,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:desMeasUncontrolEvent/text()"
                         }
 
@@ -234,15 +234,15 @@
                         {
                             hide: false,
                             headerName: 'Mjere za sprj. VN s učinkom izvan lokacije',
-                            width: 100.0,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:desMeasPrevEvent/text()"
                         }
 
 ,
                         {
                             hide: false,
-                            headerName: 'Sredstva i oprema za sprj. i ubl. nesreća',
-                            width: 100.0,
+                            headerName: 'Sredstva i oprema za sprj. i ubl. Nesreća',
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:desMeasEquipmdesMeasEquipm/text()"
                         }
 
@@ -250,7 +250,7 @@
                         {
                             hide: false,
                             headerName: 'Vatr. postrojba u sastavu podr. postrojenja',
-                            width: 30.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:fireBrigadeWithinSite/text()"
                         }
 
@@ -258,16 +258,8 @@
                         {
                             hide: false,
                             headerName: 'Datum posljednje obavijesti',
-                            width: 50.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateLastNotification/text()"
-                        }
-
-,
-                        {
-                            hide: false,
-                            headerName: 'Obavijest provjerena?',
-                            width: 30.0,
-                            xpath:"bifisic_sevesoestablishments:Establishment/bifisic_sevesoestablishments:notificationValidated/text()"
                         }
 
 
@@ -298,7 +290,7 @@
                         {
                             hide: false,
                             headerName: 'IdMeasuresPrevMitig',
-                            width: 30.0,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:IdMeasuresPrevMitig/text()"
                         }
 
@@ -306,7 +298,7 @@
                         {
                             hide: false,
                             headerName: 'Datum posljednjeg Unutarnjeg plana',
-                            width: 50.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateInternalEmergency/text()"
                         }
 
@@ -314,7 +306,7 @@
                         {
                             hide: false,
                             headerName: 'Datum posljednjeg Operativnog plana',
-                            width: 50.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateProtectRescuePlan/text()"
                         }
 
@@ -322,7 +314,7 @@
                         {
                             hide: false,
                             headerName: 'Datum podnošenja odobrenog IOS-a',
-                            width: 50.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateSafetyReportApproved/text()"
                         }
 
@@ -330,7 +322,7 @@
                         {
                             hide: false,
                             headerName: 'Datum suglasnosti na posljednji IOS',
-                            width: 50.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateClassSafetyReportApproved/text()"
                         }
 
@@ -346,7 +338,7 @@
                         {
                             hide: false,
                             headerName: 'Novi IOS u postupku izdavanja sugl. pri NT',
-                            width: 30.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:newSafetyReport/text()"
                         }
 
@@ -354,7 +346,7 @@
                         {
                             hide: false,
                             headerName: 'Datum podnošenja novog Izvješća o sigurnosti',
-                            width: 50.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateNewSafetyReport/text()"
                         }
 
@@ -386,7 +378,7 @@
                         {
                             hide: false,
                             headerName: 'IdMeasuresPrevMitig',
-                            width: 30.0,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:IdMeasuresPrevMitig/text()"
                         }
 
@@ -394,7 +386,7 @@
                         {
                             hide: false,
                             headerName: 'Datum odobrenja PSVN-a',
-                            width: 50.0,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:Establishment/bifisic_sevesoestablishments:datamapp/text()"
                         }
 
@@ -402,7 +394,7 @@
                         {
                             hide: false,
                             headerName: 'Datum dostave podataka za Vanjski plan',
-                            width: 50.0,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateSubmissionInfoExternalPlan/text()"
                         }
 
@@ -410,7 +402,7 @@
                         {
                             hide: false,
                             headerName: 'Edukacija zaposlenika-iznenadni događaj',
-                            width: 30.0,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:trainingEmployeesUncontrolEvent/text()"
                         }
 
@@ -418,7 +410,7 @@
                         {
                             hide: false,
                             headerName: 'Edukacija zaposlenika-velika nesreća',
-                            width: 30.0,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:trainingEmployeesMajorAccident/text()"
                         }
 
@@ -451,9 +443,9 @@
                             xpath: "../../bifisic_sevesoestablishments:MeasurePreventingMitigating/@gml:id"
                         },
                         {
-                            hide: true,
+                            hide: false,
                             headerName: 'IdMeasuresPrevMitig',
-                            width: 100,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:IdMeasuresPrevMitig/text()"
                         }
 
@@ -468,14 +460,6 @@
 ,
                         {
                             hide: false,
-                            headerName: 'Adresa',
-                            width: 150.0,
-                            xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorAddress/text()"
-                        }
-
-,
-                        {
-                            hide: false,
                             headerName: 'Općina',
                             width: 100.0,
                             xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:desMunicipCoOperator/text()"
@@ -485,7 +469,7 @@
                         {
                             hide: false,
                             headerName: 'Telefon',
-                            width: 50.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:coOperatorphone/text()"
                         }
 
@@ -493,7 +477,7 @@
                         {
                             hide: false,
                             headerName: 'Telefaks',
-                            width: 50.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:faxCoOperator/text()"
                         }
 
@@ -501,7 +485,7 @@
                         {
                             hide: false,
                             headerName: 'E-pošta',
-                            width: 50.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:Cooperator/bifisic_sevesoestablishments:emailCoOperator/text()"
                         }
 
@@ -537,7 +521,7 @@
                         {
                             hide: false,
                             headerName: 'id Tvari Mješavine',
-                            width: 30.0,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:IdSubstMixture/text()"
                         }
 
@@ -545,7 +529,7 @@
                         {
                             hide: false,
                             headerName: 'Prilog- Dio 1. ili Dio 2.',
-                            width: 100.0,
+                            width: 150.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:annexPart/text()"
                         }
 
@@ -553,7 +537,7 @@
                         {
                             hide: false,
                             headerName: 'Tvar ili mješavina',
-                            width: 30.0,
+                            width: 100.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:substMixture/text()"
                         }
 
@@ -585,7 +569,7 @@
                         {
                             hide: false,
                             headerName: 'CAS broj',
-                            width: 50.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:CASNumber/text()"
                         }
 
@@ -593,7 +577,7 @@
                         {
                             hide: false,
                             headerName: 'INDEKS broj',
-                            width: 50.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:INDEX/text()"
                         }
 
@@ -601,7 +585,7 @@
                         {
                             hide: false,
                             headerName: 'EC broj',
-                            width: 50.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:EC/text()"
                         }
 
@@ -615,7 +599,7 @@
 
         </Section>
           
-        <Section header='1- PODACI O OPASNIM TVARIMA ĆIJA JE PRISTUNOST UTVRĐENA U POSTROJENJU' eventKey='11' expanded={true}>
+        <Section header='2 - PODACI O OPASNIM TVARIMA ĆIJA JE PRISTUNOST UTVRĐENA U POSTROJENJU' eventKey='11' expanded={true}>
 
           <SiraTable
                 id="DangerousSubstance"
@@ -633,7 +617,7 @@
                         {
                             hide: false,
                             headerName: 'id Tvari Mješavine',
-                            width: 30.0,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:IdSubstMixture/text()"
                         }
 
@@ -657,7 +641,7 @@
                         {
                             hide: false,
                             headerName: 'Maksimalna količina (u tonama)',
-                            width: 50.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:maxQuantityTon/text()"
                         }
 
@@ -681,7 +665,7 @@
                         {
                             hide: false,
                             headerName: 'Stalni nadzor spremnika s opasnim tvarima',
-                            width: 30.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:surveillanceSubstance/text()"
                         }
 
@@ -689,7 +673,7 @@
                         {
                             hide: false,
                             headerName: 'Opis upravljanja trajnim nadzorom',
-                            width: 250.0,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:desSurveillanceSubstance/text()"
                         }
 
@@ -732,7 +716,7 @@
                         {
                             hide: false,
                             headerName: 'Vrsta tvari/mješavine',
-                            width: 500.0,
+                            width: 800.0,
                             xpath:"bifisic_sevesoestablishments:SubstanceType/bifisic_sevesoestablishments:SubstanceTypeDesc/text()"
                         }
 
@@ -829,19 +813,19 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:assessCasualties/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij -Područje visoke smrtnosti [m]' value={
+          <LabeledField label='Najgori scenarij -Područje visoke smrtnosti(m)' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioHighMortality/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij -Područje smrtnosti [m]' value={
+          <LabeledField label='Najgori scenarij -Područje smrtnosti(m)' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioMortality/text()")
           }/>
 
-          <LabeledField label='Područje trajnih posljedica [m]' value={
+          <LabeledField label='Područje trajnih posljedica(m)' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioPermConseq/text()")
           }/>
 
-          <LabeledField label='Najgori scenarij -Područje privremenih posljedica [m]' value={
+          <LabeledField label='Najgori scenarij -Područje privremenih posljedica(m)' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioTempConseq/text()")
           }/>
 
@@ -867,7 +851,7 @@
                         {
                             hide: false,
                             headerName: 'Id Događaji',
-                            width: 30.0,
+                            width: 50.0,
                             xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:idEvent/text()"
                         }
 
@@ -875,7 +859,7 @@
                         {
                             hide: false,
                             headerName: 'Događaj',
-                            width: 100.0,
+                            width: 150.0,
                             xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:nameEvent/text()"
                         }
 
@@ -883,7 +867,7 @@
                         {
                             hide: false,
                             headerName: 'Opis',
-                            width: 300.0,
+                            width: 250.0,
                             xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:desEvent/text()"
                         }
 
@@ -899,7 +883,7 @@
                         {
                             hide: false,
                             headerName: 'Vjerojatnost događaja  [broj/god]',
-                            width: 30.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:likeEvent/text()"
                         }
 
@@ -942,7 +926,7 @@
                         {
                             hide: false,
                             headerName: 'Opis',
-                            width: 400.0,
+                            width: 800.0,
                             xpath:"bifisic_sevesoestablishments:HazardSource/bifisic_sevesoestablishments:desHazardSource/text()"
                         }
 
@@ -989,7 +973,7 @@
                         {
                             hide: false,
                             headerName: 'Vrsta pojave',
-                            width: 100.0,
+                            width: 150.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:phenomTypeDes/text()"
                         }
 
@@ -997,7 +981,7 @@
                         {
                             hide: false,
                             headerName: 'Vjerojatnost događaja (broj/god)',
-                            width: 50.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:likeScenario/text()"
                         }
 
@@ -1005,55 +989,55 @@
                         {
                             hide: false,
                             headerName: 'Procjena broja žrtava',
-                            width: 50.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:assessCasualties/text()"
                         }
 
 ,
                         {
                             hide: false,
-                            headerName: 'Područje visoke smrtnosti  [m]',
-                            width: 50.0,
+                            headerName: 'Visoke smrtnosti (m)',
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:highMortality/text()"
                         }
 
 ,
                         {
                             hide: false,
-                            headerName: 'Područje smrtnosti  [m]',
-                            width: 50.0,
+                            headerName: 'Smrtnosti (m)',
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:mortality/text()"
                         }
 
 ,
                         {
                             hide: false,
-                            headerName: 'Područje trajnih posljedica  [m]',
-                            width: 50.0,
+                            headerName: 'Trajnih posljedica (m)',
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:permConseq/text()"
                         }
 
 ,
                         {
                             hide: false,
-                            headerName: 'Područje privremenih posljedica  [m]',
-                            width: 50.0,
+                            headerName: 'Privremenih posljedica (m)',
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:tempConseq/text()"
                         }
 
 ,
                         {
                             hide: false,
-                            headerName: 'Područje domino efekta  [m]',
-                            width: 50.0,
+                            headerName: 'Domino efekta (m)',
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:domArea/text()"
                         }
 
 ,
                         {
                             hide: false,
-                            headerName: 'Područje učinka izvan područja postrojenja',
-                            width: 30.0,
+                            headerName: 'Učinka izvan područja postrojenja',
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:extImpact/text()"
                         }
 
@@ -1061,7 +1045,7 @@
                         {
                             hide: false,
                             headerName: 'Scenarij-obaviještena ugrožena postrojenja',
-                            width: 30.0,
+                            width: 80.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:FacNotified/text()"
                         }
 
@@ -1101,7 +1085,7 @@
                         {
                             hide: false,
                             headerName: 'Datum podnošenja posljednje obavijesti',
-                            width: 150.0,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:ArchivedNotification/bifisic_sevesoestablishments:dateNotification/text()"
                         }
 
@@ -1109,7 +1093,7 @@
                         {
                             hide: false,
                             headerName: 'Validirana obavijest',
-                            width: 100.0,
+                            width: 200.0,
                             xpath:"bifisic_sevesoestablishments:ArchivedNotification/bifisic_sevesoestablishments:notificationValidated/text()"
                         }
 
@@ -1155,15 +1139,6 @@
 	              
         </Section>
 	              
-        <Section header='META PODACI' eventKey='21' expanded={true}>
-          
-          <LinkToPage
-            txt="View Metadata"
-            url="http://envi-metapodaci.azo.hr/geonetwork/srv/hrv/catalog.search#/metadata/d0aaac75-d9f6-44d6-97e0-0de151bfabff"
-/>
-
-        </Section>
-
 
 
     </Panel>

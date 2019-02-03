@@ -26,7 +26,7 @@
    "geometryName": "geometry",
    "geometryType": "Point",
    "card": {
-        "pdfname": "",
+        "pdfname": "CoordinatedInspectionDetail.pdf",
         "template": "assets/cardTemplateCoordinatedInspection.jsxt",
         "service": {
              "url":"{geoserverUrl}/ows?service=WFS&request=GetFeature",
@@ -140,9 +140,9 @@
   "hide" : true,
   "suppressSorting" : true,
   "headerName" : "geometry",
-  "xpath" : [ "bifisic_cide:geometry/gml:Point/gml:pos/text()" ],
+  "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}         ],
+}          ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
@@ -428,7 +428,7 @@
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName",
   "label" : "Ostali insp. nadzori - poslj. promjena, korisnik",
   "type" : "string"
-} 
+}  
   ]
 
 
