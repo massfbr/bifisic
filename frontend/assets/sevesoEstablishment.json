@@ -45,7 +45,7 @@
      "grid": {
        "root": "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment",
        "columns": [
- {
+  {
   "hide" : true,
   "id" : true,
   "headerName" : "Id",
@@ -55,105 +55,123 @@
   "suppressSorting" : true,
   "headerName" : "Županija",
   "xpath" : [ "bifisic_sevesoestablishments:desCounty/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Općina",
   "xpath" : [ "bifisic_sevesoestablishments:desMunicipality/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "OIB",
   "xpath" : [ "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:oib/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv tvrtke",
   "xpath" : [ "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:companyName/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 350
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv područja postrojenja",
   "xpath" : [ "bifisic_sevesoestablishments:EstablishmentName/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 250
 }, {
   "suppressSorting" : true,
   "headerName" : "HAOP ID broj",
   "xpath" : [ "bifisic_sevesoestablishments:idCAEN/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Adresa",
   "xpath" : [ "bifisic_sevesoestablishments:address/text()" ],
-  "type" : 2
+  "type" : 2,
+  "width" : 150
 }, {
   "suppressSorting" : true,
   "headerName" : "Administrativni položaj",
-  "xpath" : [ "bifisic_sevesoestablishments:DesAdminPosition/text()" ],
-  "type" : 2
+  "xpath" : [ "bifisic_sevesoestablishments:desAdminPosition/text()" ],
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Nac. djelatnost područja postrojenja",
-  "xpath" : [ "bifisic_sevesoestablishments:SubActivity/text()" ],
-  "type" : 2
+  "xpath" : [ "bifisic_sevesoestablishments:subActivity/text()" ],
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Uža djelatnost područja postrojenja",
-  "xpath" : [ "bifisic_sevesoestablishments:CoreActivity/text()" ],
-  "type" : 2
+  "xpath" : [ "bifisic_sevesoestablishments:coreActivity/text()" ],
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
-  "headerName" : "Obavijest provjerena?",
-  "xpath" : [ "bifisic_sevesoestablishments:NotificationValidated/text()" ],
-  "type" : 2
+  "headerName" : "Obavijest provjerena",
+  "xpath" : [ "bifisic_sevesoestablishments:notificationValidated/text()" ],
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum odobrenja PSVN-a",
   "xpath" : [ "bifisic_sevesoestablishments:dataMAPP/text()" ],
   "dateFormat" : "DD/MM/YYYY",
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
-  "headerName" : "Date posljednje obavijesti",
+  "headerName" : "Datum posljednje obavijesti",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateLastNotification/text()" ],
   "dateFormat" : "DD/MM/YYYY",
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
-  "headerName" : "Date posljednjeg Unutarnjeg plana",
+  "headerName" : "Datum posljednjeg Unutarnjeg plana",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateInternalEmergency/text()" ],
   "dateFormat" : "DD/MM/YYYY",
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
-  "headerName" : "Date posljednjeg Operativnog plana",
+  "headerName" : "Datum posljednjeg Operativnog plana",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateProtectRescuePlan/text()" ],
   "dateFormat" : "DD/MM/YYYY",
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum podnošenja odobrenog IOS-a",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateSafetyReportApproved/text()" ],
   "dateFormat" : "DD/MM/YYYY",
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum suglasnosti na posljednji IOS",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateClassSafetyReportApproved/text()" ],
   "dateFormat" : "DD/MM/YYYY",
-  "type" : 2
+  "type" : 2,
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Klasa posljednjeg IOS-a",
-  "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:ClassSafetyReportApproved/text()" ],
-  "type" : 2
+  "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:classSafetyReportApproved/text()" ],
+  "type" : 2,
+  "width" : 100
 }, {
   "hide" : true,
   "suppressSorting" : true,
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-} 
+}      
      ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
@@ -169,7 +187,7 @@
        }
      },
      "fields":[
-{
+  {
   "index" : 1,
   "attribute" : "bifisic_sevesoestablishments:idCounty",
   "label" : "Županija",
@@ -183,7 +201,7 @@
     }
   },
   "valueLabel" : "naziv"
-}, {
+},  {
   "index" : 2,
   "attribute" : "bifisic_sevesoestablishments:idMunicipality",
   "label" : "Općina",
@@ -202,7 +220,7 @@
     "to" : "zupanija"
   },
   "valueLabel" : "naziv"
-},  {
+}, {
   "index" : 3,
   "attribute" : "bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:oib",
   "label" : "OIB",
@@ -354,7 +372,7 @@
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
   }
-},  {
+}, {
   "index" : 19,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:classSafetyReportApproved",
   "label" : "Klasa posljednjeg IOS-a",
@@ -419,7 +437,9 @@
   "valueId" : "reference_annex",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:bifisic_d_referenceannex"
+      "typeName" : "bifisic_decodif:bifisic_d_referenceannex",
+      "propertyName" : "reference_annex",
+      "sortBy" : "reference_annex"
     }
   },
   "valueLabel" : "reference_annex"
@@ -439,14 +459,14 @@
   "valueLabel" : "des_category"
 }, {
   "index" : 30,
-  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:classification/bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:idClassification",
+  "attribute" : "bifisic_sevesoestablishments:classification/bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:codClassification",
   "label" : "Razvrstavanje",
   "type" : "list",
-  "valueId" : "id_classification",
+  "valueId" : "cod_classification",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_classification",
-      "propertyName" : "id_classification,des_classification",
+      "propertyName" : "des_classification",
       "sortBy" : "des_classification"
     }
   },
@@ -483,7 +503,9 @@
   "valueId" : "des_phenom_type",
   "valueService" : {
     "urlParams" : {
-      "typeName" : "bifisic_decodif:bifisic_d_phenom_type_scenario"
+      "typeName" : "bifisic_decodif:bifisic_d_phenom_type_scenario",
+      "propertyName" : "des_phenom_type",
+      "sortBy" : "des_phenom_type"
     }
   },
   "valueLabel" : "des_phenom_type"
@@ -572,7 +594,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}   ]
+}       ]
 
 
    }

@@ -57,7 +57,7 @@
           }/>
 
           <LabeledField label='Događaj' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:name_event/text()")
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:event_name/text()")
           }/>
 
           <LabeledField label='Opis' value={
@@ -68,7 +68,7 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:substance_event/text()")
           }/>
 
-          <LabeledField label='Vjerojatnost događaja  [broj/god]' value={
+          <LabeledField label='Vjerojatnost događaja  (broj/god)' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:like_event/text()")
           }/>
 
@@ -124,7 +124,7 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:radius/text()")
           }/>
 
-          <LabeledField label='Područje domino efekta  [m]' value={
+          <LabeledField label='Područje domino efekta  (m)' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:dom_area/text()")
           }/>
 
@@ -149,7 +149,7 @@
 	              center={
 	                      model.getValue({
 	                          type: TemplateUtils.GEOMETRY_TYPE,
-	                          xpath: "/gml:featureMember/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:geometry/gml:Polygon/gml:outerBoundaryIs/gml:LinearRing/gml:coordinates/text()"
+	                          xpath: "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:geometry/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList/text()"
 	                      })
 	              }
 	              layers={[
@@ -181,7 +181,6 @@
 
 
         </Section>
-
 
 
     </Panel>
