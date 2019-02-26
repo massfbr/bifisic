@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 
 
@@ -42,7 +43,8 @@ public interface MtdTCategoriaApplDAO {
 	public void update(MtdTCategoriaAppl bean);
 	
 	public void update(String sql, Map<String, Object> param);
-
+	public int updateWithoutControl(String sql, Map<String, Object> param);
+	
 	public int deleteByPK(Integer idCategoriaAppl);
 	
 	public int delete(String query, Map<String, Object> params);

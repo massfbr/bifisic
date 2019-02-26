@@ -4,6 +4,8 @@ public class CswURI {
   private int tipo;
   private String protocol;
   private String url;
+  private int statusCode;
+  private String statusMessage;
 
   public String getProtocol() {
 	return protocol;
@@ -28,4 +30,21 @@ public class CswURI {
   public void setTipo(int tipo) {
     this.tipo = tipo;
   }
+
+public int getStatusCode() {
+	return statusCode;
+}
+
+public void setStatusCode(int statusCode) {
+	this.statusCode = statusCode;
+}
+
+public String getStatusMessage() {
+	return statusMessage;
+}
+
+public void setStatusMessage(String statusMessage) {
+	this.statusMessage = statusMessage;
+}
+  
 }

@@ -342,6 +342,58 @@ public class MetadataManager {
 	logger.debug(LogFormatter.format(className, methodName, "END"));
   }
 
+  public void updateCategoriesCounters() throws Exception {
+
+	final String methodName = new Object() {
+	}.getClass().getEnclosingMethod().getName();
+
+	logger.debug(LogFormatter.format(className, methodName, "BEGIN"));
+
+	Map<String, Object> params = null;
+	String query = null;
+	
+	try {
+		  params = new HashMap<String, Object>();
+		
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_1_2_(1,5)");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+		  
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_2_2_(1,5)");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_3_1_(1,5)");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+		
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_3_2_(1,5)");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+		
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_2");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_1_2_4");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+		  
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_2_2_4");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_3_1_4");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+		
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_3_2_4");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+		
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_2");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+
+	} catch (Exception e) {
+	  e.printStackTrace();
+	  logger.error(LogFormatter.format(className, methodName, "ERROR: " + e.getMessage()));
+	  throw new Exception(e);
+	}
+
+	logger.debug(LogFormatter.format(className, methodName, "END"));
+  }
+
   public void moveOldMetadata() throws Exception {
 
 	final String methodName = new Object() {
@@ -527,16 +579,31 @@ public class MetadataManager {
 	// ***
 
 	FileWriter writer = null;
+	FileWriter servicesWriter = null;
 	try {
 	    //create a temporary file
 	    String timeLog = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-	    File logFile = new File(fileName+timeLog);
+	    File logFile = new File(fileName+timeLog+".log");
+	    File servicesLogFile = new File(fileName+"services-"+timeLog+".csv");
 	
 	    // This will output the full path where the file will be written to...
 	    System.out.println(logFile.getCanonicalPath());
+	    System.out.println(servicesLogFile.getCanonicalPath());
 	
 	    writer = new FileWriter(logFile);
+	    servicesWriter = new FileWriter(servicesLogFile);
 	
+	    servicesWriter.write("idFonteDati" + ";" + 
+					"idFunzione" + ";" +
+					"idTipoFunzione" + ";" +
+					"idMetadato" + ";" + 
+					"tipoUrl" + ";" +
+					"originalRequestUrl" + ";" +
+					"modifiedRequestUrl" + ";" +
+					"statusCode" + ";" +
+					"statusMessage" + "\n");
+		servicesWriter.flush();
+		  
 		params = new HashMap<String, Object>();
 		params.put("fl_active", "S");
 		List<MtdDFontedati> elencoFontiDati = integratioManager.getDaoManager().getMtdDFontedatiDAO().findByCriteria(params);
@@ -573,7 +640,7 @@ public class MetadataManager {
 			  logger.info(LogFormatter.format(className, methodName, "RECORD VALIDI: " + cswValidRecords.size()));
 	
 			  if (cswValidRecords.size() > 0) {
-				this.saveMetadata(cswValidRecords, fonteDati.getIdFontedati(), writer);
+				this.saveMetadata(cswValidRecords, fonteDati.getIdFontedati(), writer, servicesWriter);
 			  }
 			} catch (Exception e) {
 			  e.printStackTrace();
@@ -586,7 +653,14 @@ public class MetadataManager {
           // Close the writer regardless of what happens...
           writer.close();
         } catch (Exception e) {
-    }
+        	logger.error("error closing writer", e);
+        }
+        try {
+            // Close the writer regardless of what happens...
+            servicesWriter.close();
+          } catch (Exception e) {
+          	logger.error("error closing servicesWriter", e);
+          }
   }
 	logger.debug(LogFormatter.format(className, methodName, "END"));
 }
@@ -651,7 +725,7 @@ public class MetadataManager {
    * @return void
    * @throws Exception
    */
-  public void saveMetadata(List<CswRecord> cswRecords, int idFonteDati, FileWriter writer) throws Exception {
+  public void saveMetadata(List<CswRecord> cswRecords, int idFonteDati, FileWriter writer, FileWriter servicesWriter) throws Exception {
 	final String methodName = new Object() {
 	}.getClass().getEnclosingMethod().getName();
 
@@ -706,6 +780,7 @@ public class MetadataManager {
 
 		params = new HashMap<String, Object>();
 		params.put("id_metadata", cswRecord.getIdMetadato());
+		params.put("fk_datasource", idFonteDati);
 		
 		if (cswRecord.getIdMetadato()>=1000000) {
 			boolean stopme = true;
@@ -718,10 +793,12 @@ public class MetadataManager {
 		.delete("delete from bifisic_mtd_r_category_mtd where id_metadata = :id_metadata " +
 				"and id_category in " +
 				"( " +
-				"select r.id_category from bifisic_mtd_r_category_mtd r, bifisic_mtd_t_category t " +
+				"select r.id_category from bifisic_mtd_r_category_mtd r, bifisic_mtd_t_category t, bifisic_mtd_t_metadata m " +
 				"where r.id_metadata = :id_metadata " +
+				"and r.id_metadata = m.id_metadata " +
 				"and r.id_category=t.id_category " +
 				"and t.fk_category_type<>3 " +
+				"and m.fk_datasource=:fk_datasource " +
 				")", params);
 		
 		
@@ -800,12 +877,20 @@ public class MetadataManager {
 
 		params = new HashMap<String, Object>();
 		params.put("id_metadata", cswRecord.getIdMetadato());
+		params.put("fk_datasource", idFonteDati);
 		
 		integratioManager
 			.getDaoManager()
 			.getMtdRCategoriaMtdDAO()
 			.delete(
-				"delete from bifisic_mtd_t_function where fk_metadata = :id_metadata and fk_function_type in (select id_function_type from bifisic_mtd_d_function_type where protocol is not null)",
+				"delete from bifisic_mtd_t_function " + 
+						"where fk_metadata = :id_metadata " + 
+						"and fk_function_type in " + 
+						"(" + 
+						"select id_function_type " + 
+						"from bifisic_mtd_d_function_type " + 
+						"where protocol is not null" +
+						")",
 				params);
 
 		if (cswRecord.getUri() != null) {
@@ -813,6 +898,18 @@ public class MetadataManager {
 
 			CswURI uri = cswRecord.getUri()[f];
 
+			/*
+			 * FM 26/02/2k19
+			 * debug instruction seraching for duplicates 
+			 * please ignore
+			 
+			if (uri.getUrl()!=null
+					&& uri.getUrl().equals("http://servisi.azo.hr/more/wms?request=GetCapabilities")) {
+				boolean stopme = true;
+				stopme = false;
+			}
+			*/
+			
 			MtdTFunzione funzione = new MtdTFunzione();
 
 			// map service validation
@@ -863,6 +960,8 @@ public class MetadataManager {
 					    	writer.write("flagging url " + url + "as disabled, status code is: " + statusCode + "\n");
 					    	uri.setTipo(99);
 					    }
+					    uri.setStatusCode(statusCode);
+					    uri.setStatusMessage(response1.getStatusLine().getReasonPhrase());
 					} finally {
 					    if (response1!=null) response1.close();
 					}
@@ -876,12 +975,48 @@ public class MetadataManager {
 			
 			writer.flush();
 			
-			funzione.setIdFunzione(integratioManager.getSequenceManager().getSeqMtdTFunzione().nextIntValue());
+			/*
+			 * FM 26/02/2k19
+			 *  check for possible duplicates in the current function with keys fkTypeFunction, fkMetadata and url,
+			 *  because different layer on CSW can result in the same getCapabilities url 
+			 */
+			params = new HashMap<String, Object>();
+			params.put("fk_function_type", uri.getTipo());
+			params.put("fk_metadata", cswRecord.getIdMetadato());
+			params.put("request_url", uri.getUrl());
+
+			List<MtdTFunzione> functions = integratioManager.getDaoManager().getMtdTFunzioneDAO().findByCriteria(params);
 			funzione.setFkTipoFunzione(uri.getTipo());
 			funzione.setFkMetadato(cswRecord.getIdMetadato());
 			funzione.setRequestUrl(uri.getUrl());
+			if (functions==null || functions.isEmpty()) {
+				funzione.setIdFunzione(integratioManager.getSequenceManager().getSeqMtdTFunzione().nextIntValue());
 
-			integratioManager.getDaoManager().getMtdTFunzioneDAO().insert(funzione);
+				servicesWriter.write(idFonteDati + ";" + 
+							funzione.getIdFunzione() + ";" +
+							funzione.getFkTipoFunzione() + ";" +
+							funzione.getFkMetadato() + ";" + 
+							uri.getTipo() + ";" +
+							uri.getUrl() + ";" +
+							funzione.getRequestUrl() + ";" +
+							uri.getStatusCode() + ";" +
+							uri.getStatusMessage() + "\n");
+				servicesWriter.flush();
+
+				integratioManager.getDaoManager().getMtdTFunzioneDAO().insert(funzione);
+			} else {
+				servicesWriter.write(idFonteDati + ";" + 
+						"-99;" +
+						funzione.getFkTipoFunzione() + ";" +
+						funzione.getFkMetadato() + ";" + 
+						uri.getTipo() + ";" +
+						uri.getUrl() + ";" +
+						funzione.getRequestUrl() + ";" +
+						uri.getStatusCode() + ";" +
+						uri.getStatusMessage() + "\n");
+				servicesWriter.flush();
+			}
+			
 		  }
 		}
 	  }
