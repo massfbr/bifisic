@@ -15,7 +15,6 @@ const ConfigUtils = require('../../MapStore2/web/client/utils/ConfigUtils');
 const {isArray} = require('lodash');
 const SecurityUtils = require('../../MapStore2/web/client/utils/SecurityUtils');
 const mapUtils = require('../../MapStore2/web/client/utils/MapUtils');
-const securityUtils = require('../../MapStore2/web/client/utils/SecurityUtils');
 
 function wmsToOpenlayersOptions(options) {
     // NOTE: can we use opacity to manage visibility?
@@ -47,15 +46,18 @@ function proxyTileLoadFunction(imageTile, src) {
 
 // https://github.com/openlayers/openlayers/issues/4213
 function customTileLoader(imageTile, src) {
-    var requestHeader = securityUtils.getBasicAuthHeader();
+    var requestHeader = SecurityUtils.getBasicAuthHeader();
     let gsUrl = ConfigUtils.getConfigProp("geoserverUrl");
     let tmpUrl = gsUrl.substring(gsUrl.indexOf('://') + 4, gsUrl.length);
-    if (src && src.indexOf(tmpUrl) > -1) {
+
+    // remove :80 if needed...
+    let newSrc = src.replace(":80", "");
+    newSrc = newSrc.replace(":443", "");
+    if (newSrc && newSrc.indexOf(tmpUrl) > -1) {
         let proxyUrl = ProxyUtils.getProxyUrl();
-        let newSrc = proxyUrl + encodeURIComponent(src);
+        newSrc = proxyUrl + encodeURIComponent(src);
         let xmlhttp = new XMLHttpRequest();
         xmlhttp.open('GET', newSrc);
-        // TODO to take Authorization dinamically from state
         xmlhttp.setRequestHeader('Authorization', requestHeader);
         // xmlhttp.setRequestHeader('Authorization', 'Basic YmlmaXNpY3VzZXI6Y25wMTYwNF9ncw==');
         /* FM 12/06/2018
@@ -91,7 +93,7 @@ Layers.registerType('wms', {
     create: (options, map) => {
         const urls = getWMSURLs(isArray(options.url) ? options.url : [options.url]);
         const queryParameters = wmsToOpenlayersOptions(options) || {};
-        urls.forEach(url => SecurityUtils.addAuthenticationParameter(url, queryParameters));
+        // urls.forEach(url => SecurityUtils.addAuthenticationParameter(url, queryParameters));
         if (options.singleTile) {
             return new ol.layer.Image({
                 opacity: options.opacity !== undefined ? options.opacity : 1,
