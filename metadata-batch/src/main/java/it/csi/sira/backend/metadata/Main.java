@@ -1,11 +1,12 @@
 package it.csi.sira.backend.metadata;
 
-import it.csi.sira.backend.metadata.business.MetadataManager;
-import it.csi.sira.backend.metadata.utils.Constants;
-import it.csi.sira.backend.metadata.utils.LogFormatter;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import it.csi.sira.backend.metadata.business.MetadataManager;
+import it.csi.sira.backend.metadata.utils.Constants;
+import it.csi.sira.backend.metadata.utils.LogFormatter;
 
 public class Main {
 
@@ -27,9 +28,11 @@ public class Main {
 
 	  metadataManager.updateMetadata(fileName);
 
-	  metadataManager.moveOldMetadata();
+	  //metadataManager.moveOldMetadata();
 
 	  metadataManager.updateMetadataCounters();
+
+	  metadataManager.updateCategoriesCounters();
 
 	} catch (Exception e) {
 	  e.printStackTrace();

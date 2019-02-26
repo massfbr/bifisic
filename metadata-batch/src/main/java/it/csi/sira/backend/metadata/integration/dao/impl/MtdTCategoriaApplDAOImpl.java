@@ -6,11 +6,13 @@ package it.csi.sira.backend.metadata.integration.dao.impl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Map;
 
 import it.csi.sira.backend.metadata.integration.dto.MtdTCategoriaAppl;
 import it.csi.sira.backend.metadata.integration.dao.MtdTCategoriaApplDAO;
 import it.csi.sira.backend.metadata.utils.GenericDAO;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 /**
  * MtdTCategoriaAppl DAO implementation 
@@ -135,6 +137,11 @@ public class MtdTCategoriaApplDAOImpl extends GenericDAO<MtdTCategoriaAppl> impl
 
        return new MtdTCategoriaApplRowMapper() ;
 	}
+
+	public int updateWithoutControl(String sql, Map<String, Object> param) {
+		return template.update(sql, getParameterValue(param));
+	}
+
 
 	//----------------------------------------------------------------------
 	/**
