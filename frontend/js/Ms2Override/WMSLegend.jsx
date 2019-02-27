@@ -7,7 +7,7 @@
  */
 
 var React = require('react');
-var Legend = require('../../MapStore2/web/client/components/TOC/fragments/legend/Legend');
+var Legend = require('./Legend');
 
 var WMSLegend = React.createClass({
     propTypes: {
