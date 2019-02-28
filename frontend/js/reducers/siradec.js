@@ -69,6 +69,7 @@ function siradec(state = initialState, action) {
                 nameSpaces: action.nameSpaces,
                 layer: action.layer,
                 exporter: action.exporter,
+                geometryType: action.geometryType || 'Point',
                 queryform
                 });
 

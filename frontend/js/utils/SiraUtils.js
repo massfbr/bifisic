@@ -35,6 +35,13 @@ module.exports = {
             }
             return myData;
         });
-    }
+    },
 
+    setStore: function(store) {
+        this.store = store;
+    },
+
+    getConfigOggetti() {
+        return this.store.getState().siradec.configOggetti;
+    }
 };
