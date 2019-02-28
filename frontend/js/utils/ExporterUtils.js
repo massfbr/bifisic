@@ -12,7 +12,7 @@ const ol = require('openlayers');
 const ProWKTDef = require('./ProjWKTDef');
 const {head} = require('lodash');
 const ExporterUtils = {
-    exportFeatures: function(outputformat, features, columns, filename = 'export', mimeType, fileToAdd, outputSrs = 'EPSG:32632') {
+    exportFeatures: function(outputformat, features, columns, filename = 'export', mimeType, fileToAdd, outputSrs = 'EPSG:3857') {
         const name = filename.replace(':', "_");
         switch (outputformat) {
             case "csv": {
@@ -56,9 +56,9 @@ const ExporterUtils = {
             }, {
             folder: filename,
             types: {
-            point: 'SiraPoints',
-            polygon: 'SiraPolygons',
-            line: 'SiraLines'
+            point: 'BifisicExportPoints',
+            polygon: 'BifisicExportPolygons',
+            line: 'BifisicExportLines'
             }});
         const zip = new JSZip();
         zip.loadAsync(shpString, {base64: true}).then((result) => {

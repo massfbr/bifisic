@@ -640,7 +640,7 @@
         },
 	"header": {
             "bifisic_acronym": "BIFISIC",
-            "bifisic_name": "Objedinjene informacije za industrijsku sigurnost u Republici Hrvatskoj."
+            "bifisic_name": "Objedinjene informacije za industrijsku sigurnost u Republici Hrvatskoj"
 	},
         "MosaicTile": {
             "objects": "OBJECTS",

@@ -6,9 +6,9 @@
     onCellClicked={props.onCellClicked}
     profile={model.profile}
     columns={[
-  {
+    {
   "id" : true,
-  "headerName" : "''",
+  "headerName" : "",
   "xpath" : "@gml:id",
   "width" : 30,
   "cellRenderer" : reactCellRendererFactory(GoToDetail)
@@ -27,7 +27,7 @@
 }, {
   "headerName" : "Naziv tvrtke",
   "xpath" : "bifisic_sevesoestablishments:company_name/text()",
-  "width" : 150
+  "width" : 200
 }, {
   "headerName" : "Naziv područja postrojenja",
   "xpath" : "bifisic_sevesoestablishments:establishment_name/text()",
@@ -39,7 +39,7 @@
 }, {
   "headerName" : "Naziv Događaj",
   "xpath" : "bifisic_sevesoestablishments:event_name/text()",
-  "width" : 100
+  "width" : 250
 }, {
   "headerName" : "Uključena tvar/mješavina Događaj",
   "xpath" : "bifisic_sevesoestablishments:substance_event/text()",
@@ -55,27 +55,27 @@
 }, {
   "headerName" : "Scenarij - vrsta ozbiljnosti",
   "xpath" : "bifisic_sevesoestablishments:des_severity/text()",
-  "width" : 100
+  "width" : 200
 }, {
   "headerName" : "Scenarij - radijus  (m)",
   "xpath" : "bifisic_sevesoestablishments:radius/text()",
-  "width" : 100
+  "width" : 120
 }, {
   "headerName" : "Scenarij - Vjerojatnost događaja (broj/god)",
   "xpath" : "bifisic_sevesoestablishments:like_scenario/text()",
-  "width" : 100
+  "width" : 120
 }, {
   "headerName" : "Scenarij - Najgori scenarij",
   "xpath" : "bifisic_sevesoestablishments:worst_scenario/text()",
-  "width" : 100
+  "width" : 120
 }, {
   "headerName" : "Scenarij - Procjena broja žrtava",
   "xpath" : "bifisic_sevesoestablishments:assess_casualties/text()",
-  "width" : 100
+  "width" : 120
 }, {
   "headerName" : "Scenarij - Područje domino efekta  (m)",
   "xpath" : "bifisic_sevesoestablishments:dom_area/text()",
-  "width" : 100
-}   
+  "width" : 120
+}      
     ]}
     features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario")}/>

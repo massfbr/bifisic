@@ -179,7 +179,6 @@ const Header = React.createClass({
                     <div className="row-fluid">
 
                         <div className="col-lg-9 col-md-9 col-sm-8 col-xs-8 testalino-sx">
-                            <h1><a href="http://www.haop.hr/"><img alt="HAOP" src="assets/img/HAOP_logo_sm.png" /></a></h1>
                             <h2><a onClick={this.props.goToHome} href="#" title="<I18N.Message msgId={'header.bifisic_name'}/>"><span><I18N.Message msgId={"header.bifisic_acronym"}/></span> <I18N.Message msgId={"header.bifisic_name"}/></a></h2>
                         </div>
 

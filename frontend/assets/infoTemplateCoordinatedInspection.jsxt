@@ -8,7 +8,7 @@
     columns={[
  {
   "id" : true,
-  "headerName" : "''",
+  "headerName" : "",
   "xpath" : "@gml:id",
   "width" : 30,
   "cellRenderer" : reactCellRendererFactory(GoToDetail)
@@ -59,15 +59,17 @@
 }, {
   "headerName" : "Koordinator inspekcijskog nadzora",
   "xpath" : "bifisic_cide:coordinatorName/text()",
-  "width" : 100
+  "width" : 100,
+  "profiles" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "headerName" : "Ostale vrste nadzora",
   "xpath" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTypeDesc/text()",
-  "width" : 100
+  "width" : 100,
+  "profiles" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "headerName" : "Rezultati inspekcijskog nadzora",
   "xpath" : "bifisic_cide:totalScore/text()",
   "width" : 80
-}  
+}   
     ]}
     features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_cide:CoordinatedInspection")}/>

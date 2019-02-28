@@ -101,16 +101,16 @@
   "width" : 100
 }, {
   "suppressSorting" : true,
-  "headerName" : "Nac. djelatnost područja postrojenja",
+  "headerName" : "Nac djelatnost područja postrojenja",
   "xpath" : [ "bifisic_sevesoestablishments:SubActivity/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 200
 }, {
   "suppressSorting" : true,
   "headerName" : "Uža djelatnost područja postrojenja",
   "xpath" : [ "bifisic_sevesoestablishments:CoreActivity/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 200
 }, {
   "suppressSorting" : true,
   "headerName" : "Obavijest provjerena",
@@ -123,58 +123,58 @@
   "xpath" : [ "bifisic_sevesoestablishments:dataMAPP/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 80
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum posljednje obavijesti",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateLastNotification/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 80
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum posljednjeg Unutarnjeg plana",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateInternalEmergency/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 80
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum posljednjeg Operativnog plana",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateProtectRescuePlan/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 80
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum podnošenja odobrenog IOS-a",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateSafetyReportApproved/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 80
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Datum suglasnosti na posljednji IOS",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateClassSafetyReportApproved/text()" ],
   "dateFormat" : "DD/MM/YYYY",
   "type" : 2,
-  "width" : 80
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Klasa posljednjeg IOS-a",
   "xpath" : [ "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:classSafetyReportApproved/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 120
 }, {
   "hide" : true,
   "suppressSorting" : true,
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}
+} 
      ],
        "exporter":{
-         "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
+         "addFile":""
        }
      }
    },
@@ -187,7 +187,7 @@
        }
      },
      "fields":[
-  {
+   {
   "index" : 1,
   "attribute" : "bifisic_sevesoestablishments:idCounty",
   "label" : "Županija",
@@ -196,22 +196,22 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_zupanija",
-      "propertyName" : "naziv",
-      "sortBy" : "naziv"
+      "propertyName" : "id,naziv",
+      "sortBy" : "naziv+A"
     }
   },
   "valueLabel" : "naziv"
 }, {
   "index" : 2,
-  "attribute" : "bifisic_sevesoestablishments:idMunicipality",
+  "attribute" : "bifisic_sevesoestablishments:naziv",
   "label" : "Općina",
   "type" : "list",
-  "valueId" : "id",
+  "valueId" : "naziv",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_postanskiured",
-      "propertyName" : "naziv",
-      "sortBy" : "naziv"
+      "propertyName" : "id,naziv",
+      "sortBy" : "naziv+A"
     }
   },
   "dependson" : {
@@ -249,8 +249,8 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_nkd",
-      "propertyName" : "des_nkd",
-      "sortBy" : "des_nkd"
+      "propertyName" : "id_nkd,des_nkd",
+      "sortBy" : "des_nkd+A"
     }
   },
   "valueLabel" : "des_nkd"
@@ -263,8 +263,8 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_admin_position",
-      "propertyName" : "des_admin_position",
-      "sortBy" : "des_admin_position"
+      "propertyName" : "id_admin_position,des_admin_position",
+      "sortBy" : "des_admin_position+A"
     }
   },
   "valueLabel" : "des_admin_position"
@@ -275,15 +275,17 @@
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  }
+  },
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 10,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateLastNotification",
-  "label" : "Date posljednje obavijesti",
+  "label" : "Datum posljednje obavijesti",
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  }
+  },
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 11,
   "attribute" : "bifisic_sevesoestablishments:NotificationValidated",
@@ -297,6 +299,7 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 12,
@@ -347,6 +350,7 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 16,
@@ -355,7 +359,8 @@
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  }
+  },
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 17,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateInternalEmergency",
@@ -363,7 +368,8 @@
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  }
+  },
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 18,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateClassSafetyReportApproved",
@@ -390,6 +396,7 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 21,
@@ -428,7 +435,16 @@
   "index" : 27,
   "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:HazardType",
   "label" : "Opasna tvar- vrsta opasnosti",
-  "type" : "string"
+  "type" : "list",
+  "valueId" : "naziv",
+  "valueService" : {
+    "urlParams" : {
+      "typeName" : "bifisic_decodif:rpot_vrstaopasnosti",
+      "propertyName" : "id,naziv",
+      "sortBy" : "naziv+A"
+    }
+  },
+  "valueLabel" : "naziv"
 }, {
   "index" : 28,
   "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:referenceAnnex",
@@ -439,7 +455,7 @@
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_referenceannex",
       "propertyName" : "reference_annex",
-      "sortBy" : "reference_annex"
+      "sortBy" : "reference_annex+A"
     }
   },
   "valueLabel" : "reference_annex"
@@ -452,8 +468,8 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_dangersubstance_category",
-      "propertyName" : "des_category",
-      "sortBy" : "des_category"
+      "propertyName" : "id_category,des_category,orderby",
+      "sortBy" : "orderby+A"
     }
   },
   "valueLabel" : "des_category"
@@ -466,8 +482,8 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_classification",
-      "propertyName" : "des_classification",
-      "sortBy" : "des_classification"
+      "propertyName" : "cod_classification,des_classification,orderby",
+      "sortBy" : "orderby+A"
     }
   },
   "valueLabel" : "des_classification"
@@ -481,7 +497,7 @@
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_tvarnacinskladistenja",
       "propertyName" : "naziv",
-      "sortBy" : "naziv"
+      "sortBy" : "naziv+A"
     }
   },
   "valueLabel" : "naziv"
@@ -494,32 +510,33 @@
   "index" : 33,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:substanceEvent",
   "label" : "Scenarij nesreće - tvari koje su sudjelovale u događaju",
-  "type" : "string"
+  "type" : "string",
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 34,
-  "attribute" : "bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:TypeScenario",
+  "attribute" : "bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioPhenomTypeDes",
   "label" : "Najgori scenarij-vrsta fenomena ",
   "type" : "list",
   "valueId" : "des_phenom_type",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_phenom_type_scenario",
-      "propertyName" : "des_phenom_type",
-      "sortBy" : "des_phenom_type"
+      "propertyName" : "id_phenom_type,des_phenom_type",
+      "sortBy" : "des_phenom_type+A"
     }
   },
   "valueLabel" : "des_phenom_type"
 }, {
   "index" : 35,
-  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:phenomTypeScenario",
+  "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:phenomTypeDes",
   "label" : "Scenarij nesreće - vrsta pojave",
   "type" : "list",
   "valueId" : "des_phenom_type",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_phenom_type_scenario",
-      "propertyName" : "des_phenom_type",
-      "sortBy" : "id_phenom_type"
+      "propertyName" : "id_phenom_type,des_phenom_type",
+      "sortBy" : "des_phenom_type+A"
     }
   },
   "valueLabel" : "des_phenom_type"
@@ -532,12 +549,14 @@
   "index" : 37,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:maxImpactArea",
   "label" : "Scenarij-područje učinka(m)",
-  "type" : "number"
+  "type" : "number",
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 38,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:assessCasualties",
   "label" : "Scenarij nesreće - procjena broja žrtava",
-  "type" : "number"
+  "type" : "number",
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 39,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:domHazard",
@@ -594,7 +613,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}        ]
+}         ]
 
 
    }
