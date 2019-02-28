@@ -123,13 +123,15 @@
   "headerName" : "Koordinator inspekcijskog nadzora",
   "xpath" : [ "bifisic_cide:coordinatorName/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 100,
+  "profiles" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "suppressSorting" : true,
   "headerName" : "Ostale vrste nadzora",
   "xpath" : [ "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTypeDesc/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 100,
+  "profiles" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "suppressSorting" : true,
   "headerName" : "Rezultati inspekcijskog nadzora",
@@ -142,9 +144,9 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}          ],
+}           ],
        "exporter":{
-         "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
+         "addFile":""
        }
      }
    },
@@ -166,8 +168,8 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_zupanija",
-      "propertyName" : "naziv",
-      "sortBy" : "naziv"
+      "propertyName" : "id,naziv",
+      "sortBy" : "naziv+A"
     }
   },
   "valueLabel" : "naziv"
@@ -180,8 +182,8 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_postanskiured",
-      "propertyName" : "naziv",
-      "sortBy" : "naziv"
+      "propertyName" : "id,naziv",
+      "sortBy" : "naziv+A"
     }
   },
   "dependson" : {
@@ -215,12 +217,12 @@
   "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idAdminPosition",
   "label" : "Administrativni položaj",
   "type" : "list",
-  "valueId" : " id_admin_position",
+  "valueId" : "id_admin_position",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_admin_position",
-      "propertyName" : "des_admin_position",
-      "sortBy" : "des_admin_position"
+      "propertyName" : "id_admin_position,des_admin_position",
+      "sortBy" : "des_admin_position+A"
     }
   },
   "valueLabel" : "des_admin_position"
@@ -254,21 +256,21 @@
   "valueLabel" : "name"
 }, {
   "index" : 10,
-  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:IdSubActivity",
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idSubActivity",
   "label" : "Nacionalna djelatnost područja postrojenja",
   "type" : "list",
   "valueId" : "id_nkd",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_nkd",
-      "propertyName" : "des_nkd",
-      "sortBy" : "des_nkd"
+      "propertyName" : "id_nkd,des_nkd",
+      "sortBy" : "des_nkd+A"
     }
   },
   "valueLabel" : "des_nkd"
 }, {
   "index" : 11,
-  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:datamapp",
+  "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:dataMAPP",
   "label" : "Datum odobrenja PSVN-a",
   "type" : "date",
   "fieldOptions" : {
@@ -291,10 +293,11 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_coordinator",
-      "propertyName" : "coordinator_surname",
-      "sortBy" : "coordinator_surname"
+      "propertyName" : "id_coordinator,coordinator_surname",
+      "sortBy" : "coordinator_surname+A"
     }
   },
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "coordinator_surname"
 }, {
   "index" : 14,
@@ -310,10 +313,11 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:cide_specific_inspection_type",
-      "propertyName" : "des_inspection_type",
-      "sortBy" : "des_inspection_type"
+      "propertyName" : "id_inspection_type,des_inspection_type",
+      "sortBy" : "des_inspection_type+A"
     }
   },
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "des_inspection_type"
 }, {
   "index" : 16,
@@ -324,10 +328,11 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_inspector",
-      "propertyName" : "inspector_surname",
-      "sortBy" : "inspector_surname"
+      "propertyName" : "id_inspector,inspector_surname",
+      "sortBy" : "inspector_surname+A"
     }
   },
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "inspector_surname"
 }, {
   "index" : 17,
@@ -343,15 +348,17 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:cide_criterior",
-      "propertyName" : "des_criterior",
-      "sortBy" : "des_criterior"
+      "propertyName" : "id_criterior,des_criterior",
+      "sortBy" : "des_criterior+A"
     }
   },
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "des_criterior"
 }, {
   "index" : 19,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:CriterionScore/bifisic_cide:scoreNum",
-  "label" : "Ocjena kriterija pojedinačnog nadzora"
+  "label" : "Ocjena kriterija pojedinačnog nadzora",
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 20,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:OpenIssue/bifisic_cide:accPrescriptions",
@@ -365,6 +372,7 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 21,
@@ -373,7 +381,8 @@
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  }
+  },
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 22,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:OpenIssue/bifisic_cide:accWarning",
@@ -387,6 +396,7 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 23,
@@ -401,6 +411,7 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
+  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 24,
@@ -414,7 +425,8 @@
   "index" : 25,
   "attribute" : "bifisic_cide:lastUpdateUserName",
   "label" : "Koord. insp. nadzor - poslj. promjena, korisnik",
-  "type" : "string"
+  "type" : "string",
+  "profile" : [ "C", "ROLE_BIFISIC" ]
 }, {
   "index" : 26,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateDate",
@@ -427,8 +439,9 @@
   "index" : 27,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName",
   "label" : "Ostali insp. nadzori - poslj. promjena, korisnik",
-  "type" : "string"
-}  
+  "type" : "string",
+  "profile" : [ "C", "ROLE_BIFISIC" ]
+}   
   ]
 
 
