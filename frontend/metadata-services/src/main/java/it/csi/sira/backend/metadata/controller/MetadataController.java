@@ -159,9 +159,22 @@ public class MetadataController {
 	Logger.getLogger(Constants.LOGGER).info(LogFormatter.format(className, methodName, "BEGIN"));
 
 	String text = params.getText();
+	try {
+		if (text!=null) {
+			text = new String(text.getBytes("ISO-8859-1"), "UTF-8");
+			//System.out.println("getMetadataObject text decoded: " + java.net.URLDecoder.decode(text, "UTF-8"));
+		}
+	} catch (Exception e) {
+	  Logger.getLogger(Constants.LOGGER).error(LogFormatter.format(className, methodName, e.getMessage()));
+	  e.printStackTrace();
+	}
 	String category = params.getCategory();
 
 	Logger.getLogger(Constants.LOGGER).debug(LogFormatter.format(className, methodName, "category: " + category));
+	Logger.getLogger(Constants.LOGGER).debug(LogFormatter.format(className, methodName, "text: " + text));
+	//System.out.println("getMetadataObject category: " + category);
+	//System.out.println("getMetadataObject text: " + text);
+
 	Logger.getLogger(Constants.LOGGER).debug(LogFormatter.format(className, methodName, "text: " + text));
 
 	try {
@@ -192,10 +205,21 @@ public class MetadataController {
 	Logger.getLogger(Constants.LOGGER).info(LogFormatter.format(className, methodName, "BEGIN"));
 
 	String text = params.getText();
+	try {
+		if (text!=null) {
+			text = new String(text.getBytes("ISO-8859-1"), "UTF-8");
+			//System.out.println("getMetadataObject text decoded: " + java.net.URLDecoder.decode(text, "UTF-8"));
+		}
+	} catch (Exception e) {
+	  Logger.getLogger(Constants.LOGGER).error(LogFormatter.format(className, methodName, e.getMessage()));
+	  e.printStackTrace();
+	}
 	String category = params.getCategory();
 
 	Logger.getLogger(Constants.LOGGER).debug(LogFormatter.format(className, methodName, "category: " + category));
 	Logger.getLogger(Constants.LOGGER).debug(LogFormatter.format(className, methodName, "text: " + text));
+	//System.out.println("getMetadataView category: " + category);
+	//System.out.println("getMetadataView text: " + text);
 
 	try {
 	  if (category != null && category.length() > 0) {

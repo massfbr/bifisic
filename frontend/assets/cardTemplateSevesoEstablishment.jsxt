@@ -44,26 +44,17 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:DesRegulationAnnex/text()")
           }/>
 
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Telefon' value={
+          <LabeledField label='Telefon' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:telephone/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Telefaks' value={
+          <LabeledField label='Telefaks' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:fax/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='E-pošta' value={
+          <LabeledField label='E-pošta' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:company/bifisic_sevesoestablishments:Company/bifisic_sevesoestablishments:email/text()")
           }/>
-
-            </ProfileWrapper>
 
 
 
@@ -133,33 +124,21 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respLegPosition/text()")
           }/>
 
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Ime i prezime' value={
+          <LabeledField label='Ime i prezime' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respLegNameSurname/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Telefon' value={
+          <LabeledField label='Telefon' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respLegPhone/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Telefaks' value={
+          <LabeledField label='Telefaks' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respLegFax/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='E-pošta' value={
+          <LabeledField label='E-pošta' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respLegEmail/text()")
           }/>
-
-            </ProfileWrapper>
 
 
 
@@ -167,40 +146,25 @@
 
         <Section header='Odgovorna osoba za organizaciju djelovanja kod iznenadnog događaja' eventKey='4' expanded={false}>
           
-                      <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Položaj' value={
+                    <LabeledField label='Položaj' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respUnEventPosition/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Ime i prezime' value={
+          <LabeledField label='Ime i prezime' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respUnEventNameSurname/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Telefon' value={
+          <LabeledField label='Telefon' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respUnEventPhone/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Telefaks' value={
+          <LabeledField label='Telefaks' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respUnEventFax/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='E-pošta' value={
+          <LabeledField label='E-pošta' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:respUnEventEMail/text()")
           }/>
-
-            </ProfileWrapper>
 
 
 
@@ -208,40 +172,25 @@
 
         <Section header='Ostali (npr. osoba za kontakt - ako se razlikuje od odgovorne osobe u pravnoj osobi)' eventKey='5' expanded={false}>
           
-                      <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Položaj' value={
+                    <LabeledField label='Položaj' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:OtherPosition/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Ime i prezime' value={
+          <LabeledField label='Ime i prezime' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:OtherNameSurname/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Telefon' value={
+          <LabeledField label='Telefon' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:OtherPhone/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Telefaks' value={
+          <LabeledField label='Telefaks' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:OtherFax/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='E-pošta' value={
+          <LabeledField label='E-pošta' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:OtherEMail/text()")
           }/>
-
-            </ProfileWrapper>
 
 
 
@@ -860,12 +809,9 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenariolike/text()")
           }/>
 
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Najgori scenarij -Procjena broja žrtava' value={
+          <LabeledField label='Najgori scenarij -Procjena broja žrtava' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:assessCasualties/text()")
           }/>
-
-            </ProfileWrapper>
 
           <LabeledField label='Najgori scenarij -Područje visoke smrtnosti (m)' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment/bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioHighMortality/text()")
@@ -1193,15 +1139,6 @@
 	              
         </Section>
 	              
-        <Section header='METAPODACI' eventKey='21' expanded={true}>
-          
-          <LinkToPage
-            txt="Pogledajte Metapodaci /View Metadata"
-            url="http://envi-metapodaci.azo.hr/geonetwork/srv/hrv/catalog.search#/metadata/d0aaac75-d9f6-44d6-97e0-0de151bfabff"
-/>
-
-        </Section>
-
 
 
     </Panel>
