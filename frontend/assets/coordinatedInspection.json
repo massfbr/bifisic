@@ -123,15 +123,13 @@
   "headerName" : "Koordinator inspekcijskog nadzora",
   "xpath" : [ "bifisic_cide:coordinatorName/text()" ],
   "type" : 2,
-  "width" : 100,
-  "profiles" : [ "C", "ROLE_BIFISIC" ]
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Ostale vrste nadzora",
   "xpath" : [ "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:specInspectionTypeDesc/text()" ],
   "type" : 2,
-  "width" : 100,
-  "profiles" : [ "C", "ROLE_BIFISIC" ]
+  "width" : 100
 }, {
   "suppressSorting" : true,
   "headerName" : "Rezultati inspekcijskog nadzora",
@@ -144,7 +142,7 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}           ],
+}            ],
        "exporter":{
          "addFile":""
        }
@@ -297,7 +295,6 @@
       "sortBy" : "coordinator_surname+A"
     }
   },
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "coordinator_surname"
 }, {
   "index" : 14,
@@ -317,7 +314,6 @@
       "sortBy" : "des_inspection_type+A"
     }
   },
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "des_inspection_type"
 }, {
   "index" : 16,
@@ -332,7 +328,6 @@
       "sortBy" : "inspector_surname+A"
     }
   },
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "inspector_surname"
 }, {
   "index" : 17,
@@ -352,13 +347,11 @@
       "sortBy" : "des_criterior+A"
     }
   },
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "des_criterior"
 }, {
   "index" : 19,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:CriterionScore/bifisic_cide:scoreNum",
-  "label" : "Ocjena kriterija pojedinačnog nadzora",
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  "label" : "Ocjena kriterija pojedinačnog nadzora"
 }, {
   "index" : 20,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:OpenIssue/bifisic_cide:accPrescriptions",
@@ -372,7 +365,6 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 21,
@@ -381,8 +373,7 @@
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  },
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  }
 }, {
   "index" : 22,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:OpenIssue/bifisic_cide:accWarning",
@@ -396,7 +387,6 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 23,
@@ -411,7 +401,6 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 24,
@@ -425,8 +414,7 @@
   "index" : 25,
   "attribute" : "bifisic_cide:lastUpdateUserName",
   "label" : "Koord. insp. nadzor - poslj. promjena, korisnik",
-  "type" : "string",
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  "type" : "string"
 }, {
   "index" : 26,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateDate",
@@ -439,9 +427,8 @@
   "index" : 27,
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName",
   "label" : "Ostali insp. nadzori - poslj. promjena, korisnik",
-  "type" : "string",
-  "profile" : [ "C", "ROLE_BIFISIC" ]
-}   
+  "type" : "string"
+}    
   ]
 
 

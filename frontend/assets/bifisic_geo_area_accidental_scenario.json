@@ -152,7 +152,7 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList/text()" ],
   "type" : 6
-}          ],
+}           ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
@@ -396,7 +396,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}
+} 
   ]
 
 

@@ -66,30 +66,21 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:inspectionDate/text()")
           }/>
 
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Koordinator inspekcijskog nadzora' value={
+          <LabeledField label='Koordinator inspekcijskog nadzora' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:coordinatorName/text()")
           }/>
-
-            </ProfileWrapper>
 
           <LabeledField label='Rezultati inspekcijskog nadzora' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:totalScore/text()")
           }/>
 
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Vrijeme posljednje promjene' value={
+          <LabeledField label='Vrijeme posljednje promjene' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:lastUpdateDate/text()")
           }/>
 
-            </ProfileWrapper>
-
-            <ProfileWrapper condition={() => (model && model.profile) && ( (model.profile.indexOf('ROLE_BIFISIC')) > -1 )}>
-                          <LabeledField label='Posljednja promjena, korisnik' value={
+          <LabeledField label='Posljednja promjena, korisnik' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:lastUpdateUserName/text()")
           }/>
-
-            </ProfileWrapper>
 
         <Section header='Ostali inspekcijski nadzori' eventKey='3' expanded={false}>
 

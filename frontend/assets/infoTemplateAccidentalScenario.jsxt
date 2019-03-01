@@ -6,7 +6,7 @@
     onCellClicked={props.onCellClicked}
     profile={model.profile}
     columns={[
-    {
+     {
   "id" : true,
   "headerName" : "",
   "xpath" : "@gml:id",
@@ -76,6 +76,6 @@
   "headerName" : "Scenarij - Područje domino efekta  (m)",
   "xpath" : "bifisic_sevesoestablishments:dom_area/text()",
   "width" : 120
-}      
+}       
     ]}
     features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario")}/>

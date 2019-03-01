@@ -171,7 +171,7 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-} 
+}  
      ],
        "exporter":{
          "addFile":""
@@ -187,7 +187,7 @@
        }
      },
      "fields":[
-   {
+    {
   "index" : 1,
   "attribute" : "bifisic_sevesoestablishments:idCounty",
   "label" : "Županija",
@@ -203,10 +203,10 @@
   "valueLabel" : "naziv"
 }, {
   "index" : 2,
-  "attribute" : "bifisic_sevesoestablishments:naziv",
+  "attribute" : "bifisic_sevesoestablishments:idMunicipality",
   "label" : "Općina",
   "type" : "list",
-  "valueId" : "naziv",
+  "valueId" : "id",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_postanskiured",
@@ -275,8 +275,7 @@
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  },
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  }
 }, {
   "index" : 10,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateLastNotification",
@@ -284,8 +283,7 @@
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  },
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  }
 }, {
   "index" : 11,
   "attribute" : "bifisic_sevesoestablishments:NotificationValidated",
@@ -299,7 +297,6 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 12,
@@ -350,7 +347,6 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 16,
@@ -359,8 +355,7 @@
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  },
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  }
 }, {
   "index" : 17,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateInternalEmergency",
@@ -368,8 +363,7 @@
   "type" : "date",
   "fieldOptions" : {
     "dateFormat" : "DD/MM/YYYY"
-  },
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  }
 }, {
   "index" : 18,
   "attribute" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:dateClassSafetyReportApproved",
@@ -396,7 +390,6 @@
     "name" : "FALSE",
     "value" : "false"
   } ],
-  "profile" : [ "C", "ROLE_BIFISIC" ],
   "valueLabel" : "name"
 }, {
   "index" : 21,
@@ -510,8 +503,7 @@
   "index" : 33,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:substanceEvent",
   "label" : "Scenarij nesreće - tvari koje su sudjelovale u događaju",
-  "type" : "string",
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  "type" : "string"
 }, {
   "index" : 34,
   "attribute" : "bifisic_sevesoestablishments:worstScenario/bifisic_sevesoestablishments:WorstScenario/bifisic_sevesoestablishments:worstScenarioPhenomTypeDes",
@@ -543,20 +535,18 @@
 }, {
   "index" : 36,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:likeScenario",
-  "label" : "Scenarij-vjerojatnost pojave [broj/god]",
+  "label" : "Scenarij-vjerojatnost pojave (broj/god)",
   "type" : "string"
 }, {
   "index" : 37,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:maxImpactArea",
-  "label" : "Scenarij-područje učinka(m)",
-  "type" : "number",
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  "label" : "Scenarij-područje učinka (m)",
+  "type" : "number"
 }, {
   "index" : 38,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:assessCasualties",
   "label" : "Scenarij nesreće - procjena broja žrtava",
-  "type" : "number",
-  "profile" : [ "C", "ROLE_BIFISIC" ]
+  "type" : "number"
 }, {
   "index" : 39,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:accidentalScenario/bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:domHazard",
@@ -613,7 +603,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}         ]
+}          ]
 
 
    }

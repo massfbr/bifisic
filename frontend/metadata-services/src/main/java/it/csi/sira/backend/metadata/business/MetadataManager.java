@@ -358,6 +358,8 @@ public class MetadataManager {
 		throw new MetadataManagerException("Category not exist!!");
 	  }
 
+	System.out.println("getMetadata category: " + idCategory);
+	System.out.println("getMetadata text: " + text);
 	  JsonMetaObject category = getAppCategories(sipraMtdTCategoriaAppl.getIdCategoriaAppl(), text, type);
 
 	  if (category != null) {
