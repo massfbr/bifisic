@@ -59,12 +59,16 @@ FilterUtils.getSLD = function(ftName, json, version, nsplaceholder, nameSpaces) 
         filter = '';
     }
     let configName = ftName.indexOf(":") > -1 ? ftName.split(":")[1] : ftName;
-    let geometryType = SiraUtils.getConfigOggetti()[configName].geometryType;
+    let config = SiraUtils.getConfigOggetti()[configName];
+    // bad but there is a caos in config name and feature name
+    config = config ? config : SiraUtils.getConfigOggetti()[configName.charAt(0).toLowerCase() + configName.slice(1)];
+    let geometryType = config.geometryType;
+
     const nameSpacesAttr = Object.keys(nameSpaces).map((prefix) => 'xmlns:' + prefix + '="' + nameSpaces[prefix] + '"').join(" ");
 
     let result;
 
-    switch(geometryType) {
+    switch (geometryType) {
         case "Point": {
             result = `<StyledLayerDescriptor version="1.0.0"
                     ${nameSpacesAttr}

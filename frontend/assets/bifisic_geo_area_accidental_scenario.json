@@ -2,7 +2,7 @@
    "featureTypeName":"bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
    "featureTypeNameLabel":"Accidental Scenarios",
    "nameSpaces": {
-     "bifisic_sevesoestablishments": "http://pproo.azo.hr/bifisic/bifisic_sevesoestablishments/1.0"
+     "bifisic_sevesoestablishments": "http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"
    },
    "layer": {
         "type": "wms",
@@ -381,7 +381,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}  
+}
   ]
 
 
