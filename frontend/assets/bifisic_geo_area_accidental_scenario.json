@@ -44,7 +44,7 @@
      "grid": {
        "root": "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
        "columns": [
- {
+  {
   "hide" : true,
   "id" : true,
   "headerName" : "Id",
@@ -73,7 +73,7 @@
   "headerName" : "Naziv tvrtke",
   "xpath" : [ "bifisic_sevesoestablishments:company_name/text()" ],
   "type" : 2,
-  "width" : 150
+  "width" : 200
 }, {
   "suppressSorting" : true,
   "headerName" : "Naziv područja postrojenja",
@@ -91,7 +91,7 @@
   "headerName" : "Naziv Događaj",
   "xpath" : [ "bifisic_sevesoestablishments:event_name/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 250
 }, {
   "suppressSorting" : true,
   "headerName" : "Uključena tvar/mješavina Događaj",
@@ -115,44 +115,44 @@
   "headerName" : "Scenarij - vrsta ozbiljnosti",
   "xpath" : [ "bifisic_sevesoestablishments:des_severity/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 200
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - radijus  (m)",
   "xpath" : [ "bifisic_sevesoestablishments:radius/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 120
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - Vjerojatnost događaja (broj/god)",
   "xpath" : [ "bifisic_sevesoestablishments:like_scenario/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 120
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - Najgori scenarij",
   "xpath" : [ "bifisic_sevesoestablishments:worst_scenario/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 120
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - Procjena broja žrtava",
   "xpath" : [ "bifisic_sevesoestablishments:assess_casualties/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 120
 }, {
   "suppressSorting" : true,
   "headerName" : "Scenarij - Područje domino efekta  (m)",
   "xpath" : [ "bifisic_sevesoestablishments:dom_area/text()" ],
   "type" : 2,
-  "width" : 100
+  "width" : 120
 }, {
   "hide" : true,
   "suppressSorting" : true,
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList/text()" ],
   "type" : 6
-}        ],
+}          ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
@@ -167,7 +167,7 @@
        }
      },
      "fields":[
-   {
+    {
   "index" : 1,
   "attribute" : "bifisic_sevesoestablishments:id_county",
   "label" : "Županija",
@@ -176,7 +176,7 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_zupanija",
-      "propertyName" : "naziv",
+      "propertyName" : "id,naziv",
       "sortBy" : "naziv"
     }
   },
@@ -186,11 +186,11 @@
   "attribute" : "bifisic_sevesoestablishments:idMunicipality",
   "label" : "Općina",
   "type" : "list",
-  "valueId" : "naziv",
+  "valueId" : "id",
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:rpot_postanskiured",
-      "propertyName" : "naziv",
+      "propertyName" : "id,naziv",
       "sortBy" : "naziv"
     }
   },
@@ -229,8 +229,8 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_admin_position",
-      "propertyName" : "des_admin_position",
-      "sortBy" : "des_admin_position"
+      "propertyName" : "id_admin_position,des_admin_position",
+      "sortBy" : "des_admin_position+A"
     }
   },
   "valueLabel" : "des_admin_position"
@@ -281,8 +281,8 @@
   "valueService" : {
     "urlParams" : {
       "typeName" : "bifisic_decodif:bifisic_d_phenom_type_scenario",
-      "propertyName" : "des_phenom_type",
-      "sortBy" : "id_phenom_type"
+      "propertyName" : "id_phenom_type,des_phenom_type",
+      "sortBy" : "des_phenom_type+A"
     }
   },
   "valueLabel" : "des_phenom_type"
@@ -309,7 +309,22 @@
   "index" : 15,
   "attribute" : "bifisic_sevesoestablishments:des_severity",
   "label" : "Scenarij - vrsta ozbiljnosti",
-  "type" : "string"
+  "type" : "list",
+  "valueId" : "value",
+  "values" : [ {
+    "name" : "HIGH MORTALITY",
+    "value" : "HIGH MORTALITY"
+  }, {
+    "name" : "MORTALITY",
+    "value" : "MORTALITY"
+  }, {
+    "name" : "PERMANENT CONSEQUENCES",
+    "value" : "PERMANENT CONSEQUENCES"
+  }, {
+    "name" : "TEMPORARY CONSEQUENCE",
+    "value" : "TEMPORARY CONSEQUENCE"
+  } ],
+  "valueLabel" : "name"
 }, {
   "index" : 16,
   "attribute" : "bifisic_sevesoestablishments:radius",

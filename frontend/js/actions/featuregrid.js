@@ -15,9 +15,28 @@ const SET_FEATURES = 'SET_FEATURES';
 const SELECT_ALL = 'SELECT_ALL';
 
 function selectFeatures(features) {
+    
+    var localFeatures = features;
+    if (features instanceof Array) {
+	    for (var i=0; i<localFeatures.length; i++) {
+		if (localFeatures[i].type=='Feature'
+			&& localFeatures[i].geometry
+			&& localFeatures[i].geometry.type=='Polygon') {
+			var coords = localFeatures[i].geometry.coordinates[0];
+			var newCoords = new Array();
+			if (coords && coords.length>0) {
+				for (var j=0; j<coords.length; j++) {
+					newCoords.push(coords[j][0]);
+					newCoords.push(coords[j][1]);
+				}
+			}			
+			localFeatures[i].geometry.coordinates = newCoords;
+		}
+	    }
+    }
     return {
         type: SELECT_FEATURES,
-        features: features
+        features: localFeatures
     };
 }
 
