@@ -149,7 +149,7 @@
 	              center={
 	                      model.getValue({
 	                          type: TemplateUtils.GEOMETRY_TYPE,
-	                          xpath: "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()"
+	                          xpath: "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:geometry/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList/text()"
 	                      })
 	              }
 	              layers={[
@@ -176,6 +176,15 @@
 	              
         </Section>
 	              
+        <Section header='META PODACI' eventKey='7' expanded={true}>
+          
+          <LinkToPage
+            txt="Pogledajte Metapodaci /View Metadata"
+            url="http://envi-metapodaci.azo.hr/geonetwork/srv/hrv/catalog.search#/metadata/d0aaac75-d9f6-44d6-97e0-0de151bfabff"
+/>
+
+        </Section>
+
 
 
     </Panel>

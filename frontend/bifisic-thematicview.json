@@ -197,24 +197,74 @@
   		},
 		{
   			"type": "wms",
-        "url": "{geoserverUrl}/ows",
-        "visibility": true,
-  		"title": "Postrojenja u kojima su prisutne opasne tvari / Seveso Establishments",
-  		"name": "bifisic_sevesoestablishments:SevesoEstablishment",
-        "infoFormat": "application/vnd.ogc.gml/3.1.1",
-        "featureType": "sevesoEstablishment",
-        "group": "BIFISIC Informacije / Objects",
-        "format": "image/png"
+        "url": "http://pproo.azo.hr/geoserver/bifisic_sevesoscenarios/wms",
+        "visibility": false,
+  			"title": "Scenarij-domino efekt",
+  			"name": "bifisic_geo_domino_effect",
+  			"group": "Seveso postrojenja - Dodatne informacije",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
         },
-        {
+        "tileSize": 512
+  		},
+		{
+  			"type": "wms",
+        "url": "http://pproo.azo.hr/geoserver/bifisic_sevesoscenarios/wms",
+        "visibility": false,
+  			"title": "Najgori scenarij",
+  			"name": "bifisic_geo_worst_scenario",
+  			"group": "Seveso postrojenja - Dodatne informacije ",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
+        },
+        "tileSize": 512
+  		},
+		{
+  			"type": "wms",
+        "url": "http://pproo.azo.hr/geoserver/bifisic_sevesoscenarios/wms",
+        "visibility": false,
+  			"title": "Izvori opasnosti",
+  			"name": "bifisic_geo_hazard_source",
+  			"group": "Seveso postrojenja - Dodatne informacije ",
+  			"format": "image/png",
+        "legendParams": {
+          "sld_version": "1.1.0"
+        },
+        "tileSize": 512
+  		},
+		{
   			"type": "wms",
         "url": "{geoserverUrl}/wms",
         "visibility": true,
-  		"title": "Koordinirani Inspekcijski Nadzori / Coordinated Inspection",
+  		"title": "Seveso postrojenja - informacije o koordiniranim inspekcijama",
   		"name": "bifisic_cide:CoordinatedInspection",
         "infoFormat": "application/vnd.ogc.gml/3.1.1",
         "featureType": "coordinatedInspection",
-        "group": "BIFISIC Informacije / Objects",
+        "group": "Objects",
+        "format": "image/png"
+        },
+		{
+  			"type": "wms",
+        "url": "{geoserverUrl}/ows",
+        "visibility": true,
+  		"title": "Seveso postrojenja - Scenarij nesreće",
+  		"name": "bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
+        "infoFormat": "application/vnd.ogc.gml/3.1.1",
+        "featureType": "bifisic_geo_area_accidental_scenario",
+        "group": "Objects",
+        "format": "image/png"
+        },
+		{
+  			"type": "wms",
+        "url": "{geoserverUrl}/ows",
+        "visibility": true,
+  		"title": "Seveso postrojenja - integrirane informacije",
+  		"name": "bifisic_sevesoestablishments:SevesoEstablishment",
+        "infoFormat": "application/vnd.ogc.gml/3.1.1",
+        "featureType": "sevesoEstablishment",
+        "group": "Objects",
         "format": "image/png"
         }
       ]

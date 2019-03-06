@@ -1139,6 +1139,15 @@
 	              
         </Section>
 	              
+        <Section header='METAPODACI' eventKey='21' expanded={true}>
+          
+          <LinkToPage
+            txt="Pogledajte Metapodaci /View Metadata"
+            url="http://envi-metapodaci.azo.hr/geonetwork/srv/hrv/catalog.search#/metadata/d0aaac75-d9f6-44d6-97e0-0de151bfabff"
+/>
+
+        </Section>
+
 
 
     </Panel>

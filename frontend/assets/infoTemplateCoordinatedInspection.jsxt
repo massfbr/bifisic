@@ -68,6 +68,6 @@
   "headerName" : "Rezultati inspekcijskog nadzora",
   "xpath" : "bifisic_cide:totalScore/text()",
   "width" : 80
-}    
+}     
     ]}
     features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_cide:CoordinatedInspection")}/>
