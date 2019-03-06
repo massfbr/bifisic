@@ -1,6 +1,6 @@
 {
    "featureTypeName":"bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
-   "featureTypeNameLabel":"Accidental Scenarios",
+   "featureTypeNameLabel":"Seveso postrojenja - Scenarij nesreće",
    "nameSpaces": {
      "bifisic_sevesoestablishments": "http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"
    },
@@ -44,7 +44,7 @@
      "grid": {
        "root": "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
        "columns": [
-  {
+   {
   "hide" : true,
   "id" : true,
   "headerName" : "Id",
@@ -152,7 +152,7 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList/text()" ],
   "type" : 6
-}           ],
+}            ],
        "exporter":{
          "addFile":"assets/licenza/BIFISIC_Draft_licenseCC25BY.pdf"
        }
@@ -396,7 +396,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-} 
+}  
   ]
 
 

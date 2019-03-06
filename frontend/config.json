@@ -11,6 +11,14 @@
     ],
 
     "layers":[
+			 {
+        "type": "ol",
+        "title": "None",
+        "name": "None",
+        "source": "ol",
+        "group": "background",
+        "visibility": false
+        },
 			{
 				"type": "osm",
 				"title": "Open Street Map",

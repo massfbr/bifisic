@@ -370,7 +370,7 @@
 	                          "url": "{geoserverUrl}/wms",
 	                          "visibility": true,
 	                          "title": "Coordinated Inspection Preview",
-	                          "name": "bifisic_cide:SimplifiedSevesoEstablishment",
+	                          "name": "bifisic_cide:CoordinatedInspection",
 	                          "group": "Overlays",
 	                          "format": "image/png"
 	                      }

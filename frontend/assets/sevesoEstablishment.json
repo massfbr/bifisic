@@ -1,6 +1,6 @@
 {
    "featureTypeName":"bifisic_sevesoestablishments:SevesoEstablishment",
-   "featureTypeNameLabel":"Postrojenja u kojima su prisutne opasne tvari / Seveso Establishments",
+   "featureTypeNameLabel":"Seveso postrojenja - integrirane informacije",
    "nameSpaces": {
      "bifisic_sevesoestablishments": "http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"
    },
@@ -45,7 +45,7 @@
      "grid": {
        "root": "/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:SevesoEstablishment",
        "columns": [
-  {
+   {
   "hide" : true,
   "id" : true,
   "headerName" : "Id",
@@ -171,7 +171,7 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_sevesoestablishments:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}  
+}    
      ],
        "exporter":{
          "addFile":""
@@ -187,7 +187,7 @@
        }
      },
      "fields":[
-    {
+     {
   "index" : 1,
   "attribute" : "bifisic_sevesoestablishments:idCounty",
   "label" : "Županija",
@@ -468,7 +468,7 @@
   "valueLabel" : "des_category"
 }, {
   "index" : 30,
-  "attribute" : "bifisic_sevesoestablishments:classification/bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:codClassification",
+  "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:classification/bifisic_sevesoestablishments:Classification/bifisic_sevesoestablishments:codClassification",
   "label" : "Razvrstavanje",
   "type" : "list",
   "valueId" : "cod_classification",
@@ -497,7 +497,7 @@
 }, {
   "index" : 32,
   "attribute" : "bifisic_sevesoestablishments:event/bifisic_sevesoestablishments:Event/bifisic_sevesoestablishments:likeEvent",
-  "label" : "Scenarij-vjerojatnost događaja [broj/god]",
+  "label" : "Scenarij-vjerojatnost događaja (broj/god)",
   "type" : "string"
 }, {
   "index" : 33,
@@ -603,7 +603,7 @@
     "value" : "false"
   } ],
   "valueLabel" : "name"
-}          ]
+}            ]
 
 
    }
