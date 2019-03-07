@@ -70,6 +70,7 @@ function siradec(state = initialState, action) {
                 layer: action.layer,
                 exporter: action.exporter,
                 geometryType: action.geometryType || 'Point',
+                isSimpleFeature: action.isSimpleFeature || false,
                 queryform
                 });
 
