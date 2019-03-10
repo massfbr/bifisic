@@ -142,7 +142,7 @@
   "headerName" : "geometry",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:geometry/gml:Point/gml:pos/text()" ],
   "type" : 6
-}             ],
+}              ],
        "exporter":{
          "addFile":""
        }
@@ -157,7 +157,7 @@
        }
      },
      "fields":[
-    {
+     {
   "index" : 1,
   "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idCounty",
   "label" : "Županija područja postrojenja",
@@ -428,7 +428,7 @@
   "attribute" : "bifisic_cide:specificInspection/bifisic_cide:SpecificInspection/bifisic_cide:lastUpdateUserName",
   "label" : "Ostali insp. nadzori - poslj. promjena, korisnik",
   "type" : "string"
-}     
+}      
   ]
 
 

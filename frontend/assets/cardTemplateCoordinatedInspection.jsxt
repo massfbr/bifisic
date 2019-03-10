@@ -382,7 +382,10 @@
 	              
         <Section header='META PODACI' eventKey='7' expanded={true}>
           
-          
+          <LinkToPage
+            txt="Pogledajte Metapodaci /View Metadata"
+            url="http://envi-metapodaci.azo.hr/geonetwork/srv/hrv/catalog.search#/metadata/ea529eb6-a7cd-4312-91aa-79904f8ba69b"
+/>
 
         </Section>
 

@@ -84,5 +84,5 @@
   "headerName" : "Klasa posljednjeg IOS-a",
   "xpath" : "bifisic_sevesoestablishments:measurePreventingMitigating/bifisic_sevesoestablishments:MeasurePreventingMitigating/bifisic_sevesoestablishments:classSafetyReportApproved/text()",
   "width" : 120
-}           ]}
+}            ]}
     features={model.getValue("/wfs:FeatureCollection/gml:featureMembers/bifisic_sevesoestablishments:SevesoEstablishment")}/>
