@@ -43,6 +43,7 @@ function configureFeatureType(ft, field, featureType, activate) {
         nameSpaces: ft.nameSpaces,
         layer: ft.layer,
         exporter: ft.exporter,
+        isSimpleFeature: ft.isSimpleFeature,
         field,
         featureType,
         activate
@@ -218,6 +219,7 @@ function loadFeatureTypeConfig(configUrl, params, featureType, activate = false,
                         name: config.featureTypeNameLabel,
                         geometryName: config.geometryName,
                         geometryType: config.geometryType,
+                        isSimpleFeature: config.isSimpleFeature,
                         nameSpaces: config.nameSpaces || {},
                         layer: layer,
                         exporter: config.exporter

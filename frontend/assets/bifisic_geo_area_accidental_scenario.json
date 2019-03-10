@@ -25,6 +25,7 @@
         },
    "geometryName": "geometry",
    "geometryType": "Polygon",
+   "isSimpleFeature": true,
    "card": {
         "pdfname": "AccidentalScenarioDetail.pdf",
         "template": "assets/cardTemplateAccidentalScenario.jsxt",

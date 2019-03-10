@@ -50,7 +50,22 @@ FilterUtils.getOgcAllPropertyValue = function(featureTypeName, attribute) {
             </wfs:GetPropertyValue>`;
 };
 FilterUtils.getSLD = function(ftName, json, version, nsplaceholder, nameSpaces) {
-    let filter = this.toOGCFilterSira(ftName, json, version, null, false, null, nsplaceholder);
+    let configName = ftName.indexOf(":") > -1 ? ftName.split(":")[1] : ftName;
+    let config = SiraUtils.getConfigOggetti()[configName];
+    // bad but there is a caos in config name and feature name
+    config = config ? config : SiraUtils.getConfigOggetti()[configName.charAt(0).toLowerCase() + configName.slice(1)];
+
+
+    let myJson = json;
+    // if simpleFeature remove workspacename
+    if (config.isSimpleFeature) {
+        myJson.filterFields.map((ff) => {
+            if (ff && ff.attribute) {
+                ff.attribute = ff.attribute.split(":")[1];
+            }
+        });
+    }
+    let filter = this.toOGCFilterSira(ftName, myJson, version, null, false, null, nsplaceholder);
     let sIdx = filter.search( `<${nsplaceholder}:Filter>`);
     if (sIdx !== -1) {
         let eIndx = filter.search( `</wfs:Query>`);
@@ -58,12 +73,7 @@ FilterUtils.getSLD = function(ftName, json, version, nsplaceholder, nameSpaces) 
     } else {
         filter = '';
     }
-    let configName = ftName.indexOf(":") > -1 ? ftName.split(":")[1] : ftName;
-    let config = SiraUtils.getConfigOggetti()[configName];
-    // bad but there is a caos in config name and feature name
-    config = config ? config : SiraUtils.getConfigOggetti()[configName.charAt(0).toLowerCase() + configName.slice(1)];
     let geometryType = config.geometryType;
-
     const nameSpacesAttr = Object.keys(nameSpaces).map((prefix) => 'xmlns:' + prefix + '="' + nameSpaces[prefix] + '"').join(" ");
 
     let result;
