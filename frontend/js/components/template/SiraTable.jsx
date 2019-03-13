@@ -22,7 +22,7 @@ const uuid = require('node-uuid');
 require("ag-grid/dist/styles/ag-grid.css");
 require("ag-grid/dist/styles/theme-blue.css");
 
-const {loadCardTemplate} = require('../../actions/card');
+const {loadCardTemplate, setWaitingForConfig} = require('../../actions/card');
 
 const {
     loadFeatureTypeConfig
@@ -50,9 +50,11 @@ const SiraTable = React.createClass({
             React.PropTypes.string,
             React.PropTypes.bool
         ]),
+        waitingForConfig: React.PropTypes.object,
         selectRows: React.PropTypes.func,
         onDetail: React.PropTypes.func,
-        loadFeatureTypeConfig: React.PropTypes.func
+        loadFeatureTypeConfig: React.PropTypes.func,
+        setWaitingForConfig: React.PropTypes.func
     },
     getDefaultProps() {
         return {
@@ -67,14 +69,23 @@ const SiraTable = React.createClass({
             rowSelection: "single",
             selectedRow: null,
             selectRows: () => {},
+            waitingForConfig: null,
+            setWaitingForConfig: () => {},
             onDetail: () => {}
         };
     },
-    componentWillReceiveProps(nextProps) {
-        if (this.waitingForConfig && nextProps.configOggetti && nextProps.configOggetti[this.waitingForConfig.featureType] && nextProps.configOggetti[this.waitingForConfig.featureType].card) {
-            const params = this.waitingForConfig.params;
-            this.goToDetail(params, nextProps);
-            this.waitingForConfig = null;
+    // componentWillReceiveProps(nextProps) {
+    //    if (this.waitingForConfig && nextProps.configOggetti && nextProps.configOggetti[this.waitingForConfig.featureType] && nextProps.configOggetti[this.waitingForConfig.featureType].card) {
+    //        const params = this.waitingForConfig.params;
+    //        this.goToDetail(params, nextProps);
+    //        this.waitingForConfig = null;
+    //    }
+    // },
+    componentWillMount() {
+        if (this.props.waitingForConfig) {
+            const params = this.props.waitingForConfig.params;
+            this.props.setWaitingForConfig(null);
+            this.goToDetail(params);
         }
     },
     componentDidUpdate() {
@@ -152,12 +163,19 @@ const SiraTable = React.createClass({
     goToDetail(params, props) {
         let detailProps = props || this.props;
         const id = params.data.link;
-        const featureType = params.colDef.linkToDetail.featureType;
+        const cqlFilter = params.colDef.linkToDetail.cqlFilter;
+        const featureType = params.colDef.linkToDetail.featureType.indexOf(":") > 1 ? params.colDef.linkToDetail.featureType.split(":")[1] : params.colDef.linkToDetail.featureType;
         if (detailProps.configOggetti[featureType]) {
             const detailsConfig = detailProps.configOggetti[featureType];
             const templateUrl = params.colDef.linkToDetail.templateUrl ? params.colDef.linkToDetail.templateUrl : (detailsConfig.card.template.default || detailsConfig.card.template);
             let url;
-            if (id) {
+            if (cqlFilter) {
+                url = detailsConfig.card.service.url;
+                Object.keys(detailsConfig.card.service.params).forEach((param) => {
+                    url += `&${param}=${detailsConfig.card.service.params[param]}`;
+                });
+                url = url += "&cql_filter=" + cqlFilter;
+            }else if (id) {
                 url = detailsConfig.card.service.url;
                 Object.keys(detailsConfig.card.service.params).forEach((param) => {
                     url += `&${param}=${detailsConfig.card.service.params[param]}`;
@@ -166,14 +184,15 @@ const SiraTable = React.createClass({
             }
             detailProps.onDetail(templateUrl, url);
         } else {
-            this.waitingForConfig = {
-                featureType,
-                params
-            };
+            let waitingForConfig = {
+               featureType,
+               params
+           };
+            detailProps.setWaitingForConfig(waitingForConfig);
             detailProps.loadFeatureTypeConfig(null, {authkey: detailProps.authParams.authkey ? detailProps.authParams.authkey : ''}, featureType, false);
         }
-
     },
+
     selectRows(params) {
         // this.props.selectRows(this.props.id, (params.selectedRows[0]) ? params.selectedRows[0].id : null);
         if (params.selectedRows[0]) {
@@ -186,12 +205,14 @@ module.exports = connect((state) => {
     return {
         configOggetti: state.siradec.configOggetti,
         card: state.cardtemplate || {},
-        authParams: state.userprofile.authParams
+        authParams: state.userprofile.authParams,
+        waitingForConfig: state.siradec.waitingForConfig
     };
 }, dispatch => {
     return bindActionCreators({
         selectRows: selectRows,
         onDetail: loadCardTemplate,
+        setWaitingForConfig: setWaitingForConfig,
         loadFeatureTypeConfig
     }, dispatch);
 })(SiraTable);
