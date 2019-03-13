@@ -8,7 +8,7 @@
         "type": "wms",
         "url": "{geoserverUrl}/ows",
         "visibility": true,
-        "title": "Coordinated Inspections",
+        "title": "Seveso postrojenja - informacije o koordiniranim inspekcijama",
         "name": "bifisic_cide:CoordinatedInspection",
         "infoFormat": "application/vnd.ogc.gml/3.1.1",
         "topologyConfig": {

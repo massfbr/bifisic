@@ -1,4 +1,4 @@
-{
+﻿{
   "map": {
 
     "projection": "EPSG:3857",
@@ -214,7 +214,7 @@
         "visibility": false,
   			"title": "Najgori scenarij",
   			"name": "bifisic_geo_worst_scenario",
-  			"group": "Seveso postrojenja - Dodatne informacije ",
+  			"group": "Seveso postrojenja - Dodatne informacije",
   			"format": "image/png",
         "legendParams": {
           "sld_version": "1.1.0"
@@ -227,7 +227,7 @@
         "visibility": false,
   			"title": "Izvori opasnosti",
   			"name": "bifisic_geo_hazard_source",
-  			"group": "Seveso postrojenja - Dodatne informacije ",
+  			"group": "Seveso postrojenja - Dodatne informacije",
   			"format": "image/png",
         "legendParams": {
           "sld_version": "1.1.0"
