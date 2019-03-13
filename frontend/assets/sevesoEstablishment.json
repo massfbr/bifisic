@@ -8,7 +8,7 @@
         "type": "wms",
         "url": "{geoserverUrl}/ows",
         "visibility": true,
-        "title": "Seveso Establishments",
+        "title": "Seveso postrojenja - integrirane informacije",
         "name": "bifisic_sevesoestablishments:SevesoEstablishment",
         "infoFormat": "application/vnd.ogc.gml/3.1.1",
         "topologyConfig": {
