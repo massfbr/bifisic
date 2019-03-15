@@ -60,7 +60,22 @@
 
         </Section>
 
-        <Section header='KOORDINIRANI INSPEKCIJSKI NADZORI' eventKey='2' expanded={true}>
+        <Section header='OTVORITE CIJELU KARTICU INFORMACIJE O PODRUČJU POSTROJENJA' eventKey='2' expanded={true}>
+          
+                    <LabeledField label='Otvorite cijelu karticu' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idEstablishment/text()")
+          }/>
+
+	<LinkScheda
+	  params={{cql_filter: "bifisic_sevesoestablishments:idEstablishment='"+model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idEstablishment/text()")+"'"}}
+	  featureType="sevesoEstablishment"
+	  linkTitle={"Go to establishment " + model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idEstablishment/text()")}
+	  detailsTemplateConfigURL={"assets/cardTemplateSevesoEstablishment.jsxt"}
+	/>
+
+        </Section>
+
+        <Section header='KOORDINIRANI INSPEKCIJSKI NADZORI' eventKey='3' expanded={true}>
           
                     <LabeledField label='Datum inspekcijskog nadzora' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:inspectionDate/text()")
@@ -82,7 +97,7 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:lastUpdateUserName/text()")
           }/>
 
-        <Section header='Ostali inspekcijski nadzori' eventKey='3' expanded={false}>
+        <Section header='Ostali inspekcijski nadzori' eventKey='4' expanded={false}>
 
           <SiraTable
                 id="SpecificInspection"
@@ -158,7 +173,7 @@
                 features={model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_cide:CoordinatedInspection/bifisic_cide:specificInspection")}
                 
           />
-                        <Section header='Kriteriji ocjenjivanja' eventKey='4' expanded={(model.SpecificInspection !== undefined && model.SpecificInspection !== null ) ? true: false}>
+                        <Section header='Kriteriji ocjenjivanja' eventKey='5' expanded={(model.SpecificInspection !== undefined && model.SpecificInspection !== null ) ? true: false}>
 
           <SiraTable
                 id="CriterionScore"
@@ -245,7 +260,7 @@
 
         </Section>
           
-        <Section header='Otvorena pitanja' eventKey='5' expanded={(model.SpecificInspection !== undefined && model.SpecificInspection !== null ) ? true: false}>
+        <Section header='Otvorena pitanja' eventKey='6' expanded={(model.SpecificInspection !== undefined && model.SpecificInspection !== null ) ? true: false}>
 
           <SiraTable
                 id="OpenIssue"
@@ -348,7 +363,7 @@
 
         </Section>
 
-        <Section header='Coordinated Inspection on OpenStreetMap background courtesy by http://www.openstreetmap.org' eventKey='6' expanded={true}>
+        <Section header='Coordinated Inspection on OpenStreetMap background courtesy by http://www.openstreetmap.org' eventKey='7' expanded={true}>
 	      <MappaScheda
 	              center={
 	                      model.getValue({
@@ -380,7 +395,7 @@
 	              
         </Section>
 	              
-        <Section header='META PODACI' eventKey='7' expanded={true}>
+        <Section header='META PODACI' eventKey='8' expanded={true}>
           
           <LinkToPage
             txt="Pogledajte Metapodaci /View Metadata"

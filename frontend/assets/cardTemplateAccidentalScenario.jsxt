@@ -48,9 +48,24 @@
 
         </Section>
 
-        <Section header='SCENARIJ NESREC' eventKey='2' expanded={true}>
+        <Section header='OTVORITE CIJELU KARTICU INFORMACIJE O PODRUČJU POSTROJENJA' eventKey='2' expanded={true}>
           
-                  <Section header='Događaj' eventKey='3' expanded={true}>
+                    <LabeledField label='Otvorite cijelu karticu' value={
+              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_establishment/text()")
+          }/>
+
+	<LinkScheda
+	  params={{cql_filter: "bifisic_sevesoestablishments:idEstablishment='"+model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_establishment/text()")+"'"}}
+	  featureType="sevesoEstablishment"
+	  linkTitle={"Go to establishment " + model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_establishment/text()")}
+	  detailsTemplateConfigURL={"assets/cardTemplateSevesoEstablishment.jsxt"}
+	/>
+
+        </Section>
+
+        <Section header='SCENARIJ NESREC' eventKey='3' expanded={true}>
+          
+                  <Section header='Događaj' eventKey='4' expanded={true}>
           
                     <LabeledField label='Id Događaj' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_event/text()")
@@ -76,7 +91,7 @@
 
         </Section>
 
-        <Section header='Izvor opasnosti' eventKey='4' expanded={true}>
+        <Section header='Izvor opasnosti' eventKey='5' expanded={true}>
           
                     <LabeledField label='Id Događaji' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_event/text()")
@@ -90,7 +105,7 @@
 
         </Section>
 
-        <Section header='Scenarij' eventKey='5' expanded={true}>
+        <Section header='Scenarij' eventKey='6' expanded={true}>
           
                     <LabeledField label='Id Događaji' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_event/text()")
@@ -144,7 +159,7 @@
 
         </Section>
 
-        <Section header='Accidental Scenarios on OpenStreetMap background courtesy by http://www.openstreetmap.org' eventKey='6' expanded={true}>
+        <Section header='Accidental Scenarios on OpenStreetMap background courtesy by http://www.openstreetmap.org' eventKey='7' expanded={true}>
 	      <MappaScheda
 	              center={
 	                      model.getValue({
@@ -176,7 +191,7 @@
 	              
         </Section>
 	              
-        <Section header='META PODACI' eventKey='7' expanded={true}>
+        <Section header='META PODACI' eventKey='8' expanded={true}>
           
           <LinkToPage
             txt="Pogledajte Metapodaci /View Metadata"
