@@ -1,7 +1,7 @@
 <Panel
     bsStyle="primary"
     header={(
-        <DetailTitle title='Detail form / Obrazac s detaljnim podacima'
+        <DetailTitle title='Seveso postrojenja - integrirane informacije'
         	subtitle={['']}
 			/>
     )}>
@@ -1126,7 +1126,7 @@
 				          },
 	                      {
 	                          "type": "wms",
-	                          "url": "{geoserverUrl}/wms",
+	                          "url": "{geoserverUrl}/ows",
 	                          "visibility": true,
 	                          "title": "Seveso Establishments Preview",
 	                          "name": "bifisic_sevesoestablishments:SevesoEstablishment",

@@ -620,8 +620,30 @@
         "LoginPanel": {
             "LoginTitle": "Login"
         },
+        "CreditsPanel": {
+            "Title": "Credits",
+            "Content": "BIFISIC platform is based on the tool “Sistema Conoscenze Ambientali”, implemented by CSI Piemonte on behalf of Regione Piemonte, Italy leaning on open source GIS viewer Mapstore2"
+        },
+        "AboutPanel": {
+            "Title": "About BIFISIC",
+            "content1": "BIFISIC is a platform for conveying knowledge on prevention and control of industrial accidents and on related territorial impacts both to PA stakeholder (having restricted access with login/password) and to citizen (free access).",
+            "content2": "At functional level, beside standard geoportal functionalities, the user is provided with heterogeneous functions, from simple consultation to the preparation of thematic reports, to scenario analysis in support of decision-makers. Beside standard geoportal functionalities, the tool supports specific query & reporting add-ons applied to chosen spatial entities of interest among other geodata”, allowing final users to:",
+            "content2li1": "search (by keywords or thematic categories) datasets available in one or more Spatial Data Infrastructure (SDI);",
+            "content2li2": "display on map datasets of interest, enabling standard functions customized on each “entity”, such as:",
+            "content2li2li1": "query builder (alphanumeric) → result list (alphanumeric)→ result list (map)",
+            "content2li2li2": "result list →single record detail (alphanumeric) → single record detail (map)",
+            "content2li2li3": "result list → print/download (alphanumeric/geographic)",
+            "content2li2li4": "single record detail → print/download",
+            "content2li2li5": "spatial selection on map → result list",
+            "content2li3": "browse between related datasets at single record detail level",
+            "content3": "Data result list, including either all available columns or subsets chosen by the user, can be exported in different formats (csv, ESRI shapefile); the single record detail form can be exported in pdf format.",
+            "content4": "All data made available on the platform are displayed and/or use standard OGC (Open Spatial Consortium) interoperability services, as required by the INSPIRE Directive:",
+            "content4li1": "metadata are accessed using the CSW (Catalogue Service Web) exposed by one or more Spatial Data Infrastructures (SDIs); currently, BIFISIC harvests metadata from NIPP’s geoportal (National SDI) and ENVI’s geoportal, but if required, in future, also other SDIs could be linked",
+            "content4li2": "alphanumeric detail searches are performed using Complex-Feature WFS (Web Feature Service). Complex-Feature WFS is a useful structure model for managing entities with a huge richness of related alphanumeric data of different types and including nested levels. The detail tabs are set based on data provided by the Complex-Feature WFS",
+            "content4li3": "WMS (Web Map Services) protocol is adopted to display all data on map"
+        },
         "site_home": {
-            "search": "Web tool to visualize alphanumeric and geographic data coming from CAEN databases and external ones",
+            "search": "BIFISIC is a platform for conveying knowledge on prevention and control of industrial accidents and of related territorial impacts both to Public Administration stakeholders (having restricted access with login/password) and to general public (free access). At functional level, beside standard geoportal functionalities, the tool supports specific query & reporting add-ons applied to chosen spatial entities of interest among other geodata.",
             "shirt_title": "BIFISIC",
             "long_title": "Better Information for Industrial Safety in Croatia"
         },

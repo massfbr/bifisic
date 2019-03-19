@@ -1,7 +1,7 @@
 <Panel
     bsStyle="primary"
     header={(
-        <DetailTitle title='Detail form / Obrazac s detaljnim podacima'
+        <DetailTitle title='Seveso postrojenja - Scenarij nesreće'
         	subtitle={['']}
 			/>
     )}>
@@ -50,15 +50,11 @@
 
         <Section header='OTVORITE CIJELU KARTICU INFORMACIJE O PODRUČJU POSTROJENJA' eventKey='2' expanded={true}>
           
-                    <LabeledField label='Otvorite cijelu karticu' value={
-              model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_establishment/text()")
-          }/>
 
 	<LinkScheda
 	  params={{cql_filter: "bifisic_sevesoestablishments:idEstablishment='"+model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_establishment/text()")+"'"}}
 	  featureType="sevesoEstablishment"
-	  linkTitle={"Go to establishment " + model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_establishment/text()")}
-	  detailsTemplateConfigURL={"assets/cardTemplateSevesoEstablishment.jsxt"}
+	  linkTitle={"Otvorite cijelu karticu"}
 	/>
 
         </Section>

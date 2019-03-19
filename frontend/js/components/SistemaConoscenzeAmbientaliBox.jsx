@@ -44,11 +44,33 @@ const SistemaConoscenzeAmbientaliBox = React.createClass({
                   header={
                       <span>
                           <span className="snapshot-panel-title">
-                              <I18N.Message msgId={"RightMenu.ConoscenzeAmbTitle"}/>
+                              <I18N.Message msgId={"AboutPanel.Title"}/>
                           </span>
                           <button className="print-panel-close close" onClick={this.props.closePanel}><span>×</span></button>
                       </span>}>
-                      <h3>Work in progress ....</h3>
+                      <p><I18N.Message msgId={"AboutPanel.content1"}/></p>
+                      <p><I18N.Message msgId={"AboutPanel.content2"}/>
+                         <ul>
+                             <li><I18N.Message msgId={"AboutPanel.content2li1"}/></li>
+                             <li><I18N.Message msgId={"AboutPanel.content2li2"}/>
+                                 <ul>
+                                     <li><I18N.Message msgId={"AboutPanel.content2li2li1"}/></li>
+                                     <li><I18N.Message msgId={"AboutPanel.content2li2li2"}/></li>
+                                     <li><I18N.Message msgId={"AboutPanel.content2li2li3"}/></li>
+                                     <li><I18N.Message msgId={"AboutPanel.content2li2li4"}/></li>
+                                 </ul>
+                             </li>
+                             <li><I18N.Message msgId={"AboutPanel.content2li3"}/></li>
+                         </ul>
+                      </p>
+                      <p><I18N.Message msgId={"AboutPanel.content3"}/></p>
+                      <p><I18N.Message msgId={"AboutPanel.content4"}/>
+                         <ul>
+                             <li><I18N.Message msgId={"AboutPanel.content4li1"}/></li>
+                             <li><I18N.Message msgId={"AboutPanel.content4li2"}/></li>
+                             <li><I18N.Message msgId={"AboutPanel.content4li3"}/></li>
+                         </ul>
+                      </p>
                 </Panel>
               </Draggable>
             </div>

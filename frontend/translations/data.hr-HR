@@ -620,8 +620,30 @@
         "LoginPanel": {
             "LoginTitle": "Prijava"
         },
+        "CreditsPanel": {
+            "Title": "BIFISIC - kratki opis",
+            "Content": "BIFISIC je platforma za prenošenje znanja o sprječavanju i nadzoru industrijskih nesreća te utjecaju posljedica nesreća na okolni teritorij namijenjena nadležnim tijelima (autorizirani pristup omogućen korisničkim imenom i zaporkom) i građanima (slobodan pristup). Osim osnovnih funkcionalnosti geoportala, ovaj alat omogućuje specifične pretrage i izvoz podataka za potrebe izvještavanja vezano za predmetne subjekte te sadrži mnoštvo geografskih podataka."
+        },
+        "AboutPanel": {
+            "Title": "O platformi BIFISIC",
+            "content1": "BIFISIC je platforma za prenošenje znanja o sprječavanju i nadzoru industrijskih nesreća te utjecaju posljedica nesreća na okolni teritorij namijenjena nadležnim tijelima (autorizirani pristup omogućen korisničkim imenom i zaporkom) i građanima (slobodan pristup).",
+            "content2": "Osim osnovnih funkcionalnosti geoportala, korisniku su omogućene brojne funkcionalnosti, od jednostavnog pregleda i pripreme tematskih izvješća do analize scenarija nesreća kao pomoć nadležnim tijelima. Ovaj alat omogućuje i specifične pretrage i izvoz podataka za potrebe izvještavanja vezano za predmetne subjekte te sadrži mnoštvo geografskih podataka omogućujući korisniku da:",
+            "content2li1": "pretražuje (prema ključnim riječima ili tematskim kategorijama) podatke dostupne u jednom ili više infrastruktura prostornih podataka (engl. SDI);",
+            "content2li2": "prikaže odabrane podatke na karti, uz mogućnost prilagodbe osnovnih funkcija prilagođenih pojedinim subjektima kao što su:",
+            "content2li2li1": "složeno pretraživanje (alfanumeričko) → popis rezultata (alfanumerički)→ popis rezultata (karta)",
+            "content2li2li2": "popis rezultata → jedinstveni podatak (alfanumerički) → jedinstveni podatak (karta)",
+            "content2li2li3": "popis rezultata → ispis/preuzimanje (alfanumerički /geografski)",
+            "content2li2li4": "jedinstveni podatak → ispis/preuzimanje",
+            "content2li2li5": "odabir prostornih podataka za učitavanje na kartu → popis rezultata",
+            "content2li3": "pregledava povezane podatke na razini pojedinačnih podataka.",
+            "content3": "Popis rezultata pretrage, uključujući sve skupine podataka koje korisnik odabere, moguće je izvesti u više formata (CSV, ESRI shapefile); jedinstveni obrazac s podacima moguće je izvesti u pdf formatu.",
+            "content4": "Svi podaci dostupni na platformi prikazuju se i/ili koriste standardni OGC (engl. Open Spatial Consortium) interoperabilne geoinformacije, sukladno Direktivi INSPIRE:",
+            "content4li1": "metapodacima pristupa se preko CSW-a (engl. Catalogue Service Web) korištenjem jedne ili više infrastruktura prostornih podataka (engl. SDI); BIFISIC trenutno povlači metapodatke iz geoportala NIPP (nacionalni SDI) te geoportala ENVI, ali moguće je povezati i druge SDI-ove.",
+            "content4li2": "alfanumeričke pretrage provode se korištenjem usluge Complex-Feature WFS (engl. Web Feature Service). Complex-Feature WFS je koristan strukturni model za upravljanje objektima za koje postoji mnoštvo alfanumeričkih podataka različitih vrsta uključujući ugniježđene razine. Prozor s detaljnim podacima temelji se na podacima koji se preuzimaju pomoću Complex-Feature WFS-a. ",
+            "content4li3": "WMS (engl. Web Map Service) protokol koristi se za prikaz podataka na karti."
+        },
         "site_home": {
-            "search": "Alat za prikaz alfanumeričkih i zemljopisnih podataka iz baze podataka HAOP-a i vanjskih baza podataka",
+            "search": "BIFISIC je platforma za prenošenje znanja o sprječavanju i nadzoru industrijskih nesreća te utjecaju posljedica nesreća na okolni teritorij namijenjena nadležnim tijelima (autorizirani pristup omogućen korisničkim imenom i zaporkom) i građanima (slobodan pristup). Osim osnovnih funkcionalnosti geoportala, ovaj alat omogućuje specifične pretrage i izvoz podataka za potrebe izvještavanja vezano za predmetne subjekte te sadrži mnoštvo geografskih podataka.",
             "shirt_title": "BIFISIC",
             "long_title": "Objedinjene informacije za industrijsku sigurnost u Republici Hrvatskoj"
         },

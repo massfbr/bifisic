@@ -236,7 +236,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "{geoserverUrl}/wms",
+        "url": "{geoserverUrl}/ows",
         "visibility": true,
   		"title": "Seveso postrojenja - informacije o koordiniranim inspekcijama",
   		"name": "bifisic_cide:CoordinatedInspection",
