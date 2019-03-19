@@ -9,6 +9,7 @@ const JSpdf = require('jspdf');
 /*eslint-disable*/
 const autotable = require('jspdf-autotable');
 /*eslint-enable*/
+const croatfont = require('./croat-normal.js');
 
 let doc;
 const pageTopMargin = 15;
@@ -179,6 +180,9 @@ parseElement = function(children = []) {
 function scheda2pdf(el) {
     pdfHeight = 0;
     doc = new JSpdf('p', 'pt');
+    doc.addFont("CROAT-normal.ttf", "CROAT", "normal");
+    var fonts = doc.getFontList();
+    doc.setFont('CROAT','normal');
     if (el && el.children) {
         parseElement(el.children, doc);
         return doc;

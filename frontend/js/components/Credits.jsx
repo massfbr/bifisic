@@ -48,8 +48,8 @@ const Credits = React.createClass({
                               </span>
                               <button className="print-panel-close close" onClick={this.props.closePanel}><span>×</span></button>
                           </span>}>
-                          <h3>Credits</h3>
-                          <p>Work in progress</p>
+                          <h3><I18N.Message msgId={"CreditsPanel.Title"}/></h3>
+                          <p><I18N.Message msgId={"CreditsPanel.Content"}/></p>
                   </Panel>
             </Draggable>
         </div>
