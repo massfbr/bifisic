@@ -1,7 +1,7 @@
 ﻿{
     "locale": "en-US",
     "messages": {
-        "Language": "Language",
+        "Language": "Jezik",
         "aboutLbl": "About",
         "about_a0": "this",
         "about_h20": "License",
@@ -53,17 +53,17 @@
         "cancel": "Cancel",
         "catalog": {
             "addToMap": "Add To Map",
-            "catalogUrlPlaceholder": "Enter catalog URL...",
+            "catalogUrlPlaceholder": "Unesi URL kataloga...",
             "copied": "Copied!",
             "copyToClipboard": "Copy to clipboard",
             "error": "There was an error loading records from the catalog",
             "getWMSLink": "Get WMS Link",
             "noRecordsMatched": "No record matched",
             "pageInfo": "Results {start}-{end} of {total}",
-            "search": "Search",
+            "search": "Traži",
             "share": "Share",
-            "textSearchPlaceholder": "text to search...",
-            "title": "Catalog",
+            "textSearchPlaceholder": "tekst za pretraživanje...",
+            "title": "Katalog",
             "tooltip": "Pretraži katalog",
             "wfsGetCapLink": "WFS",
             "wmsGetCapLink": "WMS"
@@ -299,13 +299,13 @@
         "info": {
             "tooltip": "Pretraži objekte na karti"
         },
-        "infoFormatLbl": "GetFeatureInfo response format",
+        "infoFormatLbl": "GetFeatureInfo format rezultata",
         "labeledfield": {
             "label_value_not_specified": "not specified"
         },
         "language": "Language",
         "layerProperties": {
-            "confirmDelete": "Are you sure?",
+            "confirmDelete": "Jeste li sigurni?",
             "delete": "Delete",
             "display": "Display",
             "format": "Format",
@@ -316,7 +316,7 @@
             "title": "Title",
             "windowTitle": "Layer Properties"
         },
-        "layers": "Layers",
+        "layers": "Slojevi",
         "locate": {
             "feetUnit": "feet",
             "metersUnit": "meters",
@@ -351,27 +351,27 @@
             "x": "X"
         },
         "measureComponent": {
-            "Measure": "Measure",
-            "MeasureArea": "Measure Area",
-            "MeasureBearing": "Measure Bearing",
-            "MeasureLength": "Measure Distance",
-            "areaButtonText": "Area",
-            "areaLabel": "Area",
-            "bearingLabel": "Bearing",
-            "lengthButtonText": "Line",
-            "lengthLabel": "Length",
-            "resetButtonText": "Reset",
-            "title": "Measure",
-            "tooltip": "Measure length and area"
+            "Measure": "Mjere",
+            "MeasureArea": "Izmjeri područje",
+            "MeasureBearing": "Izmjeri kut",
+            "MeasureLength": "Izmjeri udaljenost",
+            "areaButtonText": "Područje",
+            "areaLabel": "Područje",
+            "bearingLabel": "kut",
+            "lengthButtonText": "Red",
+            "lengthLabel": "Dužina",
+            "resetButtonText": "Poništi",
+            "title": "Mjere",
+            "tooltip": "Izmjeri  dužinu i područje"
         },
         "menu": "Menu",
-        "mousePositionCoordinates": "Coordinates indicator",
+        "mousePositionCoordinates": "Pokazatelj koordinata",
         "msgId0": "{name} took {numPhotos, plural, =0 {no photos} =1 {one photo} other {# photos}} on {takenDate, date, long}.",
         "noFeatureInfo": "There is no information available for the point you clicked",
         "noInfoForLayers": "There are no features for the following layers: ",
         "noresultfound": "No Result found",
-        "opacity": "Opacity",
-        "options": "Options",
+        "opacity": "Prozirnost",
+        "options": "Opcije",
         "pageInfo": "{total, plural, =0 {No items} =1 {{total} Item of {total}} other {Items {start}-{end} of {total}}}",
         "print": {
             "alternatives": {
@@ -392,7 +392,7 @@
                 "forceLabels": "Force Labels:",
                 "iconsSize": "Icons size:"
             },
-            "legendoptions": "Legend options",
+            "legendoptions": "Opcije legende",
             "paneltitle": "Print",
             "printtooltip": "Print",
             "resolution": "Resolution:",
@@ -454,7 +454,7 @@
                 },
                 "draw_start_label": "Draw the region on interest in the map",
                 "dwithin_label": "meters",
-                "geometric_operation": "Geometric Operation",
+                "geometric_operation": "Geometrijska operacija",
                 "methods": {
                     "box": "BoundingBox",
                     "buffer": "Buffer",
@@ -469,8 +469,8 @@
                     "intersects": "INTERSECTS",
                     "within": "WITHIN"
                 },
-                "selection_method": "Selection Method",
-                "spatial_filter_header": "Spatial Filter"
+                "selection_method": "Metoda odabira",
+                "spatial_filter_header": "Prostorni filtar"
             }
         },
         "rasterstyler": {
@@ -480,7 +480,7 @@
             "graytitle": "Gray",
             "greentitle": "Green",
             "layerlabel": "Layer",
-            "opacitylabel": "Opacity",
+            "opacitylabel": "Prozirnost",
             "paneltitle": "Raster Styler",
             "pseudobandtitle": "Band Selection",
             "pseudotitle": "PseudoColor Settings",
@@ -506,19 +506,19 @@
         "search": {
             "placeholder": "Search by location name or coordinates ..."
         },
-        "settings": "Settings",
+        "settings": "Postavke",
         "shapefile": {
-            "add": "Add",
-            "cancel": "Cancel",
-            "defaultStyle": "Default style",
+            "add": "Dodaj",
+            "cancel": "Otkaži",
+            "defaultStyle": "Zadani stil",
             "error": {
-                "select": "Select one or more zip file"
+                "select": "Odaberi jedan ili više zip dokumenata"
             },
-            "placeholder": "Drop your file here or click to select shapefile to import.",
+            "placeholder": "Ovdje ispusti dokument ili klikni 'Odaberi' za unos shape dokumenta.",
             "success": " correctly imported",
-            "title": "Add Local Shapefile",
-            "tooltip": "Add a local shapefile to the map.",
-            "zoom": "Zoom on the shapefiles"
+            "title": "Dodaj lokalni shape dokument",
+            "tooltip": "Učitaj lokalni shape dokument u kartu.",
+            "zoom": "Uvećaj shape dokument"
         },
         "share": {
             "QRCodeLinkTitle": "qr code",
@@ -530,7 +530,7 @@
             "title": "Share",
             "titlePanel": "Share the map"
         },
-        "showMousePositionCoordinates": "Show Coordinates",
+        "showMousePositionCoordinates": "Prikaži koordinate",
         "snapshot": {
             "date": "Date",
             "downloadingSnapshots": "pending snapshot generation",
@@ -550,11 +550,11 @@
         "user": {
             "changePwd": "Change Password",
             "info": " Account Info",
-            "login": "Login",
-            "loginFail": "Login Fail",
+            "login": "Prijava",
+            "loginFail": "Neuspješna prijava",
             "loginFailedStatusMessages": {
-                "usernamePwdIncorrect": "Username or password incorrect",
-                "usernamePwdInsert": "Please insert username and password"
+                "usernamePwdIncorrect": "Neispravno korisničko ime ili zaporka",
+                "usernamePwdInsert": "Unesi korisničko ime i zaporku"
             },
             "logout": "Logout",
             "newPwd": "New Password",
@@ -665,15 +665,15 @@
             "bifisic_name": "Objedinjene informacije za industrijsku sigurnost u Republici Hrvatskoj"
 	},
         "MosaicTile": {
-            "objects": "OBJECTS",
-            "thematicViews": "THEMATIC VIEWS",
-            "allCategories": "All Categories"
+            "objects": "OBJEKTI",
+            "thematicViews": "TEMATSKI PRIKAZI",
+            "allCategories": "Sve Kategorije"
         },
         "SiraLayer": {
-            "removelayerConfirmingText": "Are you sure"
+            "removelayerConfirmingText": "Jeste li sigurni?"
         },
         "CartPanel": {
-            "removelayerConfirmingText": "Are you sure"
+            "removelayerConfirmingText": "Jeste li sigurni?"
         },
         "DefaultNode": {
             "tooltipSira": "Detaljna pretraga",
@@ -697,6 +697,10 @@
             "current": "Trenutna stranica",
             "alert": "Izvoz isključivo geometrijskih elemenata",
             "btn": "Izvoz podataka"
+        },
+        "AddMapModal": {
+            "titlesInPlaceOfNames": "titles in place of names",
+            "addAsGroup": "add as group"
         }
     }
 }
