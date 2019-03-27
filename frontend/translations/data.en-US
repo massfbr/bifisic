@@ -696,6 +696,10 @@
             "all": "All objects",
             "current": "Current page",
             "alert": "Only the features with geometry will be exported"
+        },
+        "AddMapModal": {
+            "titlesInPlaceOfNames": "titles in place of names",
+            "addAsGroup": "add as group"
         }
     }
 }

@@ -12,6 +12,7 @@ const {Modal, Button} = require('react-bootstrap');
 const DraggableModalDialog = require('./DraggableModalDialog');
 const LayersTree = require('./LayersTree');
 const Spinner = require('react-spinkit');
+const I18N = require('../../../MapStore2/web/client/components/I18N/I18N');
 
 const AddMapModal = React.createClass({
     propTypes: {
@@ -50,8 +51,8 @@ const AddMapModal = React.createClass({
     renderAddOptions() {
         return (<div className="addOptions">
                     <label style={{marginLeft: "0px", marginRight: "10px"}} className="checkbox-inline"><input type="checkbox" onChange={(e) => this.setState({useTitle: e.target.checked})}
-                    checked={this.state.useTitle}/><span>Titoli al posto dei nomi</span></label>
-                    <label style={{marginLeft: "0px", marginRight: "10px"}} className="checkbox-inline"><input type="checkbox" onChange={(e) => this.setState({useGroup: e.target.checked})} checked={this.state.useGroup}/><span>Aggiungi come gruppo</span></label>
+                    checked={this.state.useTitle}/><span><I18N.Message msgId={"AddMapModal.titlesInPlaceOfNames"}/></span></label>
+                    <label style={{marginLeft: "0px", marginRight: "10px"}} className="checkbox-inline"><input type="checkbox" onChange={(e) => this.setState({useGroup: e.target.checked})} checked={this.state.useGroup}/><span><I18N.Message msgId={"AddMapModal.addAsGroup"}/></span></label>
                 </div>);
     },
     renderError(error) {
