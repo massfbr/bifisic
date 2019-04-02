@@ -4,7 +4,7 @@
     "secureGeoserverUrl": "${url.secure.geoserver}/geoserver",
   	"secureDecsirawebUrl": "${url.secure.decsiraweb}",
     "decsirawebUrl": "${url.decsiraweb}",
-    "helpUrl": "assets/application/help.pdf",
+    "helpUrl": "assets/application/BIFISIC_Prirucnik_za_korisnike_User_Manual.pdf",
     "logOutUrl": "",
     "logOutService": "${url.secure.VH.decsiraweb}/territoriosliv1sisp/Shibboleth.sso/Logout",
     "bingApiKey": "At7ANe-DQcOfNFmnPivEhXVWn7NJ-jkkEzlPPaamJOPAXvZnZVJPg8-NtgBQ9gB3",

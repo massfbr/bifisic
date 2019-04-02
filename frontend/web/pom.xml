@@ -13,11 +13,11 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<url.geoserver>http://pproo.azo.hr</url.geoserver>
+		<url.geoserver>https://pproo.azo.hr</url.geoserver>
         <url.secure.geoserver>https://pproo.azo.hr</url.secure.geoserver>
         <url.secure.decsiraweb>https://pproo.azo.hr/bifisic/map.html</url.secure.decsiraweb>
 		<url.secure.VH.decsiraweb>https://pproo.azo.hr/</url.secure.VH.decsiraweb>
-        <url.decsiraweb>http://pproo.azo.hr/bifisic/map.html</url.decsiraweb>
+        <url.decsiraweb>https://pproo.azo.hr/bifisic/map.html</url.decsiraweb>
         <component.name>bifisic</component.name>
 		<component.version>1.0.0</component.version>
 		<tomcat.version>7.0.47</tomcat.version>
@@ -295,7 +295,7 @@
 		<profile>
 			<id>produzione</id>
 			<properties>
-				<url.geoserver>http://pproo.azo.hr</url.geoserver>
+				<url.geoserver>https://pproo.azo.hr</url.geoserver>
                 <url.secure.geoserver>https://pproo.azo.hr</url.secure.geoserver>
                 <url.secure.decsiraweb>https://pproo.azo.hr/bifisic/map.html</url.secure.decsiraweb>
 				<url.secure.VH.decsiraweb>https://pproo.azo.hr/</url.secure.VH.decsiraweb>
@@ -307,7 +307,7 @@
 		<profile>
 			<id>demo</id>
 			<properties>
-				<url.geoserver>http://pproo.azo.hr</url.geoserver>
+				<url.geoserver>https://pproo.azo.hr</url.geoserver>
                 <url.secure.geoserver>https://pproo.azo.hr</url.secure.geoserver>
                 <component.name>bifisic</component.name>
 				<component.version>1.0.0</component.version>

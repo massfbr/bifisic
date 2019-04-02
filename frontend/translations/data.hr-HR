@@ -421,7 +421,7 @@
                 "groupField": {
                     "all": "svi",
                     "any": "bilo koji",
-                    "none": "ne postoji"
+                    "none": "nijedan"
                 },
                 "group_label_a": "Ispuni",
                 "group_label_b": "sljedeće uvjete:",
@@ -548,7 +548,7 @@
             "tooltip": "Izradi i uredi sloj"
         },
         "user": {
-            "changePwd": "Change Password",
+            "changePwd": "Promijeni zaporku",
             "info": " Account Info",
             "login": "Prijava",
             "loginFail": "Neuspješna prijava",
@@ -556,12 +556,12 @@
                 "usernamePwdIncorrect": "Neispravno korisničko ime ili zaporka",
                 "usernamePwdInsert": "Unesi korisničko ime i zaporku"
             },
-            "logout": "Logout",
-            "newPwd": "New Password",
-            "password": "Password",
-            "retypePwd": "Retype Password",
-            "signIn": "Sign-in",
-            "username": "Username"
+            "logout": "Odjava",
+            "newPwd": "Nova zaporka",
+            "password": "Zaporka",
+            "retypePwd": "Ponovo unesi zaporku",
+            "signIn": "Prijavi se",
+            "username": "Korisničko ime"
         },
         "vectorstyler": {
             "addrulebtn": "Add Rule",
@@ -654,7 +654,7 @@
         "tematic_view_available": "Dostupni tematski prikaz"
         },
         "dataset_container": {
-            "object": "INFORMACIJE",
+            "object": "OBJEKTI",
             "tematic_view": "TEME"
         },
         "footer": {
@@ -699,8 +699,8 @@
             "btn": "Izvoz podataka"
         },
         "AddMapModal": {
-            "titlesInPlaceOfNames": "titles in place of names",
-            "addAsGroup": "add as group"
+            "titlesInPlaceOfNames": "naslovi umjesto naziva",
+            "addAsGroup": "dodaj skupinu"
         }
     }
 }

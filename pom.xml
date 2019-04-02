@@ -264,7 +264,9 @@
         <profile>
             <id>geoserver</id>
             <modules>
+<!--
 		<module>security</module>
+-->
                 <module>geoserver/src</module>
             </modules>
         </profile>
@@ -276,7 +278,9 @@
             <modules>
 		<module>frontend/web</module>
                 <module>backend</module>
+<!--
                 <module>security</module>
+-->
                 <module>frontend/auth-services</module>    
                 <module>frontend/metadata-services</module>     
                 <module>frontend/ogc-services</module> 
