@@ -20,7 +20,7 @@ const categorySelector = createSelector([
             return v;
         }, {objectNumber: 0, tematicViewNumber: 0});
         return {
-        tiles: [...servertiles, {id: 999, name: "All Categories", icon: "all", objectNumber, tematicViewNumber}]
+        tiles: [...servertiles, {id: 999, name: "SVE KATEGORIJE", icon: "all", objectNumber, tematicViewNumber}]
         };
     }
 );

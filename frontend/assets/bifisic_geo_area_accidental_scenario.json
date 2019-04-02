@@ -2,7 +2,7 @@
    "featureTypeName":"bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario",
    "featureTypeNameLabel":"Seveso postrojenja - Scenarij nesreće",
    "nameSpaces": {
-     "bifisic_sevesoestablishments": "http://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"
+     "bifisic_sevesoestablishments": "https://pproo.azo.hr/geoserver/bifisic_sevesoestablishments/1.0"
    },
    "layer": {
         "type": "wms",

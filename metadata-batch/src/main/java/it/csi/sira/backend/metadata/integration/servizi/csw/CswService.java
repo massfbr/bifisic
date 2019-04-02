@@ -103,7 +103,7 @@ public class CswService {
 	sb.append("<csw:ElementSetName>full</csw:ElementSetName>");
 	sb.append("<csw:Constraint version=\"1.1.0\">");
 	sb.append("<ogc:Filter>");
-	sb.append("<ogc:PropertyIsLike escapeChar=\"\\\" singleChar=\"_\" wildCard=\"%\">");
+	sb.append("<ogc:PropertyIsLike matchCase=\"false\" escapeChar=\"\\\" singleChar=\"_\" wildCard=\"%\">");
 	sb.append("<ogc:PropertyName>csw:AnyText</ogc:PropertyName>");
 	sb.append("<ogc:Literal>");
 	sb.append(text);

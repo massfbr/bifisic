@@ -2,7 +2,7 @@
    "featureTypeName":"bifisic_cide:CoordinatedInspection",
    "featureTypeNameLabel":"Seveso postrojenja - informacije o koordiniranim inspekcijama",
    "nameSpaces": {
-     "bifisic_cide": "http://pproo.azo.hr/geoserver/bifisic_cide/1.0"
+     "bifisic_cide": "https://pproo.azo.hr/geoserver/bifisic_cide/1.0"
    },
    "layer": {
         "type": "wms",

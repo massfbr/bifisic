@@ -106,7 +106,7 @@
 		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "url": "https://pproo.azo.hr/geoserver/dhmz/wms",
         "visibility": false,
   			"title": "Relativna vlažnost",
   			"name": "foi_vlaga",
@@ -119,7 +119,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "url": "https://pproo.azo.hr/geoserver/dhmz/wms",
         "visibility": false,
   			"title": "Vjetar smjer",
   			"name": "foi_vjetar_smjer",
@@ -132,7 +132,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "url": "https://pproo.azo.hr/geoserver/dhmz/wms",
         "visibility": false,
   			"title": "Vjetar brzina",
   			"name": "foi_vjetar_brzina",
@@ -145,7 +145,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "url": "https://pproo.azo.hr/geoserver/dhmz/wms",
         "visibility": false,
   			"title": "Tendencija tlaka",
   			"name": "foi_tlak_tendencija",
@@ -158,7 +158,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "url": "https://pproo.azo.hr/geoserver/dhmz/wms",
         "visibility": false,
   			"title": "Tlak zraka",
   			"name": "foi_tlak",
@@ -171,7 +171,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "url": "https://pproo.azo.hr/geoserver/dhmz/wms",
         "visibility": false,
   			"title": "Vrijeme - sve parametre",
   			"name": "foi_all_params",
@@ -184,7 +184,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/dhmz/wms",
+        "url": "https://pproo.azo.hr/geoserver/dhmz/wms",
         "visibility": false,
   			"title": "Vrijeme Stanje a Temperatura",
   			"name": "foi_vrijeme_stanje_temp",
@@ -197,7 +197,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/bifisic_sevesoscenarios/wms",
+        "url": "https://pproo.azo.hr/geoserver/bifisic_sevesoscenarios/wms",
         "visibility": false,
   			"title": "Scenarij-domino efekt",
   			"name": "bifisic_geo_domino_effect",
@@ -210,7 +210,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/bifisic_sevesoscenarios/wms",
+        "url": "https://pproo.azo.hr/geoserver/bifisic_sevesoscenarios/wms",
         "visibility": false,
   			"title": "Najgori scenarij",
   			"name": "bifisic_geo_worst_scenario",
@@ -223,7 +223,7 @@
   		},
 		{
   			"type": "wms",
-        "url": "http://pproo.azo.hr/geoserver/bifisic_sevesoscenarios/wms",
+        "url": "https://pproo.azo.hr/geoserver/bifisic_sevesoscenarios/wms",
         "visibility": false,
   			"title": "Izvori opasnosti",
   			"name": "bifisic_geo_hazard_source",
