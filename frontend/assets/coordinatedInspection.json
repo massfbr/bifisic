@@ -58,7 +58,7 @@
   "width" : 175
 }, {
   "suppressSorting" : true,
-  "headerName" : "Općina područja postrojenja",
+  "headerName" : "Mjesto / Grad",
   "xpath" : [ "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:desMunicipality/text()" ],
   "type" : 2,
   "width" : 120

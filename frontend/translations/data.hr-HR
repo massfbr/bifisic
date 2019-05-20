@@ -447,7 +447,7 @@
                     "details_bbox_label": "Edit the coordinates to modify the area",
                     "details_circle_label": "Edit the numeric fields to modify the radius and center of the circle",
                     "details_header": "Selection Details",
-                    "radius": "Radius",
+                    "radius": "Radius (m)",
                     "reset_bbox": "Reset",
                     "save_bbox": "Save BBOX modifications",
                     "save_radius": "Save the radius/center modifications"
@@ -514,11 +514,11 @@
             "error": {
                 "select": "Odaberi jedan ili više zip dokumenata"
             },
-            "placeholder": "Ovdje ispusti dokument ili klikni 'Odaberi' za unos shape dokumenta.",
+            "placeholder": "Ovdje ispusti dokument za prijenos ili klikni 'Odaberi' za prijenos shapefile dokumenta, * Shapefile datoteka za prijenos mora biti u ZIP formatu",
             "success": " correctly imported",
-            "title": "Dodaj lokalni shape dokument",
+            "title": "Dodaj lokalni shapefile u ZIP formatu",
             "tooltip": "Učitaj lokalni shape dokument u kartu.",
-            "zoom": "Uvećaj shape dokument"
+            "zoom": "Uvećaj na opseg područja shapefile dokumenta"
         },
         "share": {
             "QRCodeLinkTitle": "qr code",

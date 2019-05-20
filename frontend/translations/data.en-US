@@ -447,7 +447,7 @@
                     "details_bbox_label": "Edit the coordinates to modify the area",
                     "details_circle_label": "Edit the numeric fields to modify the radius and center of the circle",
                     "details_header": "Selection Details",
-                    "radius": "Radius",
+                    "radius": "Radius (m)",
                     "reset_bbox": "Reset",
                     "save_bbox": "Save BBOX modifications",
                     "save_radius": "Save the radius/center modifications"
@@ -514,11 +514,11 @@
             "error": {
                 "select": "Select one or more zip file"
             },
-            "placeholder": "Drop your file here or click to select shapefile to import.",
+            "placeholder": "Drop your file here or click 'Select' to transfer shapefile, * Shape file must be in ZIP format",
             "success": " correctly imported",
-            "title": "Add Local Shapefile",
+            "title": "Add local shapefile in ZIP format",
             "tooltip": "Add a local shapefile to the map.",
-            "zoom": "Zoom on the shapefiles"
+            "zoom": "Zoom to shapefile area"
         },
         "share": {
             "QRCodeLinkTitle": "qr code",
