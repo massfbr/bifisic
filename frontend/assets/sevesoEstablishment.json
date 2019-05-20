@@ -59,7 +59,7 @@
   "width" : 100
 }, {
   "suppressSorting" : true,
-  "headerName" : "Općina",
+  "headerName" : "Mjesto / Grad",
   "xpath" : [ "bifisic_sevesoestablishments:desMunicipality/text()" ],
   "type" : 2,
   "width" : 100
@@ -433,7 +433,7 @@
 }, {
   "index" : 27,
   "attribute" : "bifisic_sevesoestablishments:dangerousSubstance/bifisic_sevesoestablishments:DangerousSubstance/bifisic_sevesoestablishments:referenceAnnex",
-  "label" : "Opasne tvari/mješavine- Prilog 1.A- Dio",
+  "label" : "Opasne tvari / smjese - Prilog 1.A- Dio",
   "type" : "list",
   "valueId" : "reference_annex",
   "valueService" : {

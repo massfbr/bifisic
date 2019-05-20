@@ -6,6 +6,7 @@ package it.csi.sira.backend.metadata.integration.dao.impl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 
 import it.csi.sira.backend.metadata.integration.dto.SipraMtdTCategoriaAppl;
 import it.csi.sira.backend.metadata.integration.dao.SipraMtdTCategoriaApplDAO;
@@ -42,6 +43,11 @@ public class SipraMtdTCategoriaApplDAOImpl extends GenericDAO<SipraMtdTCategoria
 	private final static String SQL_COUNT_ALL =
 		"select count(*) from bifisic_mtd_t_category_appl";
 
+	private final static String QUERY_COUNT_ALL_CATEGORIES = "select count(distinct (bifisic_mtd_t_mtd_csw.id_metadata))\n" + 
+															"from bifisic_mtd_t_mtd_csw ,bifisic_mtd_t_function\n" + 
+															"where bifisic_mtd_t_function.fk_metadata=bifisic_mtd_t_mtd_csw.id_metadata\n" + 
+															"and bifisic_mtd_t_function.fk_function_type in (1,5)";
+	
 	@Override
 	public String getPrimaryKeySelect() {
 		return QUERY_PRIMARY_KEY;
@@ -75,6 +81,11 @@ public class SipraMtdTCategoriaApplDAOImpl extends GenericDAO<SipraMtdTCategoria
 	@Override
 	public String getSqlCount() {
 		return SQL_COUNT_ALL;
+	}
+
+	@Override
+    public int getCountAllCategories() {
+		return template.queryForInt(QUERY_COUNT_ALL_CATEGORIES, new HashMap<String,Object>());
 	}
 
 	public SipraMtdTCategoriaAppl findByPK(Integer idCategoriaAppl) {

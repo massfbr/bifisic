@@ -51,4 +51,6 @@ public interface SipraMtdTCategoriaApplDAO {
 	public boolean exist(Map<String, Object> params);
 
     public RowMapper<SipraMtdTCategoriaAppl> getRowMapper();
+    public int getCountAllCategories();
+    
 }

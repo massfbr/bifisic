@@ -98,6 +98,36 @@ where a.id_category_appl = b.id_category_appl;
 	</entry>
 
 
+	<entry key="update_bifisic_mtd_t_category_appl_by_2_1_(1,5)">
+	    <![CDATA[
+update bifisic_mtd_t_category_appl a set object_number = b.datanumber from 
+(select count(distinct id_metadata) datanumber ,bifisic_mtd_t_category.id_category,bifisic_mtd_t_category_appl.des_category,bifisic_mtd_t_category_appl.id_category_appl
+from bifisic_mtd_r_category_mtd,bifisic_mtd_t_category,bifisic_mtd_r_categapp_category,bifisic_mtd_t_category_appl,bifisic_mtd_t_function
+where bifisic_mtd_r_categapp_category.id_category=bifisic_mtd_t_category.id_category
+and bifisic_mtd_r_categapp_category.id_category_appl=bifisic_mtd_t_category_appl.id_category_appl
+  and bifisic_mtd_r_category_mtd.id_category=bifisic_mtd_t_category.id_category
+  and bifisic_mtd_t_function.fk_metadata=bifisic_mtd_r_category_mtd.id_metadata
+  and bifisic_mtd_t_category.fk_category_type = 2
+  and bifisic_mtd_t_category_appl.level=1
+  and bifisic_mtd_t_function.fk_function_type in (1,5)
+ group by bifisic_mtd_t_category.id_category,bifisic_mtd_t_category_appl.des_category,bifisic_mtd_t_category_appl.id_category_appl) b 
+where a.id_category_appl = b.id_category_appl;
+		]]>
+	</entry>
+
+
+	<entry key="update_bifisic_mtd_t_category_appl_by_1_5">
+	    <![CDATA[
+update bifisic_mtd_t_category_appl a set object_number = b.datanumber from 
+(select count(distinct (bifisic_mtd_t_mtd_csw.id_metadata)) datanumber
+from bifisic_mtd_t_mtd_csw ,bifisic_mtd_t_function
+where bifisic_mtd_t_function.fk_metadata=bifisic_mtd_t_mtd_csw.id_metadata
+and bifisic_mtd_t_function.fk_function_type in (1,5)) b
+where a.level=0;
+		]]>
+	</entry>
+
+
 	<entry key="update_bifisic_mtd_t_category_appl_by_2">
 	    <![CDATA[
 update bifisic_mtd_t_category_appl a set object_number = b.datanumber from (select sum(object_number) datanumber,fk_parent from bifisic_mtd_t_category_appl 
@@ -178,6 +208,36 @@ and bifisic_mtd_r_categapp_category.id_category_appl=bifisic_mtd_t_category_appl
   and bifisic_mtd_t_function.fk_function_type=4
  group by bifisic_mtd_t_category_appl.des_category,bifisic_mtd_t_category_appl.id_category_appl) b 
 where a.id_category_appl = b.id_category_appl;
+		]]>
+	</entry>
+
+
+	<entry key="update_bifisic_mtd_t_category_appl_by_2_1_4">
+	    <![CDATA[
+update bifisic_mtd_t_category_appl a set view_number = b.datanumber from 
+(select count(distinct id_metadata) datanumber ,bifisic_mtd_t_category.id_category,bifisic_mtd_t_category_appl.des_category,bifisic_mtd_t_category_appl.id_category_appl
+from bifisic_mtd_r_category_mtd,bifisic_mtd_t_category,bifisic_mtd_r_categapp_category,bifisic_mtd_t_category_appl,bifisic_mtd_t_function
+where bifisic_mtd_r_categapp_category.id_category=bifisic_mtd_t_category.id_category
+and bifisic_mtd_r_categapp_category.id_category_appl=bifisic_mtd_t_category_appl.id_category_appl
+  and bifisic_mtd_r_category_mtd.id_category=bifisic_mtd_t_category.id_category
+  and bifisic_mtd_t_function.fk_metadata=bifisic_mtd_r_category_mtd.id_metadata
+  and bifisic_mtd_t_category.fk_category_type = 2
+  and bifisic_mtd_t_category_appl.level=1
+  and bifisic_mtd_t_function.fk_function_type =4
+ group by bifisic_mtd_t_category.id_category,bifisic_mtd_t_category_appl.des_category,bifisic_mtd_t_category_appl.id_category_appl) b 
+where a.id_category_appl = b.id_category_appl;
+		]]>
+	</entry>
+
+
+	<entry key="update_bifisic_mtd_t_category_appl_by_4">
+	    <![CDATA[
+update bifisic_mtd_t_category_appl a set view_number = b.datanumber from 
+(select count(distinct (bifisic_mtd_t_mtd_csw.id_metadata)) datanumber
+from bifisic_mtd_t_mtd_csw ,bifisic_mtd_t_function
+where bifisic_mtd_t_function.fk_metadata=bifisic_mtd_t_mtd_csw.id_metadata
+and bifisic_mtd_t_function.fk_function_type=4) b
+where a.level=0;
 		]]>
 	</entry>
 

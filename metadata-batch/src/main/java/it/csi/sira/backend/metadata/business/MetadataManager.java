@@ -367,6 +367,12 @@ public class MetadataManager {
 		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_3_2_(1,5)");
 		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
 		
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_2_1_(1,5)");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+		
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_1_5");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+		
 		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_2");
 		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
 
@@ -382,6 +388,12 @@ public class MetadataManager {
 		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_3_2_4");
 		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
 		
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_2_1_4");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+
+		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_4");
+		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
+
 		  query = integratioManager.getQueries().getProperty("update_bifisic_mtd_t_category_appl_by_2");
 		  integratioManager.getDaoManager().getMtdTCategoriaApplDAO().updateWithoutControl(query, params);
 
