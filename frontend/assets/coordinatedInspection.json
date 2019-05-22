@@ -174,7 +174,7 @@
 }, {
   "index" : 2,
   "attribute" : "bifisic_cide:simplifiedSevesoEstablishment/bifisic_cide:SimplifiedSevesoEstablishment/bifisic_cide:idMunicipality",
-  "label" : "Općina područja postrojenja",
+  "label" : "Mjesto / Grad",
   "type" : "list",
   "valueId" : "id",
   "valueService" : {

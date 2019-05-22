@@ -14,6 +14,15 @@ const gridSelector = createSelector([grid, featureGrid],
 const categorySelector = createSelector([
         (state) => state.mosaic && state.mosaic.tiles || []
     ], (servertiles) => {
+        return {
+        tiles: [...servertiles]
+        };
+    }
+);
+/*
+const categorySelector = createSelector([
+        (state) => state.mosaic && state.mosaic.tiles || []
+    ], (servertiles) => {
         const {objectNumber = 0, tematicViewNumber = 0} = servertiles.reduce((v, t) => {
             v.objectNumber += t.objectNumber;
             v.tematicViewNumber += t.tematicViewNumber;
@@ -24,6 +33,7 @@ const categorySelector = createSelector([
         };
     }
 );
+*/
 const getChildren = function(nodes, node) {
     return node.nodes.map((child) => {
         let newNode = head(nodes.filter((n) => n.id === child));

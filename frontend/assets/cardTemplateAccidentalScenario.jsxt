@@ -111,7 +111,7 @@
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:id_scenario/text()")
           }/>
 
-          <LabeledField label='Vrsta pojave' value={
+          <LabeledField label='Vrsta fenomena' value={
               model.getValue("/wfs:FeatureCollection/wfs:member/bifisic_sevesoestablishments:bifisic_geo_area_accidental_scenario/bifisic_sevesoestablishments:des_phenom_type/text()")
           }/>
 

@@ -972,7 +972,7 @@
 ,
                         {
                             hide: false,
-                            headerName: 'Vrsta pojave',
+                            headerName: 'Vrsta fenomena',
                             width: 200.0,
                             xpath:"bifisic_sevesoestablishments:AccidentalScenario/bifisic_sevesoestablishments:phenomTypeDes/text()"
                         }

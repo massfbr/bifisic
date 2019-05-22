@@ -107,7 +107,7 @@
   "width" : 80
 }, {
   "suppressSorting" : true,
-  "headerName" : "Scenarij - Vrsta pojave",
+  "headerName" : "Scenarij - Vrsta fenomena",
   "xpath" : [ "bifisic_sevesoestablishments:des_phenom_type/text()" ],
   "type" : 2,
   "width" : 150
@@ -254,7 +254,7 @@
 }, {
   "index" : 11,
   "attribute" : "bifisic_sevesoestablishments:des_phenom_type",
-  "label" : "Scenarij nesreće - vrsta pojave",
+  "label" : "Scenarij nesreće - vrsta fenomena",
   "type" : "list",
   "valueId" : "des_phenom_type",
   "valueService" : {

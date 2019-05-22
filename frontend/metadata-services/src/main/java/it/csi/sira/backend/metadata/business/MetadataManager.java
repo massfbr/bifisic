@@ -312,8 +312,10 @@ public class MetadataManager {
 
 	  if (allFirstCategories != null && allFirstCategories.size() > 0) {
 
-		categories = new JsonAppCategory[allFirstCategories.size()];
+		categories = new JsonAppCategory[allFirstCategories.size()+1];
 
+		int tematicViewNumber = 0;
+		
 		for (int i = 0; i < allFirstCategories.size(); i++) {
 
 		  JsonAppCategory appCategory = new JsonAppCategory();
@@ -323,9 +325,20 @@ public class MetadataManager {
 		  appCategory.setIcon(allFirstCategories.get(i).getUrlIcona());
 		  appCategory.setObjectNumber(allFirstCategories.get(i).getObjectNumber() != null ? allFirstCategories.get(i).getObjectNumber() : 0);
 		  appCategory.setTematicViewNumber(allFirstCategories.get(i).getViewNumber() != null ? allFirstCategories.get(i).getViewNumber() : 0);
-
+		  tematicViewNumber += appCategory.getTematicViewNumber();
+				  
 		  categories[i] = appCategory;
 		}
+		
+		int numAllCategories = integratioManager.getDaoManager().getSipraMtdTCategoriaApplDAO().getCountAllCategories();
+		JsonAppCategory appCategory = new JsonAppCategory();
+		appCategory.setId(999);
+		appCategory.setName("SVE KATEGORIJE");
+		appCategory.setIcon("all");
+		appCategory.setObjectNumber(numAllCategories);
+		appCategory.setTematicViewNumber(tematicViewNumber);
+		
+		categories[allFirstCategories.size()] = appCategory;
 	  }
 	} catch (Exception e) {
 	  Logger.getLogger(Constants.LOGGER).error(LogFormatter.format(className, methodName, e.getMessage()));
